@@ -1,0 +1,22 @@
+@charset "UTF-8";
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Black' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Light' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Medium' rel='stylesheet'>
+	<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+	
+	
+		footer {
+					background-color: #f8f9fa;
+				}
+				
+				#footer {
+					width: 1800px;
+					margin: auto;
+					padding: 50px 20px;
+					color: #495057;
+					font-family: 'Noto Sans KR light';
+					font-size: 10px;
+					text-align: right;
+				}
+			
