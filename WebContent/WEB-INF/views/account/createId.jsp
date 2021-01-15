@@ -32,42 +32,43 @@
 					
 					<div class = "txtinfo"> 
 					
+					<form method="post" action="create">
 						<table >
 							<tr>
 								<th>아이디</th>
-								<td class="inputtd"><input id = "uid" placeholder="6자리 이상의 영문 혹은 영문과 숫자를 조합" type = "text"/></td>
+								<td class="inputtd"><input id = "uid" placeholder="6자리 이상의 영문 혹은 영문과 숫자를 조합" type = "text" name="uid"/></td>
 								
 								<td class="checktd"><input type="button" id ="checkbtn" value="중복확인" onclick='console.log("확인")'/></td>
 							</tr>
 							<tr>
 								<th>비밀번호</th>
-								<td class="inputtd"><input id = "uid" placeholder="비밀번호를 입력해주세요" type = "password"/></td>
+								<td class="inputtd"><input id = "uid" placeholder="비밀번호를 입력해주세요" type = "password" name="upassword"/></td>
 								
 							</tr>
 							<tr>
 								<th>비밀번호확인</th>
-								<td class="inputtd"><input id = "uid" placeholder="비밀번호를 한번 더 입력해주세요" type = "password"/></td>
+								<td class="inputtd"><input id = "uid" placeholder="비밀번호를 한번 더 입력해주세요" type = "password" name="upassword2"/></td>
 								
 							</tr>
 							<tr>
 								<th>이름</th>
-								<td class="inputtd"><input id = "uid" placeholder="이름을 입력해주세요" type = "text"/></td>
+								<td class="inputtd"><input id = "uid" placeholder="이름을 입력해주세요" type = "text" name="uname"/></td>
 								
 							</tr>
 							<tr>
 								<th>이메일</th>
-								<td class="inputtd"><input id = "uid" placeholder="예: example@bobsmell.com" type = "text"/></td>
+								<td class="inputtd"><input id = "uid" placeholder="예: example@bobsmell.com" type = "text" name="uemail"/></td>
 								<td class="checktd"><input type="button" id ="checkbtn" value="중복확인" onclick='console.log("확인2")'/></td>
 							</tr>
 							<tr>
 								<th>휴대폰</th>
-								<td class="inputtd"><input id = "uid" placeholder="000-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required type = "tel"/></td>
+								<td class="inputtd"><input id = "uid" placeholder="000-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required type = "tel" name="uphone"/></td>
 								<td class="checktd"><input type="button" id ="checkbtn" value="인증번호" onclick='console.log("확인3")'/></td>
 							</tr>
 							<tr>
 								<th>주소</th>
 								
-								<td class="searchad"><input type="button" id ="checkbtn" value="주소검색" onclick='console.log("확인4")'/></td>
+								<td class="searchad"><input type="button" id ="checkbtn" value="주소검색" onclick='console.log("확인4")' name="uhome"/></td>
 							</tr>
 							<tr>
 								<th>성별</th>
@@ -82,7 +83,7 @@
 							</tr>
 							<tr>
 								<th>생년</th>
-								<td class="inputtd"><input id = "uid" type = "date"/></td>
+								<td class="inputtd"><input id = "uid" type = "date" name="ubirth"/></td>
 							</tr>
 							<tr id = "linetr">
 								<th style="padding-top:21px; vertical-align:top;">이용약관동의</th>
@@ -107,11 +108,12 @@
 							</tr>
 						
 						</table>
+					
 						
 						<div class="joinbtn">
-							<input type="button" id ="checkbtn" value="가입하기" onclick='console.log("확인6")'/>
+							<button class="btn btn-info btn-sm" id ="checkbtn" href="create" >가입하기</button>
 						</div>
-					
+						</form>
 					</div>
 					
 					

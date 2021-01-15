@@ -13,7 +13,7 @@
 
 	<!-- 어디에 있는 누구에게 어느정도의 레벨을 출력할것인가 -->
 	<!-- 개발끝나면 error 로 수정 개발중에는 info -->
-	<logger name="com.mycompany">
+	<logger name="bobproject.mycompany">
 		<level value="info" />
 	</logger>	
 	

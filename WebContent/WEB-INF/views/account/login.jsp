@@ -50,17 +50,16 @@
 						</table>
 					</form>
 					</c:if>
-					<button id = "minibtn" onclick="location.href='createId.html'" class="btn btn-danger btn-sm">회원가입</button>
 					
 					
-						<!-- <table id ="table2">
+					<table id ="table2">
 							<tr>
 								<td class="inputtd"><button onclick="location.href='createId.html'" class="btn btn-danger btn-sm">회원가입</button></td>
 							</tr>
 							<tr style="21px">
 								<td class="inputtd2" style="font-family: 'Noto Sans KR medium';"><a href="" >아이디, 비밀번호 찾기</a></td>
 							</tr>
-						</table> -->
+					</table>
 					
 					<c:if test="${loginStatus!=null }">
 					<a class="btn btn-info btn-sm" href="logout">로그아웃</a>
