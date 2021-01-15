@@ -7,7 +7,8 @@
 				 <div id="div1">
 					<div id="br"></div>
 				 	<div id="mark">
-				 		<a href="..\homepage\homepage.html"><img src="../img/logo.png" width="100px"/></a>
+				 		<!-- <a href="..\homepage\homepage.html"><img src="../img/logo.png" width="100px"/></a> -->
+				 		<a href="..\homepage\homepage.html"><img src="<%=application.getContextPath()%>/resources/img/logo.png" width="100px"/></a>
 				 	</div>
 				 	<div id="login">
 				 			<ul id="ul1">

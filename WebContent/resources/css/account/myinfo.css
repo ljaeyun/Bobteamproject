@@ -1,0 +1,124 @@
+@charset "UTF-8";
+		
+			#wrapper_contents{
+				display: flex;
+				width : 1200px;
+				height: 1000px;
+				justify-content : center;
+				font-family: 'Noto Sans KR';
+			}
+			
+			#content {
+				width:1900px;
+				height; 1000px;
+			}
+			#article {
+				width : 1200px;
+					margin :0 auto;
+			}
+			
+			.title2 {
+				text-align : center;
+				
+				
+				font-size:40px;
+				
+			}
+			#search_line {
+				margin_bottonm:25px;
+				height:50px;
+				border-bottom:solid 3px gray;
+			}
+			
+			.sub {
+				text-align : right;
+				font-size : 5px;
+			}
+			
+		
+		
+			/*-------------타 이 틀--------------*/
+			.infototal {
+				padding : 15px;
+				box-sizing:border-box;
+				display :flex;
+				flex :1;
+			}
+			
+			#infomenu {
+				width : 300px;
+				padding :10px;
+				box-sizing:border-box;
+			}
+			
+			#infomain {
+				padding: 10px;
+				box-sizing:border-box;
+			
+			}
+			
+		
+			h3 {
+				margin-top : 70px;
+			}
+			
+			.infototal #infomenu > li > a {
+				text-decoration:none;
+			}
+			
+			ul {
+			 list-style: none;
+			}
+			a {
+				color : black;
+			}
+			
+			.progress {
+				height : 99px;
+			
+		
+			}
+			/*-------------사이드 메 뉴--------------*/
+			
+			#picon {
+				width : 90px;
+				height; 90px;
+				font-size: 90px;
+				
+			}
+			.pitext {
+				font-size : 20px;
+				
+			}
+			
+			#num434 {
+				font-size : 20px;
+			}
+		
+			#ew {
+				font-size: 90px;
+			}
+			
+			
+			#totalp {
+				border : 1px solid #e9ecef;
+				text-align:center;
+				width :850px;
+				height : 100px;
+			}
+			/*-------------테이블 1--------------*/
+			
+			#moneycoupon {
+				width : 850px;
+			}
+			#money {
+				width: 850px;
+				text-align : center;
+				border : 1px solid black;
+				border-collapse : collapse;
+			}
+			#money td {
+			width : 50%;
+				border : 1px solid black;
+			}
+			/*-------------테이블 2--------------*/

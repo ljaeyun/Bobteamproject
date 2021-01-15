@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>		 -->
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Black' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Light' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Medium' rel='stylesheet'>
+	<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
@@ -29,17 +31,20 @@
 				</div>
 				
 				<div class = "txtinfo"> 
-					<form method="post" action="join">
+				<c:if test="${loginStatus == null}">
+					<form method="post" action="login2">
 						<table>
 							<tr>
-								<td class="inputtd"><input id = "uid" type = "text"/></td>
+								<td class="inputtd"><input id = "uid" type = "text" name="uid" placeholder="아이디"/></td>
 							</tr>
 							
 							<tr>
-								<td class="inputtd"><input id = "uid" type = "password"/></td>
+								<td class="inputtd"><input id = "uid" type = "password" name="upassword" placeholder="패스워드"/></td>
 							</tr>
 							<tr>
-								<td class="inputtd"><button onclick="" class="btn btn-primary btn-sm">로그인</button></td>
+									
+								<td class="inputtd"><button class="btn btn-primary btn-sm">로그인</button></td>
+									
 							</tr>
 							<tr>
 								<td class="inputtd"><button onclick="location.href='../createID/createID.html'" class="btn btn-danger btn-sm">회원가입</button></td>
@@ -47,10 +52,11 @@
 							<tr style="21px">
 								<td class="inputtd2" style="font-family: 'Noto Sans KR medium';"><a href="" >아이디, 비밀번호 찾기</a></td>
 							</tr>
-							
+							<a class="btn btn-info btn-sm" href="logout">로그아웃</a>
 							<!-- ㅇㅇㅇ -->
 						</table>
 					</form>
+					</c:if>
 				</div>
 				
 				
