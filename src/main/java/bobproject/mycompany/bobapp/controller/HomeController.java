@@ -1,4 +1,4 @@
-package com.mycompany.webapp.controller;
+package bobproject.mycompany.bobapp.controller;
 
 import javax.servlet.http.HttpSession;
 

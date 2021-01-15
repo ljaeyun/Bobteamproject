@@ -1,4 +1,4 @@
-package com.mycompany.webapp.controller.account;
+package bobproject.mycompany.bobapp.controller.account;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

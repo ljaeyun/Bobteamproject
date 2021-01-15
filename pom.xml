@@ -2,14 +2,18 @@
   <modelVersion>4.0.0</modelVersion>
   
  	<!-- 프로젝트의 기본정보  -->
-  <groupId>com.mycompany</groupId>
+<!--   <groupId>com.mycompany</groupId>
   <artifactId>webapp1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <!-- 프로젝트 생성 파일 , maven install 하면 target 폴더에 ***.war 파일 생성되어 있다-->
+  프로젝트 생성 파일 , maven install 하면 target 폴더에 ***.war 파일 생성되어 있다
   <packaging>war</packaging>
+   -->
   
-  
-  
+	   <groupId>bobproject.mycompany</groupId>
+  <artifactId>bobapp</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+   
   
   
   <build>
