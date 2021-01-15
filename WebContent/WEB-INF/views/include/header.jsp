@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/header.css">
 
 <div id="wrapper_header">
@@ -29,7 +29,7 @@
 			 			<div id="menu">
 							 <ul id="ul2">
 								<li><a href="..\homepage\homepage.html">밥향기 소개</a></li>
-								<li><a href="..\menu\menu.html">메뉴</a></li>
+								<li><a href="<%=application.getContextPath()%>/menu/menu">메뉴</a></li>
 								<li><a href="..\review\review.html">리뷰</a></li>
 								<li><a href="..\event\event.html">이벤트</a></li>
 							</ul>

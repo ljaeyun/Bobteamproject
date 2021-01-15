@@ -4,33 +4,44 @@
 
 <html>
 	<head>
-	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Black' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Light' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Medium' rel='stylesheet'>
 	<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+	 -->
+	
 		<meta charset="UTF-8">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/menu/cs_menu.css">
+		
 		<title>밥향기 :: 메뉴</title>
 				
 		<script>
-			//디테일 페이지 추가하면됨
-			const menu1Click = () => {window.location.href="../detailpage/랍스터.html"};
-			const menu2Click = () => {window.location.href="../detailpage/굴떡국.html"};
-			const menu3Click = () => {window.location.href="../detailpage/폭찹스테이크.html"};
-			const menu4Click = () => {window.location.href="../detailpage/궁중떡볶음.html"};
-			const menu5Click = () => {window.location.href="../detailpage/깐쇼새우.html"};
-			const menu6Click = () => {window.location.href="../detailpage/닭한마리.html"};
-			const menu7Click = () => {window.location.href="../detailpage/목살스테이크.html"};
-			const menu8Click = () => {window.location.href="../detailpage/버섯들깨탕.html"};
-			const menu9Click = () => {window.location.href="../detailpage/두루치기.html"};
 			
-			const loginClick = () => {window.location.href="../login/login.html"};
+			const menu1Click = () => {window.location.href="<%=application.getContextPath()%>/detailpage/랍스터"};
+			const menu2Click = () => {window.location.href="<%=application.getContextPath()%>/detailpage/굴떡국"};
+			const menu3Click = () => {window.location.href="<%=application.getContextPath()%>/detailpage/폭찹스테이크"};
+			const menu4Click = () => {window.location.href="<%=application.getContextPath()%>/detailpage/궁중떡볶음"};
+			const menu5Click = () => {window.location.href="<%=application.getContextPath()%>/detailpage/깐쇼새우"};
+			const menu6Click = () => {window.location.href="<%=application.getContextPath()%>/detailpage/닭한마리"};
+			const menu7Click = () => {window.location.href="<%=application.getContextPath()%>/detailpage/목살스테이크"};
+			const menu8Click = () => {window.location.href="<%=application.getContextPath()%>/detailpage/버섯들깨탕"};
+			const menu9Click = () => {window.location.href="<%=application.getContextPath()%>/detailpage/두루치기"};
+			
+			const loginClick = () => {window.location.href="<%=application.getContextPath()%>/account/login"};
 		</script>
 		
 	</head>
 	
 	
 	<body>
+		<jsp:include page="/WEB-INF/views/include/header.jsp"/>
 		
 		<div id="wrapper_contents">
 		<div id="menu_wrapper">
@@ -43,19 +54,7 @@
 				
 			</div>	
 		
-			<!-- <div id="category">
-					
-				<a href="">
-					<div id="cat_1" class="cat">전체보기</div>
-				</a>
-				<a href=" ">
-					<div id="cat_2" class="cat">인기순</div>
-				</a>
-				<a href=" ">
-					<div id="cat_3" class="cat">빠른 배송순</div>
-				</a> 
-					
-			</div> -->
+			
 			
 			<div id="productlist_total">
 			
@@ -181,13 +180,13 @@
 			
 		
 			<div id="page_num">
-				<a href="">
+				<a href="<%=application.getContextPath()%>/menu/menu">
 					<div class="pnum_text">처음</div>
 				</a>
-				<a href="">
+				<a href="<%=application.getContextPath()%>/menu/menu">
 					<div class="pnum_text">이전</div>
 				</a>
-				<a href="">
+				<a href="<%=application.getContextPath()%>/menu/menu">
 					<div class="pnum_num">1</div>
 				</a>
 				<a href="">
@@ -207,20 +206,6 @@
 	</div>	
 		</div>
 		
-		
-		
-		<footer>
-			<p id="footer">
-			Netflix 대한민국 <br/>
-			넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 00-308-321-0058 <br/>
-			대표: 레지널드 숀 톰프슨 <br/> 
-			이메일 주소: korea@netflix.com <br/>
-			주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161 <br/>
-			클라우드 호스팅: Amazon Web Services Inc. <br/>
-			공정거래위원회 웹사이트 링크
-			</p>
-		
-		</footer>
-		
+			<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 	</body>
 </html>
