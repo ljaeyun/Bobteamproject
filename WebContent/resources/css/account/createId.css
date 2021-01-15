@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+#wrapper_contents {
+				width: 1200px;
+				margin: auto;
+				display: flex;
+				font-family: 'Noto Sans KR Medium';
+				}
+			
+			#content{
+			/*
+				display: flex;
+				width : 100%;
+				height: 1000px;
+				justify-content : center;
+				*/
+					width : 1900px;
+				height: 1000px;
+				
+			}
+			#article {
+				width : 800px;
+				margin :0 auto;
+				
+			}
+			
+			.title2 {
+				text-align : center;
+				font-size : 40px;
+				font-family:'Noto Sans KR Medium'
+			}
+			
+			#search_line {
+				
+				height:10px;
+				border-bottom:solid 3px gray;
+			}
+			
+			.sub {
+				text-align : right;
+				font-size : 5px;
+			}
+			
+			/*-------------타 이 틀--------------*/
+			
+			.txtinfo {
+				padding:20px;
+				width:800px;
+				height : 400px;
+			}
+			
+			table {
+				width : 700px;
+				
+				margin-left:auto;
+				margin-right:auto;
+				table-layout:fixed;
+			}
+			
+			table,th,td{
+				
+				border-collapse :collapse;
+				
+			}
+			
+			th {
+				text-align:left;
+				width : 120px;
+				height:30px;
+				
+			}
+			
+			td {
+				vertical-align:middle;
+				padding : 5px;
+
+			}
+
+			td.inputtd {
+				width:300px;
+			}
+			
+			td.checktd {
+				width:100px;
+			}
+			
+			#linetr {
+				border-top : 1px solid black;
+			}
+			
+			input[type="text"] {
+			  font-size:1.5em;
+			  padding:0.25em;
+			  box-sizing: border-box;
+			  width:100%;
+			}
+			
+			input[type="password"] {
+			  font-size:1.5em;
+			  padding:0.25em;
+			  box-sizing: border-box;
+			  width:100%;
+			}
+			
+				
+			input[type="button"] {
+			  font-size:1.2em;
+			  padding:0.25em;
+			  box-sizing: border-box;
+			  width:100%;
+			  cursor:pointer;
+			}
+			
+			input[type="tel"] {
+			  font-size:1.5em;
+			  padding:0.25em;
+			  box-sizing: border-box;
+			  width:100%;
+			}
+			
+			input[type="date"] {
+			  font-size:1.0em;
+			  padding:0.25em;
+			  box-sizing: border-box;
+			  width:100%;
+			}
+			
+			button[type="submit"] {
+			  font-size:1.2em;
+			  padding:0.25em;
+			  box-sizing: border-box;
+			  width:100%;
+			}
+	
+			#radiob {
+				width:100%;
+			}
+			
+			input,
+			input::-webkit-input-placeholder {
+				font-size: 16px;
+				line-height: 30px;
+			}
+			
+			#checkbtn {
+				background-color : #071338;
+				color : white;
+				border-radius : 8px;	
+				border : none;
+				outline:none;
+			}
+			
+			#checkbtn {
+				
+			}
+			
+			.btn{
+				background-color:#071338
+			}
+			.btn:hover{ 
+				background-color: #071338;
+			}
+			
+			.btn:active{
+				background-color: #071338;
+			}
+			
+			.btn:visited {
+				background-color: #071338;
+			} 	

@@ -29,7 +29,7 @@
 				</div>
 				
 				<div class = "txtinfo"> 
-					<form method="post" action="login">
+					<form method="post" action="join">
 						<table>
 							<tr>
 								<td class="inputtd"><input id = "uid" type = "text"/></td>

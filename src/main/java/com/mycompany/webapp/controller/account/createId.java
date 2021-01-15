@@ -8,19 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/account")
-public class login {
-	private static final Logger logger = LoggerFactory.getLogger(login.class);
+public class createId {
+	private static final Logger logger = LoggerFactory.getLogger(createId.class);
 	
-	@RequestMapping("/login")
+	@RequestMapping("/createId")
 	public String content() {
-		logger.info("로그인페이지");
-		return "account/login";
+		logger.info("회원가입페이지");
+		return "account/createId";
 	}
 	
-	@PostMapping("/join")
-	public String join() {
-		logger.info("로그인");
-		return "account/login";
-		
-	}
+	
 }

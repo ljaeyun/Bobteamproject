@@ -12,7 +12,7 @@ public class HomeController {
 	//http://.../webapp1
 	@RequestMapping("/")
 	public String home() {
-		logger.info("½ÇÇà");
+		logger.info("ì‹¤í–‰");
 		return "home";
 		
 	}
