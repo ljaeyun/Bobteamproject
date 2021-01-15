@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/header.css">
 
 <div id="wrapper_header">
@@ -12,8 +13,13 @@
 				 	</div>
 				 	<div id="login">
 				 			<ul id="ul1">
-				 				<li><a href="../createID/createID.html">회원가입</a></li> 
-								<li><a href="login.html">로그인</a></li>
+				 				<li><a href="/account/createId">회원가입</a></li> 
+				 				<c:if test="${loginStatus==null }">
+									<li><a href="<%=application.getContextPath()%>/account/login">로그인</a></li>
+								</c:if>
+								<c:if test="${loginStatus!=null }">
+									<li><a href="logout2">로그아웃</a></li>
+								</c:if>
 								<li><a href="..\customer_service\customer_service_faq.html">고객센터</a></li>
 							</ul>
 				 	</div>
