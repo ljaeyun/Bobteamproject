@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/event/cs_event_freinds.css">
+<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/event/cs_event_friends.css">
 </head>
 <body>
 	

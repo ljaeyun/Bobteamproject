@@ -1,7 +1,9 @@
 @charset "UTF-8";
 @charset "UTF-8";
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<style type ="text /css ">
 
-<style type ="text /css ">* {
+* {
 	box-sizing: border-box;
 }
 
@@ -46,25 +48,5 @@
 			border-bottom: solid 3px gray;
 		}
 	
-		footer {
-			background-color: #f8f9fa;
-		}
-		
-		#footer {
-			padding: 50px 20px;
-			color: #495057;
-			font-family: 'Noto Sans KR light';
-			font-size: 10px;
-			text-align: right;
-			}
 		</style>
-		<script>
-		const fun1 = () => {
-					window.location.href="./event_tabmenu.html";
-				}; 
-		const fun2 = () => {
-					window.location.href="./event_friends.html";		
-						}; 
-
 		
-		</script>

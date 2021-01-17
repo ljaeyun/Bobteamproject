@@ -1,44 +1,85 @@
 @charset "UTF-8";
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<style type ="text /css ">
 
-<style type ="text /css ">* {
+* {
 	box-sizing: border-box;
-}	#wrapper{
-				width: 1200px;
-				text-align: center;
-				margin: 0px auto;
-			}
-			.btn{
-			cursor: pointer;
-			border: 0;
-			outline: 0;
-			}
-			#event h1{
-				font-size: 30px;
-				margin-top: 20px;
-				margin-bottom: 20px;
-			}
-			#id7:hover{
-				fn7();
+}	#event_friends{
+				
+				width: 1000px;
+				box-sizing: border-box;
+				margin: auto;
+				font-family: 'Noto Sans KR'
 			}
 			
-		#search_inform{
-			margin: 0px auto;
-			width: 400px;
-			height: 130px;
-			justify-content: center;
-			text-align: center;
-			margin-bottom: 0px;
-		}
-			#search_big {
-				font-size: 40px;
+				 #side01, #side02, #side03{
+				 color:#adb5bd;
+				 margin: 13px;
+				 }
+				 #leftframe :hover{
+				 color:black;
+				 cursor:pointer;
+				 }
+				 
+			#mainframe{
+			margin-top:200px;
+			margin:0 auto;
+				
+			}
+				#mainframe01{
+				
 				}
-			#search_det {
-				font-size: 10px;
-				color: gray;
-				}
-		
-		#search_line{
-			margin-bottom: 25px;
-			height: 0px;
-			border-bottom: solid 3px gray;
-		}
+				#mainframe02{
+				margin-top:50px;
+				display: flex;
+				}	
+					#mainframe02_1{
+					flex:1;
+					}
+					#mainframe02_2{
+					flex:3;
+					}
+						#steptitle{
+						color:white;
+						background-color: #868e96;
+						width:500px;
+						}
+						#stable  h6{
+						color:#1864ab;
+						}
+						#stable p{
+						color:#868e96;
+						}
+					#vip{
+							width:100%;
+							background-color:#f3f0ff;
+							height:400px;
+							font-family: 'Noto Sans KR';
+							}
+							#vip_gift{
+							padding: 50px;
+							width:1200px;
+							margin:0 auto;
+							background-color:#f3f0ff;
+							text-align: left;
+							display: flex;
+							
+							}
+								#vip_gift01{
+								padding-left:100px; 
+								flex:1;
+								}
+									#vip_gift01 > #p1{
+									font-size: 25px;
+									font-weight: bold;
+									}
+									#vip-gift01 > #p2{
+									color:#adb5bd;
+									font-size: 20px;	
+									font-weight: bold;					
+									}
+									
+								#vip_gift02{
+								flex:1;
+								}
+</style>
