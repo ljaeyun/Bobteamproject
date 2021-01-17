@@ -41,11 +41,11 @@
 					<table>
 						<tr align = "center" >
 							<td width = "120px" height = "30px"> <b>상품명 </b></td>
-							<td colspan = "5"></td>
+							<td colspan = "5"><input type="text" name="goodsName" size="0" style="width:98%; border:0;"/></td>
 						</tr>
 						<tr align = "center">
 							<td height = "30px"> <b>판매가</b> </td>
-							<td colspan = "3" width="50px"></td>
+							<td colspan = "3" width="50px"><input type="text" name="goodsPrice" size="0" style="width:98%; border:0;"/></td>
 							<td>원</td>
 						</tr>
 						
@@ -67,11 +67,11 @@
 						
 						<tr align = "center" >
 							<td width = "100px" height = "40px"> <b>상품요약설명</b></td>
-							<td colspan = "5"></td>					
+							<td colspan = "5"><input type="text" name="goodsExplan" size="0" style="width:98%; border:0;"/></td>					
 						</tr>
 						<tr align = "center"> 
 							<td height = "400px"><b> 상품상세설명 </b></td>
-							<td colspan="5" rowspan="4"></td>
+							<td colspan="5" rowspan="4"><textarea name="goodsExplan2" rows="25" style= "width:98%; border : 0; resize:none;"></textarea></td>
 						</tr>
 					</table>
 					
