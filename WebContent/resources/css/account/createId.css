@@ -15,12 +15,13 @@
 				justify-content : center;
 				*/
 					width : 1900px;
-				height: 1000px;
+					height: 1300px;
 				
 			}
 			#article {
 				width : 800px;
 				margin :0 auto;
+				height: 1000px;
 				
 			}
 			
@@ -84,6 +85,8 @@
 				width:100px;
 			}
 			
+		
+			
 			#linetr {
 				border-top : 1px solid black;
 			}
@@ -142,17 +145,20 @@
 				line-height: 30px;
 			}
 			
+			.joinbtn {
+				height:150px;
+			}
+			
 			#checkbtn {
 				background-color : #071338;
 				color : white;
 				border-radius : 8px;	
 				border : none;
 				outline:none;
+				height: 150px;
 			}
 			
-			#checkbtn {
-				
-			}
+		
 			
 			.btn{
 				background-color:#071338

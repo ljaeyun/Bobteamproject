@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/header.css">
+<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
 
 <div id="wrapper_header">
 			 <header>
@@ -9,11 +10,11 @@
 					<div id="br"></div>
 				 	<div id="mark">
 				 		<!-- <a href="..\homepage\homepage.html"><img src="../img/logo.png" width="100px"/></a> -->
-				 		<a href="..\homepage\homepage.html"><img src="<%=application.getContextPath()%>/resources/img/logo.png" width="100px"/></a>
+				 		<a href="<%=application.getContextPath()%>/"><img src="<%=application.getContextPath()%>/resources/img/logo.png" width="100px"/></a>
 				 	</div>
 				 	<div id="login">
 				 			<ul id="ul1">
-				 				<li><a href="/account/createId">회원가입</a></li> 
+				 				<li><a href="<%=application.getContextPath()%>/account/createId">회원가입</a></li> 
 				 				<c:if test="${loginStatus==null }">
 									<li><a href="<%=application.getContextPath()%>/account/login">로그인</a></li>
 								</c:if>

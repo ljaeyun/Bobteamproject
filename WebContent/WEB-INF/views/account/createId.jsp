@@ -13,6 +13,8 @@
 
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/main.css">
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/account/createId.css">
+
+<script type="text/javascript" src="<%=application.getContextPath()%>/resources/js/account/createId.js"></script>
 </head>
 <body>
 	
@@ -106,13 +108,14 @@
 									</form>
 								</td>
 							</tr>
-						
+							<tr>
+								<td colspan = "2" style="width : 700px;">
+									<button class="btn btn-info btn-sm" id ="checkbtn" href="create" style="width:100%; height: 45px; align:center; font-size:1.2em;" >가입하기</button>
+								</td>
+							</tr>
 						</table>
 					
 						
-						<div class="joinbtn">
-							<button class="btn btn-info btn-sm" id ="checkbtn" href="create" >가입하기</button>
-						</div>
 						</form>
 					</div>
 					
