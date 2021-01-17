@@ -1,8 +1,6 @@
 @charset "UTF-8";
-	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Black' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Light' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Medium' rel='stylesheet'>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
 		* {
 				box-sizing: border-box;
