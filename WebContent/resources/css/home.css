@@ -1,0 +1,54 @@
+@charset "UTF-8";
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+	#intro1 {
+					margin: 100px 0px;
+				}
+				
+				#intro2 {
+					margin: 100px 0px;
+				}
+				
+				#intro3 {
+					margin: 100px 0px 500px 0px;
+				}
+				
+				#title {
+					font-family: 'Noto Sans KR Black';
+					font-size: 20px;
+				}
+				
+				#semititle {
+					font-family: 'Noto Sans KR Black';
+					font-size: 36px;
+				}
+				
+				#contents {
+					font-family: 'Noto Sans KR Light';
+					font-size: 15px;
+				}
+				
+			
+				#img0 {
+					text-align: center;
+					margin-bottom: 100px;
+				}
+				
+				#img1 {
+					text-align: center;
+					margin-top: 100px;
+				}
+				
+				
+				#img2 {
+					text-align: center;
+				}
+				
+				
+				#text {
+					width: 1200px;
+					margin: auto;
+				}
+			
+			
