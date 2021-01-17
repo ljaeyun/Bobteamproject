@@ -16,6 +16,8 @@
 
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/main.css">
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/account/myinfo.css">
+
+<script type="text/javascript" src="<%=application.getContextPath()%>/resources/js/account/myinfo.js"></script>
 </head>
 <body>
 	
@@ -60,7 +62,7 @@
 					
 							
 								<div id ="tempdiv" style="display:none">
-									<li><a href="../items/ItemUpdate.html" name="sel01">상품등록</a></li>
+									<li><a href="<%=application.getContextPath()%>/seller/goodsRegist" name="sel01">상품등록</a></li>
 									<li><a href="../items/ItemChange.html" name="sel02">상품수정</a></li>
 								</div>
 		

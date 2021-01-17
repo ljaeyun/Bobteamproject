@@ -17,5 +17,4 @@ public class myinfo {
 		return "account/myinfo";
 	}
 	
-	
 }
