@@ -9,10 +9,9 @@
 				 <div id="div1">
 					<div id="br"></div>
 				 	<div id="mark">
-<<<<<<< HEAD
+
 				 		<!-- <a href="..\homepage\homepage.html"><img src="../img/logo.png" width="100px"/></a> -->
-=======
->>>>>>> refs/remotes/origin/master
+
 				 		<a href="<%=application.getContextPath()%>/"><img src="<%=application.getContextPath()%>/resources/img/logo.png" width="100px"/></a>
 				 	</div>
 				 	<div id="login">
