@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@charset "UTF-8";
+
+<style type ="text /css ">* {
+	box-sizing: border-box;
+}
+
+#wrapper{
+				width: 1200px;
+				text-align: center;
+				margin: 0px auto;
+			}
+			.btn{
+			cursor: pointer;
+			border: 0;
+			outline: 0;
+			}
+			#event h1{
+				font-size: 30px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			#id7:hover{
+				fn7();
+			}
+			
+		#search_inform{
+			margin: 0px auto;
+			width: 400px;
+			height: 130px;
+			justify-content: center;
+			text-align: center;
+			margin-bottom: 0px;
+		}
+			#search_big {
+				font-size: 40px;
+				}
+			#search_det {
+				font-size: 10px;
+				color: gray;
+				}
+		
+		#search_line{
+			margin-bottom: 25px;
+			height: 0px;
+			border-bottom: solid 3px gray;
+		}
+	
+		footer {
+			background-color: #f8f9fa;
+		}
+		
+		#footer {
+			padding: 50px 20px;
+			color: #495057;
+			font-family: 'Noto Sans KR light';
+			font-size: 10px;
+			text-align: right;
+			}
+		</style>
+		<script>
+		const fun1 = () => {
+					window.location.href="./event_tabmenu.html";
+				}; 
+		const fun2 = () => {
+					window.location.href="./event_friends.html";		
+						}; 
+
+		
+		</script>
