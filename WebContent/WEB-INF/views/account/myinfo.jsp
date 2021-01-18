@@ -63,10 +63,8 @@
 							
 								<div id ="tempdiv" style="display:none">
 									<li><a href="<%=application.getContextPath()%>/seller/goodsRegist" name="sel01">상품등록</a></li>
-									<li><a href="../items/ItemChange.html" name="sel02">상품수정</a></li>
+									<li><a href="<%=application.getContextPath()%>/seller/goodsRevise" name="sel02">상품수정</a></li>
 								</div>
-		
-							
 							
 						</ul>
 					</nav>
