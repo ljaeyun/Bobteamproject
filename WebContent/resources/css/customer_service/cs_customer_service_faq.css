@@ -83,14 +83,12 @@
 				width: 700px;
 				height: 50px;
 				margin: 22px auto;
-				background-color: white;
 				align-items: center;
+				background-color: #f1f3f5;
 			}
+			#search_btn { background-color:white; height: 600px;}
 			
-			#faq_search {
-				width: 100%;
-				height: 100%;
-			}
+			
 		#faq_category_wrap{
 			display:flex;
 			flex-direction: column;
@@ -176,23 +174,29 @@
 			margin-top: 50px;
 			width: 1100px;
 			height: 100px;
-			background-color: #ced4da;
+			background-color: #dee2e6;
 			display : flex;
 			flex-direction : row;
 		}
+				
+				#banner_image{
+					padding-top : 20px;
+					padding-left: 20px;
+				}
+				
 			
-		#indiq_banner_text {
-			width: 900px;
-			height : 100px;
-			padding-left: 35px;
-			padding-top: 48px;
-		}
-		
-		#indiq_banner_btn {
-			width: 100px;
-			height: 50px;
-			margin-top : 20px;
-		}
+				#indiq_banner_text {
+					width: 800px;
+					height : 100px;
+					padding-left: 35px;
+					padding-top: 40px;
+				}
+				
+				#indiq_banner_btn {
+					width: 100px;
+					height: 50px;
+					margin-top : 20px;
+				}
 			
 		#indiv_question_box {
 			width: 800px;
@@ -200,19 +204,25 @@
 			margin: 0px auto; 	
 		}
 		
+		#indiq_title {
+			font-size: 35px;
+		}
+		
 		#indiqBox{
 			margin-top: 20px;
 			padding-left: 10px;
 		}
 		
-		#indiq_cat_box {
-			margin-top : 15px;
-			font-size : 15px;
-			font-weight : bold;
-		}
+			#indiq_cat_box {
+				margin-top : 15px;
+				font-size : 15px;
+				font-weight : bold;
+			}
 		
 		#indiq_content_box {
 			margin-top : 15px;
+			font-weight : bold;
+			
 		}
 		
 		#indiq_warning {
@@ -221,5 +231,8 @@
 			text-align : right;
 		}
 		
+		#indiq_submitbox {
+			margin: 0px auto;
+		}
 
 				

@@ -71,7 +71,10 @@
 				<div id="search_notice"><b>FAQ 검색</b></div>			
 				<div id="search_box">
 					<div id="search_input">
-						<input id="faq_search" type="text" placeholder="검색" />
+						<form action="faq_search">
+							<input id="search_txt" type="text" name="faq_search" style="width:635px; height: 50px;"/>
+							<input id="search_btn" type="submit" value="검색"style="width: 60px; height: 45px;"></input>
+						</form>
 					</div>
 				</div>
 			
@@ -146,6 +149,9 @@
 			</div>
 			
 		<div id="indiq_banner">
+			<div id="banner_image">
+				<img width="50px" src="<%=application.getContextPath()%>/resources/img/ask_icon.png"></img>
+			</div>
 			<div id="indiq_banner_text">FAQ로 해결되지 않으셨다면, 궁금한 점을 문의해주세요. </div>
 			<div id="indiq_banner_btn"> 
 				<a class="btn btn-light"  href="javascript:indi1()">1대1문의 작성</a>
