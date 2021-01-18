@@ -134,7 +134,7 @@ function fun5(){
 
 			</div>
 			
-			
+			<div>
 			<div id= "people1">
 			
 				  <table style="table-layout: fixed" id= "blue1">
@@ -265,7 +265,7 @@ function fun5(){
 				</tr>
 				</table> -->
 			</div>
-		
+			</div>
 			
 			<hr/>
 			

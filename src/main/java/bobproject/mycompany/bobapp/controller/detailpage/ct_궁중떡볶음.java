@@ -1,17 +1,5 @@
 package bobproject.mycompany.bobapp.controller.detailpage;
 
-<<<<<<< HEAD
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-@Controller
-@RequestMapping("/detailpage")
-public class ct_궁중떡볶음 {
-	private final static Logger logger = 
-			LoggerFactory.getLogger(ct_궁중떡볶음.class);
-=======
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,5 +42,5 @@ public class ct_궁중떡볶음 {
 	}
 	
 	
->>>>>>> branch 'master' of https://github.com/ljaeyun/Bobteamproject
+
 }

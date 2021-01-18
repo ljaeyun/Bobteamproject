@@ -52,10 +52,9 @@
 
 /* Style tab links */
 .tablink {
-	margin-top: 100px;
-	margin-bottom: 100px;
+	margin-top: 100px auto;
 	background-color: white;
-	float: left;
+	width:100%;
 	cursor: pointer;
 	font-size: 15px;
 	text-align: center;
