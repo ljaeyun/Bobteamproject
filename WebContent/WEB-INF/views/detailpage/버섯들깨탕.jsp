@@ -20,10 +20,10 @@
 		<section id="sec01">
 			<div id ="div01">
 			
-				<img width="450px" height="530px" src="<%=application.getContextPath()%>/resources/img/detailpage/폭찹스테이크/폭찹_01.jpg"/>
+				<img width="450px" height="530px" src="<%=application.getContextPath()%>/resources/img/detailpage/버섯들깨탕/버섯들깨탕_1.jpg"/>
 				</div>
 			<div id ="div02">
-				<h1>도톰한 목살과 비법 소스의 만남 <br/> 폭찹스테이크</h1>
+				<h1>고소한 들깨로 맛을 낸 진한국물<br/> 소고기 모둠버섯들깨탕</h1>
 				<h2>손쉽게 완성하는 근사한 일품요리</h2>
 				<h3> 19,900원</h3>
 				<h4>로그인 후 적립혜택이 적용됩니다.</h4>
@@ -69,7 +69,8 @@
 
 			
 			<ul id= "menu01">
-				<oi id="oi1"><a href ="tologin">장바구니 담기</a></oi>
+			
+			<oi id="oi1"><a href ="tologin">장바구니 담기</a></oi>
 				<oi id="oi2">늘 사는 것</oi>
 				<oi id="oi3">재입고 알림</oi>
 			</ul>
@@ -86,15 +87,15 @@
 				<oi >상품 문의</oi>
 			</ul>	
 				<div id="div04">
-					<img width="1100px" src="<%=application.getContextPath()%>/resources/img/detailpage/폭찹스테이크/폭찹_02.jpg"/>
+					<img width="1100px" src="<%=application.getContextPath()%>/resources/img/detailpage/버섯들깨탕/버섯들깨탕_2.jpg"/>
 				</div>
 			<div id="div05">
 				<h8>손쉽게 완성하는 근사한 일품요리</h8>
 				<br/>
-				<h9>[밥향기]한우 <br/>폭찹스테이크</h9>
+				<h9>[밥향기]진한 육수로 우려낸<br/>소고기 버섯 들깨탕</h9>
 				
 				<hr>
-				<p>특별한 모임을 염두해 두고 있는 분이라면,폭찹스테이크를 주목해주세요.
+				<p>특별한 모임을 염두해 두고 있는 분이라면,밥향기 한우 갈릭버터 치즈 오븐구이를 주목해주세요.
 				특출난 요리 실력이 없어도 근사한
 				<br/>한우 요리를 완성할 수 있어요. 어획 후 자숙하여 급속 냉동한 제품으로 조리가 매우 간단하답니다
 				. 가위로 쓱쓱 손질한 뒤 동봉된 갈릭버터
@@ -103,8 +104,8 @@
 				 식탁위 특별함을 더해보세요.</p>
 			</div>
 			<div id="div06">
-				<h10>영상으로 미리 만나는 한우<br/>폭찹스테이크</h10>
-				<img width="1100px"  src="<%=application.getContextPath()%>/resources/img/detailpage/폭찹스테이크/폭찹_03.jpg"/>
+				<h10>영상으로 미리 만나는 한우<br/>소고기 버섯들깨탕</h10>
+				<img width="1100px"  src="<%=application.getContextPath()%>/resources/img/detailpage/버섯들깨탕/버섯들깨탕_3.jpg"/>
 			</div>
 			<div id="div07">
 				<hr >
@@ -140,10 +141,10 @@
 			<div id="div08">
 				<hr>
 				<h14>밥향기's Pick</h14>
-				<img width="1100px" src="<%=application.getContextPath()%>/resources/img/detailpage/폭찹스테이크/폭찹_04.jpg">
+				<img width="1100px" src="<%=application.getContextPath()%>/resources/img/detailpage/버섯들깨탕/버섯들깨탕_4.jpg">
 			</div>
 			<div id="div09">
-				<h15>폭찹스테이크</h15>
+				<h15>소고기 버섯 들깨탕</h15>
 				<ul>
 					<li><b>구성:</b>①한우(450g), ②모짜렐라 치즈(35g), ③갈릭버터치즈(35g)</li>
 					<li><b>특징:</b>속이 꽉찬 캐나다산 한우를 자숙한 뒤 냉동해 손질과 조리가 편리한 제품이에요. 모짜렐라 치즈와 갈릭버터 소스가<br/>
@@ -154,7 +155,7 @@
 			<div id="div10">
 				<h16>밥향기's Tip!</h16>
 					<div id="div10_1">
-					<img width="900px" src="<%=application.getContextPath()%>/resources/img/detailpage/폭찹스테이크/폭찹_05.jpg"/>
+					<img width="900px" src="<%=application.getContextPath()%>/resources/img/detailpage/버섯들깨탕/버섯들깨탕_5.jpg"/>
 			
 					<h17>손질법을 확인하세요</h17>
 					<ul>
@@ -175,7 +176,7 @@
 					</div>
 					
 					<div id="div10_2">
-					<img width="900px"  src="<%=application.getContextPath()%>/resources/img/detailpage/폭찹스테이크/폭찹_06.jpg"/>
+					<img width="900px"  src="<%=application.getContextPath()%>/resources/img/detailpage/버섯들깨탕/버섯들깨탕_6.jpg"/>
 					<h17>완성된 한우는 이렇게 드세요.</h17>
 					<ul>
 						<li>몸통부분은 포크와 나이프를 이용해 잘라드세요. 한 번 자숙한 제품이라 껍질과 살이 쉽게 분리됩니다.</li>
@@ -190,7 +191,7 @@
 				<h18>About Bland</h18>
 				</div>
 				<div id="div11_2">	
-					<img width="170px" height="70px" src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic04.PNG"/>
+					<img width="170px" height="70px" src="<%=application.getContextPath()%>/resources/imgdetailpage/c_pic04.PNG"/>
 					<ul>
 						<oi><h19>세상의 미식을 당신의 식탁으로</h19></oi>
 						<br/>
@@ -209,7 +210,7 @@
 				<h21>밥향기's Image</h21>
 				
 				<img width="1100px" height="600px" src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic05.PNG"/>
-				<h22>폭찹스테이크</h22>
+				<h22>소고기 버섯들깨탕</h22>
 				<hr>
 			</div>
 			<div id="div13">
@@ -280,7 +281,6 @@
 					<a class="btn_page" id="next" href="to_nextpage">다음 페이지</a>
 				</div>
 				</div>
-	
 	
 		<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 	

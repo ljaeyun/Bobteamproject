@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -69,9 +70,7 @@
 
 			
 			<ul id= "menu01">
-			
-				<oi id="oi1"><a href ="addCart">장바구니 담기</a></oi>
-			
+			<oi id="oi1"><a href ="tologin">장바구니 담기</a></oi>
 				<oi id="oi2">늘 사는 것</oi>
 				<oi id="oi3">재입고 알림</oi>
 			</ul>

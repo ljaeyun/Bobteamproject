@@ -20,25 +20,15 @@ public class ct_궁중떡볶음 {
 			LoggerFactory.getLogger(ct_궁중떡볶음.class);
 	
 	@RequestMapping("/궁중떡볶음")
-	public String DP() {
+	public String 궁중떡볶음() {
 		logger.info("디테일 페이지가 실행되었습니다.");
 		return "detailpage/궁중떡볶음";
 	}
 	
-	@GetMapping("/addCart")
-	public String addCart(HttpSession session) {
-		
-		List<CartList> list = new ArrayList<>();
-		CartList cartList = new CartList();
-		cartList.setPd_name("궁중떡볶음");
-		cartList.setPd_price("19900");
-		cartList.setPd_qn("1");
-		list.add(cartList);
-		
-		session.setAttribute("cartList", list);
-		
-		logger.info("카트에 담았습니다.");
-		return "redirect:/cart/cart";
+	
+	@GetMapping("/tologin")
+	public String tologin() {
+		return "redirect:/account/login";
 	}
 	
 	
