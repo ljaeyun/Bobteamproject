@@ -10,9 +10,9 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>		 -->
 		<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>한국인은 밥심 밥향기</title>
 
-<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/main.css">
+		<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/home.css">
 </head>
 <body>
 	

@@ -48,7 +48,7 @@
 						 
 						<div id="icon">
 							<a href="<%=application.getContextPath()%>/account/myinfo"><i class="fa fa-user" aria-hidden="true"></i> 마이페이지</a>
-							<a href="<%=application.getContextPath()%>/cart/cart_none"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 장바구니</a>
+							<a href="<%=application.getContextPath()%>/cart/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 장바구니</a>
 						</div>
 						
 							

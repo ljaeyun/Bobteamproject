@@ -145,20 +145,17 @@
 				line-height: 30px;
 			}
 			
-			.joinbtn {
-				height:150px;
-			}
-			
 			#checkbtn {
 				background-color : #071338;
 				color : white;
 				border-radius : 8px;	
 				border : none;
 				outline:none;
-				height: 150px;
 			}
 			
-		
+			#checkbtn {
+				
+			}
 			
 			.btn{
 				background-color:#071338
