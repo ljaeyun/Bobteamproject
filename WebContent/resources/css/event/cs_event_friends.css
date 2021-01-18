@@ -4,12 +4,13 @@
 
 * {
 	box-sizing: border-box;
+	font-family: 'Noto Sans KR';
 }	#event_friends{
 				
 				width: 1000px;
 				box-sizing: border-box;
 				margin: auto;
-				font-family: 'Noto Sans KR'
+				
 			}
 			
 				 #side01, #side02, #side03{

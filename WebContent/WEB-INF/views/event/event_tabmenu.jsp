@@ -9,6 +9,106 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>	
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+function fun1(){
+	$.ajax({
+		url:"tabmenu1",
+		method:"get",
+		success:function(data){
+			$("#people1").html(data);
+			$("#people1").show(data);
+			$("#people2").hide(data);
+			$("#people3").hide(data);
+			$("#people4").hide(data);
+			$("#people5").hide(data);
+			$("#btn1").css({"background-color": "#364fc7", "color": "white"});
+			$("#btn2").css({"background-color": "", "color": ""});
+			$("#btn3").css({"background-color": "", "color": ""});
+			$("#btn4").css({"background-color": "", "color": ""});
+			$("#btn5").css({"background-color": "", "color": ""});
+		}
+	});
+};
+
+function fun2(){
+	$.ajax({
+		url:"tabmenu2",
+		method:"get",
+		success:function(data){
+			$("#people2").html(data);
+			$("#people1").hide(data);
+			$("#people2").show(data);
+			$("#people3").hide(data);
+			$("#people4").hide(data);
+			$("#people5").hide(data);
+			$("#btn2").css({"background-color": "#1864ab", "color": "white"});
+			$("#btn1").css({"background-color": "", "color": ""});
+			$("#btn3").css({"background-color": "", "color": ""});
+			$("#btn4").css({"background-color": "", "color": ""});
+			$("#btn5").css({"background-color": "", "color": ""});
+		}
+	});
+};
+
+function fun3(){
+	$.ajax({
+		url:"tabmenu3",
+		method:"get",
+		success:function(data){
+			$("#people3").html(data);
+			$("#people1").hide(data);
+			$("#people2").hide(data);
+			$("#people3").show(data);
+			$("#people4").hide(data);
+			$("#people5").hide(data);
+			$("#btn3").css({"background-color": "#1c7ed6", "color": "white"});
+			$("#btn1").css({"background-color": "", "color": ""});
+			$("#btn2").css({"background-color": "", "color": ""});
+			$("#btn4").css({"background-color": "", "color": ""});
+			$("#btn5").css({"background-color": "", "color": ""});
+		}
+	});
+};
+
+function fun4(){
+	$.ajax({
+		url:"tabmenu4",
+		method:"get",
+		success:function(data){
+			$("#people4").html(data);
+			$("#people1").hide(data);
+			$("#people2").hide(data);
+			$("#people3").hide(data);
+			$("#people4").show(data);
+			$("#people5").hide(data);
+			$("#btn4").css({"background-color": "#4dabf7", "color": "white"});
+			$("#btn1").css({"background-color": "", "color": ""});
+			$("#btn2").css({"background-color": "", "color": ""});
+			$("#btn3").css({"background-color": "", "color": ""});
+			$("#btn5").css({"background-color": "", "color": ""});
+		}
+	});
+};
+
+function fun5(){
+	$.ajax({
+		url:"tabmenu5",
+		method:"get",
+		success:function(data){
+			$("#people5").html(data);
+			$("#people1").hide(data);
+			$("#people2").hide(data);
+			$("#people3").hide(data);
+			$("#people4").hide(data);
+			$("#people5").show(data);
+			$("#btn5").css({"background-color": "#868e96", "color": "white"});
+			$("#btn1").css({"background-color": "", "color": ""});
+			$("#btn2").css({"background-color": "", "color": ""});
+			$("#btn3").css({"background-color": "", "color": ""});
+			$("#btn4").css({"background-color": "", "color": ""});
+		}
+	});
+};					</script>
 
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/event/cs_event_tabmenu.css">
 </head>
@@ -26,21 +126,21 @@
 			<div id="search_line"></div>
 			</div>
 			<div class = btn_A>
-				 <a type="button" id= btn1 class="tablink" onclick="fun1()">블루비양카</a>
-				 <a type="button" id= btn2 class="tablink"onclick="fun2()"> 더 블루  </a>
-				 <a type="button" id= btn3 class="tablink"onclick="fun3()" > 블루 </a>
-				 <a type="button" id= btn4 class="tablink"onclick="fun4()"> 스카이 </a>
-				 <a type="button" id= btn5 class="tablink"onclick="fun5()"> 그레이 </a>
+				 <a type="button" id= btn1 class="tablink" 	href="javascript:fun1()">블루비양카</a>
+				 <a type="button" id= btn2 class="tablink"	href="javascript:fun2()"> 더 블루  </a>
+				 <a type="button" id= btn3 class="tablink"	href="javascript:fun3()" > 블루 </a>
+				 <a type="button" id= btn4 class="tablink"	href="javascript:fun4()"> 스카이 </a>
+				 <a type="button" id= btn5 class="tablink"	href="javascript:fun5()"> 그레이 </a>
 
 			</div>
 			
 			
 			<div id= "people1">
-		
-				<table style="table-layout: fixed" id= "blue1">
+			
+				  <table style="table-layout: fixed" id= "blue1">
 				
 				<tr>
-					<th style = font-color:red ><h1>블루비양카</h1></th>
+					<th><h1>블루비양카</h1></th>
 					<th>적립률 <b>10</b>% </th>
 					<th></th>
 				</tr>
@@ -59,11 +159,12 @@
 					<th>이벤트 최우선 적용</th>
 					<th></th>
 				</tr>
-				</table>
-			</div>
+				</table> 
+			</div> 
+			
+			
 			<div id= "people2">
-			<hr/>
-				<table style="table-layout: fixed" id= "blue2">
+				<!-- <table style="table-layout: fixed" id= "blue2">
 				
 				<tr>
 					<th ><h1>더 블루</h1></th>
@@ -85,11 +186,10 @@
 					<th>이벤트 우선 적용</th>
 					<th></th>
 				</tr>
-				</table>
+				</table> -->
 			</div>
 			<div id= "people3">
-			<hr/> 
-				<table style="table-layout: fixed" id= "blue3">
+				<!-- <table style="table-layout: fixed" id= "blue3">
 				
 				<tr>
 					<th><h1>블루 &nbsp;</h1></th>
@@ -111,11 +211,10 @@
 					<th>이벤트 우선 적용</th>
 					<th></th>
 				</tr>
-				</table>
+				</table> -->
 			</div>
 			<div id= "people4">
-			<hr/>
-				<table style="table-layout: fixed" id= "blue4">
+			<!-- <table style="table-layout: fixed" id= "blue4">
 		
 				<tr>
 					<th><h1>스카이</h1></th>
@@ -137,10 +236,11 @@
 					<th>이벤트 우선 적용</th>
 					<th></th>
 				</tr>
-				</table>
+				</table> -->
 			</div>
+			
 			<div id= "people5">
-			<hr/>
+			<!-- <hr/>
 				<table style="table-layout: fixed" id= "blue5">
 				
 				<tr>
@@ -163,8 +263,10 @@
 					<th>밥향기 이벤트 알람발송</th>
 					<th></th>
 				</tr>
-				</table>
+				</table> -->
 			</div>
+		
+			
 			<hr/>
 			
 			<div id ="extra1">
@@ -173,106 +275,11 @@
 					<li>등급별 할인 쿠폰혜택은 변경 될 수 있습니다.
 				</ul>
 			</div>
-			</section>	
-		</div>
-			 <script>
-			function fun1() {
-				  document.getElementById("btn1").style.display = "block";
-				  btn1.style.color = "white";
-				  btn2.style.color = "#1864ab";	
-				  btn3.style.color = "#1c7ed6";	
-				  btn4.style.color = "#4dabf7";	
-				  btn5.style.color = "#868e96";	
-				  
-				  btn1.style.backgroundColor = "#364fc7";
-				  btn2.style.backgroundColor = "white";	
-				  btn3.style.backgroundColor = "white";	
-				  btn4.style.backgroundColor = "white";	
-				  btn5.style.backgroundColor = "white";	
-				  document.getElementById("people1").style.display = "block";
-				  document.getElementById("people2").style.display = "";
-				  document.getElementById("people3").style.display = "";
-				  document.getElementById("people4").style.display = "";
-				  document.getElementById("people5").style.display = "";
-				}
-			function fun2() {
-				  document.getElementById("btn2").style.display = "block";
-					
-				  
-				  btn1.style.color = "#364fc7";
-				  btn2.style.color = "white";	
-				  btn3.style.color = "#1c7ed6";	
-				  btn4.style.color = "#4dabf7";	
-				  btn5.style.color = "#868e96";	
-				  btn1.style.backgroundColor = "white";
-				  btn2.style.backgroundColor = "#1864ab";	
-				  btn3.style.backgroundColor = "white";	
-				  btn4.style.backgroundColor = "white";	
-				  btn5.style.backgroundColor = "white";	
-				  document.getElementById("people1").style.display = "none";
-				  document.getElementById("people2").style.display = "block";
-				  document.getElementById("people3").style.display = "";
-				  document.getElementById("people4").style.display = "";
-				  document.getElementById("people5").style.display = "";
-				}
-			function fun3() {
-				 btn1.style.color = "#364fc7";
-				  btn2.style.color = "#1864ab";	
-				  btn3.style.color = "white";	
-				  btn4.style.color = "#4dabf7";	
-				  btn5.style.color = "#868e96";	
-				  btn1.style.backgroundColor = "white";
-				  btn2.style.backgroundColor = "white";	
-				  btn3.style.backgroundColor = "#1c7ed6";	
-				  btn4.style.backgroundColor = "white";	
-				  btn5.style.backgroundColor = "white";			
-				  document.getElementById("btn3").style.display = "block";
-				  document.getElementById("people1").style.display = "none";
-				  document.getElementById("people2").style.display = "";
-				  document.getElementById("people3").style.display = "block";
-				  document.getElementById("people4").style.display = "";
-				  document.getElementById("people5").style.display = "";
-				}
-			function fun4() {
-				 btn1.style.color = "#364fc7";
-				  btn2.style.color = "#1864ab";	
-				  btn3.style.color = "#1c7ed6";	
-				  btn4.style.color = "white";	
-				  btn5.style.color = "#868e96";	
-				 btn1.style.backgroundColor = "white";
-				  btn2.style.backgroundColor = "white";	
-				  btn3.style.backgroundColor = "white";	
-				  btn4.style.backgroundColor = "#4dabf7";	
-				  btn5.style.backgroundColor = "white";	
-				  document.getElementById("btn4").style.display = "block";
-				  document.getElementById("people1").style.display = "none";
-				  document.getElementById("people2").style.display = "";
-				  document.getElementById("people3").style.display = "";
-				  document.getElementById("people4").style.display = "block";
-				  document.getElementById("people5").style.display = "";
-				}
-			function fun5() {
-				  btn1.style.color = "#364fc7";
-				  btn2.style.color = "#1864ab";	
-				  btn3.style.color = "#1c7ed6";	
-				  btn4.style.color = "#4dabf7";	
-				  btn5.style.color = "white";	
-				  btn1.style.backgroundColor = "white";
-				  btn2.style.backgroundColor = "white";	
-				  btn3.style.backgroundColor = "white";	
-				  btn4.style.backgroundColor = "white";	
-				  btn5.style.backgroundColor = "#868e96";	
-				  document.getElementById("btn5").style.display = "block";
-				  document.getElementById("people1").style.display = "none	";
-				  document.getElementById("people2").style.display = "";
-				  document.getElementById("people3").style.display = "";
-				  document.getElementById("people4").style.display = "";
-				  document.getElementById("people5").style.display = "block";
-				}
-				
-  		</script> 
-		
+			</section>
+			</div>
 	
+			
+
 		<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 	
 </body>

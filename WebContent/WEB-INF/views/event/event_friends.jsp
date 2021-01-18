@@ -24,6 +24,8 @@
 				<h4 id="search_det">밥향기를 친구에게 추천하고, 친구와 함께 적립금 혜택을 받아보세요.<br/>
 					 초대할 떄마다 나의 적립금이 차곡차곡 쌓여요
 				</h4></div>	
+				
+				
 				<div id="search_line"></div>
 				
 				 <div id="mainframe02">	
@@ -63,8 +65,8 @@
 						
 					</div>
 					<div id="vip_gift02">
-						<img height=300px src="./이것이 자바다.PNG"/>
-						<img height=300px src="./혼공자.PNG"/>
+						<img height=300px src="<%=application.getContextPath() %>/resources/img/이것이 자바다.PNG"/>
+						<img height=300px src="<%=application.getContextPath() %>/resources/img/혼공자.PNG"/>
 					</div>
 			</div>
 			</div>
