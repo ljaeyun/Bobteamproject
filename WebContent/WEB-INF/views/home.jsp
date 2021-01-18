@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 <title>한국인은 밥심 밥향기</title>
 
-<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/home.css">
+		<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/home.css">
 </head>
 <body>
 	
