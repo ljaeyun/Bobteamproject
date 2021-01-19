@@ -78,7 +78,7 @@ public class goodsRegist {
 
 		
 		
-		return "redirect:/seller/goodsRegist";
+		return "redirect:/goodsRegist";
 	}
 	
 }

@@ -33,7 +33,7 @@ public class createId {
 		
 		
 		
-		return "redirect:../";
+		return "redirect:/";
 	}
 	
 }
