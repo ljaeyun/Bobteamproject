@@ -21,7 +21,7 @@
 									<li><a href="<%=application.getContextPath()%>/login">로그인</a></li>
 								</c:if>
 								<c:if test="${loginStatus!=null }">
-									<li><a href="logout2">로그아웃</a></li>
+									<li><a href="<%=application.getContextPath()%>/account/logout">로그아웃</a></li>
 								</c:if>
 								<li><a href="<%=application.getContextPath()%>/customer_service_faq">고객센터</a></li>
 							</ul>

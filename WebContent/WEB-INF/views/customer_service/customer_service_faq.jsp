@@ -1,16 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
-	<head>
-	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Black' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Light' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Medium' rel='stylesheet'>
-	<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
-		<meta charset="UTF-8">
-		<title>밥향기 :: FAQ</title>
-		
-		<script>
+<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>	
+		<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+<meta charset="UTF-8">
+<title>밥향기 :: FAQ</title>
+
+<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_faq.css">
+
+	<script>
 		
 			function toggle_01() {
 			  var x = document.getElementById("answer_list_01");
@@ -40,22 +44,20 @@
 				  } else {
 				    x.style.display = "none";}}
 			
-			const noticeClick = () => {window.location.href="/html_css_javascript/project/customer_service/customer_service_notice.html"};
-			const faqClick = () => {window.location.href="/html_css_javascript/project/customer_service/customer_service_faq.html"};
+			const noticeClick = () => {window.location.href="<%=application.getContextPath()%>/customer_service/customer_service_notice"};
+			const faqClick = () => {window.location.href="<%=application.getContextPath()%>/customer_service/customer_service_faq"};
 		
 		</script>	
-		
-			
-		
-		
-	</head>
+
+
+
+</head>
+<body>
 	
-	
-	<body>
+		<jsp:include page="/WEB-INF/views/include/header.jsp"/>
 		
-		
-		<div id="wrapper_contents">
-		<div id="cs_wrap">
+		<div id="wrapper_content">
+			<div id="cs_wrap">
 			<div id="title_box">
 				<div id="title"><b>고객센터</b></div>
 			</div>
@@ -69,7 +71,10 @@
 				<div id="search_notice"><b>FAQ 검색</b></div>			
 				<div id="search_box">
 					<div id="search_input">
-						<input id="faq_search" type=="text" placeholder="검색" />
+						<form action="faq_search">
+							<input id="search_txt" type="text" name="faq_search" style="width:635px; height: 50px;"/>
+							<input id="search_btn" type="submit" value="검색"style="width: 60px; height: 45px;"></input>
+						</form>
 					</div>
 				</div>
 			
@@ -143,7 +148,30 @@
 				</div>
 			</div>
 			
-			<div id="indiv_question_box">
+		<div id="indiq_banner">
+			<div id="banner_image">
+				<img width="50px" src="<%=application.getContextPath()%>/resources/img/ask_icon.png"></img>
+			</div>
+			<div id="indiq_banner_text">FAQ로 해결되지 않으셨다면, 궁금한 점을 문의해주세요. </div>
+			<div id="indiq_banner_btn"> 
+				<a class="btn btn-light"  href="javascript:indi1()">1대1문의 작성</a>
+			</div>
+		
+		</div>
+		<script>
+			function indi1() {
+				$.ajax({
+					url: "indiQuest",
+					method: "get",
+					success: function(data) {
+						$("#indiqBox").html(data);
+					}
+				});
+			};
+		</script>		
+			<div id="indiqBox" style="margin-top:10px;"></div>
+	
+		<!-- 	<div id="indiv_question_box">
 				<div id="indiq_title">1:1 문의</div>
 				<div id="indiq_cat_box">
 					<div id="indiq_cat">문의 유형</div>
@@ -167,11 +195,12 @@
 					<button id="indiq_submit" class="indiq_btn">확인</button>
 					<button id="indiq_cancel" class="indiq_btn">취소</button>
 				</div>
-			</div>
+			</div>  -->
 			
 		</div>
 		</div>
 		
-
+		<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
+		
 	</body>
 </html>

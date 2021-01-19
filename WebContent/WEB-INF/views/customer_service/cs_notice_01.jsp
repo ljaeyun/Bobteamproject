@@ -1,31 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
 	<head>
-	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Black' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Light' rel='stylesheet'>
-	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Medium' rel='stylesheet'>
-	<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+		<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>		 -->
+				<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
 		<meta charset="UTF-8">
-		<title>밥향기 :: 공지사항</title>
+		<title>밥향기 :: 공지사항(세부)</title>
 		
-		<script>
+				<script>
+					function noticeClick () {window.location.href="<%=application.getContextPath()%>/customer_service/customer_service_notice"};
+					function faqClick () {window.location.href="<%=application.getContextPath()%>/customer_service/customer_service_faq"};
+					function noticeBack () {window.location.href="<%=application.getContextPath()%>/customer_service/customer_service_notice"};
+				</script>
 		
-		const noticeClick = () => {window.location.href="customer_service_notice.html"};
-		const faqClick = () => {window.location.href="customer_service_faq.html"};
-		const noticeBack = () => {window.location.href="customer_service_notice.html"};
 		
-		
-		</script>
-		
+				<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_cs_notice.css">
 	</head>
-	
-	
+
 	<body>
+	
+		<jsp:include page="/WEB-INF/views/include/header.jsp"/>
 		
-		
-		<div id="wrapper_contents">
+		<div id="wrapper_content">
 		<div id="cs_wrap">
 			<div id="title_box">
 				<div id="title"><b>고객센터</b></div>
@@ -35,8 +36,7 @@
 				<div id="category_01" class="cs_cat" onclick="faqClick()"><b>FAQ</b></div>
 				<div id="category_02" class="cs_cat" onclick="noticeClick()"><b>공지사항</b></div>
 			</div>
-			
-			<div id="notice_wrap">
+				<div id="notice_wrap">
 				<table id="notice_detail_table">
 					
 					<tr id="notice_detail_title">
@@ -71,11 +71,11 @@
 				 	목록
 				 </button>
 				
+				</div>
 			</div>
-			
-						
 		</div>
-		</div>
+		
+		<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 		
 	</body>
 </html>

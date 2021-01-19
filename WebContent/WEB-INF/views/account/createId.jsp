@@ -93,8 +93,8 @@
 									<form class = "checkbox" name="form1">
 								
 										<p><input type="checkbox" name="selectall" value="selectall" style="margin-right : 25px" id="chk" onclick="selectAll(this)"/><label for="chk"><span><b>전체동의</b></span></label></p>
-										<p><input type="checkbox" name="agreebox" value="twodragon" style="margin-right : 25px" onclick="checkSelectAll()"/><label for="nom1"><span>이용약관동의(필수)</span></label></p>
-										<p><input type="checkbox" name="agreebox" value="myinfo" style="margin-right : 25px" onclick="checkSelectAll()"/><label for="nom2"><span>개인정보처리방침의(필수)</span></label></p>
+										<p><input type="checkbox" name="agreebox" value="twodragon" style="margin-right : 25px" onclick="checkSelectAll(); mustSelect();" class="mustclick"/><label for="nom1"><span>이용약관동의(필수)</span></label></p>
+										<p><input type="checkbox" name="agreebox" value="myinfo" style="margin-right : 25px" onclick="checkSelectAll(); mustSelect();" class="mustclick"/><label for="nom2"><span>개인정보처리방침의(필수)</span></label></p>
 										<p><input type="checkbox" name="agreebox" value="myinfo2" style="margin-right : 25px" onclick="checkSelectAll()"/><label for="nom3"><span>개인정보처리방침의(선택)</span></label></p>
 										<p><input type="checkbox" name="agreebox" value="coupon" style="margin-right : 25px" onclick="checkSelectAll()" /><label for="nom4"><span>무료배송,할인쿠폰 등 혜택/정보 수신 동의(선택)</span></label></p>
 										<p>
@@ -103,14 +103,14 @@
 											<label><input style="margin-left:67px"type="radio" name="INFO" value="email" >이메일 </label>
 											</div> 
 										</p>
-										<p><label><input type="checkbox" name="agreebox" value="oldage" style="margin-right : 25px" onclick="checkSelectAll()"/>본인은 만 14세 이상입니다(필수)</label></p>
+										<p><label><input type="checkbox" name="agreebox" value="oldage" style="margin-right : 25px" onclick="checkSelectAll(); mustSelect();" class="mustclick"/>본인은 만 14세 이상입니다(필수)</label></p>
 						
 									</form>
 								</td>
 							</tr>
 							<tr>
 								<td colspan = "2" style="width : 700px;">
-									<button class="btn btn-info btn-sm" id ="checkbtn" href="create" style="width:100%; height: 45px; align:center; font-size:1.2em;" >가입하기</button>
+									<button  class="btn btn-info btn-sm" id ="checkbtn" href="create" style="width:100%; height: 45px; align:center; font-size:1.2em; cursor:pointer" >가입하기</button>
 								</td>
 							</tr>
 						</table>

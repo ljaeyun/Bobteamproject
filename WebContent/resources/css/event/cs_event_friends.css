@@ -1,26 +1,44 @@
+
 @charset "UTF-8";
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <style type ="text /css ">
 
 * {
 	box-sizing: border-box;
-}	#event_friends{
+	font-family: 'Noto Sans KR';
+}
+	#event_friends{
 				
 				width: 1000px;
 				box-sizing: border-box;
 				margin: auto;
-				font-family: 'Noto Sans KR'
+				
 			}
-			
-				 #side01, #side02, #side03{
-				 color:#adb5bd;
-				 margin: 13px;
-				 }
-				 #leftframe :hover{
-				 color:black;
-				 cursor:pointer;
-				 }
-				 
+			#search_inform {
+	margin: 0px auto;
+	width: 400px;
+	height: 130px;
+	justify-content: center;
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+#search_big {
+	font-size: 40px;
+}
+
+#search_det {
+	font-size: 10px;
+	color: gray;
+}
+
+#search_line {
+	margin-bottom: 25px;
+	height: 0px;
+	border-bottom: solid 3px gray;
+}
+
+								
 			#mainframe{
 			margin-top:200px;
 			margin:0 auto;

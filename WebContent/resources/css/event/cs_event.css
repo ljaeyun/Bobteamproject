@@ -5,9 +5,10 @@
 
 * {
 	box-sizing: border-box;
+	font-family: 'Noto Sans KR';
 }
 
-#wrapper{
+		#wrapper{
 				width: 1200px;
 				text-align: center;
 				margin: 0px auto;
@@ -47,6 +48,7 @@
 			height: 0px;
 			border-bottom: solid 3px gray;
 		}
+	
 	
 		</style>
 		

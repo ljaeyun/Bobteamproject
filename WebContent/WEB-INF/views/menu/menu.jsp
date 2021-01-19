@@ -22,7 +22,6 @@
 			const menu7Click = () => {window.location.href="<%=application.getContextPath()%>/detailpage/목살스테이크"};
 			const menu8Click = () => {window.location.href="<%=application.getContextPath()%>/detailpage/버섯들깨탕"};
 			const menu9Click = () => {window.location.href="<%=application.getContextPath()%>/detailpage/두루치기"};
-			
 			const loginClick = () => {window.location.href="<%=application.getContextPath()%>/account/login"};
 		</script>
 		
@@ -42,6 +41,9 @@
 			<div id="search_line">
 				
 			</div>	
+	
+		
+		
 		
 			
 			
@@ -57,7 +59,8 @@
 							<div class ="infoline_1" onclick="menu1Click()">2인분 | 1시간</div>
 							<div class ="infoline_2" onclick="menu1Click()">랍스터 갈릭버터 치즈 오븐구이</div>
 							<div class ="infoline_3" onclick="menu1Click()">19,900원</div>
-							<span class = "sp_cart" onclick="loginClick()"><img width="25px" height="25px" src="../img/shopping_cart.png"/></span>			
+							<span class = "sp_cart" onclick="loginClick()"><img width="25px" height="25px" src="../img/shopping_cart.png"/></span>
+								<a href="cartmove">뭐지</a>	
 						</div>
 					</div>
 					
