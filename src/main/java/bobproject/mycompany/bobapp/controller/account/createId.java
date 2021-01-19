@@ -30,6 +30,8 @@ public class createId {
 		logger.info("주소 : "+ci.getUhome());
 		logger.info("생일 : "+ci.getUbirth());
 		
+		
+		
 		return "redirect:../";
 	}
 	
