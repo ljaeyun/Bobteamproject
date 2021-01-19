@@ -4,50 +4,17 @@
 
 <html>
 <head>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>	
-		<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+
+
 <meta charset="UTF-8">
 <title>밥향기 :: FAQ</title>
 
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_faq.css">
 
-	<script>
-		
-			function toggle_01() {
-			  var x = document.getElementById("answer_list_01");
-			  if (x.style.display === "none") {
-			    x.style.display = "block";
-			  } else {
-			    x.style.display = "none";}}
-			
-			function toggle_02() {
-				  var x = document.getElementById("answer_list_02");
-				  if (x.style.display === "none") {
-				    x.style.display = "block";
-				  } else {
-				    x.style.display = "none";}}
-			
-			function toggle_03() {
-				  var x = document.getElementById("answer_list_03");
-				  if (x.style.display === "none") {
-				    x.style.display = "block";
-				  } else {
-				    x.style.display = "none";}}
-			
-			function toggle_04() {
-				  var x = document.getElementById("answer_list_04");
-				  if (x.style.display === "none") {
-				    x.style.display = "block";
-				  } else {
-				    x.style.display = "none";}}
-			
-		
-		</script>	
-
-
+		<script src="<%=application.getContextPath()%>/resources/js/customer_service/customer_service.js"> </script>
 
 </head>
 <body>
@@ -70,8 +37,8 @@
 				<div id="search_box">
 					<div id="search_input">
 						<form action="faq_search">
-							<input id="search_txt" type="text" name="faq_search" style="width:635px; height: 50px;"/>
-							<input id="search_btn" type="submit" value="검색"style="width: 60px; height: 45px;"></input>
+							<input id="search_txt" type="text" name="faq_search" />
+							<input id="search_btn" type="submit" value="검색"></input>
 						</form>
 					</div>
 				</div>
@@ -88,7 +55,7 @@
 				
 				<div id="faq_listbox">
 						<div id="question_list_01" class="question_list"  onclick="toggle_01()">
-							<div class="faq_Q_Icon"><img src="../img/letterQ.png" width="35px" height="35px"/></div>
+							<div class="faq_Q_Icon"><img src="<%=application.getContextPath()%>/resources/img/letterQ.png" width="35px" height="35px"/></div>
 							<div id="question_01" class="faq_q" >
 								<ul>
 								 	<li class="question_text">자택이 아닌 다른곳으로도 배송이 가능한가요?</li>
@@ -109,7 +76,7 @@
 							</ul>
 						</div>
 						<div id="question_list_02" class="question_list"  onclick="toggle_02()">
-							<div class="faq_Q_Icon"><img src="../img/letterQ.png" width="35px" height="35px"/></div>
+							<div class="faq_Q_Icon"><img src="<%=application.getContextPath()%>/resources/img/letterQ.png" width="35px" height="35px"/></div>
 							<div id="question_02" class="faq_q">
 								<ul >
 								 	<li class="question_text">외국이나 해외에 거주하는 사람도 배송받을 수 있나요?</li>
@@ -124,7 +91,7 @@
 							</ul>
 						</div>
 						<div id="question_list_03" class="question_list" onclick="toggle_03()">
-							<div class="faq_Q_Icon"><img src="../img/letterQ.png" width="35px" height="35px"/></div>
+							<div class="faq_Q_Icon"><img src="<%=application.getContextPath()%>/resources/img/letterQ.png" width="35px" height="35px"/></div>
 							<div id="question_03" class="faq_q">
 								<ul>
 								 	<li class="question_text">배송을 못받았는데 [배송완료]로 확인돼요.</li>
@@ -147,12 +114,12 @@
 			</div>
 			
 		<div id="indiq_banner">
-			<div >
+			<div id="banner_image">
 				<img width="50px" src="<%=application.getContextPath()%>/resources/img/ask_icon.png"></img>
 			</div>
 			<div id="indiq_banner_text">FAQ로 해결되지 않으셨다면, 궁금한 점을 문의해주세요. </div>
 			<div id="indiq_banner_btn"> 
-				<a class="btn btn-light"  href="javascript:indi1()">1대1문의 작성</a>
+				<a href="javascript:indi1()">1대1문의 <br/> 작성</a>
 			</div>
 		
 		</div>
@@ -169,32 +136,6 @@
 		</script>		
 			<div id="indiqBox" style="margin-top:10px;"></div>
 	
-		<!-- 	<div id="indiv_question_box">
-				<div id="indiq_title">1:1 문의</div>
-				<div id="indiq_cat_box">
-					<div id="indiq_cat">문의 유형</div>
-					<div id="indiq_cat_input">
-						<form id="indiq_cat_form">
-							<input type="text" name="indiq" placeholder="문의 유형을 작성해주세요."></input>
-						</form>
-					</div>
-				</div>
-				<div id="indiq_content_box">
-					<div id="indiq_content_title">문의 내용</div>
-					<div id="indiq_content">
-						<form id="indiq_content_form">
-							<textarea rows="5" cols="100"></textarea>
-						</form>
-					</div>
-				</div>
-				<div id="indiq_waring"> 고객님의 개인정보(이름,핸드폰 번호, 계좌번호 등) 입력 시 관리자에 의해 임의 삭제될 수 있습니다.
-				</div>
-				<div id="indiq_submitbox">
-					<button id="indiq_submit" class="indiq_btn">확인</button>
-					<button id="indiq_cancel" class="indiq_btn">취소</button>
-				</div>
-			</div>  -->
-			
 		</div>
 		</div>
 		

@@ -11,7 +11,7 @@ import bobproject.mycompany.bobapp.dto.cart.CartList;
 
 
 @Controller
-@RequestMapping("/궁중떡볶음")
+@RequestMapping("/detailpage")
 public class ct_궁중떡볶음 {
 	private final static Logger logger = 
 			LoggerFactory.getLogger(ct_궁중떡볶음.class);
@@ -38,10 +38,10 @@ public class ct_궁중떡볶음 {
 }
 
 	
-	@RequestMapping("/궁중떡볶음")
+	@RequestMapping("/menu4")
 	public String DP() {
 		logger.info("디테일 페이지가 실행되었습니다.");
-		return "detailpage/궁중떡볶음";
+		return "detailpage/menu4";
 	}
 	
 
@@ -58,6 +58,6 @@ public class ct_궁중떡볶음 {
 		session.setAttribute("cartList", list);
 		
 		logger.info("카트에 담았습니다.");
-		return "redirect:/cart/cart";
+		return "redirect:/cart";
 	}
 }

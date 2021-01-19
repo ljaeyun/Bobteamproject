@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,7 +69,9 @@
 
 			
 			<ul id= "menu01">
-			<oi id="oi1"><a href ="addCart">장바구니 담기</a></oi>
+			
+				<oi id="oi1"><a href ="addCart">장바구니 담기</a></oi>
+			
 				<oi id="oi2">늘 사는 것</oi>
 				<oi id="oi3">재입고 알림</oi>
 			</ul>
@@ -275,13 +276,12 @@
 					</table>
 					<hr>
 				</div>
+				<div id="div15">
+					<button class="btn_page" id="pre" value="이전 페이지" onclick="previous()">이전 페이지</button>
+					<button	class="btn_page" id="tocategory" value="목록" onclick="tocategory">카테고리</button>
+					<button	class="btn_page" id="next" value="다음 페이지" onclick="next()">다음 페이지</button>
 				</div>
-					<div id="div15">
-					<a class="btn_page" id="pre"  href="to_previouspage">이전 페이지</a>
-					<a class="btn_page" id="tocategory" href="to_category">카테고리</a>
-					<a class="btn_page" id="next" href="to_nextpage">다음 페이지</a>
 				</div>
-				
 
 		<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 	

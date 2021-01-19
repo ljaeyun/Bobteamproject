@@ -27,25 +27,25 @@ public class ct_menu {
 	@GetMapping("/menu1")
 	public String detail1() {
 		logger.info("메뉴에서 랍스터으로 갑니다");
-		return "detailpage/랍스터";
+		return "redirect:/detailpage/menu1";
 	}
 	
 	@GetMapping("/menu2")
 	public String detail2() {
 		logger.info("메뉴에서 굴떡국으로 갑니다");
-		return "detailpage/굴떡국";
+		return "detailpage/menu2";
 	}
 	
 	@GetMapping("/menu3")
 	public String detail3() {
 		logger.info("메뉴에서 폭찹스테이크으로 갑니다");
-		return "detailpage/폭찹스테이크";
+		return "redirect:/detailpage/폭찹스테이크";
 	}
 	
 	@GetMapping("/menu4")
 	public String detail4() {
 		logger.info("메뉴에서 궁중떡볶음으로 갑니다");
-		return "detailpage/궁중떡볶음";
+		return "redirect:/detailpage/menu4";
 	}
 	
 	@GetMapping("/menu5")
