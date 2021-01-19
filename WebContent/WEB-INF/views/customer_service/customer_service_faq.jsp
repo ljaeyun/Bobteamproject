@@ -44,8 +44,6 @@
 				  } else {
 				    x.style.display = "none";}}
 			
-			const noticeClick = () => {window.location.href="<%=application.getContextPath()%>/customer_service/customer_service_notice"};
-			const faqClick = () => {window.location.href="<%=application.getContextPath()%>/customer_service/customer_service_faq"};
 		
 		</script>	
 
@@ -63,15 +61,18 @@
 			</div>
 			
 			<div id="category_box">
-				<div id="category_01" class="cs_cat" onclick="faqClick()"><b>FAQ</b></div>
-				<div id="category_02" class="cs_cat" onclick="noticeClick()"><b>공지사항</b></div>
+				<div id="category_01" class="cs_cat"><a href="customer_service_faq"><b>FAQ</b></a></div>
+				<div id="category_02" class="cs_cat"><a href="customer_service_notice"><b>공지사항</b></a></div>
 			</div>
 			
 			<div id="faq_wrap">
 				<div id="search_notice"><b>FAQ 검색</b></div>			
 				<div id="search_box">
 					<div id="search_input">
-						<input id="faq_search" type="text" placeholder="검색" />
+						<form action="faq_search">
+							<input id="search_txt" type="text" name="faq_search" style="width:635px; height: 50px;"/>
+							<input id="search_btn" type="submit" value="검색"style="width: 60px; height: 45px;"></input>
+						</form>
 					</div>
 				</div>
 			
@@ -146,6 +147,9 @@
 			</div>
 			
 		<div id="indiq_banner">
+			<div >
+				<img width="50px" src="<%=application.getContextPath()%>/resources/img/ask_icon.png"></img>
+			</div>
 			<div id="indiq_banner_text">FAQ로 해결되지 않으셨다면, 궁금한 점을 문의해주세요. </div>
 			<div id="indiq_banner_btn"> 
 				<a class="btn btn-light"  href="javascript:indi1()">1대1문의 작성</a>

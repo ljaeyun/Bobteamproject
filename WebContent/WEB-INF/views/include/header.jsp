@@ -16,14 +16,14 @@
 				 	</div>
 				 	<div id="login">
 				 			<ul id="ul1">
-				 				<li><a href="<%=application.getContextPath()%>/account/createId">회원가입</a></li> 
+				 				<li><a href="<%=application.getContextPath()%>/createId">회원가입</a></li> 
 				 				<c:if test="${loginStatus==null }">
-									<li><a href="<%=application.getContextPath()%>/account/login">로그인</a></li>
+									<li><a href="<%=application.getContextPath()%>/login">로그인</a></li>
 								</c:if>
 								<c:if test="${loginStatus!=null }">
-									<li><a href="logout2">로그아웃</a></li>
+									<li><a href="<%=application.getContextPath()%>/account/logout">로그아웃</a></li>
 								</c:if>
-								<li><a href="<%=application.getContextPath()%>/customer_service/customer_service_faq">고객센터</a></li>
+								<li><a href="<%=application.getContextPath()%>/customer_service_faq">고객센터</a></li>
 							</ul>
 				 	</div>
 			 	</div>
@@ -32,9 +32,9 @@
 			 			<div id="menu">
 							 <ul id="ul2">
 								<li><a href="<%=application.getContextPath()%>/">밥향기 소개</a></li>
-								<li><a href="<%=application.getContextPath()%>/menu/menu">메뉴</a></li>
-								<li><a href="<%=application.getContextPath()%>/review/review">리뷰</a></li>
-								<li><a href="<%=application.getContextPath()%>/event/event">이벤트</a></li>
+								<li><a href="<%=application.getContextPath()%>/menu">메뉴</a></li>
+								<li><a href="<%=application.getContextPath()%>/review">리뷰</a></li>
+								<li><a href="<%=application.getContextPath()%>/event">이벤트</a></li>
 							</ul>
 					 	</div>
 			 			
@@ -47,8 +47,8 @@
 						 </div>
 						 
 						<div id="icon">
-							<a href="<%=application.getContextPath()%>/account/myinfo"><i class="fa fa-user" aria-hidden="true"></i> 마이페이지</a>
-							<a href="<%=application.getContextPath()%>/cart/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 장바구니</a>
+							<a href="<%=application.getContextPath()%>/myinfo"><i class="fa fa-user" aria-hidden="true"></i> 마이페이지</a>
+							<a href="<%=application.getContextPath()%>/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 장바구니</a>
 						</div>
 						
 							

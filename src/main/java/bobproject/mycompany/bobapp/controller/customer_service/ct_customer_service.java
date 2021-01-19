@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import bobproject.mycompany.bobapp.dto.cs_faq.cs_faq;
+
 
 @Controller
 @RequestMapping("/customer_service")
@@ -44,9 +46,25 @@ public class ct_customer_service {
 	}
 
 	@GetMapping("/indiQuest")
-	public String indiq() {
+	public String indiq_popup() {
 		logger.info("1대일 문의를 요청함");
 		return "customer_service/indiQuest";
+	}
+	
+	@RequestMapping("/indiq")
+	public String indiq(cs_faq cf) {
+		String indiq_cat = cf.getIndiq_cat();
+		String indiq_content = cf.getIndiq_content();
+		logger.info("1:1 문의유형 : " + indiq_cat);
+		logger.info("1:1 문의내용 : " + indiq_content);
+		return "redirect:/customer_service/customer_service_faq";
+	}
+	
+	@RequestMapping("/faq_search")
+	public String faq(cs_faq faq) {
+		String faq_search = faq.getFaq_search();
+		logger.info("검색내용 : " + faq_search);
+		return "redirect:/customer_service/customer_service_faq";
 	}
 	
 	

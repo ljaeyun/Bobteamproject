@@ -28,18 +28,35 @@ public class login {
 		logger.info("로그인");
 		logger.info("아이디 : " + uid);
 		logger.info("패스워드 : " + upassword);
+		
 		if(uid.equals("admin") &&upassword.equals("12345")) {
 			session.setAttribute("loginStatus", "ok");
-			
+			session.setAttribute("id", uid);
+			session.setAttribute("ADMIN", "admin");
+			return "redirect:../";
+		} else if(uid.equals("temp") && upassword.equals("123")){
+			//임시로 만든 id 
+			session.setAttribute("loginStatus", "ok");
+			session.setAttribute("id", uid);
+			session.setAttribute("ADMIN", "");
 			return "redirect:../";
 		}
 		return "redirect:/account/login";
 	}
 	
-	@GetMapping("/logout")
+	public boolean checklogin(HttpSession session)
+	{
+		if(session.getAttribute("loginStatus") == "ok")
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	@RequestMapping("/logout")
 	public String logout(HttpSession session) {
+		session.invalidate();	
 		
-		session.removeAttribute("loginStatus");
 		return "redirect:../";
 	}
 }

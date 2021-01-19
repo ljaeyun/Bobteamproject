@@ -12,11 +12,7 @@
 		<meta charset="UTF-8">
 		<title>밥향기 :: 공지사항(세부)</title>
 		
-				<script>
-					function noticeClick () {window.location.href="<%=application.getContextPath()%>/customer_service/customer_service_notice"};
-					function faqClick () {window.location.href="<%=application.getContextPath()%>/customer_service/customer_service_faq"};
-					function noticeBack () {window.location.href="<%=application.getContextPath()%>/customer_service/customer_service_notice"};
-				</script>
+			
 		
 		
 				<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_cs_notice.css">
@@ -33,8 +29,8 @@
 			</div>
 			
 			<div id="category_box">
-				<div id="category_01" class="cs_cat" onclick="faqClick()"><b>FAQ</b></div>
-				<div id="category_02" class="cs_cat" onclick="noticeClick()"><b>공지사항</b></div>
+				<div id="category_01" class="cs_cat"><a href="customer_service_faq"><b>FAQ</b></a></div>
+				<div id="category_02" class="cs_cat"><a href="customer_service_notice"><b>공지사항</b></a></div>
 			</div>
 			<table id="notice_detail_table">
 					
@@ -65,9 +61,7 @@
 				
 				</table>
 				 
-				 <button class="btn_notice_back" onclick="noticeBack()">
-				 	목록
-				 </button>
+				<button class="btn_notice_back"><a href="customer_service_notice">목록</a></button>
 			</div>
 		</div>
 		

@@ -57,17 +57,20 @@
 						</ul>
 						
 						<ul>
-							<h3><b>판매자등록</b></h3>
-							<li><input type="checkbox" onclick="openli(this)" name="seller" value="seller" id="sell" /><label for="sell"><b>판매자등록</b></label></li>
-					
 							
+						<%-- 	<li><input type="checkbox" onclick="openli(this)" name="seller" value="seller" id="sell" /><label for="sell"><b>판매자등록</b></label></li>
+					
 								<div id ="tempdiv" style="display:none">
 									<li><a href="<%=application.getContextPath()%>/seller/goodsRegist" name="sel01">상품등록</a></li>
-									<li><a href="../items/ItemChange.html" name="sel02">상품수정</a></li>
-								</div>
-		
-							
-							
+									<li><a href="<%=application.getContextPath()%>/seller/goodsRevise" name="sel02">상품수정</a></li>
+								</div> --%>
+								
+								<% if(session.getAttribute("ADMIN").equals("admin")){ %>
+									<h3><b>판매자등록</b></h3>
+									<li><a href="<%=application.getContextPath()%>/seller/goodsRegist" name="sel01">상품등록</a></li>
+									<li><a href="<%=application.getContextPath()%>/seller/goodsRevise" name="sel02">상품수정</a></li>
+								<%} %>
+									
 						</ul>
 					</nav>
 					
