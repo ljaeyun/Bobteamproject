@@ -21,7 +21,7 @@ public class ct_menu {
 	@GetMapping("/login1")
 	public String cart1() {
 		logger.info("장바구니 클릭, 로그인으로 넘어갑니다.");
-		return "redirect:/account/login";
+		return "redirect:/login";
 	}
 	
 	@GetMapping("/menu1")
@@ -33,13 +33,13 @@ public class ct_menu {
 	@GetMapping("/menu2")
 	public String detail2() {
 		logger.info("메뉴에서 굴떡국으로 갑니다");
-		return "detailpage/menu2";
+		return "redirect:/detailpage/menu2";
 	}
 	
 	@GetMapping("/menu3")
 	public String detail3() {
 		logger.info("메뉴에서 폭찹스테이크으로 갑니다");
-		return "redirect:/detailpage/폭찹스테이크";
+		return "redirect:/detailpage/menu3";
 	}
 	
 	@GetMapping("/menu4")
@@ -51,31 +51,31 @@ public class ct_menu {
 	@GetMapping("/menu5")
 	public String detail5() {
 		logger.info("메뉴에서 칠리깐쇼새우으로 갑니다");
-		return "detailpage/깐쇼새우";
+		return "redirect:/detailpage/menu5";
 	}
 	
 	@GetMapping("/menu6")
 	public String detail6() {
 		logger.info("메뉴에서 만두전골으로 갑니다");
-		return "detailpage/만두전골";
+		return "redirect:/detailpage/menu6";
 	}
 	
 	@GetMapping("/menu7")
 	public String detail7() {
 		logger.info("메뉴에서 목살스테이크으로 갑니다");
-		return "detailpage/목살스테이크";
+		return "redirect:/detailpage/menu7";
 	}
 	
 	@GetMapping("/menu8")
 	public String detail8() {
 		logger.info("메뉴에서 버섯들깨탕으로 갑니다");
-		return "detailpage/버섯들깨탕";
+		return "redirect:/detailpage/menu8";
 	}
 	
 	@GetMapping("/menu9")
 	public String detail9() {
 		logger.info("메뉴에서 두루치기으로 갑니다");
-		return "detailpage/두루치기";
+		return "redirect:/detailpage/menu9";
 	}
 	
 	

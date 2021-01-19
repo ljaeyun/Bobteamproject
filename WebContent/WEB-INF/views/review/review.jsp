@@ -27,11 +27,9 @@
 		<div id="wrapper_contents">
 			<div id="review_wrapper">
 			
-					<script>
-						const backhome () => {windows.location.href="<%=application.getContextPath()%>/home"};
-					</script>
-				<div id="rewview_ready" onclick="backhome()">
-					<img src="../img/site_ready.jpg" width="600px" height="700px" />
+					
+				<div id="rewview_ready">
+					<a href="backhome"><img src="<%=application.getContextPath()%>/resources/img/site_ready.jpg" width="600px" height="700px" /></a>
 				</div>
 			
 			</div>

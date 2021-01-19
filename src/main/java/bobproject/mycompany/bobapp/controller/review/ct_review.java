@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@RequestMapping("/review")
 public class ct_review {
 
 	private static final Logger logger = LoggerFactory.getLogger(ct_review.class);
@@ -21,7 +20,11 @@ public class ct_review {
 		return "review/review";
 	}
 	
-	
+	@GetMapping("/backhome")
+	public String detail3() {
+		logger.info("홈페이지로 돌아갑니다");
+		return "home";
+	}
 
 	
 }
