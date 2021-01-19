@@ -44,8 +44,6 @@
 				  } else {
 				    x.style.display = "none";}}
 			
-			const noticeClick = () => {window.location.href="<%=application.getContextPath()%>/customer_service/customer_service_notice"};
-			const faqClick = () => {window.location.href="<%=application.getContextPath()%>/customer_service/customer_service_faq"};
 		
 		</script>	
 
@@ -63,8 +61,8 @@
 			</div>
 			
 			<div id="category_box">
-				<div id="category_01" class="cs_cat" onclick="faqClick()"><b>FAQ</b></div>
-				<div id="category_02" class="cs_cat" onclick="noticeClick()"><b>공지사항</b></div>
+				<div id="category_01" class="cs_cat"><a href="customer_service_faq"><b>FAQ</b></a></div>
+				<div id="category_02" class="cs_cat"><a href="customer_service_notice"><b>공지사항</b></a></div>
 			</div>
 			
 			<div id="faq_wrap">
@@ -149,7 +147,7 @@
 			</div>
 			
 		<div id="indiq_banner">
-			<div id="banner_image">
+			<div >
 				<img width="50px" src="<%=application.getContextPath()%>/resources/img/ask_icon.png"></img>
 			</div>
 			<div id="indiq_banner_text">FAQ로 해결되지 않으셨다면, 궁금한 점을 문의해주세요. </div>
