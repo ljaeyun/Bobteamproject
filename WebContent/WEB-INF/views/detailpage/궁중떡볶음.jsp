@@ -23,9 +23,9 @@
 				<img width="450px" height="530px" src="<%=application.getContextPath()%>/resources/img/detailpage/궁중떡볶음/궁중_1.jpg"/>
 				</div>
 			<div id ="div02">
-				<h1>소고기와 떡복이의 조화<br/>수라상 궁중 떡볶음</h1>
+				<h1>소고기와 떡볶이의 조화<br/>궁중 떡볶음</h1>
 				<h2>손쉽게 완성하는 근사한 일품요리</h2>
-				<h3> 19,900원</h3>
+				<h3>19,900원</h3>
 				<h4>로그인 후 적립혜택이 적용됩니다.</h4>
 				
 			<table id ="table01">
@@ -33,7 +33,7 @@
 					<th > 판매단위 </th>
 					<th> 1팩 </th>
 				</tr>
-				<tr >
+				<tr>
 					<th> 중량/용량 </th>
 					<th> 530g</th>
 				</tr>
