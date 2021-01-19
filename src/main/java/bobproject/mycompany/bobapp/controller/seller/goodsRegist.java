@@ -22,8 +22,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import bobproject.mycompany.bobapp.dto.seller.sellergoods;
 
-@Controller
-@RequestMapping("/seller")
+@Controller("goodsRegist")
+/* @RequestMapping("/seller") */
 public class goodsRegist {
 	private static final Logger logger = LoggerFactory.getLogger(goodsRegist.class);
 	
@@ -37,6 +37,7 @@ public class goodsRegist {
 	public String goodsupload(sellergoods sg)
 	{
 		String gname = sg.getGname();
+		sg.setGname(gname);
 		String gcost = sg.getGcost();
 		logger.info("상품명 : " + gname);
 		logger.info("상품판매가 : " + gcost);

@@ -18,11 +18,11 @@
 		<section>
 			<nav>
 				<ul>
-					<li><a id="menu" href ="<%=application.getContextPath()%>/seller/goodsRegist">상품 등록</a></li>    <!-- 주 소 수 정-->
+							<li><a id="menu" href ="<%=application.getContextPath()%>/goodsRegist">상품 등록</a></li>    <!-- 주 소 수 정-->
 					<li><a> &nbsp</a></li>
-					<li><a id="menu" href ="<%=application.getContextPath()%>/seller/goodsRevise">상품 수정</a></li>    <!-- 주 소 수 정-->
+					<li><a id="menu" href ="<%=application.getContextPath()%>/goodsRevise">상품 수정</a></li>    <!-- 주 소 수 정-->
 					<li><a> &nbsp</a></li>
-					<li><a id="menu" href ="<%=application.getContextPath()%>/seller/goodsDetail">상품 상세조회</a></li>    <!-- 주 소 수 정-->
+					<li><a id="menu" href ="<%=application.getContextPath()%>/goodsDetail">상품 상세조회</a></li>    <!-- 주 소 수 정-->
 				</ul>
 				
 				<div id="ClientC">
@@ -93,7 +93,7 @@
 					
 					<div style="margin-bottom:15px;font-family: 'Noto Sans KR Medium';" class = "buttonBox" align ="right">
 						      <!-- 주 소 수 정-->					
-						<a class = "btn" id="can" href="">취소</a>            <!-- 주 소 수 정-->
+						<a class = "btn" id="can" href="../account/myinfo">취소</a>            <!-- 주 소 수 정-->
 					</div>
 	<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 </body>

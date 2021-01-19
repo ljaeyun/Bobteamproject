@@ -9,6 +9,15 @@ public class createIntel {
 	private String uphone; //전화번호
 	private String uhome; //주소
 	private String ubirth; //생일
+	private String gender;
+	
+	
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	public String getUid() {
 		return uid;
 	}

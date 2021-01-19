@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-@Controller
-@RequestMapping("/account")
+@Controller("login")
+/* @RequestMapping("/account") */
 public class login {
 	private static final Logger logger = LoggerFactory.getLogger(login.class);
 	
@@ -33,15 +33,15 @@ public class login {
 			session.setAttribute("loginStatus", "ok");
 			session.setAttribute("id", uid);
 			session.setAttribute("ADMIN", "admin");
-			return "redirect:../";
+			return "redirect:/";
 		} else if(uid.equals("temp") && upassword.equals("123")){
 			//임시로 만든 id 
 			session.setAttribute("loginStatus", "ok");
 			session.setAttribute("id", uid);
 			session.setAttribute("ADMIN", "");
-			return "redirect:../";
+			return "redirect:/";
 		}
-		return "redirect:/account/login";
+		return "redirect:/login";
 	}
 	
 	public boolean checklogin(HttpSession session)
@@ -57,6 +57,6 @@ public class login {
 	public String logout(HttpSession session) {
 		session.invalidate();	
 		
-		return "redirect:../";
+		return "redirect:/";
 	}
 }

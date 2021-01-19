@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.dto.createid.createIntel;
 
-@Controller
-@RequestMapping("/account")
+@Controller("createId")
+/* @RequestMapping("/account") */
 public class createId {
 	private static final Logger logger = LoggerFactory.getLogger(createId.class);
 	
@@ -27,6 +27,7 @@ public class createId {
 		logger.info("이름 : "+ci.getUname());
 		logger.info("이메일 : "+ci.getUemail());
 		logger.info("전화번호 : "+ci.getUphone());
+		logger.info("성별 : " +ci.getGender());
 		logger.info("주소 : "+ci.getUhome());
 		logger.info("생일 : "+ci.getUbirth());
 		

@@ -67,8 +67,8 @@
 								
 								<% if(session.getAttribute("ADMIN").equals("admin")){ %>
 									<h3><b>판매자등록</b></h3>
-									<li><a href="<%=application.getContextPath()%>/seller/goodsRegist" name="sel01">상품등록</a></li>
-									<li><a href="<%=application.getContextPath()%>/seller/goodsRevise" name="sel02">상품수정</a></li>
+									<li><a href="<%=application.getContextPath()%>/goodsRegist" name="sel01">상품등록</a></li>
+									<li><a href="<%=application.getContextPath()%>/goodsRevise" name="sel02">상품수정</a></li>
 								<%} %>
 									
 						</ul>

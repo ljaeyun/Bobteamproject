@@ -22,8 +22,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import bobproject.mycompany.bobapp.dto.seller.sellergoods;
 
-@Controller
-@RequestMapping("/seller")
+@Controller("goodRevise")
+/* @RequestMapping("/seller") */
 public class goodsRevise {
 	private static final Logger logger = LoggerFactory.getLogger(goodsRevise.class);
 	

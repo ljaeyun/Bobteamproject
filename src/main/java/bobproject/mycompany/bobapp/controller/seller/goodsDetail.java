@@ -22,14 +22,16 @@ import org.springframework.web.multipart.MultipartFile;
 
 import bobproject.mycompany.bobapp.dto.seller.sellergoods;
 
-@Controller
-@RequestMapping("/seller")
+@Controller("goodsDetail")
+/* @RequestMapping("/seller") */
 public class goodsDetail {
 	private static final Logger logger = LoggerFactory.getLogger(goodsDetail.class);
 	
 	@RequestMapping("/goodsDetail")
-	public String content() {
+	public String content(sellergoods sg, Model model) {
 		logger.info("상품상세보기");
+		
+		
 		return "seller/goodsDetail";
 	}
 	
