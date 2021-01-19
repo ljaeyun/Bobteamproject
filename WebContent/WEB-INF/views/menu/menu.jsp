@@ -153,25 +153,25 @@
 			
 		
 			<div id="page_num">
-				<a href="<%=application.getContextPath()%>/menu/menu">
+				<a href="menu">
 					<div class="pnum_text">처음</div>
 				</a>
-				<a href="<%=application.getContextPath()%>/menu/menu">
+				<a href="menu">
 					<div class="pnum_text">이전</div>
 				</a>
-				<a href="<%=application.getContextPath()%>/menu/menu">
+				<a href="menu">
 					<div class="pnum_num">1</div>
 				</a>
-				<a href="">
+				<a href="menu">
 					<div class="pnum_num">2</div>
 				</a>
-				<a href="">
+				<a href="menu">
 					<div class="pnum_num">3</div>
 				</a>
-				<a href="">
+				<a href="menu">
 					<div class="pnum_text">다음</div>
 				</a>
-				<a href="">
+				<a href="menu">
 					<div class="pnum_text">맨끝</div>
 				</a>
 			</div>
