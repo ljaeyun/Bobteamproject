@@ -15,10 +15,32 @@ import bobproject.mycompany.bobapp.dto.cart.CartList;
 public class ct_궁중떡볶음 {
 	private final static Logger logger = 
 			LoggerFactory.getLogger(ct_궁중떡볶음.class);
-	/*
-	 * @RequestMapping("/궁중떡볶음") public String content() {
-	 * logger.info("이벤트 페이지 출력"); return "detailpage/궁중떡볶음"; }
-	 */
+	
+	@GetMapping("/menu4")
+	public String DP() {
+		logger.info("디테일 페이지가 실행되었습니다.");
+		return "detailpage/menu4";
+	}
+	
+
+	@GetMapping("/addCart")
+	public String addCart(HttpSession session) {
+		
+		List<CartList> list = new ArrayList<>();
+		/*	for(int i=1; i <= list.size(); i++) { */
+			CartList cartList = new CartList();
+			cartList.setPd_name("궁중떡볶음");
+			cartList.setPd_price("19900");
+			cartList.setPd_qn("1");
+			list.add(cartList);
+/*		}*/
+		session.setAttribute("cartList", list);
+		
+	
+		logger.info("카트에 담았습니다.");
+		return "redirect:/cart";
+	}
+	
 	@GetMapping("/to_previouspage")
 	public String to_previouspage(){
 		logger.info("이전 페이지로 이동합니다.");
@@ -34,30 +56,8 @@ public class ct_궁중떡볶음 {
 		logger.info("이전 페이지로 이동합니다.");
 		return "detailpage/칠리깐쇼새우";
 
-	
-}
+	}
 
 	
-	@RequestMapping("/menu4")
-	public String DP() {
-		logger.info("디테일 페이지가 실행되었습니다.");
-		return "detailpage/menu4";
-	}
 	
-
-	@GetMapping("/addCart")
-	public String addCart(HttpSession session) {
-		
-		List<CartList> list = new ArrayList<>();
-		CartList cartList = new CartList();
-		cartList.setPd_name("궁중떡볶음");
-		cartList.setPd_price("19900");
-		cartList.setPd_qn("1");
-		list.add(cartList);
-		
-		session.setAttribute("cartList", list);
-		
-		logger.info("카트에 담았습니다.");
-		return "redirect:/cart";
-	}
 }

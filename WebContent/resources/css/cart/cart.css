@@ -230,7 +230,7 @@
 					}
 					
 				#cart_order {
-					width: 100%;
+					width: 1200px;
 					height: 100px;
 					align-items: right;
 					display: flex;
@@ -240,7 +240,7 @@
 					padding-top: 20px;
 					padding-right: 60px;
 				}
-					#nonmember {
+				/* 	#nonmember {
 						text-align: center;
 						font-size: 12px;
 						width: 130px;
@@ -249,7 +249,7 @@
 						border-radius: 20px;
 						font-family: 'Noto Sans KR Medium';
 						padding-top: 10px;
-					}
+					} */
 					
 					#member {
 						text-align: center;
@@ -258,7 +258,7 @@
 						height: 40px;
 						background-color: purple;
 						border-radius: 20px;
-						margin-left: 20px;
+						margin-right: 20px;
 						padding-top: 10px;
 					}
 					
