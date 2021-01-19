@@ -18,7 +18,7 @@
 		<section>
 			<nav>
 				<ul>
-							<li><a id="menu" href ="<%=application.getContextPath()%>/goodsRegist">상품 등록</a></li>    <!-- 주 소 수 정-->
+					<li><a id="menu" href ="<%=application.getContextPath()%>/goodsRegist">상품 등록</a></li>    <!-- 주 소 수 정-->
 					<li><a> &nbsp</a></li>
 					<li><a id="menu" href ="<%=application.getContextPath()%>/goodsRevise">상품 수정</a></li>    <!-- 주 소 수 정-->
 					<li><a> &nbsp</a></li>
