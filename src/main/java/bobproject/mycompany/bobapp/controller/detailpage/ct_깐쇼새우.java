@@ -14,16 +14,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import bobproject.mycompany.bobapp.dto.cart.CartList;
 
 @Controller
-@RequestMapping("/detailpage")
+@RequestMapping("/깐쇼새우 ")
 public class ct_깐쇼새우 {
 	private final static Logger logger = 
 			LoggerFactory.getLogger(ct_깐쇼새우.class);
-	
-	@RequestMapping("/깐쇼새우")
-	public String 깐쇼새우() {
-		logger.info("디테일 페이지가 실행되었습니다.");
-		return "detailpage/깐쇼새우";
-	}
 
-}
+	@GetMapping("/to_previouspage")
+	public String to_previouspage(){
+		logger.info("이전 페이지로 이동합니다.");
+		return "detailpage/랍스터";
+	}
+	@GetMapping("/to_category")
+	public String to_category(){
+		logger.info("이전 페이지로 이동합니다.");
+		return "menu/menu";
+	}
+	@GetMapping("/to_nextpage")
+	public String to_nextpage(){
+		logger.info("이전 페이지로 이동합니다.");
+		return "detailpage/폭찹스테이크";
+
 	
+}
+}

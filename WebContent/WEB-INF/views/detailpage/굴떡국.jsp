@@ -21,7 +21,7 @@
 		<section id="sec01">
 			<div id ="div01">
 			
-				<img width="450px" height="530px" src="../img/detailpage/굴떡국/굴떡국_1.jpg"/>
+				<img width="450px" height="530px" src="<%=application.getContextPath()%>/resources/img/detailpage/굴떡국/굴떡국_1.jpg"/>
 				</div>
 			<div id ="div02">
 				<h1>다향 듬뿍 새해맞이 특별 메뉴<br/>매생이굴떡국</h1>
@@ -87,7 +87,7 @@
 				<oi >상품 문의</oi>
 			</ul>	
 				<div id="div04">
-					<img width="1100px" src="../img/detailpage/굴떡국/굴떡국_2.jpg"/>
+					<img width="1100px" src="<%=application.getContextPath()%>/resources/img/detailpage/굴떡국/굴떡국_2.jpg"/>
 				</div>
 			<div id="div05">
 				<h8>손쉽게 완성하는 근사한 일품요리</h8>
@@ -105,7 +105,7 @@
 			</div>
 			<div id="div06">
 				<h10>영상으로 미리 만나는 생굴<br/>매생이굴떡국</h10>
-				<img width="1100px"  src="../img/detailpage/굴떡국/굴떡국_3.jpg"/>
+				<img width="1100px"  src="<%=application.getContextPath()%>/resources/img/detailpage/굴떡국/굴떡국_3.jpg"/>
 			</div>
 			<div id="div07">
 				<hr >
@@ -113,14 +113,14 @@
 			</div>
 				<div id="div07_1">
 					<div id= "Ingredients">
-					<img width="100px" height="80px" src="../img/detailpage/c_pic01.PNG"/>
+					<img width="100px" height="80px" src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic01.PNG"/>
 					<h11>재료와 성분 Ingredient</h11>
 					<ul>
 					<li>캐나다산 생굴</li>
 					</ul>
 					</div>
 					<div id= "Process">
-					<img width="100px" height="80px" src="../img/detailpage/c_pic02.PNG"/>
+					<img width="100px" height="80px" src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic02.PNG"/>
 					<h12>생산 유통 과정 Process</h12>
 					<ul>
 						<li>HACCP인증 시설에서 위생적으로 생산</li>
@@ -129,7 +129,7 @@
 					</div>
 					</div>
 					<div id= "Recommendation">
-					<img width="100px" height="80px" src="../img/detailpage/c_pic03.PNG"/>
+					<img width="100px" height="80px" src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic03.PNG"/>
 					<h13>활용법 Recommendation</h13>
 					<ul>
 					<li>간편하고 근사한 홈파티용 생굴</li>
@@ -141,7 +141,7 @@
 			<div id="div08">
 				<hr>
 				<h14>밥향기's Pick</h14>
-				<img width="1100px" src="../img/detailpage/굴떡국/굴떡국_4.jpg"/>
+				<img width="1100px" src="<%=application.getContextPath()%>/resources/img/detailpage/굴떡국/굴떡국_4.jpg"/>
 			</div>
 			<div id="div09">
 				<h15>매생이굴떡국</h15>
@@ -155,7 +155,7 @@
 			<div id="div10">
 				<h16>밥향기's Tip!</h16>
 					<div id="div10_1">
-					<img width="900px" src="../img/detailpage/굴떡국/굴떡국_5.jpg"/>
+					<img width="900px" src="<%=application.getContextPath()%>/resources/img/detailpage/굴떡국/굴떡국_5.jpg"/>
 			
 					<h17>손질법을 확인하세요</h17>
 					<ul>
@@ -176,7 +176,7 @@
 					</div>
 					
 					<div id="div10_2">
-					<img width="900px"  src="../img/detailpage/굴떡국/굴떡국_6.jpg"/>
+					<img width="900px"  src="<%=application.getContextPath()%>/resources/img/detailpage/굴떡국/굴떡국_6.jpg"/>
 					<h17>완성된 생굴는 이렇게 드세요.</h17>
 					<ul>
 						<li>몸통부분은 포크와 나이프를 이용해 잘라드세요. 한 번 자숙한 제품이라 껍질과 살이 쉽게 분리됩니다.</li>
@@ -191,7 +191,7 @@
 				<h18>About brand</h18>
 				</div>
 				<div id="div11_2">	
-					<img width="170px" height="70px" src="../img/detailpage/c_pic04.PNG"/>
+					<img width="170px" height="70px" src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic04.PNG"/>
 					<ul>
 						<oi><h19>세상의 미식을 당신의 식탁으로</h19></oi>
 						<br/>
@@ -209,7 +209,7 @@
 				<hr>
 				<h21>밥향기's Image</h21>
 				
-				<img width="1100px" height="600px" src="../img/detailpage/c_pic05.PNG"/>
+				<img width="1100px" height="600px" src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic05.PNG"/>
 				<h22>매생이굴떡국</h22>
 				<hr>
 			</div>
@@ -218,19 +218,19 @@
 				<h23>WHY 밥향기</h23>
 					<div id= "div13_1">
 						<div id= "div13_11">
-							<img width="50px"  src="../img/detailpage/c_pic06.PNG"/>
+							<img width="50px"  src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic06.PNG"/>
 							<br/>
 							<h24>깐깐한 상품위원회</h24>
 							<p>나와 내 가족이 먹고 쓸 상품을 고르는<br/>마음으로 매주 상품을 직접 먹어보고<br/>경험해보고 성분, 맛, 안정성 등 다각도의<br/>기준을 통과한 상품만을 판매합니다.</p>
 						</div>
 						<div id= "div13_12">
-							<img width="50px"  src="../img/detailpage/c_pic07.PNG"/>
+							<img width="50px"  src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic07.PNG"/>
 							<br/>
 							<h24>차별화된 밥향기상품</h24>
 							<p>전국각지와 해외의 훌륭한 생산자가 <br/>믿고 선택하는 파트너 밥향기<br/>2000여개가 넘는 밥향기 단독브랜드 <br/>온리 밥향기 상품을 믿고 만나보세요</p>
 						</div>
 							<div id= "div13_13">
-							<img width="50px"  src="../img/detailpage/c_pic08.PNG"/>
+							<img width="50px"  src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic08.PNG"/>
 							<br/>
 							<h24>신선한 풀 콜드 체인 배송</h24>
 							<p>온라인 배송 최초로 산지에서 문앞까지<br/>상온, 냉동, 냉장 상품을 분리 포장 후<br/>최적의 온도를 유지하는 냉장 배송 시스템 <br/>풀콜드체인으로 상품을 신선하게 배송해드립니다.</p>
@@ -238,13 +238,13 @@
 					</div>
 					<div id= "div13_2">
 						<div id= "div13_21">
-							<img width="50px"  src="../img/detailpage/c_pic09.PNG"/>
+							<img width="50px"  src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic09.PNG"/>
 							<br/>
 							<h24>고객, 생산자를 위한 최선의 가격</h24>
 							<p>매주 대형마트와 주요 온라인 마트의 가격<br/>변동상황을 확인해 신선제품 품질을 <br/>타협하지 않는 선에서 최선의 가격으로<br/>합리적으로 판매한니다.</p>
 						</div>
 						<div id= "div13_22">
-							<img width="50px"  src="../img/detailpage/c_pic10.PNG"/>
+							<img width="50px"  src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic10.PNG"/>
 							<br/>
 							<h24>환경을 생각하는 지속가능한 유통</h24>
 							<p>친환경유통에서 부터 생산자가 상품에만 <br/>집중할 수 있는 직매입 유통구조까지 <br/>지속가능한 유통을 고민하여 구성원 <br/>모두가 더 나아질 수 있도록 노력합니다.</p>

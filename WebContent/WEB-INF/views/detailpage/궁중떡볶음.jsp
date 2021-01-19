@@ -275,12 +275,13 @@
 					</table>
 					<hr>
 				</div>
-				<div id="div15">
-					<button class="btn_page" id="pre" value="이전 페이지" onclick="previous()">이전 페이지</button>
-					<button	class="btn_page" id="tocategory" value="목록" onclick="tocategory">카테고리</button>
-					<button	class="btn_page" id="next" value="다음 페이지" onclick="next()">다음 페이지</button>
 				</div>
+					<div id="div15">
+					<a class="btn_page" id="pre"  href="to_previouspage">이전 페이지</a>
+					<a class="btn_page" id="tocategory" href="to_category">카테고리</a>
+					<a class="btn_page" id="next" href="to_nextpage">다음 페이지</a>
 				</div>
+				
 
 		<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 	

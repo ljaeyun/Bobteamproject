@@ -1,6 +1,9 @@
 package bobproject.mycompany.bobapp.controller.detailpage;
 
 import java.util.ArrayList;
+
+
+
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -13,24 +16,33 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.dto.cart.CartList;
 
+
 @Controller
-@RequestMapping("/detailpage")
+@RequestMapping("/궁중떡볶음")
 public class ct_궁중떡볶음 {
 	private final static Logger logger = 
 			LoggerFactory.getLogger(ct_궁중떡볶음.class);
-	
-	@RequestMapping("/궁중떡볶음")
-	public String 궁중떡볶음() {
-		logger.info("디테일 페이지가 실행되었습니다.");
-		return "detailpage/궁중떡볶음";
-	}
-	
-	
-	@GetMapping("/tologin")
-	public String tologin() {
-		return "redirect:/account/login";
-	}
-	
-	
 
+	
+	/*
+	 * @RequestMapping("/궁중떡볶음") public String content() {
+	 * logger.info("이벤트 페이지 출력"); return "detailpage/궁중떡볶음"; }
+	 */
+	@GetMapping("/to_previouspage")
+	public String to_previouspage(){
+		logger.info("이전 페이지로 이동합니다.");
+		return "detailpage/폭찹스테이크";
+	}
+	@GetMapping("/to_category")
+	public String to_category(){
+		logger.info("이전 페이지로 이동합니다.");
+		return "menu/menu";
+	}
+	@GetMapping("/to_nextpage")
+	public String to_nextpage(){
+		logger.info("이전 페이지로 이동합니다.");
+		return "detailpage/칠리깐쇼새우";
+
+	
+}
 }
