@@ -1,7 +1,7 @@
 @charset "UTF-8";
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <style type ="text /css ">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
 
 * {
 	box-sizing: border-box;
@@ -14,7 +14,8 @@
 }
 
 #search_inform {
-	margin: 0px auto;
+
+	margin: 50px auto;
 	width: 400px;
 	height: 130px;
 	justify-content: center;
@@ -27,7 +28,7 @@
 }
 
 #search_det {
-	font-size: 10px;
+	font-size: 15px;
 	color: gray;
 }
 
@@ -52,8 +53,6 @@
 
 /* Style tab links */
 .tablink {
-	margin-top: 100px auto;
-	background-color: white;
 	width:100%;
 	cursor: pointer;
 	font-size: 15px;
@@ -66,10 +65,10 @@
 #btn1 {
 	
 	border: 1px solid #364fc7;;
-	height: 80px;
-	margin: 0px 5px 0 25px;
+	height: 80px !important;
+	margin: 0px 5px 0 0px;
 	border-top-right-radius: 15px;
-	width: 18%;
+	width: 18% !important;
 	padding-top: 30px;
 	color: #364fc7;
 	text-decoration: none;
@@ -78,10 +77,10 @@
 #btn2 {
 	
 	border: 1px solid #1864ab;
-	height: 70px;
+	height: 70px !important;
 	margin: 10px 5px 0 5px;
 	border-top-right-radius: 15px;
-	width: 18%;
+	width: 18% !important;
 	padding-top: 25px;
 	color: #1864ab;
 	text-decoration: none;
@@ -90,10 +89,10 @@
 #btn3 {
 	
 	border: 1px solid #1c7ed6;
-	height: 60px;
+	height: 60px !important;
 	margin: 20px 5px 0 5px;
 	border-top-right-radius: 15px;
-	width: 18%;
+	width: 18% !important;
 	padding-top: 20px;
 	color: #1c7ed6;
 	text-decoration: none;
@@ -102,10 +101,10 @@
 #btn4 {
 	
 	border: 1px solid #4dabf7;
-	height: 50px;
+	height: 50px !important;
 	margin: 30px 5px 0 5px;
 	border-top-right-radius: 15px;
-	width: 18%;
+	width: 18% !important;
 	padding-top: 15px;
 	color: #4dabf7;
 	text-decoration: none;
@@ -114,24 +113,26 @@
 #btn5 {
 	
 	border: 1px solid #868e96;
-	height: 40px;
+	height: 40px !important;
 	margin: 40px 5px 0 5px;
 	border-top-right-radius: 15px;
-	width: 18%;
+	width: 18% !important;
 	padding-top: 8px;
 	color: #868e96;
 	text-decoration: none;
 
 }
-
+#allpeople{
+ margin-top: 70px;	
+}
 #people1 {
-	margin-top: 130px;
+	
 	margin-bottom: 50px;
 }
 
 #people1 h1 {
 	color: #364fc7;
-	font-size: 30px
+	font-size: 25px
 }
 
 #people1 h5 {
@@ -147,13 +148,13 @@
 }
 
 #people2 {
-	margin-top: 130px;
+	
 	margin-bottom: 50px;
 }
 
 #people2 h1 {
 	color: #1864ab;
-	font-size: 30px
+	font-size: 25px
 }
 
 #people2 h5 {
@@ -169,13 +170,13 @@
 }
 
 #people3 {
-	margin-top: 130px;
+	
 	margin-bottom: 50px;
 }
 
 #people3 h1 {
 	color: #1c7ed6;
-	font-size: 30px
+	font-size: 25px
 }
 
 #people3 h5 {
@@ -191,13 +192,13 @@
 }
 
 #people4 {
-	margin-top: 130px;
+
 	margin-bottom: 50px;
 }
 
 #people4 h1 {
 	color: #4dabf7;
-	font-size: 30px
+	font-size: 25px
 }
 
 #people4 h5 {
@@ -213,13 +214,13 @@
 }
 
 #people5 {
-	margin-top: 130px;
+	
 	margin-bottom: 50px;
 }
 
 #people5 h1 {
 	color: #868e96;
-	font-size: 30px
+	font-size:25px
 }
 
 #people5 h5 {

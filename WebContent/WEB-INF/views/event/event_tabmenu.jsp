@@ -108,7 +108,8 @@ function fun5(){
 			$("#btn4").css({"background-color": "", "color": ""});
 		}
 	});
-};					</script>
+};			
+</script>
 
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/event/cs_event_tabmenu.css">
 </head>
