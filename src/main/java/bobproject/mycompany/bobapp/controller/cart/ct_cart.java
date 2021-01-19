@@ -9,11 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/cart")
 public class ct_cart {
 	private static final Logger logger = LoggerFactory.getLogger(ct_cart.class);
 	
-	@RequestMapping()
+	@RequestMapping("/cart")
 	public String cart() {
 		logger.info("cart 실행");
 		return "cart/cart";
@@ -25,7 +24,7 @@ public class ct_cart {
 		session.removeAttribute("cartList");
 		
 		logger.info("cart를 삭제했습니다.");
-		return "redirect:/cart/cart";
+		return "redirect:/cart";
 	}
 	
 }
