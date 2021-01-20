@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller("myinfo")
+@Controller
 /* @RequestMapping("/account") */
 public class myinfo {
 	private static final Logger logger = LoggerFactory.getLogger(myinfo.class);

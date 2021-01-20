@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-@Controller("login")
+@Controller
 /* @RequestMapping("/account") */
 public class login {
 	private static final Logger logger = LoggerFactory.getLogger(login.class);
@@ -23,8 +23,8 @@ public class login {
 	}
 	
 	@PostMapping("/login2")
-	public String login2(String uid, String upassword, HttpSession session, HttpServletRequest request) {
-		String referer = (String)request.getHeader("REFERER");
+	public String login2(String uid, String upassword, HttpSession session) {
+		
 		logger.info("로그인");
 		logger.info("아이디 : " + uid);
 		logger.info("패스워드 : " + upassword);

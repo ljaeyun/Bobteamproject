@@ -22,7 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import bobproject.mycompany.bobapp.dto.seller.sellergoods;
 
-@Controller("goodsDetail")
+@Controller
 /* @RequestMapping("/seller") */
 public class goodsDetail {
 	private static final Logger logger = LoggerFactory.getLogger(goodsDetail.class);

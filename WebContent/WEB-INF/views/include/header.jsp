@@ -23,7 +23,7 @@
 								<c:if test="${loginStatus!=null }">
 									<li><a href="<%=application.getContextPath()%>/logout">로그아웃</a></li>
 								</c:if>
-								<li><a href="<%=application.getContextPath()%>/customer_service_faq">고객센터</a></li>
+								<li><a href="<%=application.getContextPath()%>/customer_service/customer_service_faq">고객센터</a></li>
 							</ul>
 				 	</div>
 			 	</div>
@@ -32,7 +32,7 @@
 			 			<div id="menu">
 							 <ul id="ul2">
 								<li><a href="<%=application.getContextPath()%>/">밥향기 소개</a></li>
-								<li><a href="<%=application.getContextPath()%>/menu">메뉴</a></li>
+								<li><a href="<%=application.getContextPath()%>/menu/menu">메뉴</a></li>
 								<li><a href="<%=application.getContextPath()%>/review">리뷰</a></li>
 								<li><a href="<%=application.getContextPath()%>/event">이벤트</a></li>
 							</ul>

@@ -10,7 +10,7 @@ import bobproject.mycompany.bobapp.dto.cs_faq.cs_faq;
 
 
 @Controller
-
+@RequestMapping("/customer_service")
 public class ct_customer_service {
 
 	private static final Logger logger = LoggerFactory.getLogger(ct_customer_service.class);
@@ -58,14 +58,14 @@ public class ct_customer_service {
 		String indiq_content = cf.getIndiq_content();
 		logger.info("1:1 문의유형 : " + indiq_cat);
 		logger.info("1:1 문의내용 : " + indiq_content);
-		return "redirect:/customer_service_faq";
+		return "redirect:/customer_service/customer_service_faq";
 	}
 	
 	@RequestMapping("/faq_search")
 	public String faq(cs_faq faq) {
 		String faq_search = faq.getFaq_search();
 		logger.info("검색내용 : " + faq_search);
-		return "redirect:/customer_service_faq";
+		return "redirect:/customer_service/customer_service_faq";
 	}
 	
 	

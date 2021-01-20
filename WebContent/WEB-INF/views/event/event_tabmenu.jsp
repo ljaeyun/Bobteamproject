@@ -122,7 +122,7 @@ function fun5(){
 			<div id="message">
 			<div id="search_inform">
 				<h1 id="search_big">밥향기 리버스 혜택</h1>
-				<h4 id="search_det">고객님께 받은 사랑을 혜택으로 돌려드려요.<br/> 매월 실적에 따라 달라지는 실용적이고 다채로운 혜택을 확인해보세요.</h4>
+				<h4 id="search_det">고객님께 받은 사랑을 혜택으로 돌려드려요.<br/> 매월 실적에 따라 달라지는 실용적이고 다채로운 혜택을 확인</h4>
 			</div>	
 			<div id="search_line"></div>
 			</div>

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-
+@RequestMapping("/menu")
 public class ct_menu {
 	private static final Logger logger = LoggerFactory.getLogger(ct_menu.class);
 	

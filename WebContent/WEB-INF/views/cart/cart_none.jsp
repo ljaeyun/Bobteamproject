@@ -13,7 +13,7 @@
 				<div id="none1">!</div>
 				<div id="none2">장바구니에 담긴 상품이 없습니다.</div>
 				<div id="none3">다양한 메뉴들을 만나보세요.</div>
-				<div id="none4"><a href="menu">메뉴 보러 가기  ></a></div>
+				<div id="none4"><a href="menu/menu">메뉴 보러 가기  ></a></div>
 		</div>	
 		
 		
