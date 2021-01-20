@@ -17,9 +17,9 @@
 							<div id="checkeach">
 								<input type="checkbox" name="checkBox"/>
 							</div>
-								<a href="detailpage/${cartList.pd_name}"><img src="<%=application.getContextPath()%>/resources/img/detailpage/${cartList.pd_name}/${cartList.pd_name}.jpg" style="width:100px;"/></a>
+								<a href="detailpage/menu${cartList.pd_num}"><img src="<%=application.getContextPath()%>/resources/img/detailpage/menu${cartList.pd_num}.jpg" style="width:100px;"/></a>
 							<div id="pd_info">
-								<div id="pd_name"><a href="detailpage/${cartList.pd_name}">${cartList.pd_name}</a></div>
+								<div id="pd_name"><a href="detailpage/menu${cartList.pd_num}">${cartList.pd_name}</a></div>
 								<div id="pd_price">${cartList.pd_price}원</div>
 							</div>
 							

@@ -29,9 +29,10 @@ public class ct_궁중떡볶음 {
 		List<CartList> list = new ArrayList<>();
 		/*	for(int i=1; i <= list.size(); i++) { */
 			CartList cartList = new CartList();
+			cartList.setPd_num(4);
 			cartList.setPd_name("궁중떡볶음");
 			cartList.setPd_price("19900");
-			cartList.setPd_qn("1");
+			cartList.setPd_qn(1);
 			list.add(cartList);
 /*		}*/
 		session.setAttribute("cartList", list);

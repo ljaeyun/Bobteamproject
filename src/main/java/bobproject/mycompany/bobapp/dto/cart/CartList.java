@@ -1,10 +1,17 @@
 package bobproject.mycompany.bobapp.dto.cart;
 
 public class CartList {
+	private int pd_num;
 	private String pd_name;
 	private String pd_price;
-	private String pd_qn;
+	private int pd_qn;
 	
+	public int getPd_num() {
+		return pd_num;
+	}
+	public void setPd_num(int pd_num) {
+		this.pd_num = pd_num;
+	}
 	public String getPd_name() {
 		return pd_name;
 	}
@@ -17,10 +24,10 @@ public class CartList {
 	public void setPd_price(String pd_price) {
 		this.pd_price = pd_price;
 	}
-	public String getPd_qn() {
+	public int getPd_qn() {
 		return pd_qn;
 	}
-	public void setPd_qn(String pd_qn) {
+	public void setPd_qn(int pd_qn) {
 		this.pd_qn = pd_qn;
 	}
 
