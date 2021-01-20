@@ -10,7 +10,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>		 -->
 	<meta charset="UTF-8">
 	<title>밥향기::홈페이지</title>
-	<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/cs_detailpage.css">
+	<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/detailpage/cs_detailpage.css">
 	</head>
 	<body>
 	
@@ -277,9 +277,9 @@
 					<hr>
 				</div>
 				<div id="div15">
-					<a class="btn_page" id="pre"  href="to_previouspage">이전 페이지</a>
-					<a class="btn_page" id="tocategory" href="to_category">카테고리</a>
-					<a class="btn_page" id="next" href="to_nextpage">다음 페이지</a>
+					<a class="btn_page" id="pre"  href="to_previouspage6">이전 페이지</a>
+					<a class="btn_page" id="tocategory" href="to_category6">카테고리</a>
+					<a class="btn_page" id="next" href="to_nextpage6">다음 페이지</a>
 				</div>
 				</div>
 	

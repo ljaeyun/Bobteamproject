@@ -7,30 +7,28 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-
+@RequestMapping("/detailpage")
 public class ct_두루치기{
 	private final static Logger logger = 
 			LoggerFactory.getLogger(ct_두루치기.class);
-	 @RequestMapping("/두루치기")
-	  public String content() {
-		  logger.info("이벤트 페이지 출력");
-		  return "detailpage/두루치기 ";
-	  }
-	
-	
-	@GetMapping("/to_previouspage")
+	@RequestMapping("/menu9")
+	public String DP() {
+		logger.info("디테일 페이지가 실행되었습니다.");
+		return "detailpage/menu9";
+	}
+	@GetMapping("/to_previouspage9")
 	public String to_previouspage(){
 		logger.info("이전 페이지로 이동합니다.");
 		return "detailpage/랍스터";
 	}
-	@GetMapping("/to_category")
+	@GetMapping("/to_category9")
 	public String to_category(){
 		logger.info("메뉴로 이동합니다.");
 		return "menu/menu";
 	}
-	@GetMapping("/to_nextpage")
+	@GetMapping("/to_nextpage9")
 	public String to_nextpage(){
-		logger.info("이전 페이지로 이동합니다.");
+		logger.info("다음 페이지로 이동합니다.");
 		return "detailpage/폭찹스테이크";
 
 	

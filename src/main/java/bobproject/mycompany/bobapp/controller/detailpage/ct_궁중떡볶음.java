@@ -22,7 +22,7 @@ public class ct_궁중떡볶음 {
 	@GetMapping("/to_previouspage")
 	public String to_previouspage(){
 		logger.info("이전 페이지로 이동합니다.");
-		return "detailpage/폭찹스테이크";
+		return "detailpage/menu3";
 	}
 	@GetMapping("/to_category")
 	public String to_category(){
@@ -31,8 +31,8 @@ public class ct_궁중떡볶음 {
 	}
 	@GetMapping("/to_nextpage")
 	public String to_nextpage(){
-		logger.info("이전 페이지로 이동합니다.");
-		return "detailpage/칠리깐쇼새우";
+		logger.info("다음 페이지로 이동합니다.");
+		return "detailpage/menu5";
 
 	
 }

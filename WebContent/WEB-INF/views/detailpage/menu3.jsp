@@ -275,9 +275,9 @@
 					<hr>
 				</div>
 					<div id="div15">
-					<a class="btn_page" id="pre"  href="to_previouspage">이전 페이지</a>
-					<a class="btn_page" id="tocategory" href="to_category">카테고리</a>
-					<a class="btn_page" id="next" href="to_nextpage">다음 페이지</a>
+					<a class="btn_page" id="pre"  href="to_previouspage3">이전 페이지</a>
+					<a class="btn_page" id="tocategory" href="to_category3">카테고리</a>
+					<a class="btn_page" id="next" href="to_nextpage3">다음 페이지</a>
 				</div>
 				</div>
 	
