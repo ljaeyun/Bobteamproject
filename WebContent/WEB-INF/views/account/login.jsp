@@ -10,7 +10,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Medium' rel='stylesheet'>
 	<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>밥향기 :: 로그인</title>
 
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/main.css">
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/account/login.css">
