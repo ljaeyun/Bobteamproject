@@ -10,7 +10,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>		 -->
 	<meta charset="UTF-8">
 	<title>밥향기::홈페이지</title>
-	<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/cs_detailpage.css">
+	<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/detailpage/cs_detailpage.css">
 	</head>
 	<body>
 	
@@ -69,7 +69,7 @@
 
 			
 			<ul id= "menu01">
-				<oi id="oi1"><a href ="tologin">장바구니 담기</a></oi>
+				<oi id="oi1"><a href ="addCart">장바구니 담기</a></oi>
 				<oi id="oi2">늘 사는 것</oi>
 				<oi id="oi3">재입고 알림</oi>
 			</ul>

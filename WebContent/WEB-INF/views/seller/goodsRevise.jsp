@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>밥향기 :: 상품수정</title>
   <%@ page import="java.util.*" %>
   <%@ page import="java.text.SimpleDateFormat" %>
   
