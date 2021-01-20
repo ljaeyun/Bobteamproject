@@ -18,11 +18,12 @@ public class ct_eventpage {
   }
   @RequestMapping("/forword_tabmenu")
   public String forword_tapmenu(){
-	  logger.info("탭메뉴 페이지로 이동합니다");
+	  logger.info("멤버쉽 페이지로 이동합니다");
 	  return "event/event_tabmenu";
   }
   @RequestMapping("/forword_friends")
   public String forword_friends() {
+	  logger.info("친구추천 이벤트 페이지로 이동합니다");
 	  return "event/event_friends";
   }
 

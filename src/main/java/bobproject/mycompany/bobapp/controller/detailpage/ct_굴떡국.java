@@ -22,7 +22,7 @@ public class ct_굴떡국 {
 	}
 	@GetMapping("/to_category")
 	public String to_category(){
-		logger.info("이전 페이지로 이동합니다.");
+		logger.info("메뉴로 이동합니다.");
 		return "menu/menu";
 	}
 	@GetMapping("/to_nextpage")
