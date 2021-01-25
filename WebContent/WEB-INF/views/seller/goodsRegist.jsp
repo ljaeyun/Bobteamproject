@@ -14,15 +14,21 @@
 <body>
 
 	<jsp:include page="/WEB-INF/views/include/header.jsp"/>
-
+	<div id="wrapper_contents">
+	<div class = "title2">
+					<h1 style="font-size:40px"><b>상품 등록<b></h1>
+					<div id="search_line"> </div>
+	</div>
+	<br/>
+	<br/>
 	<section>
 			<nav>
 				<ul>
-					<li><a id="menu" href ="<%=application.getContextPath()%>/goodsRegist">상품 등록</a></li>    <!-- 주 소 수 정-->
+					<li><a id="r_menu" href ="<%=application.getContextPath()%>/goodsRegist">상품 등록</a></li>    <!-- 주 소 수 정-->
 					<li><a> &nbsp</a></li>
-					<li><a id="menu" href ="<%=application.getContextPath()%>/goodsRevise">상품 수정</a></li>    <!-- 주 소 수 정-->
+					<li><a id="r_menu" href ="<%=application.getContextPath()%>/goodsRevise">상품 수정</a></li>    <!-- 주 소 수 정-->
 					<li><a> &nbsp</a></li>
-					<li><a id="menu" href ="<%=application.getContextPath()%>/goodsDetail">상품 상세조회</a></li>    <!-- 주 소 수 정-->
+					<li><a id="r_menu" href ="<%=application.getContextPath()%>/goodsDetail">상품 상세조회</a></li>    <!-- 주 소 수 정-->
 				</ul>
 				
 				<div id="ClientC">
@@ -38,7 +44,7 @@
 			</nav>
 			
 			<article>
-					<h1>상품등록</h1>
+					
 						<form method="post" enctype="multipart/form-data" name="myForm" action="goodsupload">
 							<table>
 								<tr align = "center" >
@@ -63,7 +69,7 @@
 												-대표이미지 등록 시 , 상세, 목록, 작은목록, 축소 이미지에 자동 리사이징 됩니다. <br>
 												-권장이미지 : 500px * 500px / 5M 이하 / gif, png, jpg(jpeg)
 											</p>
-										 <div>
+										 </div>
 									</td>
 								</tr>
 								
@@ -81,8 +87,6 @@
 									
 								</tr>
 							</table>
-						<a class="btn" onclick="javascript:document.myForm.submit();" type="submit">등록</a>
-							<!-- <a class = "btn" href="">등록</a>					 주 소 수 정 -->
 						
 					
 						</form>
@@ -92,12 +96,18 @@
 		</section>
 		
 		<!-- 상품 등록 , 취소 버튼 -->
+				
+			<!-- <a class = "btn" href="">등록</a>					 주 소 수 정 -->
+		<div style="margin-bottom:15px;font-family: 'Noto Sans KR Medium';" class = "buttonBox" align ="right">
+	      <!-- 주 소 수 정-->				
+	      	<a class = "btn" id="register" onclick="javascript:document.myForm.submit();" type="submit">등록</a>	
+			<a class = "btn" id="cancel" href="../account/myinfo">취소</a>            <!-- 주 소 수 정-->
+		</div>
 		
-					<div style="margin-bottom:15px;font-family: 'Noto Sans KR Medium';" class = "buttonBox" align ="right">
-						      <!-- 주 소 수 정-->					
-						<a class = "btn" id="can" href="../account/myinfo">취소</a>            <!-- 주 소 수 정-->
-					</div>
+	</div>	
+		
 					
+		
 			<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 </body>
 </html>

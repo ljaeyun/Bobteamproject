@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+#wrapper_contents {
+					width: 1200px;
+					margin: 20px auto;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				/* 	border: 1px solid black; */
+				}
+			
+				#cart_header {
+					width:1200px;
+					height: 140px;
+				 	font-family: 'Noto Sans KR Medium';
+					font-size: 40px;
+					text-align: center;
+					padding: 10px 0px 0px 0px;
+				}
+				
+				
+				#cart_listall {
+					width: 1200px;
+					display: flex;
+				/* 	border: 1px solid black; */
+					flex-direction: column;
+					align-items: center;
+				}
+				
+					
+						
+					#cart_listeach {
+						height: 200px;
+						width: 90%;
+						display: flex;
+						flex-direction: row;
+						border-bottom: 1px solid #dee2e6;
+						vertical-align: middle;
+						align-items: center;
+						padding-left: 30px;
+					}
+					
+						
+						
+						#pd_img {
+							width: 10%;
+						/* 	border: 1px solid black; */
+							align-items: center;
+						}
+						
+						#pd_info {
+							width: 45%;
+						/* 	border: 1px solid black; */
+							align-items: center;
+						}
+						
+						
+							#pd_name {
+								padding-left: 50px;
+								margin-bottom: 20px;
+								font-family: 'Noto Sans KR Medium';
+								font-size: 16px;
+							}
+							
+							
+							#pd_name >a {
+								text-decoration: none;
+								color: black;
+							}
+							
+							#pd_price {
+								padding-left: 50px;
+								font-family: 'Noto Sans KR';
+								font-size: 18px;
+							}
+						
+						#form {
+							width: 30%;
+							display: flex;
+							flex-direction: row;
+							text-align: center;
+							margin-right: 50px;
+						}
+						
+							#pd_quantity_box {
+								width: 40%;
+								height: 30px;
+								display: flex;
+								flex-direction: row;
+								text-align: center;
+								margin-right: 50px;
+								
+								
+							}
+							
+								
+								input[type="button"] {
+									width: 30px;
+									height: 30px;
+									border: none;
+									background-color: none;
+									font-family: 'Noto Sans KR Medium';
+									font-size: 15px;
+									text-align: center;
+									border-top: silver;
+									border-left: silver;
+									border-bottom: silver;
+								}
+								
+								.pd_quantity_box input[type="text"] {
+									width: 50px;
+									height: 30px;
+									background-color: none;
+									border: none;
+									font-family: 'Noto Sans KR Medium';
+									font-size: 15px;
+									text-align: center;
+								}
+							
+							
+							#pd_price_sum {
+								width: 60%;
+								align-items: center;
+							/* 	border: 1px solid black; */
+								font-size: 18px;
+								font-family: 'Noto Sans KR Medium';
+							}
+							
+								.pd_price_sum input[type="text"] {
+									width: 100px;
+									height: 30px;
+									background-color: none;
+									border: none;
+									font-family: 'Noto Sans KR Medium';
+									font-size: 15px;
+									text-align: center;
+								}
+								
+								.sum_all input[type="text"] {
+									width: 50px;
+									background-color: none;
+									font-size: 24px;
+									border: none;
+									font-family: 'Noto Sans KR Medium';
+									text-align: center;
+								}
+							
+						#pd_delete {
+							width: 5%;
+						/* 	border: 1px solid black; */
+							text-align: center;
+						}
+						
+						#pd_delete >a {
+							color: silver;
+						}
+					
+				#cart_price {
+					height: 100px;
+					width: 90%;
+					border-bottom: 1px solid black;
+					vertical-align: middle;
+					display: flex;
+					flex-direction: row;
+					font-family: 'Noto Sans KR Medium';
+					font-size: 24px;
+					align-items: center;
+					padding-left: 20px;
+					padding-top: 15px;
+				}
+				
+				#price1 {
+					font-family: 'Noto Sans KR';
+					font-size: 12px;
+				}
+		
+					#price {
+						width: 20%;
+						height: 100%;
+						text-align: center;
+						margin: 10px 20px 0px 20px;
+					}
+				
+					#discount {
+						width: 20%;
+						height: 100%;
+						text-align: center;
+						margin: 10px 20px 0px 20px;
+					}
+					
+					#delivery {
+						width: 20%;
+						height: 100%;
+						text-align: center;
+						margin: 10px 20px 0px 20px;
+					}
+					
+					#finalprice {
+						width: 20%;
+						height: 100%;
+						text-align: center;
+						margin: 10px 20px 0px 20px;
+					}
+					
+					#fianl_price {
+						color: purple;
+					}
+					
+				#cart_order {
+					width: 1200px;
+					height: 100px;
+					align-items: right;
+					display: flex;
+					align-self: right;
+					vertical-align: middle;
+					justify-content: flex-end;
+					padding-top: 20px;
+					padding-right: 60px;
+				}
+				/* 	#nonmember {
+						text-align: center;
+						font-size: 12px;
+						width: 130px;
+						height: 40px;
+						border: 1px solid black;
+						border-radius: 20px;
+						font-family: 'Noto Sans KR Medium';
+						padding-top: 10px;
+					} */
+					
+					#member {
+						text-align: center;
+						font-size: 12px;
+						width: 130px;
+						height: 30px;
+						background-color: purple;
+						border-radius: 20px;
+						margin-right: 50px;
+						padding-top: 10px;
+					}
+					
+					#member >a {
+						font-family: 'Noto Sans KR Medium';
+						color: white;
+						text-decoration: none;
+					}
+					
+					#checkbox {
+					border: 1px solid black;
+					}

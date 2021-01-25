@@ -1,7 +1,26 @@
 @charset "UTF-8";
 
 
-section {
+			.title2 {
+							text-align : center;
+							font-size:40px;
+							font-family: 'Noto Sans KR Medium';
+						}
+			#search_line {
+							margin_bottonm:25px;
+							height:50px;
+							border-bottom:solid 3px gray;
+						}
+						
+			
+			#r_menu {
+				color: black;
+				font-size: 16px;
+				
+			}			
+
+			
+			section {
 				background-color: #e9ecef;
 				flex: 1;
 				height: 800px;
@@ -43,14 +62,10 @@ section {
 				display : inline-block;
 				width:100px;
 				height:40px;
-				border : 1px solid orange;
-				background-color: blue;
-				color:white;
 				text-align: center;
 				font-size : 0.9rem;
 				text-decoration: none;
-				
-				margin-right : 20px;
+				border-radius: 20px;
 				line-height:40px;
 			}
 			
@@ -61,14 +76,22 @@ section {
 				margin-right : 70px;
 			}
 			
-			a#can {
-				background-color: yellow;
-				color:red;
+			a#register {
+				background-color: purple;
+				border: 1px solid purple;
+				color: white;
+				margin-right: 20px;
 			}
-			a#can:hover {
-				background-color: red;
-				color:yellow;
+			
+			a#cancel {
+				border: 1px solid black;
+				color: black;
 			}
+			
+	//		a#cancel:hover {
+	//			background-color: red;
+	//			color:yellow;
+	//		}
 			
 			.imageInput {
 				display : inline-block;

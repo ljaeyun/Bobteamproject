@@ -41,7 +41,7 @@ public class ct_궁중떡볶음 {
 	
 		
 		logger.info("카트에 담았습니다.");
-		return "redirect:/cart";
+		return "redirect:/cart/cart";
 		
 	/*	List<CartList> list = new ArrayList<>();
 		for(int i = 0; i < list.size(); i++) {
