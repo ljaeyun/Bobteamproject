@@ -33,7 +33,7 @@
 				<div class = "txtinfo"> 
 				<c:if test="${loginStatus == null}">
 					<form method="post" action="login2">
-						<table>
+						<table id = "table1">
 							<tr>
 								<td class="inputtd"><input id = "uid" type = "text" name="uid" placeholder="아이디"/></td>
 							</tr>

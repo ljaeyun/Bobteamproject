@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#wrapper_contents{
+			#wrapper_contents{
 				display: flex;
 				width : 1200px;
 				height: 590px;
@@ -42,7 +42,7 @@
 			
 			
 			
-			table {
+			#table1 {
 				width : 400px;
 				
 				margin-left:auto;
@@ -52,7 +52,7 @@
 				
 			}
 			
-				#table2 {
+			#table2 {
 				width : 400px;
 				
 				margin-left:auto;
@@ -60,10 +60,10 @@
 				table-layout:fixed;
 			}
 			
-			table,th,td{
+			#table1 ,th,td{
 				
 				 border-collapse: separate;
-				 border-spacing: 0 12px;
+				 border-spacing: 0 10px;
 			}
 			
 			
@@ -105,6 +105,24 @@
 			  padding:0.25em;
 			  box-sizing: border-box;
 			  width:100%;
+			  border : none;
+			  border : solid 1px #ccc;
+			  border-radius : 60px;
+			  
+			}
+			
+			input[type="text"]:focus {
+			  outline:none;
+			  border : none;
+			  border : solid 1px #000000;
+			  border-radius : 60px;
+			}
+			
+			input[type="password"]:focus {
+			  outline:none;
+			  border : none;
+			  border : solid 1px #000000;
+			  border-radius : 60px;
 			}
 			
 			input[type="password"] {
@@ -112,6 +130,9 @@
 			  padding:0.25em;
 			  box-sizing: border-box;
 			  width:100%;
+			   border : none;
+			  border : solid 1px #ccc;
+			  border-radius : 60px;
 			}
 			
 			input[type="date"] {
@@ -141,9 +162,14 @@
 				color: #FFF;
 				cursor:pointer;
 				font-family: 'Noto Sans KR medium';
+				
+				  border : none;
+			  border : solid 1px #ccc;
+			  border-radius : 60px;
 				}
 			.btn-primary:hover,
 			.btn-primary:focus {
+				outline:none;
 				border-color: #1B0325;
 				background-color: #1B0325;
 				color: #FFF; }
@@ -152,7 +178,7 @@
 			.btn-primary:visited,
 			.btn-primary:active:focus,
 			.btn-primary:active:hover {
-				border-color: #639d34;
+				border-color: #800080;
 				background-color: #639d34;
 				color: #FFF; }
 				
@@ -166,9 +192,14 @@
 				color: #000000; 
 				cursor:pointer;
 				font-family: 'Noto Sans KR medium';
+				
+				  border : none;
+			  border : solid 1px #ccc;
+			  border-radius : 60px;
 				}
 			.btn-danger:hover,
 			.btn-danger:focus {
+				outline:none;
 				border-color: #6fb03a;
 				background-color: #ACF196;
 				color: #000000; }

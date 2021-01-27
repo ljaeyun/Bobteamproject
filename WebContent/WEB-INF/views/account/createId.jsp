@@ -70,7 +70,8 @@
 							<tr>
 								<th>주소</th>
 								
-								<td class="searchad"><input type="button" id ="checkbtn" value="주소검색" onclick='console.log("확인4")' name="uhome"/></td>
+								<!-- <td class="searchad"><input type="button" id ="checkbtn" value="주소검색" onclick='console.log("확인4")' name="uhome"/></td> -->
+								<td class="searchad"><input id = "uid" placeholder="주소를 입력해주세요" type="text" name="uhome"/></td>
 							</tr>
 							<tr>
 								<th>성별</th>
