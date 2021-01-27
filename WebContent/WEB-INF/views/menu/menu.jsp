@@ -34,14 +34,14 @@
 				<div id="productline_1" class="productline">
 			
 					<div id="infobox_1" class="infobox">
-						<div id="image_1" class="cat_img" > <a href="menu1">
+						<div id="image_1" class="cat_img" > <a href="method1?param1=menu1">
 							<img height=100% width=100% src="<%=application.getContextPath()%>/img/detailpage/랍스터/랍스터_01.PNG"/></a>
 						</div>
 						<div id="productinfobox_1" class="productinfobox">
 							<div class ="infoline_1"><a href="menu1">2인분 | 1시간</a></div>
 							<div class ="infoline_2" ><a href="menu1">랍스터 갈릭버터 치즈 오븐구이</a></div>
 							<div class ="infoline_3" ><a href="menu1">19,900원</a></div> 
-							<span class = "sp_cart"><a href="login1"><img width="25px" height="25px" src="<%=application.getContextPath()%>/resources/img/shopping_cart.png"/></a></span>
+							<span class = "sp_cart"><a href="<%=application.getContextPath()%>/login"><img width="25px" height="25px" src="<%=application.getContextPath()%>/resources/img/shopping_cart.png"/></a></span>
 						</div>
 					</div>
 					
@@ -53,7 +53,7 @@
 							<div class ="infoline_1"  ><a href="menu2">1인분 | 1시간</a></div>
 							<div class ="infoline_2" ><a href="menu2">메생이 굴떡국</a></div>
 							<div class ="infoline_3" ><a href="menu2">19,800원</a></div>
-							<span class = "sp_cart" ><a href="login1"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>				
+							<span class = "sp_cart" ><a href="<%=application.getContextPath()%>/login"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>				
 						</div>
 					</div>	
 					
@@ -65,7 +65,7 @@
 							<div class ="infoline_1" ><a href="menu3">3인분 | 20분</a></div>
 							<div class ="infoline_2" ><a href="menu3">폭찹스테이크</a></div>
 							<div class ="infoline_3" ><a href="menu3">24,800원</a></div>
-							<span class = "sp_cart" ><a href="login1"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>						
+							<span class = "sp_cart" ><a href="<%=application.getContextPath()%>/login"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>						
 						</div>
 					</div>	
 				</div>
@@ -79,7 +79,7 @@
 							<div class ="infoline_1" ><a href="menu4">2인분 | 1시간</a> </div>
 							<div class ="infoline_2" ><a href="menu4">궁중떡볶음</a></div>
 							<div class ="infoline_3" ><a href="menu4">21,800원</a></div>
-							<span class = "sp_cart" ><a href="login1"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>
+							<span class = "sp_cart" ><a href="<%=application.getContextPath()%>/login"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>
 													
 						</div>
 					</div>
@@ -92,7 +92,7 @@
 							<div class ="infoline_1" ><a href="menu5">3인분 | 15분 </a></div>
 							<div class ="infoline_2" ><a href="menu5">칠리 깐쇼새우</a></div>
 							<div class ="infoline_3" ><a href="menu5">25,800원</a></div>
-							<span class = "sp_cart" ><a href="login1"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>			
+							<span class = "sp_cart" ><a href="<%=application.getContextPath()%>/login"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>			
 						</div>
 					</div>	
 					
@@ -104,7 +104,7 @@
 							<div class ="infoline_1" ><a href="menu6">3인분 | 40분 </a></div>
 							<div class ="infoline_2" ><a href="menu6">만두전골</a></div>	
 							<div class ="infoline_3" ><a href="menu6">23,800원</a></div>
-							<span class = "sp_cart" ><a href="login1"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>					
+							<span class = "sp_cart" ><a href="<%=application.getContextPath()%>/login"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>					
 						</div>
 					</div>
 				</div>
@@ -117,7 +117,7 @@
 								<div class ="infoline_1" ><a href="menu7">3인분 | 20분</a></div>
 								<div class ="infoline_2" ><a href="menu7">목살 스테이크 원플레이트</a></div>
 								<div class ="infoline_3" ><a href="menu7">25,800원</a></div>
-							<span class = "sp_cart" ><a href="login1"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>
+							<span class = "sp_cart" ><a href="<%=application.getContextPath()%>/login"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>
 														
 							</div>
 						</div>
@@ -130,7 +130,7 @@
 								<div class ="infoline_1" ><a href="menu8">3인분 | 35분</a></div>
 								<div class ="infoline_2" ><a href="menu8">버섯 들깨탕</a></div>	
 								<div class ="infoline_3" ><a href="menu8">24,800원</a></div>
-							<span class = "sp_cart" ><a href="login1"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>		
+							<span class = "sp_cart" ><a href="<%=application.getContextPath()%>/login"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>		
 							</div>
 						</div>	
 						
@@ -142,7 +142,7 @@
 								<div class ="infoline_1" ><a href="menu9">3인분 | 30분</a></div>
 								<div class ="infoline_2" ><a href="menu9">두부 두루치기</a></div>	
 								<div class ="infoline_3" ><a href="menu9">34,800원</a></div>
-							<span class = "sp_cart" ><a href="login1"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>					
+							<span class = "sp_cart" ><a href="<%=application.getContextPath()%>/login"><img width="25px" height="25px" src="<%=application.getContextPath()%>/img/shopping_cart.png"/></a></span>					
 							</div>
 						</div>
 					</div>

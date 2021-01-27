@@ -7,7 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
-import bobproject.mycompany.bobapp.dto.cart.CartList;
+import bobproject.mycompany.bobapp.dto.CartList;
 
 public class addCart {
 /*	@GetMapping("/addCart")
