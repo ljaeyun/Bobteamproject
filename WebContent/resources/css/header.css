@@ -73,23 +73,23 @@
 					height: 40%;
 					margin: auto;
 					display: flex;
-					/* border-top: 0.5px solid silver; */
-					/* border-bottom: 0.5px solid silver; */
-					
+					vertical-align: middle;
 				}
+				
 				#div3 {
 					width: 65%;
 					height: 100%;
 					margin: auto;
 					display: flex;
 					flex-direction: row;
+					vertical-align: middle;
 				}
 				 
 				#menu {
 					height: 100%;
 					width: 45%;
 					align-item: right;
-					/* border: 1px solid black; */
+					vertical-align: middle;
 				}
 				
 				#ul2 > li > a {
@@ -101,7 +101,7 @@
 				#ul2 > li > a:hover  {
 					color: black;
 					text-decoration: overline;
-					font-family: 'Noto Sans KR Black';
+					vertical-align: middle;
 				}
 				
 				
@@ -110,8 +110,7 @@
 					font-size: 16px;
 					list-style: none;
 					display: inline-block;
-					/* padding: 0px 35px; */
-					margin: 6px 60px 0px 0px;
+					margin: 0px 60px 0px 0px;
 					font-family: 'Noto Sans KR Medium';
 				}
 							
@@ -119,8 +118,6 @@
 				#search {
 					height: 100%;
 					width: 30%;
-					padding-top: 19px;
-					/* border: 1px solid black; */
 					text-align: left;
 				}
 				
@@ -140,8 +137,6 @@
 				#icon { 
 					height: 100%;
 					width: 25%;
-					padding-top: 24px;
-					/* border: 1px solid black; */
 					font-size: 12px;
 					text-align: left;
 					
