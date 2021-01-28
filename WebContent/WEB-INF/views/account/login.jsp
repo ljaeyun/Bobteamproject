@@ -37,14 +37,20 @@
 				
 				<div class = "txtinfo"> 
 				<c:if test="${loginStatus == null}">
-					<form name="loginfrom" onsubmit = "login()">
+					<form name="loginfrom" onsubmit = "login()" method="post">
 						<table id = "table1">
 							<tr>
-								<td class="inputtd"><input id = "mid" type = "text" name="mid" placeholder="아이디"/></td>
+								<td class="inputtd">
+									<input id = "mid" type = "text" name="mid" placeholder="아이디"/>
+								    <small id="errorMid" class="form-text text-danger"></small>
+								</td>
 							</tr>
 							
 							<tr>
-								<td class="inputtd"><input id = "upw" type = "password" name="mpw" placeholder="패스워드"/></td>
+								<td class="inputtd">
+									<input id = "mpw" type = "password" name="mpw" placeholder="패스워드"/>
+									<small id="errorMpassword" class="form-text text-muted"></small>
+								</td>
 							</tr>
 							<tr>
 									
@@ -54,6 +60,51 @@
 							<!-- ㅇㅇㅇ -->
 						</table>
 					</form>
+					<script>
+						function login() {
+							event.preventDefault();
+							
+							$("#errorMid").html("");
+							
+							
+							$("#errorMpassword").html("");
+							
+							const mid = $("#mid").val();
+							var validation = true;
+							if(mid === "") {
+								$("#errorMid").html("필수입력이니다");
+								validation = false;
+							}
+							
+							const mpassword = $("#mpassword").val();
+							if(mpassword === "") {
+								$("#errorMpassword").html("필수입력힙니다");
+								validation = false;
+							}
+							
+							if(!validation)
+							{
+								return;
+							}
+							$.ajax({
+								url: "login",
+								method:"post",
+								data : {mid, mpassword},
+								success : function(data) {
+									//{"result" : "success | wrongMid | wrongMpassword"}
+									if(data.result === "success") {
+										alert("로그인 성공");
+										location.href="boardlist2";
+									} else if(data.result === "wrongMid"){
+										$("#errorMid").html("아이디가 존재하지 않습니다");
+									} else {
+										$("#errorMpassword").html("비밀번호가 틀렸습니다");
+									}
+								}
+							});
+						}
+					</script>
+					
 					</c:if>
 					
 					

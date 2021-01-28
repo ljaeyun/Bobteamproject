@@ -15,13 +15,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.Service.MemberService;
-import bobproject.mycompany.bobapp.dto.createid.Members;
+import bobproject.mycompany.bobapp.dto.createid.Account;
 @Controller
 /* @RequestMapping("/account") */
 public class LoginId {
 	private static final Logger logger = LoggerFactory.getLogger(LoginId.class);
 	
-	@GetMapping("/login")
+	@RequestMapping("/login")
 	public String content() {
 		logger.info("로그인페이지");
 		return "account/login";
@@ -31,7 +31,8 @@ public class LoginId {
 	private MemberService memberService;
 	
 	@PostMapping("/login")
-	public void login(Members id , HttpServletResponse response, HttpSession session) throws Exception {
+	public void login(Account id , HttpServletResponse response, HttpSession session) throws Exception {
+		logger.info("로그인 실행");
 		String result = memberService.login(id);
 		if(result.equals("success")) {
 			session.setAttribute("sessionMid", id.getMid());
