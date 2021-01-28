@@ -11,28 +11,6 @@ public class Product {
 	private int pweight;
 	private int ptime;
 	private String psubtitle;
-	private String pmainimgtype;
-	private String psubimg1type;
-	public String getPmainimgtype() {
-		return pmainimgtype;
-	}
-	public void setPmainimgtype(String pmainimgtype) {
-		this.pmainimgtype = pmainimgtype;
-	}
-	public String getPsubimg1type() {
-		return psubimg1type;
-	}
-	public void setPsubimg1type(String psubimg1type) {
-		this.psubimg1type = psubimg1type;
-	}
-	public String getPsubimg2type() {
-		return psubimg2type;
-	}
-	public void setPsubimg2type(String psubimg2type) {
-		this.psubimg2type = psubimg2type;
-	}
-	private String psubimg2type;
-	
 	public int getPno() {
 		return pno;
 	}
