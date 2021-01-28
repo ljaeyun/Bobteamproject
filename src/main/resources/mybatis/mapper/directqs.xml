@@ -19,5 +19,17 @@
 		from direct_qs
 		order by qno desc	
 	</select>
+	
+	<select id="selectByPk" parameterType="int" resultType="directq">
+		select 
+			qno,
+			qanswer,
+			qtitle,
+			qcontent,
+			mid
+		from direct_qs
+		where qno=#{qno}
+	</select>
+	
 </mapper>
 

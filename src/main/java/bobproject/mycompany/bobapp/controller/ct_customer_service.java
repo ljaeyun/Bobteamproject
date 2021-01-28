@@ -66,4 +66,12 @@ public class ct_customer_service {
 	public String indiq() {
 		return "customer_service/indiQuest";
 	}
+	
+	@GetMapping("/directqread")
+	public String directqread(int qno, Model model) {
+		CSDirectq directq = csdirectqService.getDirectq(qno);
+		model.addAttribute("directq", directq);
+		return "customer_service/dq_read";
+	}
+	
 }

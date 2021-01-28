@@ -26,5 +26,10 @@ public class CSDirectqDao {
 		return list;
 	}
 	
+	public CSDirectq selectByPk(int qno) {
+		CSDirectq directq = sst.selectOne("direct_qs.selectByPk", qno);
+		return directq;
+	}
+	
 	
 }

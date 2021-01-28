@@ -45,11 +45,12 @@
 						    <label for="qanswer">답변</label>
 						    <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50" readonly>${directq.qanswer}</textarea>
 					  </div>
-					 <a class="btn btn-primary" href="dq_list">목록</a>
+					 <a class="btn btn-primary" href="directqlist">목록</a>
 					 <!--  <c:if test="${sessionMid == board.bwriter}">
 						  <a class="btn btn-warning" href="boardupdate?bno=${board.bno}">수정</a>
 						  <a class="btn btn-danger" href="boarddelete?bno=${board.bno}">삭제</a>
 					  </c:if>  -->
+					 </form>
 			</div>
 		</div>
 		
