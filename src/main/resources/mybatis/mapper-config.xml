@@ -3,8 +3,8 @@
 
 <configuration>
 	<typeAliases>
-		<typeAlias alias="account" type="bobproject.mycompany.bobapp.dto.createid.createIntel"/>
-		
+		<typeAlias alias="account" type="bobproject.mycompany.bobapp.dto.createid.Members"/>
 		<typeAlias alias="product" type="bobproject.mycompany.bobapp.dto.Product"/>
+		<typeAlias alias="cart" type="bobproject.mycompany.bobapp.dto.Cart"/>
 	</typeAliases>
 </configuration>

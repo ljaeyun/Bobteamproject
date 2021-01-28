@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" isELIgnored="false" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -11,25 +11,17 @@
 		<script src="https://kit.fontawesome.com/7f16510dcc.js" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
 </head>
 <body>
-	
 		<jsp:include page="/WEB-INF/views/include/header.jsp"/>
-		
 		<div id="wrapper_contents">
-			
-		<c:if test="${cartList == null}">
-		<jsp:include page="/WEB-INF/views/cart/cart_none.jsp"/>		
+		<c:if test="${empty cartlist}">
+		<jsp:include page="/WEB-INF/views/cart/cartnone.jsp"/>		
 		</c:if>
-		
-		<c:if test="${cartList != null}">
-		<jsp:include page="/WEB-INF/views/cart/cart_list.jsp"/>
+		<c:if test="${!empty cartlist}">
+		<jsp:include page="/WEB-INF/views/cart/cartlist.jsp"/>
 		</c:if>			
-			
 		</div>	
-	
 		<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
-	
 </body>
 </html>

@@ -4,6 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Black' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Light' rel='stylesheet'>
@@ -32,14 +37,14 @@
 				
 				<div class = "txtinfo"> 
 				<c:if test="${loginStatus == null}">
-					<form method="post" action="login2">
+					<form name="loginfrom" onsubmit = "login()">
 						<table id = "table1">
 							<tr>
-								<td class="inputtd"><input id = "uid" type = "text" name="uid" placeholder="아이디"/></td>
+								<td class="inputtd"><input id = "mid" type = "text" name="mid" placeholder="아이디"/></td>
 							</tr>
 							
 							<tr>
-								<td class="inputtd"><input id = "uid" type = "password" name="upassword" placeholder="패스워드"/></td>
+								<td class="inputtd"><input id = "upw" type = "password" name="mpw" placeholder="패스워드"/></td>
 							</tr>
 							<tr>
 									

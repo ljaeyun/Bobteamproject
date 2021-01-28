@@ -1,3 +1,4 @@
+
 package bobproject.mycompany.bobapp.controller;
 
 import java.io.PrintWriter;
@@ -27,6 +28,8 @@ public class Controller_Pboard {
 		logger.info("상품등록페이지 열기");
 		return "seller/goodsRegist";
 	}
+	
+	
 	@PostMapping("/goodsRegist")
 	public String RegistForm(Product product) {
 		logger.info("실행");

@@ -1,5 +1,8 @@
 package bobproject.mycompany.bobapp.controller;
 
+import java.util.List;
+
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -8,25 +11,42 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import bobproject.mycompany.bobapp.Service.CartService;
+import bobproject.mycompany.bobapp.dto.Cart;
+import bobproject.mycompany.bobapp.dto.Product;
+
 @Controller
 @RequestMapping("/cart")
 public class ct_cart {
 	private static final Logger logger = LoggerFactory.getLogger(ct_cart.class);
 	
-	@RequestMapping("/cart")
-	public String cart() {
-		logger.info("cart 실행");
+	@Resource
+	private CartService cartService;
+	
+	@GetMapping("/cartlist")
+	public String cartlist(HttpSession session) {
+	//	String mid = (String) session.getAttribute("sessionMid");
+		String mid = "test";
+		
+		List<Product> cartlist = cartService.getCartList(mid);
+		
+		session.setAttribute("cartlist", cartlist);
 		return "cart/cart";
 	}
 	
-	@GetMapping("/order")
-	public String order() {
-		logger.info("order 실행");
-		return "order/order";
+	@GetMapping("/addcart")
+	public String addcart(Cart cart, HttpSession session) throws Exception {
+		
+		String mid = (String) session.getAttribute("sessionMid");
+		cart.setMid(mid);
+		
+		cartService.addCart(cart);
+		
+		return "redirect:/cart/cartlist";
 	}
 	
-	@GetMapping("/delete")
-	public String delete(HttpSession session) {
+	@GetMapping("/deletecart")
+	public String deletecart(HttpSession session) {
 		
 		session.removeAttribute("cartList");
 		
@@ -37,7 +57,14 @@ public class ct_cart {
 	@GetMapping("/menu")
 	public String menu() {
 		logger.info("menu로 돌아갑니다.");
-		return "redirect:/menu/menu";
+		return "redirect:/menu";
+	}
+	
+	@GetMapping("/orderlist")
+	public String orderlist() {
+		logger.info("주문 진행 페이지로 갑니다.");
+	
+		return "redirect:/order/orderlist";
 	}
 	
 }

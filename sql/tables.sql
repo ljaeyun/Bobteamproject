@@ -1,5 +1,5 @@
 -- 생성자 Oracle SQL Developer Data Modeler 20.2.0.167.1538
---   위치:        2021-01-27 10:33:40 KST
+--   위치:        2021-01-28 09:16:12 KST
 --   사이트:      Oracle Database 11g
 --   유형:      Oracle Database 11g
 
@@ -9,57 +9,57 @@
 
 -- predefined type, no DDL - XMLTYPE
 
-CREATE TABLE account (
-    "uid"     VARCHAR2(15) NOT NULL,
-    upw       VARCHAR2(15) NOT NULL,
-    uname     VARCHAR2(30) NOT NULL,
-    uemail    VARCHAR2(50) NOT NULL,
-    uphone    VARCHAR2(15) NOT NULL,
-    ugender   VARCHAR2(30) NOT NULL,
-    ubirth    DATE NOT NULL,
-    uaddress  VARCHAR2(300) NOT NULL,
-    ugrade    VARCHAR2(50) NOT NULL
+CREATE TABLE accounts (
+    mid       VARCHAR2(15) NOT NULL,
+    mpw       VARCHAR2(15) NOT NULL,
+    mname     VARCHAR2(30) NOT NULL,
+    memail    VARCHAR2(50) NOT NULL,
+    mphone    VARCHAR2(15) NOT NULL,
+    mgender   VARCHAR2(30) NOT NULL,
+    mbirth    DATE NOT NULL,
+    maddress  VARCHAR2(300) NOT NULL,
+    mgrade    VARCHAR2(50) NOT NULL
 );
 
-ALTER TABLE account ADD CONSTRAINT account_pk PRIMARY KEY ( "uid" );
+ALTER TABLE accounts ADD CONSTRAINT account_pk PRIMARY KEY ( mid );
 
-CREATE TABLE cart (
-    "uid"  VARCHAR2(15) NOT NULL,
-    pno    NUMBER(4) NOT NULL,
-    cpqn   NUMBER(10) NOT NULL
+CREATE TABLE carts (
+    mid   VARCHAR2(15) NOT NULL,
+    pno   NUMBER(4) NOT NULL,
+    cpqn  NUMBER(10) NOT NULL
 );
 
-ALTER TABLE cart ADD CONSTRAINT cart_pk PRIMARY KEY ( "uid",
-                                                      pno );
+ALTER TABLE carts ADD CONSTRAINT cart_pk PRIMARY KEY ( mid,
+                                                       pno );
 
-CREATE TABLE direct_q (
-    "uid"     VARCHAR2(15),
+CREATE TABLE direct_qs (
+    mid       VARCHAR2(15),
     qtitle    VARCHAR2(1000) NOT NULL,
     qcontent  VARCHAR2(1000) NOT NULL,
     qanswer   VARCHAR2(1000) NOT NULL,
     qno       NUMBER(4) NOT NULL
 );
 
-ALTER TABLE direct_q ADD CONSTRAINT direct_q_pk PRIMARY KEY ( qno );
+ALTER TABLE direct_qs ADD CONSTRAINT direct_q_pk PRIMARY KEY ( qno );
 
-CREATE TABLE faq (
-    fno      NUMBER(4) NOT NULL,
-    ftitle   VARCHAR2(500) NOT NULL,
-    fanswer  VARCHAR2(500) NOT NULL,
-    fcatid   NUMBER(4) NOT NULL,
-    "uid"    VARCHAR2(15)
-);
-
-ALTER TABLE faq ADD CONSTRAINT faq_pk PRIMARY KEY ( fno );
-
-CREATE TABLE faq_category (
+CREATE TABLE faq_categorys (
     fname   VARCHAR2(300),
     fcatid  NUMBER(4) NOT NULL
 );
 
-ALTER TABLE faq_category ADD CONSTRAINT faq_category_pk PRIMARY KEY ( fcatid );
+ALTER TABLE faq_categorys ADD CONSTRAINT faq_category_pk PRIMARY KEY ( fcatid );
 
-CREATE TABLE grade (
+CREATE TABLE faqs (
+    fno      NUMBER(4) NOT NULL,
+    ftitle   VARCHAR2(500) NOT NULL,
+    fanswer  VARCHAR2(500) NOT NULL,
+    fcatid   NUMBER(4) NOT NULL,
+    mid      VARCHAR2(15)
+);
+
+ALTER TABLE faqs ADD CONSTRAINT faq_pk PRIMARY KEY ( fno );
+
+CREATE TABLE grades (
     ugrade         VARCHAR2(50) NOT NULL,
     gdiscountrate  NUMBER(5, 4) NOT NULL,
     gsaverate      NUMBER(5, 4) NOT NULL,
@@ -67,27 +67,17 @@ CREATE TABLE grade (
     gcriteria      NUMBER(10) NOT NULL
 );
 
-ALTER TABLE grade ADD CONSTRAINT grade_pk PRIMARY KEY ( ugrade );
+ALTER TABLE grades ADD CONSTRAINT grade_pk PRIMARY KEY ( ugrade );
 
-CREATE TABLE notice (
+CREATE TABLE notices (
     nno          NUMBER(4) NOT NULL,
     ndate        DATE NOT NULL,
     ntitle       VARCHAR2(1000) NOT NULL,
     ncontent     VARCHAR2(3000) NOT NULL,
-    account_uid  VARCHAR2(15)
+    account_mid  VARCHAR2(15)
 );
 
-ALTER TABLE notice ADD CONSTRAINT notice_pk PRIMARY KEY ( nno );
-
-CREATE TABLE "order" (
-    ono       NUMBER(4) NOT NULL,
-    sid       NUMBER(4) NOT NULL,
-    "uid"     VARCHAR2(15),
-    pno       NUMBER(4),
-    oaddress  VARCHAR2(300)
-);
-
-ALTER TABLE "order" ADD CONSTRAINT order_pk PRIMARY KEY ( ono );
+ALTER TABLE notices ADD CONSTRAINT notice_pk PRIMARY KEY ( nno );
 
 CREATE TABLE ordered_items (
     opqn  NUMBER(4) NOT NULL,
@@ -105,7 +95,17 @@ CREATE TABLE ordered_status (
 
 ALTER TABLE ordered_status ADD CONSTRAINT order_status_pk PRIMARY KEY ( sid );
 
-CREATE TABLE product (
+CREATE TABLE orders (
+    ono       NUMBER(4) NOT NULL,
+    sid       NUMBER(4) NOT NULL,
+    pno       NUMBER(4),
+    oaddress  VARCHAR2(300),
+    mid       VARCHAR2(15) NOT NULL
+);
+
+ALTER TABLE orders ADD CONSTRAINT order_pk PRIMARY KEY ( ono );
+
+CREATE TABLE products (
     pno          NUMBER(4) NOT NULL,
     pname        VARCHAR2(50) NOT NULL,
     pmainimg     VARCHAR2(500) NOT NULL,
@@ -119,66 +119,66 @@ CREATE TABLE product (
     pcontent     VARCHAR2(4000)
 );
 
-ALTER TABLE product ADD CONSTRAINT product_pk PRIMARY KEY ( pno );
+ALTER TABLE products ADD CONSTRAINT product_pk PRIMARY KEY ( pno );
 
-CREATE TABLE purchase (
-    "uid"           VARCHAR2(15) NOT NULL,
-    upurchasecount  NUMBER(10),
-    upurchasesum    NUMBER(10),
-    usavemoney      NUMBER(10)
+CREATE TABLE purchases (
+    mid             VARCHAR2(15) NOT NULL,
+    mpurchasecount  NUMBER(10),
+    mpurchasesum    NUMBER(10),
+    msavemoney      NUMBER(10)
 );
 
-ALTER TABLE account
-    ADD CONSTRAINT account_grade_fk FOREIGN KEY ( ugrade )
-        REFERENCES grade ( ugrade );
+ALTER TABLE accounts
+    ADD CONSTRAINT account_grade_fk FOREIGN KEY ( mgrade )
+        REFERENCES grades ( ugrade );
 
-ALTER TABLE cart
-    ADD CONSTRAINT cart_account_fk FOREIGN KEY ( "uid" )
-        REFERENCES account ( "uid" );
+ALTER TABLE carts
+    ADD CONSTRAINT cart_account_fk FOREIGN KEY ( mid )
+        REFERENCES accounts ( mid );
 
-ALTER TABLE cart
+ALTER TABLE carts
     ADD CONSTRAINT cart_product_fk FOREIGN KEY ( pno )
-        REFERENCES product ( pno );
+        REFERENCES products ( pno );
 
-ALTER TABLE direct_q
-    ADD CONSTRAINT direct_q_account_fk FOREIGN KEY ( "uid" )
-        REFERENCES account ( "uid" );
+ALTER TABLE direct_qs
+    ADD CONSTRAINT direct_q_account_fk FOREIGN KEY ( mid )
+        REFERENCES accounts ( mid );
 
-ALTER TABLE faq
+ALTER TABLE faqs
     ADD CONSTRAINT faq_faq_category_fk FOREIGN KEY ( fcatid )
-        REFERENCES faq_category ( fcatid );
+        REFERENCES faq_categorys ( fcatid );
 
-ALTER TABLE faq
-    ADD CONSTRAINT fid FOREIGN KEY ( "uid" )
-        REFERENCES account ( "uid" );
+ALTER TABLE faqs
+    ADD CONSTRAINT fid FOREIGN KEY ( mid )
+        REFERENCES accounts ( mid );
 
-ALTER TABLE notice
-    ADD CONSTRAINT notice_account_fk FOREIGN KEY ( account_uid )
-        REFERENCES account ( "uid" );
+ALTER TABLE notices
+    ADD CONSTRAINT notice_account_fk FOREIGN KEY ( account_mid )
+        REFERENCES accounts ( mid );
 
 ALTER TABLE ordered_items
     ADD CONSTRAINT order_items_product_fk FOREIGN KEY ( pno )
-        REFERENCES product ( pno );
+        REFERENCES products ( pno );
 
-ALTER TABLE "order"
+ALTER TABLE orders
     ADD CONSTRAINT order_order_status_fk FOREIGN KEY ( sid )
         REFERENCES ordered_status ( sid );
 
-ALTER TABLE "order"
+ALTER TABLE orders
     ADD CONSTRAINT order_product_fk FOREIGN KEY ( pno )
-        REFERENCES product ( pno );
+        REFERENCES products ( pno );
 
 ALTER TABLE ordered_items
     ADD CONSTRAINT ordered_items_order_fk FOREIGN KEY ( ono )
-        REFERENCES "order" ( ono );
+        REFERENCES orders ( ono );
 
-ALTER TABLE purchase
-    ADD CONSTRAINT purchase_account_fk FOREIGN KEY ( "uid" )
-        REFERENCES account ( "uid" );
+ALTER TABLE orders
+    ADD CONSTRAINT orders_accounts_fk FOREIGN KEY ( mid )
+        REFERENCES accounts ( mid );
 
-ALTER TABLE "order"
-    ADD CONSTRAINT "uid" FOREIGN KEY ( "uid" )
-        REFERENCES account ( "uid" );
+ALTER TABLE purchases
+    ADD CONSTRAINT purchase_account_fk FOREIGN KEY ( mid )
+        REFERENCES accounts ( mid );
 
 
 
