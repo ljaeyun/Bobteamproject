@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import bobproject.mycompany.bobapp.dao.LoginDao;
-import bobproject.mycompany.bobapp.dto.createid.Account;
+import bobproject.mycompany.bobapp.dto.createid.Member;
 
 @Service
 public class MemberService {
@@ -17,8 +17,8 @@ public class MemberService {
 	@Resource
 	private LoginDao loginDao;
 	
-	public String login(Account id) {
-		Account dbId = loginDao.selectByPk(id.getMid());
+	public String login(Member id) {
+		Member dbId = loginDao.selectByPk(id.getMid());
 		
 		if(dbId == null) {
 			return "wrongMid";
@@ -28,13 +28,13 @@ public class MemberService {
 			return "wrongMpw";
 		}
 	}
-	public Account getMember(String mid)
+	public Member getMember(String mid)
 	{
-		Account id = loginDao.selectByPk(mid);
+		Member id = loginDao.selectByPk(mid);
 		return id;
 	}
 	
-	public void join(Account id)
+	public void join(Member id)
 	{
 		loginDao.insert(id);
 	}

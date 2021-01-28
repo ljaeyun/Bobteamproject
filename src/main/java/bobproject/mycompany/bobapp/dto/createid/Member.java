@@ -2,7 +2,7 @@ package bobproject.mycompany.bobapp.dto.createid;
 
 import java.util.Date;
 
-public class Account {
+public class Member {
 	private String mid;
 	private String mpw;
 	private String mname;

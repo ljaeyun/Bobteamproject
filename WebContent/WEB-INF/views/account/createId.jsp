@@ -120,9 +120,41 @@
 								</td>
 							</tr>
 						</table>
-					
-						
 						</form>
+						<script>
+							/* function join() {
+								event.preventDefault();
+								const mid = $("#mid").val();
+								var validation = true;
+								if(mid === ""){
+									validation = false;
+								}
+								
+								const mpw = $("#mpw").val();
+								if(mpw === ""){
+									validation = false;
+								}
+								
+								if(!validation)
+								{
+									return;
+								}
+								$.ajax({
+									url:"join",
+									method:"post",
+									data:{mid, mpw, mname, memail, mphone, mgender, mbirth, maddress},
+									success : funcstion(data) {
+										if(data.result ==="success") {
+											alert("회원가입 성공");
+											loaction.href="/bobapp/"
+										} else if(data.result ==="wrongMid") {
+											alert("회원가입 실패");
+										}
+									}
+								});
+							} */
+						</script>
+						
 					</div>
 					
 					

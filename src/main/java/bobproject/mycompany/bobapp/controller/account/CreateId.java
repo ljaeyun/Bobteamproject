@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.Service.MemberService;
-import bobproject.mycompany.bobapp.dto.createid.Account;
+import bobproject.mycompany.bobapp.dto.createid.Member;
 
 @Controller
 /* @RequestMapping("/account") */
@@ -26,11 +26,13 @@ public class CreateId {
 	private MemberService memberService;
 	
 	@PostMapping("/join")
-	public String create(Account id) {
+	public String create(Member id) {
 		
 		memberService.join(id);
 		
 		return "redirect:/";
 	}
+	
+	
 	
 }
