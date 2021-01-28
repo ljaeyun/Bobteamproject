@@ -1,3 +1,5 @@
+package bobproject.mycompany.bobapp.dto;
+
 import org.springframework.web.multipart.MultipartFile;
 
 public class Product {
