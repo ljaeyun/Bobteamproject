@@ -4,7 +4,10 @@
 <configuration>
 	<typeAliases>
 
+<<<<<<< HEAD
 		
+=======
+>>>>>>> branch 'master' of https://github.com/ljaeyun/Bobteamproject
 		<typeAlias alias="notice" type="bobproject.mycompany.bobapp.dto.CustomerServiceNotice"/>
 		<typeAlias alias="directq" type="bobproject.mycompany.bobapp.dto.CSDirectq"/>
 

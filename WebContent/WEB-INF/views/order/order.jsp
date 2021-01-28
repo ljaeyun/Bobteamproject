@@ -6,7 +6,7 @@
 <head>
 	<title>Insert title here</title>
 		<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/cart/cart.css">
-		<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/cart/cart_none.css">
+		<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/cart/order.css">
 		<script src="<%=application.getContextPath()%>/resources/js/cart/cart.js"></script>
 		<script src="https://kit.fontawesome.com/7f16510dcc.js" crossorigin="anonymous"></script>
 <meta charset="UTF-8">

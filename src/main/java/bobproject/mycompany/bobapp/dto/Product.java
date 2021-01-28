@@ -14,9 +14,9 @@ public class Product {
 	private String psubimg1;
 	private String psubimg2;
 	
-	private int pprice =0;
-	private int pweight =0;
-	private int ptime =0;
+	private int pprice;
+	private int pweight;
+	private int ptime;
 	private String pmainimgtype;
 	private String psubimg1type;
 	private String psubimg2type;

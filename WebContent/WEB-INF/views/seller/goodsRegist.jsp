@@ -15,9 +15,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	
-<link rel="stylesheet"
-	href="<%=application.getContextPath()%>/resources/css/seller/goodsRegist.css">
+<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/seller/goodsRegist.css">
 </head>
 <body>
 	
@@ -25,7 +23,7 @@
 	<div class="wrapper">
 		<div class="content">
 		<div class="alert alert-secondary" role="alert">상품 등록 페이지</div>
-		<form enctype="multipart/form-data" name="boardwriteform" action="goodsRegist" method="post">
+		<form enctype="multipart/form-data" name="RegistForm" action="goodsRegist" method="post">
 			<div class="form-group">
 				<label for="pname">상품의 이름을 입력하세요</label>
 					<input type="text" class="form-control" id="pname" name="pname">
