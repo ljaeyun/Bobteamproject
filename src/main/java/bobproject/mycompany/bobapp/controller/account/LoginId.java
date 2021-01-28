@@ -35,7 +35,18 @@ public class LoginId {
 		logger.info("로그인 실행");
 		String result = memberService.login(id);
 		if(result.equals("success")) {
-			session.setAttribute("sessionMid", id.getMid());
+			if(id.getMid().equals("admin"))
+			{
+				session.setAttribute("sessionMid", id.getMid());
+				session.setAttribute("loginStatus", "ok");
+				session.setAttribute("ADMIN", "admin");
+			}
+			else
+			{
+				session.setAttribute("sessionMid", id.getMid());
+				session.setAttribute("loginStatus", "ok");
+			}
+			
 		}
 		
 		response.setContentType("application.json; charset=UTF-8");
