@@ -32,6 +32,8 @@ public class Controller_Pboard {
 		logger.info("상품등록");
 		return "seller/goodsRegist";
 	}
+	
+	
 	@PostMapping("/goodsRegist")
 	public String RegistForm(Product product, HttpSession session) throws Exception {
 		
