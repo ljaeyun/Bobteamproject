@@ -10,12 +10,11 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.Service.MemberService;
-import bobproject.mycompany.bobapp.dto.createid.Account;
+import bobproject.mycompany.bobapp.dto.createid.Member;
 @Controller
 /* @RequestMapping("/account") */
 public class LoginId {
@@ -31,7 +30,7 @@ public class LoginId {
 	private MemberService memberService;
 	
 	@PostMapping("/login")
-	public void login(Account id , HttpServletResponse response, HttpSession session) throws Exception {
+	public void login(Member id , HttpServletResponse response, HttpSession session) throws Exception {
 		logger.info("로그인 실행");
 		String result = memberService.login(id);
 		if(result.equals("success")) {

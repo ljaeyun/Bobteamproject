@@ -3,6 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		
 	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Black' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Light' rel='stylesheet'>
@@ -44,49 +49,49 @@
 							</tr>
 							<tr>
 								<th>비밀번호</th>
-								<td class="inputtd"><input id = "uid" placeholder="비밀번호를 입력해주세요" type = "password" name="upassword"/></td>
+								<td class="inputtd"><input id = "mpw" placeholder="비밀번호를 입력해주세요" type = "password" name="mpw"/></td>
 								
 							</tr>
 							<tr>
 								<th>비밀번호확인</th>
-								<td class="inputtd"><input id = "uid" placeholder="비밀번호를 한번 더 입력해주세요" type = "password" name="upassword2"/></td>
+								<td class="inputtd"><input id = "mpw2" placeholder="비밀번호를 한번 더 입력해주세요" type = "password" name="mpw2"/></td>
 								
 							</tr>
 							<tr>
 								<th>이름</th>
-								<td class="inputtd"><input id = "uid" placeholder="이름을 입력해주세요" type = "text" name="uname"/></td>
+								<td class="inputtd"><input id = "mname" placeholder="이름을 입력해주세요" type = "text" name="mname"/></td>
 								
 							</tr>
 							<tr>
 								<th>이메일</th>
-								<td class="inputtd"><input id = "uid" placeholder="예: example@bobsmell.com" type = "text" name="uemail"/></td>
+								<td class="inputtd"><input id = "memail" placeholder="예: example@bobsmell.com" type = "text" name="memail"/></td>
 								<td class="checktd"><input type="button" id ="checkbtn" value="중복확인" onclick='console.log("확인2")'/></td>
 							</tr>
 							<tr>
 								<th>휴대폰</th>
-								<td class="inputtd"><input id = "uid" placeholder="000-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required type = "tel" name="uphone"/></td>
+								<td class="inputtd"><input id = "mphone" placeholder="000-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required type = "tel" name="mphone"/></td>
 								<td class="checktd"><input type="button" id ="checkbtn" value="인증번호" onclick='console.log("확인3")'/></td>
 							</tr>
 							<tr>
 								<th>주소</th>
 								
 								<!-- <td class="searchad"><input type="button" id ="checkbtn" value="주소검색" onclick='console.log("확인4")' name="uhome"/></td> -->
-								<td class="searchad"><input id = "uid" placeholder="주소를 입력해주세요" type="text" name="uhome"/></td>
+								<td class="searchad"><input id = "maddress" placeholder="주소를 입력해주세요" type="text" name="maddress"/></td>
 							</tr>
 							<tr>
 								<th>성별</th>
 								<td>
 									<div id = "radiob">
-										<label><input style="margin-left:67px"type="radio" name="gender" value="man">남 </label>
-										<label><input style="margin-left:67px"type="radio" name="gender" value="woman">여 </label>
-										<label><input style="margin-left:67px"type="radio" name="gender" value="no">선택안함 </label>
+										<label><input style="margin-left:67px"type="radio" name="mgender" value="man">남 </label>
+										<label><input style="margin-left:67px"type="radio" name="mgender" value="woman">여 </label>
+										<label><input style="margin-left:67px"type="radio" name="mgender" value="no">선택안함 </label>
 									</div>
 								</td>
 								
 							</tr>
 							<tr>
 								<th>생년</th>
-								<td class="inputtd"><input id = "uid" type = "date" name="ubirth"/></td>
+								<td class="inputtd"><input id = "mbirth" type = "date" name="mbirth"/></td>
 							</tr>
 							<tr id = "linetr">
 								<th style="padding-top:21px; vertical-align:top;">이용약관동의</th>
@@ -115,9 +120,41 @@
 								</td>
 							</tr>
 						</table>
-					
-						
 						</form>
+						<script>
+							/* function join() {
+								event.preventDefault();
+								const mid = $("#mid").val();
+								var validation = true;
+								if(mid === ""){
+									validation = false;
+								}
+								
+								const mpw = $("#mpw").val();
+								if(mpw === ""){
+									validation = false;
+								}
+								
+								if(!validation)
+								{
+									return;
+								}
+								$.ajax({
+									url:"join",
+									method:"post",
+									data:{mid, mpw, mname, memail, mphone, mgender, mbirth, maddress},
+									success : funcstion(data) {
+										if(data.result ==="success") {
+											alert("회원가입 성공");
+											loaction.href="/bobapp/"
+										} else if(data.result ==="wrongMid") {
+											alert("회원가입 실패");
+										}
+									}
+								});
+							} */
+						</script>
+						
 					</div>
 					
 					

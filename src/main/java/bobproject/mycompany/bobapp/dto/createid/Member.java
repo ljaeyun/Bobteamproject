@@ -2,14 +2,15 @@ package bobproject.mycompany.bobapp.dto.createid;
 
 import java.util.Date;
 
-public class Account {
+public class Member {
 	private String mid;
 	private String mpw;
 	private String mname;
 	private String memail;
 	private String mphone;
 	private String mgender;
-	private Date mbirth;
+	//private Date mbirth;
+	private String mbirth;
 	private String maddress;
 	private String mgrade;
 	public String getMid() {
@@ -48,10 +49,10 @@ public class Account {
 	public void setMgender(String mgender) {
 		this.mgender = mgender;
 	}
-	public Date getMbirth() {
+	public String getMbirth() {
 		return mbirth;
 	}
-	public void setMbirth(Date mbirth) {
+	public void setMbirth(String mbirth) {
 		this.mbirth = mbirth;
 	}
 	public String getMaddress() {

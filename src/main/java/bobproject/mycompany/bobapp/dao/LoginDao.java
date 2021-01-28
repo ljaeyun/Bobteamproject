@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import bobproject.mycompany.bobapp.dto.createid.Account;
+import bobproject.mycompany.bobapp.dto.createid.Member;
 
 @Repository
 public class LoginDao {
@@ -16,15 +16,15 @@ public class LoginDao {
 	@Resource
 	private SqlSessionTemplate sst;
 	
-	public Account selectByPk(String mid)
+	public Member selectByPk(String mid)
 	{
-		Account id = sst.selectOne("accounts.selectByPk", mid);
+		Member id = sst.selectOne("members.selectByPk", mid);
 		return id;
 	}
 	
-	public int insert(Account id)
+	public int insert(Member id)
 	{
-		int rows = sst.insert("accounts.insert", id);
+		int rows = sst.insert("members.insert", id);
 		return rows;
 	}
 }
