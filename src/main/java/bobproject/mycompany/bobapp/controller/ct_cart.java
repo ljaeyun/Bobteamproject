@@ -36,9 +36,17 @@ public class ct_cart {
 	
 	@GetMapping("/addcart")
 	public String addcart(Cart cart, HttpSession session) throws Exception {
+	//	login 에서 세션에 mid 저장	
+	//	String mid = (String) session.getAttribute("sessionMid");
+	//	cart.setMid(mid);
 		
-		String mid = (String) session.getAttribute("sessionMid");
-		cart.setMid(mid);
+		cart.setMid("test");
+	
+	//	detail 에서 세션에 pno 저장
+	//	int pno = (Integer) session.getAttribute("sessionPno");
+	//	cart.setPno(pno);
+		
+		cart.setPno(7);
 		
 		cartService.addCart(cart);
 		
