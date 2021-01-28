@@ -1,4 +1,4 @@
-package bobproject.mycompany.bobapp.dto;
+import org.springframework.web.multipart.MultipartFile;
 
 import org.springframework.web.multipart.MultipartFile;  
 
