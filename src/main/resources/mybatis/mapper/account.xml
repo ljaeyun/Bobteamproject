@@ -6,5 +6,11 @@
 		from accounts
 		where mid=#{mid}
 	</select>
-
+	
+	<insert id="insert" parameterType="account">
+		insert into accounts
+		(mid, mpw, mname, memail, mphone, mgender, mbirth, maddress)
+		values
+		(#{mid}, #{mpw}, #{mname}, #{memail}, #{mphone}, #{mgender}, #{mbirth}, #{maddress})
+	</insert>
 </mapper>

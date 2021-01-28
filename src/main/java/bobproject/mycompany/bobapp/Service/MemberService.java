@@ -33,4 +33,9 @@ public class MemberService {
 		Account id = loginDao.selectByPk(mid);
 		return id;
 	}
+	
+	public void join(Account id)
+	{
+		loginDao.insert(id);
+	}
 }

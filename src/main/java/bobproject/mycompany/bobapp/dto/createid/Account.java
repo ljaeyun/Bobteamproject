@@ -9,7 +9,8 @@ public class Account {
 	private String memail;
 	private String mphone;
 	private String mgender;
-	private Date mbirth;
+	//private Date mbirth;
+	private String mbirth;
 	private String maddress;
 	private String mgrade;
 	public String getMid() {
@@ -48,10 +49,10 @@ public class Account {
 	public void setMgender(String mgender) {
 		this.mgender = mgender;
 	}
-	public Date getMbirth() {
+	public String getMbirth() {
 		return mbirth;
 	}
-	public void setMbirth(Date mbirth) {
+	public void setMbirth(String mbirth) {
 		this.mbirth = mbirth;
 	}
 	public String getMaddress() {
