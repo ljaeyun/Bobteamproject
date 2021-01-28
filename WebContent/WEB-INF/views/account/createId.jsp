@@ -34,11 +34,11 @@
 					
 					<div class = "txtinfo"> 
 					
-					<form method="post" action="create">
+					<form method="post" name="joinform" action="join">
 						<table >
 							<tr>
 								<th>아이디</th>
-								<td class="inputtd"><input id = "uid" placeholder="6자리 이상의 영문 혹은 영문과 숫자를 조합" type = "text" name="uid"/></td>
+								<td class="inputtd"><input id = "mid" placeholder="6자리 이상의 영문 혹은 영문과 숫자를 조합" type = "text" name="mid"/></td>
 								
 								<td class="checktd"><input type="button" id ="checkbtn" value="중복확인" onclick='console.log("확인")'/></td>
 							</tr>

@@ -3,9 +3,15 @@
 
 <configuration>
 	<typeAliases>
+
 		<typeAlias alias="account" type="bobproject.mycompany.bobapp.dto.createid.createIntel"/>
 		<typeAlias alias="notice" type="bobproject.mycompany.bobapp.dto.CustomerServiceNotice"/>
 		<typeAlias alias="directq" type="bobproject.mycompany.bobapp.dto.CSDirectq"/>
+
+		<typeAlias alias="account" type="bobproject.mycompany.bobapp.dto.createid.Members"/>
+		
+		<typeAlias alias="product" type="bobproject.mycompany.bobapp.dto.Product"/>
+
 	</typeAliases>
 </configuration>
 

@@ -1,26 +1,53 @@
 package bobproject.mycompany.bobapp.controller.account;
 
+import java.io.PrintWriter;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import javax.servlet.http.HttpServletRequest;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import bobproject.mycompany.bobapp.Service.MemberService;
+import bobproject.mycompany.bobapp.dto.createid.Members;
 @Controller
 /* @RequestMapping("/account") */
-public class login {
-	private static final Logger logger = LoggerFactory.getLogger(login.class);
+public class LoginId {
+	private static final Logger logger = LoggerFactory.getLogger(LoginId.class);
 	
-	@RequestMapping("/login")
+	@GetMapping("/login")
 	public String content() {
 		logger.info("로그인페이지");
 		return "account/login";
 	}
+	
+	@Resource
+	private MemberService memberService;
+	
+	@PostMapping("/login")
+	public void login(Members id , HttpServletResponse response, HttpSession session) throws Exception {
+		String result = memberService.login(id);
+		if(result.equals("success")) {
+			session.setAttribute("sessionMid", id.getMid());
+		}
+		
+		response.setContentType("application.json; charset=UTF-8");
+		PrintWriter pw = response.getWriter();
+		
+		JSONObject root = new JSONObject();
+		root.put("result", result);
+		pw.println(root.toString());
+		
+		pw.flush();
+		pw.close();
+	}
+	
 	
 	@PostMapping("/login2")
 	public String login2(String uid, String upassword, HttpSession session) {
