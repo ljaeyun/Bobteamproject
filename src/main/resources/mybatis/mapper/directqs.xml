@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="direct_qs">
+	<insert id="insert" parameterType="directq">
+			insert into direct_qs
+			(qno, qtitle, qcontent)
+			values
+			(qno_seq.nextval, #{qtitle}, #{qcontent})
+	</insert>
+	
+	<select id="selectAll" resultType="directq">
+		select
+			qno,
+			qanswer,
+			qtitle,
+			qcontent,
+			mid
+		from direct_qs
+		order by qno desc	
+	</select>
+</mapper>
+

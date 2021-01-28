@@ -91,6 +91,7 @@
 				background-color: #e9ecef;
 				height: 50px;
 				width: 100%;
+				text-align: center;
 					
 			}
 			
@@ -101,6 +102,7 @@
 			.not_list_title {
 				text-align: left;
 				width: 800px;
+				text-align: center;
 			}
 			
 			.not_list_title :hover {

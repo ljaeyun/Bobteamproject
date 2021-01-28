@@ -1,12 +1,21 @@
 package bobproject.mycompany.bobapp.controller;
 
+import java.util.List;
+
+import javax.annotation.Resource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import bobproject.mycompany.bobapp.dto.cs_faq;
+import bobproject.mycompany.bobapp.Service.CSDirectqService;
+import bobproject.mycompany.bobapp.Service.CSNoticeService;
+import bobproject.mycompany.bobapp.dto.CSDirectq;
+import bobproject.mycompany.bobapp.dto.CustomerServiceNotice;
 
 
 @Controller
@@ -21,52 +30,40 @@ public class ct_customer_service {
 		return "customer_service/customer_service_faq";
 	}
 	
-	@RequestMapping("/customer_service_notice")
-	public String notice() {
-		logger.info("공지사항 접속");
-		return "customer_service/customer_service_notice";
+	@Resource
+	private CSNoticeService csnoticeService;
+	
+	@GetMapping("/cs_notice")
+	public String cs_notice(Model model) {
+		List<CustomerServiceNotice> list = csnoticeService.getNoticeList();
+		model.addAttribute("list", list);
+		return "customer_service/cs_notice";
 	}
 	
-	@RequestMapping("/cs_notice_01")
-	public String notice_01() {
-		logger.info("공지사항 세부1");
-		return "customer_service/cs_notice_01";
-	}
-	
-	@RequestMapping("/cs_notice_02")
-	public String notice_02() {
-		logger.info("공지사항 세부2");
-		return "customer_service/cs_notice_02";
-	}
-	
-	
-	@RequestMapping("/cs_notice_03")
-	public String notice_03() {
-		logger.info("공지사항 세부3");
-		return "customer_service/cs_notice_03";
-	}
 
+	@Resource
+	private CSDirectqService csdirectqService;
+	
+	@GetMapping("/directqwrite")
+	public String directqwriteForm() {
+		return "customer_service/dq_write";
+	}
+	
+	@PostMapping("/directqwrite")
+	public String directqwrite(CSDirectq csdirectq) throws Exception {
+		csdirectqService.saveDirectq(csdirectq);
+		return "redirect:/customer_service/customer_service_faq";
+	}
+	
+	@GetMapping("/directqlist")
+	public String dq_list(Model model) {
+		List<CSDirectq> list = csdirectqService.getDirectqList();
+		model.addAttribute("list", list);
+		return "customer_service/dq_list";
+	}
+	
 	@GetMapping("/indiQuest")
-	public String indiq_popup() {
-		logger.info("1대1 문의를 요청함");
+	public String indiq() {
 		return "customer_service/indiQuest";
 	}
-	
-	@RequestMapping("/indiq")
-	public String indiq(cs_faq cf) {
-		String indiq_cat = cf.getIndiq_cat();
-		String indiq_content = cf.getIndiq_content();
-		logger.info("1:1 문의유형 : " + indiq_cat);
-		logger.info("1:1 문의내용 : " + indiq_content);
-		return "redirect:/customer_service/customer_service_faq";
-	}
-	
-	@RequestMapping("/faq_search")
-	public String faq(cs_faq faq) {
-		String faq_search = faq.getFaq_search();
-		logger.info("검색내용 : " + faq_search);
-		return "redirect:/customer_service/customer_service_faq";
-	}
-	
-	
 }
