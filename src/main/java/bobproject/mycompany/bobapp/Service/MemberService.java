@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import bobproject.mycompany.bobapp.dao.LoginDao;
+import bobproject.mycompany.bobapp.dao.OrderDao;
 import bobproject.mycompany.bobapp.dto.createid.Account;
 
 @Service
@@ -33,4 +34,9 @@ public class MemberService {
 		Account id = loginDao.selectByPk(mid);
 		return id;
 	}
+	
+	
+	@Resource
+	private OrderDao orderDao;
+	
 }

@@ -1,5 +1,6 @@
 <%@ page isELIgnored="false" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <div id="cart">
 				<div id="cart_header">주문하기</div>
 				<div id="order_listall">
@@ -7,19 +8,16 @@
 						<c:forEach var="cart" items="${cartlist}">
 							<div id="cart_listeach">
 								<div id="checkeach">
-									<input type="checkbox" name="checkBox"/>
+									
 								</div>
 									<a href=""><img src="<%=application.getContextPath()%>" style="width:100px;"/></a>
 								<div id="pd_info">
 									<div id="pname"><a href="">${cart.pname}</a></div>
-									<div id="pprice">${cart.pprice}원</div>
 								</div>
 								<form id="form" name="form" method="post">
 									<div id="pd_quantity_box" class="pd_quantity_box">
 										<input type=hidden name="pprice" value="${cart.pprice}"/>
-										<div><input type="button" value=" - " onclick="minus()"/></div>
-										<div id="quantity"><input type="text" name="amount" value=1 onchange="change();"></div>
-										<div><input type="button" value=" + " onclick="plus()"/></div>	
+										<div id="quantity"><input type="text" name="amount" value=1 onchange="change();">개</div>
 									</div>
 									<div id="pd_price_sum" class="pd_price_sum"><input type="text" name="sum" value="${cart.pprice}" readonly/>원</div>
 								</form>
@@ -51,15 +49,15 @@
 				<div id="order_list">
 					<div>주문자 정보</div>
 				</div>
-				<div>받으실 분</div> <div></div>
-				<div>휴대폰</div> <div></div>
-				<div>이메일</div> <div></div>
-				<div>배송지</div> <div></div>
+				<div>받으실 분</div> <input type="text" class="form-control" id="mname" name="mname">
+				<div>휴대폰</div> <input type="text" class="form-control" id="mphone" name="mphone">
+				<div>이메일</div> <input type="text" class="form-control" id="memail" name="memail">
+				<div>배송지</div> <input type="text" class="form-control" id="oaddress" name="oaddress">
 				<br/><br/><br/><br/>	
 				<div id="order_list">
 					<div>결제 수단</div>
 				</div>
 				<br/><br/><br/><br/>
-				<button>결제하기</button>
+				<button type="button" class="btn btn-dark">결제하기</button>
 				</div>
 </div>

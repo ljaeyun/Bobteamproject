@@ -19,7 +19,7 @@
 							<div id="checkeach">
 								<input type="checkbox" name="checkBox"/>
 							</div>
-								<a href=""><img src="<%=application.getContextPath()%>" style="width:100px;"/></a>
+								<a href=""><img src="" style="width:100px;"/></a>
 							<div id="pd_info">
 								<div id="pname"><a href="">${cart.pname}</a></div>
 								<div id="pprice">${cart.pprice}원</div>
@@ -28,18 +28,43 @@
 							
 							<form id="form" name="form" method="post">
 								<div id="pd_quantity_box" class="pd_quantity_box">
-									<input type=hidden name="pprice" value="${cart.pprice}"/>
-									<div><input type="button" value=" - " onclick="minus()"/></div>
-									<div id="quantity"><input type="text" name="amount" value=1 onchange="change();"></div>
-									<div><input type="button" value=" + " onclick="plus()"/></div>	
+									<input type=hidden name="pprice_${cart.pno}" value="${cart.pprice}"/>
+									<div><input type="button" value=" - " onclick="minus(${cart.pno})"/></div>
+									<div id="quantity"><input type="text" name="amount_${cart.pno}" value=1 onchange="change();"></div>
+									<div><input type="button" value=" + " onclick="plus(${cart.pno})"/></div>	
 								</div>
-								<div id="pd_price_sum" class="pd_price_sum"><input type="text" name="sum" value="${cart.pprice}" readonly/>원</div>
+								<div id="pd_price_sum" class="pd_price_sum"><input type="text" name="sum_${cart.pno}" value="${cart.pprice}" readonly/>원</div>
 							</form>
 							
 							<div id="pd_delete"><a href="delete"></a></div>
 							
 						</div>	
 					</c:forEach>
+					
+					<script>
+						checkAll = () => {
+						   	if(document.getElementById("checkall").checked==true){ 
+						         for(var i=0;i<${cartlist}.length;i++) document.getElementsByName("checkBox")[i].checked=true; 
+							}
+						    if(document.getElementById("checkall").checked==false){
+						         for(var i=0;i<${cartlist}.length;i++) document.getElementsByName("checkBox")[i].checked=false;  
+						    }
+						}
+						
+						var pprice;
+						var amount;
+						
+						plus = (int pno) => {
+							pprice = document.form.pprice_${pno};
+							amount = document.form.amount_${pno};
+							sum = document.form.sum_${pno};
+							amount.value++;
+							sum.value = amount.value * parseInt(pprice.value);
+							
+						}
+						
+						
+					</script>
 					
 					<div id="cart_price">
 						<div id="price">
