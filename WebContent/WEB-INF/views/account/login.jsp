@@ -37,7 +37,7 @@
 				
 				<div class = "txtinfo"> 
 				<c:if test="${loginStatus == null}">
-					<form name="loginfrom" onsubmit = "login()" method="post">
+					<form name="loginfrom" onsubmit = "login()">
 						<table id = "table1">
 							<tr>
 								<td class="inputtd">
@@ -76,8 +76,8 @@
 								validation = false;
 							}
 							
-							const mpassword = $("#mpassword").val();
-							if(mpassword === "") {
+							const mpw = $("#mpw").val();
+							if(mpw === "") {
 								$("#errorMpassword").html("필수입력힙니다");
 								validation = false;
 							}
@@ -89,12 +89,12 @@
 							$.ajax({
 								url: "login",
 								method:"post",
-								data : {mid, mpassword},
+								data : {mid, mpw},
 								success : function(data) {
 									//{"result" : "success | wrongMid | wrongMpassword"}
 									if(data.result === "success") {
 										alert("로그인 성공");
-										location.href="boardlist2";
+										location.href="/bobapp/";
 									} else if(data.result === "wrongMid"){
 										$("#errorMid").html("아이디가 존재하지 않습니다");
 									} else {
