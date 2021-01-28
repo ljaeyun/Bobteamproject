@@ -5,14 +5,17 @@
 <html>
 <head>
 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 
 <meta charset="UTF-8">
 <title>밥향기 :: FAQ</title>
 
-<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_faq.css">
+		<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_faq.css">
 
 		<script src="<%=application.getContextPath()%>/resources/js/customer_service/customer_service.js"> </script>
 
@@ -29,20 +32,11 @@
 			
 			<div id="category_box">
 				<div id="category_01" class="cs_cat"><a href="customer_service_faq"><b>FAQ</b></a></div>
-				<div id="category_02" class="cs_cat"><a href="customer_service_notice"><b>공지사항</b></a></div>
+				<div id="category_02" class="cs_cat"><a href="cs_notice"><b>공지사항</b></a></div>
 			</div>
 			
 			<div id="faq_wrap">
-				<div id="search_notice"><b>FAQ 검색</b></div>			
-				<div id="search_box">
-					<div id="search_input">
-						<form action="faq_search">
-							<input id="search_txt" type="text" name="faq_search" />
-							<input id="search_btn" type="submit" value="검색"></input>
-						</form>
-					</div>
-				</div>
-			
+							
 				<div id="faq_category_wrap">
 					<div id="faq_category_title"><b>문의유형</b></div>
 					<div id="faq_category_box">
@@ -119,7 +113,7 @@
 			</div>
 			<div id="indiq_banner_text">FAQ로 해결되지 않으셨다면, 궁금한 점을 문의해주세요. </div>
 			<div id="indiq_banner_btn"> 
-				<a href="javascript:indi1()">1대1문의 <br/> 작성</a>
+				<a href="javascript:indi1()">1대1문의 <br/>작성</a>
 			</div>
 		
 		</div>
