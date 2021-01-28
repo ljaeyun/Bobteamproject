@@ -7,107 +7,100 @@
 <title>밥향기 :: 상품등록</title>
   <%@ page import="java.util.*" %>
   <%@ page import="java.text.SimpleDateFormat" %>
-  
-<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/main.css">
-<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/seller/goodsRegist.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	
+<link rel="stylesheet"
+	href="<%=application.getContextPath()%>/resources/css/seller/goodsRegist.css">
 </head>
 <body>
-
+	
 	<jsp:include page="/WEB-INF/views/include/header.jsp"/>
-	<div id="wrapper_contents">
-	<div class = "title2">
-					<h1 style="font-size:40px"><b>상품 등록<b></h1>
-					<div id="search_line"> </div>
-	</div>
-	<br/>
-	<br/>
-	<section>
-			<nav>
-				<ul>
-					<li><a id="r_menu" href ="<%=application.getContextPath()%>/goodsRegist">상품 등록</a></li>    <!-- 주 소 수 정-->
-					<li><a> &nbsp</a></li>
-					<li><a id="r_menu" href ="<%=application.getContextPath()%>/goodsRevise">상품 수정</a></li>    <!-- 주 소 수 정-->
-					<li><a> &nbsp</a></li>
-					<li><a id="r_menu" href ="<%=application.getContextPath()%>/goodsDetail">상품 상세조회</a></li>    <!-- 주 소 수 정-->
-				</ul>
-				
-				<div id="ClientC">
-					<p><u> 밥향기 고객센터 </u><br>
-					<br>
-					카카오톡 : <b> 친구찾기 > 쿡킷 </b><br>
-					이메일 : <b>cookcook@CookKit.com </b><br>
-					전화 : 070-1234-5678 <br>
-					시간 : <b>월~금 : 09 : 00 ~ 18 : 00 </b><br>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>공휴일 휴무</b>
-					</p>
-				</div>
-			</nav>
-			
-			<article>
-					
-						<form method="post" enctype="multipart/form-data" name="myForm" action="goodsupload">
-							<table>
-								<tr align = "center" >
-									<td width = "120px" height = "30px"> <b>상품명 </b></td>
-									<td colspan = "5"><input type="text" name="gname" size="20" style="width:98%; border:0;"/></td>
-								</tr>
-								<tr align = "center">
-									<td height = "30px"> <b>판매가</b> </td>
-									<td colspan = "3" width="50px"><input type="text" name="gcost" size="20" style="width:98%; border:0;"/></td>
-									<td>원</td>
-								</tr>
-								
-								<tr align = "center">
-									<td height = "220px"> <b>상품이미지 등록</b> </td>
-									<td colspan = "4" width="50px">
-										
-										<input type="file" name="gimg"/>
-										
-										<div align = "center">
-											<p font-size = "1px">
-												-쇼핑몰에 기본으로 보여지는 상품이미지를 등록합니다. <br>
-												-대표이미지 등록 시 , 상세, 목록, 작은목록, 축소 이미지에 자동 리사이징 됩니다. <br>
-												-권장이미지 : 500px * 500px / 5M 이하 / gif, png, jpg(jpeg)
-											</p>
-										 </div>
-									</td>
-								</tr>
-								
-								<tr align = "center" >
-									<td width = "100px" height = "40px"> <b>상품요약설명</b></td>
-									<td colspan = "5"><input type="text" name="gsummary" size="20" style="width:98%; border:0;"/></td>					
-								</tr>
-								<tr align = "center"> 
-									<td height = "400px"><b> 상품상세설명 </b></td>
-									<td colspan="5" rowspan="4"><textarea name="gdetail" rows="20" style= "width:98%; border : 0; resize:none;"></textarea></td>
-								</tr>
-								<tr>
-									
-								
-									
-								</tr>
-							</table>
-						
-					
-						</form>
-			</article>
-			
-			
-		</section>
+	<div class="wrapper">
+		<div class="content">
+		<div class="alert alert-secondary" role="alert">상품 등록 페이지</div>
+		<form enctype="multipart/form-data" name="boardwriteform" action="goodsRegist" method="post">
+			<div class="form-group">
+				<label for="pname">상품의 이름을 입력하세요</label>
+					<input type="text" class="form-control" id="pname" name="pname">
+					<small class="form-text text-muted">10자 이내</small>
+			</div>
+			<div class="form-group">
+				<label for="pmainimg">첫번째 이미지를 첨부하세요</label>
+					<input type="file" class="form-control-file border" id="pmainimg" name="pattach1">
+					<small class="form-text text-muted">쇼핑몰의 기본 상품 이미지입니다</small>
+			</div>
+			<div class="form-group">
+				<label for="psubimg1">두번째 이미지를 첨부하세요</label>
+					<input type="file" class="form-control-file border" id="psubimg1" name="pattach2">
+					<small class="form-text text-muted">쇼핑몰의 상세 상품 이미지입니다</small>
+			</div>
+			<div class="form-group">
+				<label for="psubimg2">세번째 이미지를 첨부하세요</label>
+					<input type="file" class="form-control-file border" id="psubimg2" name="pattach3">
+					<small class="form-text text-muted">쇼핑몰의 상세 상품 이미지입니다</small>
+			</div>
+			<div class="form-group">
+			<label for="pprice">상품의 가격을 입력하세요</label>
+					<input type="text" class="form-control" id="pprice" name="pprice">
+					<small class="form-text text-muted">숫자로만 입력하세요</small>
+			</div>
+			<div class="form-group">
+			<label for="pamount">조리기준 인분을 입력하세요</label>
+					<input type="text" class="form-control" id="pamount" name="pamount">
+					<small class="form-text text-muted">예시: 3인분</small>
+			</div>
+			<div class="form-group">
+			<label for="ptime">조리시간을 입력하세요</label>
+					<input type="text" class="form-control" id="ptime" name="ptime">
+					<small class="form-text text-muted">예시: 30분</small>
+			</div>
+			<div class="form-group">
+			<label for="pdifficulty">조리 난이도를 입력하세요</label>
+					<input type="text" class="form-control" id="pdifficulty" name="pdifficulty">
+					<small class="form-text text-muted">"상", "중", "하" 로 입력하세요</small>
+			</div>
+			<div class="form-group">
+			<label for="pweight">상품의 중량을 입력하세요</label>
+					<input type="text" class="form-control" id="pweight" name="pweight">
+					<small class="form-text text-muted">그램단위로 숫자만 입력하세요</small>
+			</div>
+			<div class="form-group">
+			<label for="psubtitle">상품의 상세설명란의 타이틀을 입력하세요</label>
+					<textarea class="form-control" id="psubtitle" name="psubtitle"
+					rows="2" cols="50"></textarea>
+					<small class="form-text text-muted">20자 내외 권고</small>
+			</div>
+			<label for="pcontent">상품의 상세설명을 입력하세요</label>
+					<textarea class="form-control" id="pcontent" name="pcontent"
+					rows="6" cols="50"></textarea>
+					<small class="form-text text-muted">2000자 이내 권고</small>
+			<button class="btn btn-primary">저장</button>
+			<a class="btn btn-primary" href="boardlist2">취소</a>
+			</form>
+			</div>
+			<hr/>
+			<div id="ClientC">
+				<p><u> 밥향기 고객센터 </u><br>
+				<br>
+				카카오톡 : <b> 친구찾기 > 쿡킷 </b><br>
+				이메일 : <b>cookcook@CookKit.com </b><br>
+				전화 : 070-1234-5678 <br>
+				시간 : <b>월~금 : 09 : 00 ~ 18 : 00 </b><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>공휴일 휴무</b>
+				</p>
+			</div>
 		
-		<!-- 상품 등록 , 취소 버튼 -->
-				
-			<!-- <a class = "btn" href="">등록</a>					 주 소 수 정 -->
-		<div style="margin-bottom:15px;font-family: 'Noto Sans KR Medium';" class = "buttonBox" align ="right">
-	      <!-- 주 소 수 정-->				
-	      	<a class = "btn" id="register" onclick="javascript:document.myForm.submit();" type="submit">등록</a>	
-			<a class = "btn" id="cancel" href="../account/myinfo">취소</a>            <!-- 주 소 수 정-->
-		</div>
 		
+					
 	</div>	
-		
-					
-		
+	
 			<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 </body>
 </html>
