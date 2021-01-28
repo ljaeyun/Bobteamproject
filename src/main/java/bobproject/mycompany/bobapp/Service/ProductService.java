@@ -1,5 +1,7 @@
 package bobproject.mycompany.bobapp.Service;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.slf4j.Logger;
@@ -19,6 +21,11 @@ public class ProductService {
 	
 	public void saveProduct(Product product) {
 		productDao.insert(product);
+	}
+
+	public List<Product> getProductList() {
+		List<Product> list = productDao.selectAll();
+		return list;
 	}
 	
 	
