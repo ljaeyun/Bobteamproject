@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="carts">
+	<insert id="insert" parameterType="cart">
+		insert into carts
+		(mid, pno)
+		values
+		(#{mid}, #{pno})
+	</insert>
+	
+	<select id="selectById" parameterType="string" resultType="product">
+		select pname, pprice
+		from products
+		where pno in (
+			select pno
+			from carts
+			where mid=#{mid}
+		)
+	</select>
+	
+</mapper>
