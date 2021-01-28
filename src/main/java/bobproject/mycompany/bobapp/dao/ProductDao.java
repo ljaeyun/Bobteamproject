@@ -1,7 +1,5 @@
 package bobproject.mycompany.bobapp.dao;
 
-import java.util.List;
-
 import javax.annotation.Resource;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -24,9 +22,5 @@ public class ProductDao {
 		return rows;
 	}
 
-	public List<Product> selectAll() {
-		List<Product> list = sst.selectList("products.selectAll");
-		return list;
-	}
 
 }

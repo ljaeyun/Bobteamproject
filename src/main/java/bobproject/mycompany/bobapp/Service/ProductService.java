@@ -23,10 +23,11 @@ public class ProductService {
 		productDao.insert(product);
 	}
 
-	public List<Product> getProductList() {
-		List<Product> list = productDao.selectAll();
-		return list;
+	public Product getProduct() {
+		// TODO Auto-generated method stub
+		return null;
 	}
+
 	
 	
 }

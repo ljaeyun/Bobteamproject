@@ -1,13 +1,14 @@
 package bobproject.mycompany.bobapp.controller;
 
-import java.util.List;
+import java.io.PrintWriter;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.multipart.MultipartFile;
@@ -45,13 +46,31 @@ public class Controller_Pboard {
 		productService.saveProduct(product);
 		return "redirect:/";
 		}
-	//상품 페이지구현 
-	@GetMapping("/detailpage")
-	public String productlist(Model model) {
-		List<Product> list = productService.getProductList();
-		model.addAttribute("list", list);
-		return "/detailpage";
+	@GetMapping("/employee")
+	public void employ(int pno,HttpServletResponse response) throws Exception {
+		response.setContentType("appliaction/json;charset=UTF-8");
+		PrintWriter pw = response.getWriter();
+		Product pd	= productService.getProduct();
+		JSONObject root = new JSONObject();
+		root.put("pno", pd.getPno());
+		root.put("pprice", pd.getPprice());
+		root.put("ptime", pd.getPtime());
+		root.put("pweight", pd.getPweight());
+		root.put("pamount", pd.getPamount());
+		root.put("", pd.getPattach1());
+		root.put("", pd.getPattach2());
+		root.put("", pd.getPattach3());
+		root.put("", pd.getPcontent());
+		root.put("", pd.getPdifficulty());
+		root.put("", pd.getPname());
+		root.put("", pd.getPsubtitle());
+		String json = root.toString();
+		pw.println(json);
+		pw.flush();
+		pw.close();
+		
+		
+		
 	}
-	
 	
 }
