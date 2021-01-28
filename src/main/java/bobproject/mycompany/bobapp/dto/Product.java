@@ -1,6 +1,6 @@
-import org.springframework.web.multipart.MultipartFile;
+package bobproject.mycompany.bobapp.dto;
 
-import org.springframework.web.multipart.MultipartFile;  
+import org.springframework.web.multipart.MultipartFile;
 
 public class Product {
 	private int pno;
