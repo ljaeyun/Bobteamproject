@@ -56,6 +56,13 @@
 							<li><a href=" ">회원탈퇴</a></li>
 						</ul>
 						
+						<c:if test='${ADMIN!="admin"}'>
+						<ul>
+							<h3><b>고객센터</b></h3>
+							<li><a href="javascript:dqBox()">1대1 문의내역</a></li>
+						</ul>
+						</c:if>
+						
 						<ul>
 							
 						<%-- 	<li><input type="checkbox" onclick="openli(this)" name="seller" value="seller" id="sell" /><label for="sell"><b>판매자등록</b></label></li>
@@ -70,19 +77,33 @@
 									<li><a href="<%=application.getContextPath()%>/goodsRegist" name="sel01">상품등록</a></li>
 									<li><a href="<%=application.getContextPath()%>/goodsRevise" name="sel02">상품수정</a></li>
 									
-									<h3><b>고객센터</b></h3>
-									<li><a href="<%=application.getContextPath()%>/customer_service/directqlist" name="cs01">1대1문의</a></li>
-									<li><a href="<%=application.getContextPath()%>/customer_service/cs_notice" name="cs02">공지사항</a></li>
-									<li><a href="<%=application.getContextPath()%>/goodsRevise" name="sel02">FAQ</a></li>
-									
+									<h3><b>[관리자]고객센터</b></h3>
+									<li><a href="<%=application.getContextPath()%>/customer_service/directqlist" name="cs01">1대1문의 관리</a></li>
+									<li><a href="<%=application.getContextPath()%>/customer_service/cs_notice" name="cs02">공지사항 관리</a></li>
+									<li><a href="<%=application.getContextPath()%>/goodsRevise" name="sel02">FAQ 관리 </a></li>
 								</c:if>									
 						</ul>
 					</nav>
 					
 		<!--=========================================================================== -->
 
+	<script>
+		function dqBox(){
+			$.ajax({
+				url:"dqdone",
+				method:"get",
+				success:function(data){
+					$("#directqBox").html(data);
+					$("#infomain").hide();
+					$("#directqBox").show();
+				}
+			});
+		};
+	</script>
+					<div id="directqBox">			
+					</div>
 		
-					<div id = "infomain">
+					<div id="infomain">
 					
 						<h4><b>주문/배송 현황</b></h4>
 						<hr style="height:5px; background-color:black">
