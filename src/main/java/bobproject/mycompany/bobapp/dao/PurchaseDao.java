@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
-import bobproject.mycompany.bobapp.dto.createid.Member;
+import bobproject.mycompany.bobapp.dto.Purchase;
 
 @Repository
 public class PurchaseDao {
@@ -16,9 +16,9 @@ public class PurchaseDao {
 	@Resource
 	private SqlSessionTemplate sst;
 	
-	public Member selectByPk(String mid)
+	public Purchase selectByPk(String mid)
 	{
-		Member id = sst.selectOne("purchases.selectByPk", mid);
+		Purchase id = sst.selectOne("purchases.selectByPk", mid);
 		return id;
 	}
 	
