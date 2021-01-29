@@ -31,5 +31,17 @@ public class CSDirectqDao {
 		return directq;
 	}
 	
+	public int update(CSDirectq directq) {
+		int rows = sst.update("direct_qs.update", directq);
+		return rows;
+	}
+	
+	
+	public int delete(int qno) {
+		int rows = sst.delete("direct_qs.delete", qno);
+		return rows;
+	}
+
+	
 	
 }

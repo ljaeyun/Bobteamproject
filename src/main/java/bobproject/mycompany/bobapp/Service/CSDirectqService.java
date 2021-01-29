@@ -28,4 +28,13 @@ public class CSDirectqService {
 		CSDirectq directq = csdirectqDao.selectByPk(qno);
 		return directq;
 	}
+	
+	public void updateDirectq(CSDirectq directq) {
+		csdirectqDao.update(directq);
+	}
+	
+	public void deleteDirectq(int qno) {
+		csdirectqDao.delete(qno);
+	}
+	
 }
