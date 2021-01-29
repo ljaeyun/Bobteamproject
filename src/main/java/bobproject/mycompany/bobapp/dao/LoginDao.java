@@ -22,6 +22,12 @@ public class LoginDao {
 		return id;
 	}
 	
+	public Member selectByEmail(String memail)
+	{
+		Member email = sst.selectOne("members.selectByEmail", memail);
+		return email;
+	}
+	
 	public int insert(Member id)
 	{
 		int rows = sst.insert("members.insert", id);

@@ -39,6 +39,15 @@ public class MemberService {
 		}
 	}
 	
+	public String checkMemail(Member email) {
+		Member chkEmail = loginDao.selectByEmail(email.getMemail());
+		
+		if(chkEmail == null) {
+			return "yesMemail";
+		} else {
+			return "noMemail";
+		}
+	}
 	
 	public Member getMember(String mid)
 	{

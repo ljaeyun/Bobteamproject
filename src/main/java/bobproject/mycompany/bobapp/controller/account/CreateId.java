@@ -56,6 +56,21 @@ public class CreateId {
 		pw2.close();
 	}
 
+	@GetMapping("/checkMemail")
+	public void checkMemail(Member email, HttpServletResponse response, HttpSession session) throws Exception {
+		logger.info("이메일확인");
+		String chkResult = memberService.checkMemail(email);  //chkResult 에서 존재하는 mid 확인
+		
+		response.setContentType("application.json; charset=UTF-8");
+		PrintWriter pw3 = response.getWriter();
+		
+		JSONObject root3 = new JSONObject();  //객체 생성
+		root3.put("chkResult", chkResult);
+		pw3.println(root3.toString());
+		
+		pw3.flush();
+		pw3.close();
+	}
 	
 	
 	
