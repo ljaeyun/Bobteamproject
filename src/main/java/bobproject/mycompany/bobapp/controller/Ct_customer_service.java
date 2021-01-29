@@ -20,9 +20,9 @@ import bobproject.mycompany.bobapp.dto.CustomerServiceNotice;
 
 @Controller
 @RequestMapping("/customer_service")
-public class ct_customer_service {
+public class Ct_customer_service {
 
-	private static final Logger logger = LoggerFactory.getLogger(ct_customer_service.class);
+	private static final Logger logger = LoggerFactory.getLogger(Ct_customer_service.class);
 	
 	@RequestMapping("/customer_service_faq")
 	public String faq() {
@@ -57,6 +57,7 @@ public class ct_customer_service {
 		model.addAttribute("list", list);
 		return "customer_service/dq_list";
 	}
+	
 	
 	@GetMapping("/directqread")
 	public String directqread(int qno, Model model) {
