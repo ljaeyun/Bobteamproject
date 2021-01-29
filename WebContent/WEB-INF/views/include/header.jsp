@@ -16,8 +16,8 @@
 				 	</div>
 				 	<div id="login">
 				 			<ul id="ul1">
-				 				<li><a href="<%=application.getContextPath()%>/createId">회원가입</a></li> 
 				 				<c:if test="${loginStatus==null }">
+				 					<li><a href="<%=application.getContextPath()%>/createId">회원가입</a></li> 
 									<li><a href="<%=application.getContextPath()%>/login">로그인</a></li>
 								</c:if>
 								<c:if test="${loginStatus!=null }">
