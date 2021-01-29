@@ -28,6 +28,18 @@ public class MemberService {
 			return "wrongMpw";
 		}
 	}
+	
+	public String checkMid(Member id) {
+		Member chkId = loginDao.selectByPk(id.getMid());
+		
+		if(chkId == null) {
+			return "yesMid";
+		} else {
+			return "noMid";
+		}
+	}
+	
+	
 	public Member getMember(String mid)
 	{
 		Member id = loginDao.selectByPk(mid);
@@ -42,4 +54,7 @@ public class MemberService {
 	{
 		loginDao.insert(id);
 	}
+	
+	
+	
 }
