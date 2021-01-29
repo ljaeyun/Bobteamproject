@@ -29,7 +29,7 @@
 				</div>
 				
 					<div class="alert alert-primary" role="alert">
-						   게시물 보기
+						 1대1 문의 상세내역 확인
 					</div>
 					<form name="dqreadform" action="dqread" method="post">
 					  <div class="form-group">
@@ -52,7 +52,7 @@
 						    </c:if>
 						   
 					  </div>
-					 <a class="btn btn-primary" href="directqlist">목록</a>
+					 <a class="btn btn-primary" href="customer_service/dqdone">목록</a>
 					 <c:if test="${sessionMid == board.bwriter}">
 						  <a class="btn btn-warning" href="directqupdate?qno=${directq.qno}">수정</a>
 						  <a class="btn btn-danger" href="directqdelete?qno=${directq.qno}">삭제</a>

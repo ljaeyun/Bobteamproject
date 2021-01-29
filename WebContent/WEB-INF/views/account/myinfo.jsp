@@ -16,7 +16,7 @@
 
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/main.css">
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/account/myinfo.css">
-	<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_faq.css">
+<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_faq.css">
 
 
 <script type="text/javascript" src="<%=application.getContextPath()%>/resources/js/account/myinfo.js"></script>

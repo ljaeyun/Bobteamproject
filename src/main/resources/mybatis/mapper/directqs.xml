@@ -31,7 +31,7 @@
 		where qno=#{qno}
 	</select>
 	
-	<select id="selectById" parameterType="String" resultType="directq">
+	<select id="selectById" resultType="directq">
 		select 
 			qno,
 			qanswer,

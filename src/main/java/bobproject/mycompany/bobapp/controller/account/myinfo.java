@@ -44,8 +44,10 @@ public class myinfo {
 	private CSDirectqService csdirectqService;
 	
 	@GetMapping("/dqdone")
-	public String dq_list(Model model) {
-		List<CSDirectq> list = csdirectqService.getDirectqList();
+	public String dq_list(CSDirectq csdirectq, Model model, HttpSession session) {
+		String mid = (String) session.getAttribute("sessionMid");
+		
+		List<CSDirectq> list = csdirectqService.getValidatedList(mid);
 		model.addAttribute("list", list);
 		return "customer_service/dqdone";
 	}

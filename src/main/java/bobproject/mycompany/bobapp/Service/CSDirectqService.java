@@ -24,6 +24,11 @@ public class CSDirectqService {
 		return list;
 	}
 	
+	public List<CSDirectq> getValidatedList(String mid) {
+		List<CSDirectq> list = csdirectqDao.selectById(mid);
+		return list;
+	}
+	
 	public CSDirectq getDirectq(int qno) {
 		CSDirectq directq = csdirectqDao.selectByPk(qno);
 		return directq;

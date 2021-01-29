@@ -31,6 +31,12 @@ public class CSDirectqDao {
 		return directq;
 	}
 	
+	public List<CSDirectq> selectById(String mid) {
+		List<CSDirectq> list =
+				sst.selectList("direct_qs.selectById", mid);
+		return list;
+	}
+	
 	public int update(CSDirectq directq) {
 		int rows = sst.update("direct_qs.update", directq);
 		return rows;

@@ -20,7 +20,8 @@
 					  	<c:forEach var="directq" items="${list}">
 						  	<tr>
 						      <td class="not_list_num">${directq.qno}</td>
-						      <td class="not_list_title"><a class="text-decoration-none" href="directqread?qno=${directq.qno}">${directq.qtitle}</a></td>
+						      <td class="not_list_title"><a class="text-decoration-none" 
+						      	href="directqread?qno=${directq.qno}">${directq.qtitle}</a></td>
 						      <td class="not_list_date">${directq.qanswer}</td>
 					  		</tr>
 					  	</c:forEach>
