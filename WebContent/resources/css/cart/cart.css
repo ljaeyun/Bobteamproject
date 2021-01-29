@@ -78,7 +78,7 @@
 						}
 						
 						
-							#pd_name {
+							#pname {
 								padding-left: 50px;
 								margin-bottom: 20px;
 								font-family: 'Noto Sans KR Medium';
@@ -86,12 +86,12 @@
 							}
 							
 							
-							#pd_name >a {
+							#pname >a {
 								text-decoration: none;
 								color: black;
 							}
 							
-							#pd_price {
+							#pprice {
 								padding-left: 50px;
 								font-family: 'Noto Sans KR';
 								font-size: 18px;

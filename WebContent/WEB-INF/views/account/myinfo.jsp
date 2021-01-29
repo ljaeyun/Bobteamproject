@@ -69,6 +69,12 @@
 									<h3><b>판매자등록</b></h3>
 									<li><a href="<%=application.getContextPath()%>/goodsRegist" name="sel01">상품등록</a></li>
 									<li><a href="<%=application.getContextPath()%>/goodsRevise" name="sel02">상품수정</a></li>
+									
+									<h3><b>고객센터</b></h3>
+									<li><a href="<%=application.getContextPath()%>/customer_service/directqlist" name="cs01">1대1문의</a></li>
+									<li><a href="<%=application.getContextPath()%>/customer_service/cs_notice" name="cs02">공지사항</a></li>
+									<li><a href="<%=application.getContextPath()%>/goodsRevise" name="sel02">FAQ</a></li>
+									
 								</c:if>									
 						</ul>
 					</nav>

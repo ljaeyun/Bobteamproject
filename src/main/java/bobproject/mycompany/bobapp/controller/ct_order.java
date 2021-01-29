@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.Service.CartService;
-import bobproject.mycompany.bobapp.dto.Cart;
+import bobproject.mycompany.bobapp.Service.MemberService;
 import bobproject.mycompany.bobapp.dto.Product;
 
 @Controller
@@ -23,16 +23,18 @@ public class ct_order {
 	@Resource
 	private CartService cartService;
 	
+	@Resource 
+	private MemberService memberService;
+	
 	@GetMapping("/orderlist")
 	public String orderlist(HttpSession session) {
 		//카트 불러오기
-	//	String mid = (String) session.getAttribute("sessionMid");
-		String mid = "test";
+		String mid = (String) session.getAttribute("sessionMid");
+	//	String mid = "test";
 		List<Product> cartlist = cartService.getCartList(mid);
 		session.setAttribute("cartlist", cartlist);
 		
 		//회원 정보 불러오기
-		
 		
 		
 		return "order/order";

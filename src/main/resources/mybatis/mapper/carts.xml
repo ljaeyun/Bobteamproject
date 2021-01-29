@@ -9,7 +9,7 @@
 	</insert>
 	
 	<select id="selectById" parameterType="string" resultType="product">
-		select pname, pprice
+		select pname, pprice, pno
 		from products
 		where pno in (
 			select pno

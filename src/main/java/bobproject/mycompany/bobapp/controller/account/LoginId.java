@@ -10,18 +10,17 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.Service.MemberService;
-import bobproject.mycompany.bobapp.dto.createid.Members;
+import bobproject.mycompany.bobapp.dto.createid.Member;
 @Controller
 /* @RequestMapping("/account") */
 public class LoginId {
 	private static final Logger logger = LoggerFactory.getLogger(LoginId.class);
 	
-	@GetMapping("/login")
+	@RequestMapping("/login")
 	public String content() {
 		logger.info("로그인페이지");
 		return "account/login";
@@ -31,10 +30,22 @@ public class LoginId {
 	private MemberService memberService;
 	
 	@PostMapping("/login")
-	public void login(Members id , HttpServletResponse response, HttpSession session) throws Exception {
+	public void login(Member id , HttpServletResponse response, HttpSession session) throws Exception {
+		logger.info("로그인 실행");
 		String result = memberService.login(id);
 		if(result.equals("success")) {
-			session.setAttribute("sessionMid", id.getMid());
+			if(id.getMid().equals("admin"))
+			{
+				session.setAttribute("sessionMid", id.getMid());
+				session.setAttribute("loginStatus", "ok");
+				session.setAttribute("ADMIN", "admin");
+			}
+			else
+			{
+				session.setAttribute("sessionMid", id.getMid());
+				session.setAttribute("loginStatus", "ok");
+			}
+			
 		}
 		
 		response.setContentType("application.json; charset=UTF-8");
