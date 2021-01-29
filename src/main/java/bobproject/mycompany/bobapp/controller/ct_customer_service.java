@@ -40,9 +40,23 @@ public class ct_customer_service {
 		return "customer_service/cs_notice";
 	}
 	
+	@GetMapping("/noticeread")
+	public String notice(int nno, Model model) {
+		CustomerServiceNotice noticeread = csnoticeService.getNotice(nno);
+		model.addAttribute("noticeread", noticeread);
+		return "customer_service/notice_read";
+	}
 
+	
 	@Resource
 	private CSDirectqService csdirectqService;
+	
+	@GetMapping("/directqread")
+	public String directqread(int qno, Model model) {
+		CSDirectq directq = csdirectqService.getDirectq(qno);
+		model.addAttribute("directq", directq);
+		return "customer_service/dq_read";
+	}
 	
 	@GetMapping("/directqwrite")
 	public String directqwriteForm() {
@@ -67,11 +81,6 @@ public class ct_customer_service {
 		return "customer_service/indiQuest";
 	}
 	
-	@GetMapping("/directqread")
-	public String directqread(int qno, Model model) {
-		CSDirectq directq = csdirectqService.getDirectq(qno);
-		model.addAttribute("directq", directq);
-		return "customer_service/dq_read";
-	}
+	
 	
 }

@@ -51,7 +51,7 @@
 					  	<c:forEach var="notice" items="${list}">
 						  	<tr>
 						      <td class="not_list_num">${notice.nno}</td>
-						      <td class="not_list_title"><a class="text-decoration-none">${notice.ntitle}</a></td>
+						      <td class="not_list_title"><a class="text-decoration-none" href="noticeread?nno=${notice.nno}">${notice.ntitle}</a></td>
 						      <td class="not_list_date"><fmt:formatDate value="${notice.ndate}" pattern="yyyy.MM.dd"/></td>
 					  		</tr>
 					  	</c:forEach>
