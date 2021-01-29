@@ -42,13 +42,25 @@
 					  </div>
 					  <div class="form-group">
 						    <label for="qanswer">답변</label>
-						    <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50" readonly>${directq.qanswer}</textarea>
+						    
+						    <c:if test='${ADMIN!="admin"}'>
+						     <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50" readonly>${directq.qanswer}</textarea>
+						    </c:if> 
+						    
+						    <c:if test='${ADMIN=="admin"}'>
+						     <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50">${directq.qanswer}</textarea>
+						    </c:if>
+						   
 					  </div>
 					 <a class="btn btn-primary" href="directqlist">목록</a>
-					 <!-- <c:if test="${sessionMid == board.bwriter}"> -->
+					 <c:if test="${sessionMid == board.bwriter}">
 						  <a class="btn btn-warning" href="directqupdate?qno=${directq.qno}">수정</a>
 						  <a class="btn btn-danger" href="directqdelete?qno=${directq.qno}">삭제</a>
-					 <!--  </c:if>  -->
+					 </c:if>
+					 
+		
+					 
+					 
 					 </form>
 			</div>
 		</div>
