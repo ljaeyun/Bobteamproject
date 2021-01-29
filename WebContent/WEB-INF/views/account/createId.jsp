@@ -43,9 +43,9 @@
 						<table >
 							<tr>
 								<th>아이디</th>
-								<td class="inputtd"><input id = "mid" placeholder="6자리 이상의 영문 혹은 영문과 숫자를 조합" type = "text" name="mid"/></td>
+								<td class="inputtd"><input id = "mid" placeholder="6자리 이상의 영문 혹은 영문과 숫자를 조합" type = "text" name="mid" /></td>
 								
-								<td class="checktd"><input type="button" id ="checkbtn" value="중복확인" onclick='console.log("확인")'/></td>
+								<td class="checktd"><input type="button" id ="midcheckbtn" value="중복확인" onclick='console.log("확인")'/></td>
 							</tr>
 							<tr>
 								<th>비밀번호</th>
@@ -116,60 +116,36 @@
 							</tr>
 							<tr>
 								<td colspan = "2" style="width : 700px;">
-									<button  class="btn btn-info btn-sm" id ="checkbtn" href="create" style="width:100%; height: 45px; align:center; font-size:1.2em; cursor:pointer" >가입하기</button>
+									<button  class="btn btn-info btn-sm" id ="joinbtn" href="create" style="width:100%; height: 45px; align:center; font-size:1.2em; cursor:pointer" disabled="">가입하기</button>
 								</td>
 							</tr>
 						</table>
 						</form>
 						<script>
-								$('#checkbtn').click(function(){
+								var but = document.getElementById('joinbtn');	
+								
+								$('#midcheckbtn').click(function(){
+									const mid = $("#mid").val();
 									$.ajax({
 										url:"checkMid",
 										method:"get",
 										data:{mid},
 										success : function(data) {
-											if(data.result === "yesMid") {
+											if(data.chkResult === "noMid") {
+												but.disabled=true;
 												alert("아이디 중복 입니다. 다른아이디 쓰세요");
-											} else if(data.result ==="noMid") {
+											} else if(data.chkResult ==="yesMid") {
+												but.disabled=false;
 												alert("아이디 중복이 아닙니다. ")
 											}
 										}
 									});
 								});		
-						
-						
-						
-							/* function join() {
-								event.preventDefault();
-								const mid = $("#mid").val();
-								var validation = true;
-								if(mid === ""){
-									validation = false;
-								}
-								
-								const mpw = $("#mpw").val();
-								if(mpw === ""){
-									validation = false;
-								}
-								
-								if(!validation)
-								{
-									return;
-								}
-								$.ajax({
-									url:"join",
-									method:"post",
-									data:{mid, mpw, mname, memail, mphone, mgender, mbirth, maddress},
-									success : funcstion(data) {
-										if(data.result ==="success") {
-											alert("회원가입 성공");
-											loaction.href="/bobapp/"
-										} else if(data.result ==="wrongMid") {
-											alert("회원가입 실패");
-										}
-									}
+														
+								$('#mpw2').focus(function(){
+									
 								});
-							} */
+						
 						</script>
 						
 					</div>

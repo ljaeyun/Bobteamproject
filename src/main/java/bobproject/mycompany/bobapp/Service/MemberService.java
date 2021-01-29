@@ -34,10 +34,8 @@ public class MemberService {
 		
 		if(chkId == null) {
 			return "yesMid";
-		} else if(chkId.getMid().equals(id.getMid())) {
-			return "noMid";
 		} else {
-			return "error";
+			return "noMid";
 		}
 	}
 	
@@ -48,8 +46,9 @@ public class MemberService {
 		return id;
 	}
 
-	@Resource
-	private OrderDao orderDao;
+	/*
+	 * @Resource private OrderDao orderDao;
+	 */
 
 	public void join(Member id)
 	{

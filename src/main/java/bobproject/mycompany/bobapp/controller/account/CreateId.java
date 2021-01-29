@@ -50,6 +50,7 @@ public class CreateId {
 		
 		JSONObject root2 = new JSONObject();  //객체 생성
 		root2.put("chkResult", chkResult);
+		pw2.println(root2.toString());
 		
 		pw2.flush();
 		pw2.close();
