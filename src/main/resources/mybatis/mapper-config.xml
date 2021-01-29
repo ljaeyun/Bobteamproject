@@ -11,5 +11,8 @@
 		<typeAlias alias="product" type="bobproject.mycompany.bobapp.dto.Product"/>
 
 		<typeAlias alias="cart" type="bobproject.mycompany.bobapp.dto.Cart"/>
+		<typeAlias alias="order" type="bobproject.mycompany.bobapp.dto.Order"/>
+		<typeAlias alias="orderitem" type="bobproject.mycompany.bobapp.dto.Orderitem"/>
+		
 	</typeAliases>
 </configuration>

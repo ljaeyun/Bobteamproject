@@ -25,8 +25,9 @@ checkAll = () => {
 				document.getElementById("fianl_price").innerHTML = parseInt(sum.value) + deli + "원";
 			}
 			
-			plus = () => {
-				pprice = document.form.pprice;
+			plus = (pno) => {
+			/*
+				pprice = document.form["pprice_"+po\;
 				amount = document.form.amount;
 				sum = document.form.sum;
 				amount.value++;
@@ -38,7 +39,8 @@ checkAll = () => {
 					deli = 3000;
 				}
 				document.getElementById("deli").innerHTML = deli + "원";
-				document.getElementById("fianl_price").innerHTML = parseInt(sum.value) + deli + "원";
+				document.getElementById("fianl_price").innerHTML = parseInt(sum.value) + deli + "원";*/
+				
 			}
 
 			minus = () => {

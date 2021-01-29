@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -24,13 +25,12 @@ public class ct_cart {
 	private CartService cartService;
 	
 	@GetMapping("/cartlist")
-	public String cartlist(HttpSession session) {
-	//	String mid = (String) session.getAttribute("sessionMid");
-		String mid = "test";
+	public String cartlist(HttpSession session, Model model) {
+		String mid = (String) session.getAttribute("sessionMid");
 		
 		List<Product> cartlist = cartService.getCartList(mid);
 		
-		session.setAttribute("cartlist", cartlist);
+		model.addAttribute("cartlist", cartlist);
 		return "cart/cart";
 	}
 	
@@ -52,6 +52,7 @@ public class ct_cart {
 		
 		return "redirect:/cart/cartlist";
 	}
+	
 	
 	@GetMapping("/deletecart")
 	public String deletecart(HttpSession session) {

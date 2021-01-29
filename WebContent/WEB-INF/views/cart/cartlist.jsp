@@ -11,65 +11,88 @@
 						<a href="">선택 삭제</a>
 					</div>	
 				
-			
 				
 				
-				<c:forEach var="cart" items="${cartlist}">
+				
+				<c:forEach var="cartlist" items="${cartlist}">
 						<div id="cart_listeach">
 							<div id="checkeach">
 								<input type="checkbox" name="checkBox"/>
 							</div>
 								<a href=""><img src="" style="width:100px;"/></a>
 							<div id="pd_info">
-								<div id="pname"><a href="">${cart.pname}</a></div>
-								<div id="pprice">${cart.pprice}원</div>
+								<div id="pname"><a href="">${cartlist.pname}</a></div>
+								<div id="pprice">${cartlist.pprice}원</div>
 							</div>
 							
 							
-							<form id="form" name="form" method="post">
+							<form id="form_${cartlist.pno}" name="form_${cartlist.pno}" method="post">
 								<div id="pd_quantity_box" class="pd_quantity_box">
-									<input type=hidden name="pprice_${cart.pno}" value="${cart.pprice}"/>
-									<div><input type="button" value=" - " onclick="minus(${cart.pno})"/></div>
-									<div id="quantity"><input type="text" name="amount_${cart.pno}" value=1 onchange="change();"></div>
-									<div><input type="button" value=" + " onclick="plus(${cart.pno})"/></div>	
+									<input type=hidden name="pprice_${cartlist.pno}" value="${cartlist.pprice}"/>
+									<div><input type="button" value=" - " onclick="minus(${cartlist.pno})"/></div>
+									<div id="quantity"><input type="text" name="amount_${cartlist.pno}" value="${cartlist.cpqn}" readonly></div>
+									<div><input type="button" value=" + " onclick="plus(${cartlist.pno})"/></div>	
 								</div>
-								<div id="pd_price_sum" class="pd_price_sum"><input type="text" name="sum_${cart.pno}" value="${cart.pprice}" readonly/>원</div>
+								<div id="pd_price_sum" class="pd_price_sum"><input type="text" name="sum_${cartlist.pno}" value="${cartlist.pprice*cartlist.cpqn}" readonly/>원</div>
+							
+								<div id="pd_delete"><a href="delete"></a></div>
 							</form>
-							
-							<div id="pd_delete"><a href="delete"></a></div>
-							
 						</div>	
 					</c:forEach>
 					
 					<script>
-						checkAll = () => {
-						   	if(document.getElementById("checkall").checked==true){ 
-						         for(var i=0;i<${cartlist}.length;i++) document.getElementsByName("checkBox")[i].checked=true; 
-							}
-						    if(document.getElementById("checkall").checked==false){
-						         for(var i=0;i<${cartlist}.length;i++) document.getElementsByName("checkBox")[i].checked=false;  
-						    }
-						}
+						
 						
 						var pprice;
 						var amount;
 						
-						plus = (int pno) => {
-							pprice = document.form.pprice_${pno};
-							amount = document.form.amount_${pno};
-							sum = document.form.sum_${pno};
+						
+						function plus(pno) {
+							pprice = document["form_" + pno]["pprice_" + pno];
+							amount = document["form_" + pno]["amount_" + pno];
+							sum = document["form_" + pno]["sum_" + pno];
 							amount.value++;
-							sum.value = amount.value * parseInt(pprice.value);
+							sum.value = amount.value * pprice.value;
 							
+							sum_all = document.getElementById("sum_all");
+							sum_all.value += parseInt(sum.value);
+							sum_all.innerHTML = sum_all.value + "원";
+							
+							if(document.form.sum_all.value >= 50000) {
+								deli = 0;
+							} else if(document.form.sum_all.value < 50000) {
+								deli = 3000;
+							}
+							document.getElementById("deli").innerHTML = deli + "원";
+							document.getElementById("fianl_price").innerHTML = parseInt(sum_all.value) + deli + "원";
 						}
 						
+						
+						
+						function minus(pno) {
+							pprice = document["form_" + pno]["pprice_" + pno];
+							amount = document["form_" + pno]["amount_" + pno];
+							sum = document["form_" + pno]["sum_" + pno];
+							if (amount.value > 1) {
+								amount.value--;
+								sum.value = amount.value * parseInt(pprice.value);
+								document.getElementById("sum_all").innerHTML = sum.value + "원";
+								if(document.form.sum_all.value >= 50000) {
+									deli = 0;
+								} else if(document.form.sum_all.value < 50000) {
+									deli = 3000;
+								}
+								document.getElementById("deli").innerHTML = deli + "원";
+								document.getElementById("fianl_price").innerHTML = parseInt(sum_all.value) + deli + "원";
+							}
+						}
 						
 					</script>
 					
 					<div id="cart_price">
 						<div id="price">
 							<div id="price1">총 상품금액</div>
-							<div id="sum_all">19900원</div>
+							<div id="sum_all">원</div>
 						</div>
 						<div>-</div>
 						<div id="discount">

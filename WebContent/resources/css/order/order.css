@@ -217,34 +217,10 @@
 					padding-top: 20px;
 					padding-right: 60px;
 				}
-				/* 	#nonmember {
-						text-align: center;
-						font-size: 12px;
-						width: 130px;
-						height: 40px;
-						border: 1px solid black;
-						border-radius: 20px;
-						font-family: 'Noto Sans KR Medium';
-						padding-top: 10px;
-					} */
+				
+				#order_info > input {
+					width: 1200px;
+					display: inline-block;
+				}
 					
-					#member {
-						text-align: center;
-						font-size: 12px;
-						width: 130px;
-						height: 30px;
-						background-color: purple;
-						border-radius: 20px;
-						margin-right: 50px;
-						padding-top: 10px;
-					}
 					
-					#member >a {
-						font-family: 'Noto Sans KR Medium';
-						color: white;
-						text-decoration: none;
-					}
-					
-					#checkbox {
-					border: 1px solid black;
-					}

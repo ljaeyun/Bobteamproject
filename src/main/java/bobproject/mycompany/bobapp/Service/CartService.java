@@ -12,6 +12,7 @@ import bobproject.mycompany.bobapp.dto.Product;
 public class CartService {
 	@Resource
 	private CartDao cartDao;
+	
 	public void addCart(Cart cart) {
 		cartDao.insert(cart);
 	}

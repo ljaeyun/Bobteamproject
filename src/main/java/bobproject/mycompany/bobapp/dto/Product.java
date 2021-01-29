@@ -25,9 +25,15 @@ public class Product {
 	private MultipartFile pattach2;
 	private MultipartFile pattach3;
 	
+	private int cpqn;
 	
 	
-	
+	public int getCpqn() {
+		return cpqn;
+	}
+	public void setCpqn(int cpqn) {
+		this.cpqn = cpqn;
+	}
 	public int getPno() {
 		return pno;
 	}

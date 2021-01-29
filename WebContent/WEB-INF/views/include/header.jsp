@@ -48,10 +48,14 @@
 						 
 						<div id="icon">
 							<a href="<%=application.getContextPath()%>/myinfo"><i class="fa fa-user" aria-hidden="true"></i> 마이페이지</a>
-							<a href="<%=application.getContextPath()%>/cart/cartlist"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 장바구니</a>
-						</div>
-						
 							
+							<c:if test="${sessionMid != null}">
+								<a href="<%=application.getContextPath()%>/cart/cartlist"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 장바구니</a>
+							</c:if>
+							<c:if test="${sessionMid == null}">
+								<a href="<%=application.getContextPath()%>/login"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 장바구니</a>
+							</c:if>
+						</div>
 					</div>
 			 	</div>
 			</header>
