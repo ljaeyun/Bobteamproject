@@ -122,6 +122,23 @@
 						</table>
 						</form>
 						<script>
+								$('#checkbtn').click(function(){
+									$.ajax({
+										url:"checkMid",
+										method:"get",
+										data:{mid},
+										success : function(data) {
+											if(data.result === "yesMid") {
+												alert("아이디 중복 입니다. 다른아이디 쓰세요");
+											} else if(data.result ==="noMid") {
+												alert("아이디 중복이 아닙니다. ")
+											}
+										}
+									});
+								});		
+						
+						
+						
 							/* function join() {
 								event.preventDefault();
 								const mid = $("#mid").val();
