@@ -6,7 +6,6 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Insert title here</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -30,7 +29,7 @@
 				</div>
 				
 					<div class="alert alert-primary" role="alert">
-						   게시물 보기
+						 1대1 문의 상세내역 확인
 					</div>
 					<form name="dqreadform" action="dqread" method="post">
 					  <div class="form-group">
@@ -43,13 +42,26 @@
 					  </div>
 					  <div class="form-group">
 						    <label for="qanswer">답변</label>
-						    <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50" readonly>${directq.qanswer}</textarea>
+						    
+						    <c:if test='${ADMIN!="admin"}'>
+						     <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50" readonly>${directq.qanswer}</textarea>
+						    </c:if> 
+						    
+						    <c:if test='${ADMIN=="admin"}'>
+						     <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50">${directq.qanswer}</textarea>
+						    </c:if>
+						   
 					  </div>
-					 <a class="btn btn-primary" href="dq_list">목록</a>
-					 <!--  <c:if test="${sessionMid == board.bwriter}">
-						  <a class="btn btn-warning" href="boardupdate?bno=${board.bno}">수정</a>
-						  <a class="btn btn-danger" href="boarddelete?bno=${board.bno}">삭제</a>
-					  </c:if>  -->
+					 <a class="btn btn-primary" href="customer_service/dqdone">목록</a>
+					 <c:if test="${sessionMid == board.bwriter}">
+						  <a class="btn btn-warning" href="directqupdate?qno=${directq.qno}">수정</a>
+						  <a class="btn btn-danger" href="directqdelete?qno=${directq.qno}">삭제</a>
+					 </c:if>
+					 
+		
+					 
+					 
+					 </form>
 			</div>
 		</div>
 		

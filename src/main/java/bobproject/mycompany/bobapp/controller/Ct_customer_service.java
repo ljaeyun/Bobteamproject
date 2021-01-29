@@ -20,9 +20,9 @@ import bobproject.mycompany.bobapp.dto.CustomerServiceNotice;
 
 @Controller
 @RequestMapping("/customer_service")
-public class ct_customer_service {
+public class Ct_customer_service {
 
-	private static final Logger logger = LoggerFactory.getLogger(ct_customer_service.class);
+	private static final Logger logger = LoggerFactory.getLogger(Ct_customer_service.class);
 	
 	@RequestMapping("/customer_service_faq")
 	public String faq() {
@@ -40,9 +40,44 @@ public class ct_customer_service {
 		return "customer_service/cs_notice";
 	}
 	
+	@GetMapping("/noticeread")
+	public String notice(int nno, Model model) {
+		CustomerServiceNotice noticeread = csnoticeService.getNotice(nno);
+		model.addAttribute("noticeread", noticeread);
+		return "customer_service/notice_read";
+	}
 
+	
 	@Resource
 	private CSDirectqService csdirectqService;
+	
+	@GetMapping("/directqlist")
+	public String dq_list(Model model) {
+		List<CSDirectq> list = csdirectqService.getDirectqList();
+		model.addAttribute("list", list);
+		return "customer_service/dq_list";
+	}
+	
+	
+	@GetMapping("/directqread")
+	public String directqread(int qno, Model model) {
+		CSDirectq directq = csdirectqService.getDirectq(qno);
+		model.addAttribute("directq", directq);
+		return "customer_service/dq_read";
+	}
+	
+	@GetMapping("/directqupdate")
+	public String directqupdateForm(int qno, Model model) {
+		CSDirectq directq = csdirectqService.getDirectq(qno);
+		model.addAttribute("directq", directq); 
+		return "customer_service/dq_update";
+	}
+	
+	@PostMapping("/directqupdate")
+	public String directqupdate(CSDirectq directq) {
+		csdirectqService.updateDirectq(directq);
+		return "redirect:/customer_service/directqlist";
+	}
 	
 	@GetMapping("/directqwrite")
 	public String directqwriteForm() {
@@ -55,15 +90,19 @@ public class ct_customer_service {
 		return "redirect:/customer_service/customer_service_faq";
 	}
 	
-	@GetMapping("/directqlist")
-	public String dq_list(Model model) {
-		List<CSDirectq> list = csdirectqService.getDirectqList();
-		model.addAttribute("list", list);
-		return "customer_service/dq_list";
+	@GetMapping("/directqdelete")
+	public String directqdelete(int qno) {
+		csdirectqService.deleteDirectq(qno);
+		return "redirect:/customer_service/directqlist";
 	}
+	
+	
 	
 	@GetMapping("/indiQuest")
 	public String indiq() {
 		return "customer_service/indiQuest";
 	}
+	
+	
+	
 }

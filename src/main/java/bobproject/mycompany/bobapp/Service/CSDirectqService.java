@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import bobproject.mycompany.bobapp.dao.CSDirectqDao;
 import bobproject.mycompany.bobapp.dto.CSDirectq;
-import bobproject.mycompany.bobapp.dto.CustomerServiceNotice;
 
 @Service
 public class CSDirectqService {
@@ -24,4 +23,23 @@ public class CSDirectqService {
 		List<CSDirectq> list = csdirectqDao.selectAll();
 		return list;
 	}
+	
+	public List<CSDirectq> getValidatedList(String mid) {
+		List<CSDirectq> list = csdirectqDao.selectById(mid);
+		return list;
+	}
+	
+	public CSDirectq getDirectq(int qno) {
+		CSDirectq directq = csdirectqDao.selectByPk(qno);
+		return directq;
+	}
+	
+	public void updateDirectq(CSDirectq directq) {
+		csdirectqDao.update(directq);
+	}
+	
+	public void deleteDirectq(int qno) {
+		csdirectqDao.delete(qno);
+	}
+	
 }

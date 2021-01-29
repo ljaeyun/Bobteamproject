@@ -19,5 +19,40 @@
 		from direct_qs
 		order by qno desc	
 	</select>
+	
+	<select id="selectByPk" parameterType="int" resultType="directq">
+		select 
+			qno,
+			qanswer,
+			qtitle,
+			qcontent,
+			mid
+		from direct_qs
+		where qno=#{qno}
+	</select>
+	
+	<select id="selectById" resultType="directq">
+		select 
+			qno,
+			qanswer,
+			qtitle,
+			qcontent,
+			mid
+		from direct_qs
+		where mid=#{mid}
+	</select>
+	
+	
+	<update id="update" parameterType="directq">
+		update direct_qs
+		set qtitle=#{qtitle}, qcontent=#{qcontent}
+		where qno=#{qno}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete from direct_qs where qno=#{qno}
+	</delete>
+	
+	
 </mapper>
 
