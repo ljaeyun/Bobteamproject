@@ -44,7 +44,14 @@
 						    <label for="qanswer">답변</label>
 						     <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50" readonly>${directq.qanswer}</textarea>
 					  </div>
+					 <c:if test='${ADMIN=="admin"}'>
+					 <a class="btn btn-primary" href="directqlist">목록</a>
+					 </c:if>
+					 
+					<c:if test='${ADMIN!="admin"}'>
 					 <a class="btn btn-primary" href="myinfo">목록</a>
+					 </c:if>
+					 
 					 <c:if test="${sessionMid == directq.mid}">
 						  <a class="btn btn-warning" href="directqupdate?qno=${directq.qno}">수정</a>
 						  <a class="btn btn-danger" href="directqdelete?qno=${directq.qno}">삭제</a>
