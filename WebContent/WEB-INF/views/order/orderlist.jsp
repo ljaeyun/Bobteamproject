@@ -4,26 +4,30 @@
 <div id="cart">
 				<div id="cart_header">주문하기</div>
 				<div id="order_listall">
+				<form action="order" method="post">
 					<div id="order_list">주문상품</div>	
-						<c:forEach var="cart" items="${cartlist}">
+						<c:forEach var="cartlist" items="${cartlist}">
 							<div id="cart_listeach">
 								<div id="checkeach">
-									
+									<input type="checkbox" name="checkBox"/>
 								</div>
-									<a href=""><img src="<%=application.getContextPath()%>" style="width:100px;"/></a>
+									<a href=""><img src="" style="width:100px;"/></a>
 								<div id="pd_info">
-									<div id="pname"><a href="">${cart.pname}</a></div>
+									<div id="pname"><a href="">${cartlist.pname}</a></div>
+									<div id="pprice">${cartlist.pprice}원</div>
 								</div>
-								<form id="form" name="form" method="post">
+								
 									<div id="pd_quantity_box" class="pd_quantity_box">
-										<input type=hidden name="pprice" value="${cart.pprice}"/>
-										<div id="quantity"><input type="text" name="amount" value=1 onchange="change();">개</div>
+										<input type=hidden name="pprice_${cartlist.pno}" value="${cartlist.pprice}"/>
+										
+										<div id="quantity"><input type="text" name="amount_${cartlist.pno}" value="${cartlist.cpqn}" readonly></div>
+											
 									</div>
-									<div id="pd_price_sum" class="pd_price_sum"><input type="text" name="sum" value="${cart.pprice}" readonly/>원</div>
-								</form>
-								<div id="pd_delete"><a href="delete"></a></div>
+									<div id="pd_price_sum" class="pd_price_sum"><input type="text" name="sum_${cartlist.pno}" value="${cartlist.pprice*cartlist.cpqn}" readonly/>원</div>
+								
 							</div>	
 						</c:forEach>
+					
 						<div id="cart_price">
 							<div id="price">
 								<div id="price1">총 상품금액</div>
@@ -43,13 +47,14 @@
 							<div id="finalprice">
 								<div id="price1">총 예상 결제금액</div>
 								<div id="fianl_price">22900원</div>
+								<input type="hidden" value="30000" name="oprice"/>
 							</div>
 						</div>
 				<br/><br/><br/><br/>	
-				<div id="order_list" action="order" method="post">
+				<div id="order_list">
 					<div>주문자 정보</div>
 				</div>
-				<form>
+				
 				<div id="order_info">
 					<div>받으실 분</div><input type="text" class="form-control" id="mname" name="mname" value="${memberinfo.mname}">
 					<div>휴대폰</div> <input type="text" class="form-control" id="mphone" name="mphone" value="${memberinfo.mphone}">
@@ -57,11 +62,10 @@
 					<div>배송지</div> <input type="text" class="form-control" id="oaddress" name="oaddress" value="${memberinfo.maddress}">
 				</div>
 				<br/><br/><br/><br/>
-				<div id="order_list">
-					<div>결제 수단</div>
-				</div>
-				<br/><br/><br/><br/>
-				<a type="submit" class="btn btn-dark">결제하기</a>
-				</div>
+				
+				<button type="submit" class="btn btn-dark">결제하기</button>
 				</form>
+				
+				
+			</div>
 </div>

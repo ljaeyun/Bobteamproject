@@ -12,8 +12,8 @@
 		<selectKey keyProperty="ono" resultType="int" order="BEFORE">
 			select ono_seq.nextval from dual
 		</selectKey>
-			insert into orders (ono, mid, oaddress)
-			values (#{ono}, #{mid}, #{oaddress})
+			insert into orders (ono, mid, oaddress, oprice)
+			values (#{ono}, #{mid}, #{oaddress}, #{oprice})
 	</insert>
 	
 	<insert id="insertorderitem" parameterType="orderitem">

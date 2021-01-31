@@ -46,7 +46,7 @@ public class ct_cart {
 	//	int pno = (Integer) session.getAttribute("sessionPno");
 	//	cart.setPno(pno);
 		
-		cart.setPno(8);
+		cart.setPno(7);
 		
 		cartService.addCart(cart);
 		
@@ -60,7 +60,7 @@ public class ct_cart {
 		session.removeAttribute("cartList");
 		
 		logger.info("cart를 삭제했습니다.");
-		return "redirect:/cart";
+		return "redirect:/cart/cartlist";
 	}
 	
 	@GetMapping("/menu")
@@ -70,8 +70,12 @@ public class ct_cart {
 	}
 	
 	@GetMapping("/orderlist")
-	public String orderlist() {
+	public String orderlist(Cart cart, HttpSession session) {
 		logger.info("주문 진행 페이지로 갑니다.");
+		String mid = (String) session.getAttribute("sessionMid");
+		
+		cart.setMid(mid);
+		cartService.updateCart(cart);
 	
 		return "redirect:/order/orderlist";
 	}

@@ -1,5 +1,6 @@
 package bobproject.mycompany.bobapp.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -49,13 +50,26 @@ public class ct_order {
 	
 	
 	@PostMapping("/order")
-	public String order(Order order, List<Orderitem> orderitems, Model model, HttpSession session) {
+	public String order(Order order, Model model, HttpSession session) {
 		String mid = (String) session.getAttribute("sessionMid");
 		
 		order.setMid(mid);
 		
+		List<Orderitem> orderitems = new ArrayList<>();
+		
+		List<Product> cartlist = cartService.getCartList(mid);
+		
+		for(Product cart : cartlist) {
+			Orderitem oi = new Orderitem();
+			oi.setPno(cart.getPno());
+			oi.setOpqn(cart.getCpqn());
+			orderitems.add(oi);
+		}
+		
 		orderService.order(order, orderitems);
 		
+		cartService.deleteCart(mid);
+		logger.info("주문완료");
 		return "redirect:/order/orderdone";
 	}
 	

@@ -15,6 +15,7 @@
 				
 				
 				<c:forEach var="cartlist" items="${cartlist}">
+					<form id="form_${cartlist.pno}" name="form_${cartlist.pno}" method="post">
 						<div id="cart_listeach">
 							<div id="checkeach">
 								<input type="checkbox" name="checkBox"/>
@@ -26,25 +27,72 @@
 							</div>
 							
 							
-							<form id="form_${cartlist.pno}" name="form_${cartlist.pno}" method="post">
+							
 								<div id="pd_quantity_box" class="pd_quantity_box">
 									<input type=hidden name="pprice_${cartlist.pno}" value="${cartlist.pprice}"/>
 									<div><input type="button" value=" - " onclick="minus(${cartlist.pno})"/></div>
 									<div id="quantity"><input type="text" name="amount_${cartlist.pno}" value="${cartlist.cpqn}" readonly></div>
-									<div><input type="button" value=" + " onclick="plus(${cartlist.pno})"/></div>	
+									<div><input type="button" value=" + " onclick="plus(${cartlist.pno})"/></div>
 								</div>
-								<div id="pd_price_sum" class="pd_price_sum"><input type="text" name="sum_${cartlist.pno}" value="${cartlist.pprice*cartlist.cpqn}" readonly/>원</div>
+								<div id="pd_price_sum" class="pd_price_sum"><input type="text" class="sum" name="sum_${cartlist.pno}" value="${cartlist.pprice*cartlist.cpqn}" readonly/>원</div>
 							
 								<div id="pd_delete"><a href="delete"></a></div>
-							</form>
-						</div>	
+								
+						</div>
+						</form>	
 					</c:forEach>
 					
-					<script>
-						
-						
+					<div id="cart_price">
+						<div id="price">
+							<div id="price1">총 상품금액</div>
+							<div id="sum_all">원</div>
+						</div>
+						<div>-</div>
+						<div id="discount">
+							<div id="price1">총 할인가격</div>
+							<div>0원</div>
+						</div>
+						<div>+</div>
+						<div id="delivery">
+							<div id="price1">총 배송비</div>
+							<input id="deli" class="deli" name="deli"/><div>원</div>
+						</div>
+						<div>=</div>
+						<div id="finalprice">
+							<div id="price1">총 예상 결제금액</div>
+							<input id="fianl_price" name="oprice"/><div>원</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<script>
+
+				
 						var pprice;
 						var amount;
+						var sum;
+						var sum_all;
+				
+				
+						function sum() {
+							var count = $(".sum").length;
+							var sum_all = 0;
+							for(var i= 0; i < count; i++) {
+								sum_all += parseInt($(".sum")[i].value);
+							}
+							$("#sum_all").html(sum_all+"원");
+							
+							if(sum_all.value >= 50000) {
+								deli = 0;
+							} else {
+								deli = 3000;
+							}
+							
+							$("#deli").val(deli);
+							
+						}
+						
 						
 						
 						function plus(pno) {
@@ -54,17 +102,21 @@
 							amount.value++;
 							sum.value = amount.value * pprice.value;
 							
-							sum_all = document.getElementById("sum_all");
-							sum_all.value += parseInt(sum.value);
-							sum_all.innerHTML = sum_all.value + "원";
+							var count = $(".sum").length;
+							var sum_all = 0;
+							for(var i= 0; i < count; i++) {
+								sum_all += parseInt($(".sum")[i].value);
+							}
+							$("#sum_all").html(sum_all+"원");
 							
-							if(document.form.sum_all.value >= 50000) {
+							if(sum_all.value >= 50000) {
 								deli = 0;
-							} else if(document.form.sum_all.value < 50000) {
+							} else {
 								deli = 3000;
 							}
-							document.getElementById("deli").innerHTML = deli + "원";
-							document.getElementById("fianl_price").innerHTML = parseInt(sum_all.value) + deli + "원";
+							
+							$("#deli").val(deli);
+							
 						}
 						
 						
@@ -87,30 +139,11 @@
 							}
 						}
 						
+						
+						
+						
+						
 					</script>
-					
-					<div id="cart_price">
-						<div id="price">
-							<div id="price1">총 상품금액</div>
-							<div id="sum_all">원</div>
-						</div>
-						<div>-</div>
-						<div id="discount">
-							<div id="price1">총 할인가격</div>
-							<div>0원</div>
-						</div>
-						<div>+</div>
-						<div id="delivery">
-							<div id="price1">총 배송비</div>
-							<div id="deli">3000원</div>
-						</div>
-						<div>=</div>
-						<div id="finalprice">
-							<div id="price1">총 예상 결제금액</div>
-							<div id="fianl_price">22900원</div>
-						</div>
-					</div>
-				</div>
 				<div id="cart_order">
 			<!--	 	<div id="nonmember">비회원 주문하기 > </div> -->
 					<div id="member"><a href="orderlist"> 회원 주문하기 ></a></div>

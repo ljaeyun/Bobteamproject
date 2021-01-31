@@ -20,4 +20,11 @@ public class CartService {
 		List<Product> cartlist = cartDao.selectById(mid);
 		return cartlist;
 	}
+	public void deleteCart(String mid) {
+		cartDao.delete(mid);
+	}
+	public void updateCart(Cart cart) {
+		cartDao.update(cart);
+	}
+	
 }
