@@ -46,21 +46,22 @@
 							</div>
 						</div>
 				<br/><br/><br/><br/>	
-				<div id="order_list">
+				<div id="order_list" action="order" method="post">
 					<div>주문자 정보</div>
 				</div>
+				<form>
 				<div id="order_info">
 					<div>받으실 분</div><input type="text" class="form-control" id="mname" name="mname" value="${memberinfo.mname}">
 					<div>휴대폰</div> <input type="text" class="form-control" id="mphone" name="mphone" value="${memberinfo.mphone}">
 					<div>이메일</div> <input type="text" class="form-control" id="memail" name="memail" value="${memberinfo.memail}">
 					<div>배송지</div> <input type="text" class="form-control" id="oaddress" name="oaddress" value="${memberinfo.maddress}">
 				</div>
-				
 				<br/><br/><br/><br/>
 				<div id="order_list">
 					<div>결제 수단</div>
 				</div>
 				<br/><br/><br/><br/>
-				<a type="button" class="btn btn-dark" href="order">결제하기</a>
+				<a type="submit" class="btn btn-dark">결제하기</a>
 				</div>
+				</form>
 </div>

@@ -19,7 +19,7 @@
 		
 		<div id="wrapper_contents">
 		
-		<jsp:include page="/WEB-INF/views/order/order_list.jsp"/>
+		<jsp:include page="/WEB-INF/views/order/orderlist.jsp"/>
 		
 		</div>	
 	
