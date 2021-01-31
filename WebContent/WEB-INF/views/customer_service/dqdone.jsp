@@ -8,6 +8,8 @@
 
 
 			<div>
+			
+					<div><h5>1대1문의 내역</h5></div>
 					<table id="notice_table" class="table table-bordered">
 					  <thead>
 					    <tr id="notice_title">

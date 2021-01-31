@@ -25,12 +25,7 @@
 		<div id="wrapper_content">
 			<div id="cs_wrap">
 				<div id="title_box">
-					<div id="title"><b>고객센터</b></div>
-				</div>
-				
-				<div id="category_box">
-					<div id="category_01" class="cs_cat"><a href="customer_service_faq"><b>FAQ</b></a></div>
-					<div id="category_02" class="cs_cat"><a href="customer_service_notice"><b>공지사항</b></a></div>
+					<div id="title"><b>나의 정보</b></div>
 				</div>
 			
 						<div class="alert alert-primary" role="alert">
@@ -49,8 +44,25 @@
 						 		<small class="form-text text-muted">수정할 내용을 작성해주세요.</small>
 						  </div>
 						  
+						 <c:if test='${ADMIN!="admin"}'>
+						 	<input type="hidden" name="qanswer" value="${directq.qanswer}"/>
+						  </c:if>
+						  
+						 <c:if test='${ADMIN=="admin"}'>
+							    <div class="form-group">
+								    <label for="qanswer">답변 작성하기</label>
+								    <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50">${directq.qanswer}</textarea>
+							 	</div>
+						  </c:if>
+						  
+						  <c:if test='${ADMIN!="admin"}'>
 						  <button class="btn btn-primary">수정</button>
-						  <a class="btn btn-primary" href="directqlist">수정취소</a>
+						 </c:if>
+						  
+						  <c:if test='${ADMIN=="admin"}'>
+						   <button class="btn btn-primary">답변</button>
+						  </c:if>
+						  <a class="btn btn-primary" href="myinfo">취소</a>
 						</form>
 			
 				

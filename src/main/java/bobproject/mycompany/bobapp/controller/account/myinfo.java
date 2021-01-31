@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.Service.CSDirectqService;
@@ -46,10 +47,35 @@ public class myinfo {
 	@GetMapping("/dqdone")
 	public String dq_list(CSDirectq csdirectq, Model model, HttpSession session) {
 		String mid = (String) session.getAttribute("sessionMid");
-		
 		List<CSDirectq> list = csdirectqService.getValidatedList(mid);
 		model.addAttribute("list", list);
 		return "customer_service/dqdone";
+	}
+	
+	@GetMapping("/directqread")
+	public String directqread(int qno, Model model) {
+		CSDirectq directq = csdirectqService.getDirectq(qno);
+		model.addAttribute("directq", directq);
+		return "customer_service/dq_read";
+	}
+	
+	@GetMapping("/directqupdate")
+	public String directqupdateForm(int qno, Model model) {
+		CSDirectq directq = csdirectqService.getDirectq(qno);
+		model.addAttribute("directq", directq); 
+		return "customer_service/dq_update";
+	}
+	
+	@PostMapping("/directqupdate")
+	public String directqupdate(CSDirectq directq) {
+		csdirectqService.updateDirectq(directq);
+		return "redirect:/myinfo";
+	}
+	
+	@GetMapping("/directqdelete")
+	public String directqdelete(int qno) {
+		csdirectqService.deleteDirectq(qno);
+		return "redirect:/myinfo";
 	}
 	
 	

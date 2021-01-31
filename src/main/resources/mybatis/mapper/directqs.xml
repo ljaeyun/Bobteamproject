@@ -45,7 +45,7 @@
 	
 	<update id="update" parameterType="directq">
 		update direct_qs
-		set qtitle=#{qtitle}, qcontent=#{qcontent}
+		set qtitle=#{qtitle}, qcontent=#{qcontent}, qanswer=#{qanswer}
 		where qno=#{qno}
 	</update>
 	
