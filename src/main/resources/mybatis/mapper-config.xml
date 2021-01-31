@@ -6,9 +6,12 @@
 
 		<typeAlias alias="notice" type="bobproject.mycompany.bobapp.dto.CustomerServiceNotice"/>
 		<typeAlias alias="directq" type="bobproject.mycompany.bobapp.dto.CSDirectq"/>
+		<typeAlias alias="faq" type="bobproject.mycompany.bobapp.dto.CSFaq"/>
+		<typeAlias alias="faq_cat" type="bobproject.mycompany.bobapp.dto.CSFaq_cat"/>
 		<typeAlias alias="member" type="bobproject.mycompany.bobapp.dto.createid.Member"/>
 		<typeAlias alias="product" type="bobproject.mycompany.bobapp.dto.Product"/>
 		<typeAlias alias="cart" type="bobproject.mycompany.bobapp.dto.Cart"/>
+		
 		
 		<typeAlias alias="purchase" type="bobproject.mycompany.bobapp.dto.Purchase"/>
 	</typeAliases>

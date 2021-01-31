@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.Service.CSDirectqService;
+import bobproject.mycompany.bobapp.Service.CSFaqService;
 import bobproject.mycompany.bobapp.Service.CSNoticeService;
 import bobproject.mycompany.bobapp.dto.CSDirectq;
+import bobproject.mycompany.bobapp.dto.CSFaq;
 import bobproject.mycompany.bobapp.dto.CustomerServiceNotice;
 
 
@@ -45,6 +47,17 @@ public class Ct_CSCenter {
 		CustomerServiceNotice noticeread = csnoticeService.getNotice(nno);
 		model.addAttribute("noticeread", noticeread);
 		return "customer_service/notice_read";
+	}
+	
+	@Resource
+	private CSFaqService csfaqService;
+	
+	@GetMapping("/customer_service_faq")
+	public String cs_faqlist(Model model) {
+		logger.info("작동여부확인");
+		List<CSFaq> list = csfaqService.getFaqcatList();
+		model.addAttribute("list", list);
+		return "customer_service/customer_service_faq";
 	}
 
 	
@@ -96,12 +109,12 @@ public class Ct_CSCenter {
 		return "redirect:/customer_service/directqlist";
 	}
 	
-	
-	
 	@GetMapping("/indiQuest")
 	public String indiq() {
 		return "customer_service/indiQuest";
 	}
+	
+	
 	
 	
 	
