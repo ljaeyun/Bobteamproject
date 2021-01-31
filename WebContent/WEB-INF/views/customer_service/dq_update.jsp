@@ -57,7 +57,7 @@
 						  
 						  <c:if test='${ADMIN!="admin"}'>
 						  <button class="btn btn-primary">수정</button>
-						 </c:if>
+						  </c:if>
 						  
 						  <c:if test='${ADMIN=="admin"}'>
 						   <button class="btn btn-primary">답변</button>

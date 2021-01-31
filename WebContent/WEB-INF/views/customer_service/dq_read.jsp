@@ -42,15 +42,7 @@
 					  </div>
 					  <div class="form-group">
 						    <label for="qanswer">답변</label>
-						    
-						    <c:if test='${ADMIN!="admin"}'>
 						     <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50" readonly>${directq.qanswer}</textarea>
-						    </c:if> 
-						    
-						    <c:if test='${ADMIN=="admin"}'>
-						     <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50">${directq.qanswer}</textarea>
-						    </c:if>
-						   
 					  </div>
 					 <a class="btn btn-primary" href="myinfo">목록</a>
 					 <c:if test="${sessionMid == directq.mid}">
@@ -59,6 +51,7 @@
 					 </c:if>
 					 <c:if test='${ADMIN=="admin"}'>
 					 	<a class="btn btn-warning" href="directqupdate?qno=${directq.qno}">답변</a>
+					 	<a class="btn btn-danger" href="directqdelete?qno=${directq.qno}">삭제</a>
 					 </c:if>
 					</form>
 			</div>

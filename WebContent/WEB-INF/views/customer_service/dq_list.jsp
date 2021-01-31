@@ -39,7 +39,10 @@
 					    <tr id="notice_title">
 					      <th class="not_list_num">번호</th>
 					      <th class="not_list_title">제목</th>
-					      <th class="not_list_date">답변</th>
+					      <th class="not_list_title">답변</th>
+					     	<c:if test='${ADMIN=="admin"}'>
+					      	 <th class="not_list_title">작성자</th>
+					      	</c:if>
 					    </tr>
 					  </thead>
 					  <tbody>
@@ -47,7 +50,10 @@
 						  	<tr>
 						      <td class="not_list_num">${directq.qno}</td>
 						      <td class="not_list_title"><a class="text-decoration-none" href="directqread?qno=${directq.qno}">${directq.qtitle}</a></td>
-						      <td class="not_list_date">${directq.qanswer}</td>
+						      <td class="not_list_title">${directq.qanswer}</td>
+						      	<c:if test='${ADMIN=="admin"}'>
+					      	 		 <td class="not_list_title">${directq.mid}</td>
+					      		</c:if>
 					  		</tr>
 					  	</c:forEach>
 					  </tbody>

@@ -87,7 +87,7 @@ public class Ct_CSCenter {
 	@PostMapping("/directqwrite")
 	public String directqwrite(CSDirectq csdirectq) throws Exception {
 		csdirectqService.saveDirectq(csdirectq);
-		return "redirect:/customer_service/customer_service_faq";
+		return "redirect:/myinfo";
 	}
 	
 	@GetMapping("/directqdelete")
