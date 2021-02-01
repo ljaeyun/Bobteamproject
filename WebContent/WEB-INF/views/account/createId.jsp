@@ -43,18 +43,20 @@
 						<table >
 							<tr>
 								<th>아이디</th>
-								<td class="inputtd"><input id = "mid" placeholder="6자리 이상의 영문 혹은 영문과 숫자를 조합" type = "text" name="mid"/></td>
+								<td class="inputtd"><input id = "mid" placeholder="6자리 이상의 영문 혹은 영문과 숫자를 조합" type = "text" name="mid" /></td>
 								
-								<td class="checktd"><input type="button" id ="checkbtn" value="중복확인" onclick='console.log("확인")'/></td>
+								<td class="checktd"><input type="button" id ="midcheckbtn" value="중복확인" onclick='console.log("확인")'/></td>
 							</tr>
 							<tr>
 								<th>비밀번호</th>
-								<td class="inputtd"><input id = "mpw" placeholder="비밀번호를 입력해주세요" type = "password" name="mpw"/></td>
+								<td class="inputtd"><input id = "mpw" placeholder="비밀번호를 입력해주세요" type = "password" name="mpw"onkeyup="doublepw(this.value)"/></td>
 								
 							</tr>
 							<tr>
 								<th>비밀번호확인</th>
-								<td class="inputtd"><input id = "mpw2" placeholder="비밀번호를 한번 더 입력해주세요" type = "password" name="mpw2"/></td>
+								<td class="inputtd"><input id = "mpw2" placeholder="비밀번호를 한번 더 입력해주세요" type = "password" name="mpw2" onkeyup="doublepw(this.value)"/>
+													<small id="sameMpw" class="form-text text-danger"></small>
+								</td>
 								
 							</tr>
 							<tr>
@@ -65,7 +67,7 @@
 							<tr>
 								<th>이메일</th>
 								<td class="inputtd"><input id = "memail" placeholder="예: example@bobsmell.com" type = "text" name="memail"/></td>
-								<td class="checktd"><input type="button" id ="checkbtn" value="중복확인" onclick='console.log("확인2")'/></td>
+								<td class="checktd"><input type="button" id ="memailcheckbtn" value="중복확인" onclick='console.log("확인2")'/></td>
 							</tr>
 							<tr>
 								<th>휴대폰</th>
@@ -116,43 +118,91 @@
 							</tr>
 							<tr>
 								<td colspan = "2" style="width : 700px;">
-									<button  class="btn btn-info btn-sm" id ="checkbtn" href="create" style="width:100%; height: 45px; align:center; font-size:1.2em; cursor:pointer" >가입하기</button>
+									<button  class="btn btn-info btn-sm" id ="joinbtn" href="create" style="width:100%; height: 45px; align:center; font-size:1.2em; cursor:pointer" disabled="">가입하기</button>
 								</td>
 							</tr>
 						</table>
 						</form>
 						<script>
-							/* function join() {
-								event.preventDefault();
-								const mid = $("#mid").val();
-								var validation = true;
-								if(mid === ""){
-									validation = false;
-								}
+								var loginbtn = document.getElementById('joinbtn');	
+								var flag1 = false;
+								var flag2 = false;
+								//var flag2 = false;
 								
-								const mpw = $("#mpw").val();
-								if(mpw === ""){
-									validation = false;
-								}
-								
-								if(!validation)
-								{
-									return;
-								}
-								$.ajax({
-									url:"join",
-									method:"post",
-									data:{mid, mpw, mname, memail, mphone, mgender, mbirth, maddress},
-									success : funcstion(data) {
-										if(data.result ==="success") {
-											alert("회원가입 성공");
-											loaction.href="/bobapp/"
-										} else if(data.result ==="wrongMid") {
-											alert("회원가입 실패");
+								$('#midcheckbtn').click(function(){
+									const mid = $("#mid").val();
+									$.ajax({
+										url:"checkMid",
+										method:"get",
+										data:{mid},
+										success : function(data) {
+											if(data.chkResult === "noMid") {
+												flag1 = false;
+												
+												if((flag1 && flag2) == false)
+													{
+														loginbtn.disabled=true;	
+													}else {
+														loginbtn.disabled=false;
+													}
+												alert("아이디 중복 입니다. 다른아이디 쓰세요");
+											} else if(data.chkResult ==="yesMid") {
+												flag1 = true;
+												if((flag1 && flag2) == false)
+												{
+													loginbtn.disabled=true;	
+												}else {
+													loginbtn.disabled=false;
+												}
+												alert("아이디 중복이 아닙니다. ")
+											}
 										}
-									}
+									});
+								});		
+								
+								/* var emailbtn = document.getElementById('joinbtn');	 */
+								$('#memailcheckbtn').click(function(){
+									const memail = $('#memail').val();
+									$.ajax({
+										url:"checkMemail",
+										method:"get",
+										data:{memail},
+										success : function(data) {
+											if(data.chkResult === "noMemail") {
+												flag2 = false;
+												if((flag1 && flag2) == false)
+													{
+														loginbtn.disabled=true;	
+													}else {
+														loginbtn.disabled=false;
+													}
+												alert("이메일 중복 입니다. 다른이메일 쓰세요");
+											} else if(data.chkResult ==="yesMemail") {
+												flag2 = true;
+												if((flag1 && flag2) == false)
+												{
+													loginbtn.disabled=true;	
+												}else {
+													loginbtn.disabled=false;
+												}
+											
+												alert("이메일  중복이 아닙니다. ")
+											}
+										}
+									});
 								});
-							} */
+														
+								function doublepw(val) {
+									var pw1 = document.getElementById('mpw').value;
+									var pw2 = document.getElementById('mpw2').value;
+									
+									if(pw2 == pw1){
+										$("#sameMpw").html("비밀번호가 동일합니다");
+									} else {
+										$("#sameMpw").html("비밀번호가 틀립니다");
+									}
+								}
+						
 						</script>
 						
 					</div>

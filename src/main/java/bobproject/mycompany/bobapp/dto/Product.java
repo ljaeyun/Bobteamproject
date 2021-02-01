@@ -10,30 +10,25 @@ public class Product {
 	private String psubtitle;
 	private String pdifficulty;
 
-	private String pmainimg;
-	private String psubimg1;
-	private String psubimg2;
+	private String pimgorigin1;
+	private String pimgorigin2;
+	private String pimgorigin3;
+	
+	private String pimgsave1;
+	private String pimgsave2;
+	private String pimgsave3;
 	
 	private int pprice;
 	private int pweight;
 	private int ptime;
-	private String pmainimgtype;
-	private String psubimg1type;
-	private String psubimg2type;
+	private String pimgtype1;
+	private String pimgtype2;
+	private String pimgtype3;
 	
 	private MultipartFile pattach1;
 	private MultipartFile pattach2;
 	private MultipartFile pattach3;
 	
-	private int cpqn;
-	
-	
-	public int getCpqn() {
-		return cpqn;
-	}
-	public void setCpqn(int cpqn) {
-		this.cpqn = cpqn;
-	}
 	public int getPno() {
 		return pno;
 	}
@@ -70,23 +65,41 @@ public class Product {
 	public void setPdifficulty(String pdifficulty) {
 		this.pdifficulty = pdifficulty;
 	}
-	public String getPmainimg() {
-		return pmainimg;
+	public String getPimgorigin1() {
+		return pimgorigin1;
 	}
-	public void setPmainimg(String pmainimg) {
-		this.pmainimg = pmainimg;
+	public void setPimgorigin1(String pimgorigin1) {
+		this.pimgorigin1 = pimgorigin1;
 	}
-	public String getPsubimg1() {
-		return psubimg1;
+	public String getPimgorigin2() {
+		return pimgorigin2;
 	}
-	public void setPsubimg1(String psubimg1) {
-		this.psubimg1 = psubimg1;
+	public void setPimgorigin2(String pimgorigin2) {
+		this.pimgorigin2 = pimgorigin2;
 	}
-	public String getPsubimg2() {
-		return psubimg2;
+	public String getPimgorigin3() {
+		return pimgorigin3;
 	}
-	public void setPsubimg2(String psubimg2) {
-		this.psubimg2 = psubimg2;
+	public void setPimgorigin3(String pimgorigin3) {
+		this.pimgorigin3 = pimgorigin3;
+	}
+	public String getPimgsave1() {
+		return pimgsave1;
+	}
+	public void setPimgsave1(String pimgsave1) {
+		this.pimgsave1 = pimgsave1;
+	}
+	public String getPimgsave2() {
+		return pimgsave2;
+	}
+	public void setPimgsave2(String pimgsave2) {
+		this.pimgsave2 = pimgsave2;
+	}
+	public String getPimgsave3() {
+		return pimgsave3;
+	}
+	public void setPimgsave3(String pimgsave3) {
+		this.pimgsave3 = pimgsave3;
 	}
 	public int getPprice() {
 		return pprice;
@@ -106,23 +119,23 @@ public class Product {
 	public void setPtime(int ptime) {
 		this.ptime = ptime;
 	}
-	public String getPmainimgtype() {
-		return pmainimgtype;
+	public String getPimgtype1() {
+		return pimgtype1;
 	}
-	public void setPmainimgtype(String pmainimgtype) {
-		this.pmainimgtype = pmainimgtype;
+	public void setPimgtype1(String pimgtype1) {
+		this.pimgtype1 = pimgtype1;
 	}
-	public String getPsubimg1type() {
-		return psubimg1type;
+	public String getPimgtype2() {
+		return pimgtype2;
 	}
-	public void setPsubimg1type(String psubimg1type) {
-		this.psubimg1type = psubimg1type;
+	public void setPimgtype2(String pimgtype2) {
+		this.pimgtype2 = pimgtype2;
 	}
-	public String getPsubimg2type() {
-		return psubimg2type;
+	public String getPimgtype3() {
+		return pimgtype3;
 	}
-	public void setPsubimg2type(String psubimg2type) {
-		this.psubimg2type = psubimg2type;
+	public void setPimgtype3(String pimgtype3) {
+		this.pimgtype3 = pimgtype3;
 	}
 	public MultipartFile getPattach1() {
 		return pattach1;
@@ -142,6 +155,5 @@ public class Product {
 	public void setPattach3(MultipartFile pattach3) {
 		this.pattach3 = pattach3;
 	}
-	
-	
+
 }

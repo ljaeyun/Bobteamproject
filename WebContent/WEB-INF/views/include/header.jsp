@@ -16,8 +16,8 @@
 				 	</div>
 				 	<div id="login">
 				 			<ul id="ul1">
-				 				<li><a href="<%=application.getContextPath()%>/createId">회원가입</a></li> 
 				 				<c:if test="${loginStatus==null }">
+				 					<li><a href="<%=application.getContextPath()%>/createId">회원가입</a></li> 
 									<li><a href="<%=application.getContextPath()%>/login">로그인</a></li>
 								</c:if>
 								<c:if test="${loginStatus!=null }">
@@ -39,11 +39,11 @@
 					 	</div>
 			 			
 						<div id="search">
-						<i class="fa fa-search" aria-hidden="true"></i>
-						 	<input id="src1" type="text" placeholder="검색" />
-						 			<!-- <div id="src1" input=>
-						 				검색
-						 			</div> -->
+				
+							<form action="search" method="get" >
+								 <input id="src1" type="text"  name="keyword" placeholder="검색" />
+						 		 <button><i class="fa fa-search" aria-hidden="true"></i></button>
+						 	</form>
 						 </div>
 						 
 						<div id="icon">

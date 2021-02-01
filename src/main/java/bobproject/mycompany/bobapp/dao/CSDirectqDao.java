@@ -26,5 +26,28 @@ public class CSDirectqDao {
 		return list;
 	}
 	
+	public CSDirectq selectByPk(int qno) {
+		CSDirectq directq = sst.selectOne("direct_qs.selectByPk", qno);
+		return directq;
+	}
+	
+	public List<CSDirectq> selectById(String mid) {
+		List<CSDirectq> list =
+				sst.selectList("direct_qs.selectById", mid);
+		return list;
+	}
+	
+	public int update(CSDirectq directq) {
+		int rows = sst.update("direct_qs.update", directq);
+		return rows;
+	}
+	
+	
+	public int delete(int qno) {
+		int rows = sst.delete("direct_qs.delete", qno);
+		return rows;
+	}
+
+	
 	
 }

@@ -13,4 +13,10 @@
 		values
 		(#{mid}, #{mpw}, #{mname}, #{memail}, #{mphone}, #{mgender}, #{mbirth}, #{maddress})
 	</insert>
+	
+	<select id="selectByEmail" parameterType="string" resultType="member">
+		select memail
+		from members
+		where memail=#{memail}
+	</select>
 </mapper>

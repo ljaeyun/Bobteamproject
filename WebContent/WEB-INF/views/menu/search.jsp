@@ -41,8 +41,7 @@
 				<div id="productline" class="productline">
 					<c:forEach var="product" items="${list}">
 					<div id="infobox" >
-					
-						<div id="image" class="cat_img" > <a class="class" href="detailpage?pno=${product.pno}">
+						<div id="image" class="cat_img" > <a class="class" href="menu/detailpage?pno=${product.pno}">
 							<img height=300px width=250px src="pphoto1?pno=${product.pno}"/></a>
 						</div>
 						<div id="productinfobox" class="productinfobox">
@@ -58,26 +57,7 @@
 			</div>
 		</div>	
 		</div>
-		<div id="page_num">
-				<a class="btn btn-outline-secondary btn-sm mr-2"
-					href="menu?pageNo=1">처음</a>
-				<c:if test="${pager.groupNo > 1}">
-					<a class="btn btn-outline-secondary btn-sm mr-2"
-						href="menu?pageNo=${pager.startPageNo - 1}">이전</a>
-				</c:if>
-				<c:forEach var="i" begin="${pager.startPageNo}" end="${pager.endPageNo}">
-					<c:if test="${i == pager.pageNo}">
-						<a class="btn btn-secondary btn-sm mr-2" href="menu?pageNo=${i}">${i}</a>
-					</c:if>
-					<c:if test="${i != pager.pageNo}">
-						<a class="btn btn-outline-secondary btn-sm mr-2" href="menu?pageNo=${i}">${i}</a>
-					</c:if>
-				</c:forEach>
-				<c:if test="${pager.groupNo < pager.totalGroupNo}">
-					<a class="btn btn-outline-secondary btn-sm mr-2" href="menu?pageNo=${pager.endPageNo + 1}">다음</a>
-				</c:if>
-					<a class="btn btn-outline-secondary btn-sm mr-2" href="menu?pageNo=${pager.totalPageNo}">맨끝</a>
-			</div>
+	
 		</div>
 			<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
 	</body>

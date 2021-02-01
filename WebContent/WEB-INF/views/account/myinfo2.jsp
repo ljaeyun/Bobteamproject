@@ -6,39 +6,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Black' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Light' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans KR Medium' rel='stylesheet'>
 	<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
 <meta charset="UTF-8">
 <title>밥향기 :: 나의정보</title>
 
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/main.css">
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/account/myinfo.css">
-<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_faq.css">
-
 
 <script type="text/javascript" src="<%=application.getContextPath()%>/resources/js/account/myinfo.js"></script>
-
-	<script>
-		function dqBox(){
-			$.ajax({
-				url:"dqdone",
-				method:"get",
-				success:function(data){
-					$("#directqBox").html(data);
-					$("#infomain").hide();
-					$("#directqBox").show();
-				}
-			});
-		};
-	</script>
-
 </head>
 <body>
-
-
 	
 		<jsp:include page="/WEB-INF/views/include/header.jsp"/>
 	
@@ -47,7 +28,7 @@
 		<div id="content">
 			<div id="article">
 				<div class = "title2">
-					<h1 style="font-size:40px;"><b>나의 정보<b></h1>
+					<h1 style="font-size:40px"><b>나의 정보<b></h1>
 					<div id="search_line">
 					
 					</div>
@@ -75,13 +56,6 @@
 							<li><a href=" ">회원탈퇴</a></li>
 						</ul>
 						
-						<c:if test='${ADMIN!="admin"}'>
-						<ul>
-							<h3><b>고객센터</b></h3>
-							<li><a href="javascript:dqBox()">1대1 문의내역</a></li>
-						</ul>
-						</c:if>
-						
 						<ul>
 							
 						<%-- 	<li><input type="checkbox" onclick="openli(this)" name="seller" value="seller" id="sell" /><label for="sell"><b>판매자등록</b></label></li>
@@ -95,22 +69,14 @@
 									<h3><b>판매자등록</b></h3>
 									<li><a href="<%=application.getContextPath()%>/goodsRegist" name="sel01">상품등록</a></li>
 									<li><a href="<%=application.getContextPath()%>/goodsRevise" name="sel02">상품수정</a></li>
-									
-									<h3><b>[관리자]고객센터</b></h3>
-									<li><a href="<%=application.getContextPath()%>/customer_service/directqlist" href="javascript:dqBox()" name="cs01">1대1문의 관리</a></li>
-									<li><a href="<%=application.getContextPath()%>/customer_service/cs_notice" name="cs02">공지사항 관리</a></li>
-									<li><a href="<%=application.getContextPath()%>/goodsRevise" name="sel02">FAQ 관리 </a></li>
 								</c:if>									
 						</ul>
 					</nav>
 					
 		<!--=========================================================================== -->
 
-
-					<div id="directqBox">			
-					</div>
 		
-					<div id="infomain">
+					<div id = "infomain">
 					
 						<h4><b>주문/배송 현황</b></h4>
 						<hr style="height:5px; background-color:black">

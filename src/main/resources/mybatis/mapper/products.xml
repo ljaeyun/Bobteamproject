@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="products">
-	<select id="selectAll" resultType="product">
+	<select id="selectByPk" resultType="product" parameterType="int">
 		select
 			pno,
 		    pname,
@@ -12,18 +12,139 @@
 			pprice,
 			pweight,
 			ptime,
-			pmainimg,
-			psubimg1,
-			psubimg2,
-			pmainimgtype,
-			psubimg1type,
-			psubimg2type
+			pimgorigin1,
+			pimgorigin2,
+			pimgorigin3,
+			pimgsave1,
+			pimgsave2,
+			pimgsave3,
+			pimgtype1,
+			pimgtype2,
+			pimgtype3
+		from products
+		where pno =#{pno}
+	</select>
+	<select id="countAll" resultType="int">
+		select count(*) from products
+	</select>
+	<select id="selectByPage" parameterType="pager" resultType="product">
+		select
+			rno,
+			pno,
+		    pname,
+			pamount,
+			pcontent,
+			psubtitle,
+			pdifficulty,
+			pprice,
+			pweight,
+			ptime,
+			pimgorigin1,
+			pimgorigin2,
+			pimgorigin3,
+			pimgsave1,
+			pimgsave2,
+			pimgsave3,
+			pimgtype1,
+			pimgtype2,
+			pimgtype3
+		from(
+		    select 
+				    rownum as rno,
+				    pno,
+				    pname,
+					pamount,
+					pcontent,
+					psubtitle,
+					pdifficulty,
+					pprice,
+					pweight,
+					ptime,
+					pimgorigin1,
+					pimgorigin2,
+					pimgorigin3,
+					pimgsave1,
+					pimgsave2,
+					pimgsave3,
+					pimgtype1,
+					pimgtype2,
+					pimgtype3
+	   	 from ( 
+	        select
+				pno,
+			    pname,
+				pamount,
+				pcontent,
+				psubtitle,
+				pdifficulty,
+				pprice,
+				pweight,
+				ptime,
+				pimgorigin1,
+				pimgorigin2,
+				pimgorigin3,
+				pimgsave1,
+				pimgsave2,
+				pimgsave3,
+				pimgtype1,
+				pimgtype2,
+				pimgtype3
+			from products
+	    )
+	    where rownum &lt;= #{endRowNo} 
+		)
+		where rno &gt;= #{startRowNo}	
+	</select>
+	<select id="selectSearch" parameterType="keyword" resultType="product">
+		select
+			pno,
+		    pname,
+			pamount,
+			pcontent,
+			psubtitle,
+			pdifficulty,
+			pprice,
+			pweight,
+			ptime,
+			pimgorigin1,
+			pimgorigin2,
+			pimgorigin3,
+			pimgsave1,
+			pimgsave2,
+			pimgsave3,
+			pimgtype1,
+			pimgtype2,
+			pimgtype3
+		from
+			products
+		where pname like #{keyword}
+	</select>
+		<select id="selectAll" resultType="product">
+		select
+			pno,
+		    pname,
+			pamount,
+			pcontent,
+			psubtitle,
+			pdifficulty,
+			pprice,
+			pweight,
+			ptime,
+			pimgorigin1,
+			pimgorigin2,
+			pimgorigin3,
+			pimgsave1,
+			pimgsave2,
+			pimgsave3,
+			pimgtype1,
+			pimgtype2,
+			pimgtype3
 		from products
 	</select>
 	<insert id="insert" parameterType="product">
 		insert into products
-		(pno, pname, pamount, pcontent, psubtitle, pdifficulty, pprice, pweight, ptime, pmainimg, psubimg1, psubimg2, pmainimgtype, psubimg1type, psubimg2type)
+		(pno, pname, pamount, pcontent, psubtitle, pdifficulty, pprice, pweight, ptime, pimgorigin1, pimgorigin2, pimgorigin3, pimgsave1, pimgsave2, pimgsave3, pimgtype1, pimgtype2, pimgtype3)
 		values
-		(pno_seq.nextval, #{pname}, #{pamount}, #{pcontent}, #{psubtitle}, #{pdifficulty}, #{pprice}, #{pweight}, #{ptime}, #{pmainimg}, #{psubimg1}, #{psubimg2}, #{pmainimgtype}, #{psubimg1type}, #{psubimg2type})
+		(pno_seq.nextval, #{pname}, #{pamount}, #{pcontent}, #{psubtitle}, #{pdifficulty}, #{pprice}, #{pweight}, #{ptime}, #{pimgorigin1}, #{pimgorigin2}, #{pimgorigin3}, #{pimgsave1}, #{pimgsave2}, #{pimgsave3}, #{pimgtype1}, #{pimgtype2}, #{pimgtype3})
 	</insert>
 </mapper>

@@ -14,5 +14,17 @@
 		order by nno desc	
 	</select>
 
+	<select id="selectByPk" parameterType="int" resultType="notice">
+		select
+			nno,
+			ndate,
+			ntitle,
+			ncontent,
+			account_mid
+		from notices
+		where nno=#{nno}
+	</select>
+	
+
 </mapper>
 
