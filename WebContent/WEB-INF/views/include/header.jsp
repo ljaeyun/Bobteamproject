@@ -32,7 +32,7 @@
 			 			<div id="menu">
 							 <ul id="ul2">
 								<li><a href="<%=application.getContextPath()%>/">밥향기 소개</a></li>
-								<li><a href="<%=application.getContextPath()%>/menu">메뉴</a></li>
+								<li><a href="<%=application.getContextPath()%>/menu?pageNo=1">메뉴</a></li>
 								<li><a href="<%=application.getContextPath()%>/review">리뷰</a></li>
 								<li><a href="<%=application.getContextPath()%>/event">이벤트</a></li>
 							</ul>

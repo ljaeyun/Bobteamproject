@@ -142,17 +142,17 @@ public class Controller_Pboard {
 		is.close();
 	}
 
-	@GetMapping("/menu/menu")
+	@GetMapping("/menu")
 	public String menu(@RequestParam(defaultValue="1") int pageNo, Model model) {
 		int totalRows = productService.getTotalRows();
 		Pager pager = new Pager(9, 3 ,totalRows, pageNo);
 		List<Product> list = productService.getProductList(pager);
 		model.addAttribute("list", list);
 		model.addAttribute("pager", pager);	
-		return "/menu/menu";
+		return "menu/menu";
 	}
 	
-	@GetMapping("/menu/detailpage")
+	@GetMapping("/detailpage")
 	public String detailpage(@RequestParam(defaultValue ="7") int pno, Model model) {
 		Product product = new Product();
 		product = productService.getProduct(pno);	
