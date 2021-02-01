@@ -45,10 +45,10 @@
 							<img height=300px width=250px src="pphoto1?pno=${product.pno}"/></a>
 						</div>
 						<div id="productinfobox" class="productinfobox">
-							<div class ="infoline_1"><a class="infomation" href="detailpage?pno=${product.pno}">${product.pamount} | ${product.ptime}</a></div>
-							<div class ="infoline_2" ><a class="infomation" href="detailpage?pno=${product.pno}">${product.pname}</a></div>
-							<div class ="infoline_3" ><a class="infomation" href="detailpage?pno=${product.pno}">${product.pprice}원</a></div> 
-							<span class = "sp_cart"><a class="infomation" href="<%=application.getContextPath()%>/login">
+							<div class ="infoline_1"><a  href="detailpage?pno=${product.pno}">${product.pamount} | 조리시간 : ${product.ptime} 분  | 난이도 :${product.pdifficulty}</a></div>
+							<div class ="infoline_2" ><a href="detailpage?pno=${product.pno}">${product.pname}</a></div>
+							<div class ="infoline_3" ><a  href="detailpage?pno=${product.pno}">${product.pprice}원</a></div> 
+							<span class = "sp_cart"><a  href="<%=application.getContextPath()%>/login">
 							<img width="25px" height="25px" src="../img/shopping_cart.png"/></a></span>
 						</div>
 					</div>

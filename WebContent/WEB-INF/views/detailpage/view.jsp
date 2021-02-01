@@ -34,7 +34,7 @@
 			<div id ="div02">
 				<h1>${product.pname}</h1>
 				<h2>손쉽게 완성하는 근사한 일품요리</h2>
-				<h3>${product.pprice}</h3>
+				<h3>${product.pprice}원</h3>
 				<h4>로그인 후 적립혜택이 적용됩니다.</h4>
 				
 			<table id ="table01">
@@ -44,8 +44,8 @@
 				</tr>
 				<tr >
 					<th> 중량/용량 </th>
-					<th> ${product.pweight}</th>
-				</tr>
+					<th> ${product.pweight}g</th>
+				</tr>	
 				<tr >
 					<th> 조리 인분 </th>
 					<th> ${product.pweight} 인	분</th>
