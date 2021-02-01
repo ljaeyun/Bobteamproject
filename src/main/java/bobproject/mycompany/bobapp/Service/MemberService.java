@@ -7,7 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import bobproject.mycompany.bobapp.dao.LoginDao;
-import bobproject.mycompany.bobapp.dao.OrderDao;
+import bobproject.mycompany.bobapp.dao.PurchaseDao;
+import bobproject.mycompany.bobapp.dto.Purchase;
 import bobproject.mycompany.bobapp.dto.createid.Member;
 
 @Service
@@ -64,6 +65,13 @@ public class MemberService {
 		loginDao.insert(id);
 	}
 	
+	@Resource
+	private PurchaseDao purchaseDao;
 	
-	
+	public Member getPurchase(String id)
+	{
+		Member mem = purchaseDao.selectByPk(id);
+		
+		return mem;
+	}
 }

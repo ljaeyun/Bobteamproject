@@ -13,6 +13,29 @@ public class Member {
 	private String mbirth;
 	private String maddress;
 	private String mgrade;
+	
+	private int mpurchasecount;
+	private int mpruchasesum;
+	private int msavemoney;
+	
+	public int getMpurchasecount() {
+		return mpurchasecount;
+	}
+	public void setMpurchasecount(int mpurchasecount) {
+		this.mpurchasecount = mpurchasecount;
+	}
+	public int getMpruchasesum() {
+		return mpruchasesum;
+	}
+	public void setMpruchasesum(int mpruchasesum) {
+		this.mpruchasesum = mpruchasesum;
+	}
+	public int getMsavemoney() {
+		return msavemoney;
+	}
+	public void setMsavemoney(int msavemoney) {
+		this.msavemoney = msavemoney;
+	}
 	public String getMid() {
 		return mid;
 	}
