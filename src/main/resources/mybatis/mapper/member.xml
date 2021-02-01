@@ -19,4 +19,11 @@
 		from members
 		where memail=#{memail}
 	</select>
+	
+	<select id="insertGrade" parameterType="string" resultType="member">
+		insert into members
+		(mgrade)
+		values
+		(#{mgrade})	
+	</select>
 </mapper>

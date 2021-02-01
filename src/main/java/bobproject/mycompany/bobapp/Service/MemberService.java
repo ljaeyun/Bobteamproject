@@ -18,16 +18,24 @@ public class MemberService {
 	@Resource
 	private LoginDao loginDao;
 	
+	@Resource
+	private PurchaseDao purchaseDao;
+	
+	
+	
 	public String login(Member id) {
 		Member dbId = loginDao.selectByPk(id.getMid());
+		Purchase dbId2 = 
+		
 		
 		if(dbId == null) {
 			return "wrongMid";
 		} else if(dbId.getMpw().equals(id.getMpw())) {
-			return "success";
+				return "success";
 		} else {
 			return "wrongMpw";
 		}
+			
 	}
 	
 	public String checkMid(Member id) {
@@ -65,13 +73,5 @@ public class MemberService {
 		loginDao.insert(id);
 	}
 	
-	@Resource
-	private PurchaseDao purchaseDao;
 	
-	public Member getPurchase(String id)
-	{
-		Member mem = purchaseDao.selectByPk(id);
-		
-		return mem;
-	}
 }

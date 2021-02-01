@@ -17,9 +17,9 @@ public class PurchaseDao {
 	@Resource
 	private SqlSessionTemplate sst;
 	
-	public Member selectByPk(String mid)
+	public Purchase selectByPk(String mid)
 	{
-		Member id = sst.selectOne("purchases.selectByPk", mid);
+		Purchase id = sst.selectOne("purchases.selectByPk", mid);
 		return id;
 	}
 	
