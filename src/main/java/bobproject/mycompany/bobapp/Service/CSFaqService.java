@@ -21,6 +21,11 @@ public class CSFaqService {
 		return list;
 	}
 	
+	public List<CSFaq> getFaqcatList2(int fcatid) {
+		List<CSFaq> list = csfaqDao.selectByCat(fcatid);
+		return list;
+	}
+	
 	/*
 	 * public List<CSDirectq> getValidatedList(String mid) { List<CSDirectq> list =
 	 * csdirectqDao.selectById(mid); return list; }

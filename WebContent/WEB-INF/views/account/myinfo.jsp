@@ -47,7 +47,7 @@
 		<div id="content">
 			<div id="article">
 				<div class = "title2">
-					<h1 style="font-size:40px;"><b>나의 정보<b></h1>
+					<h1 style="font-size:40px;"><b>나의 정보</b></h1>
 					<div id="search_line">
 					
 					</div>

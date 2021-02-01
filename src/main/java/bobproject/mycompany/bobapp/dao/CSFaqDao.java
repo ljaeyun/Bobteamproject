@@ -21,6 +21,12 @@ public class CSFaqDao {
 		return list;
 	}
 	
+	public List<CSFaq> selectByCat(int fcatid) {
+		List<CSFaq> list =
+				sst.selectList("faq.selectByCat", fcatid);
+		return list;
+	}
+	
 	/*
 	 * public CustomerServiceNotice selectByPk(int nno) { CustomerServiceNotice
 	 * noticeread = sst.selectOne("notice.selectByPk", nno); return noticeread; }

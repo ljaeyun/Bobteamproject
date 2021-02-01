@@ -117,7 +117,7 @@
 			.faq_cat {
 				flex: 1;
 				height:45px;
-				padding-top : 18px;
+				padding-top : 12px;
 				border: 1px solid black;
 				text-align: center;
 				font-size : 18px;
@@ -165,7 +165,7 @@
 	
 			.answer_list {
 				background-color: #dee2e6;
-				display: none;
+				/* display: none; */
 				padding-left: 100px;
 				padding-top : 10px;
 			}

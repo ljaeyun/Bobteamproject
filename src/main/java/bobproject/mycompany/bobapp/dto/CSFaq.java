@@ -7,6 +7,7 @@ public class CSFaq {
 	private String fanswer;
 	private String mid;
 	private int fcatid;
+	private String fname;
 	
 	public int getFno() {
 		return fno;
@@ -38,6 +39,13 @@ public class CSFaq {
 	public void setFcatid(int fcatid) {
 		this.fcatid = fcatid;
 	}
+	public String getFname() {
+		return fname;
+	}
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+	
 	
 	
 	

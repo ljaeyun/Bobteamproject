@@ -7,7 +7,7 @@
 		select fno, ftitle, fanswer, mid, c.fname, f.fcatid
 		from faqs f, faq_categorys c
 		where f.fcatid=c.fcatid
-		order by fno desc	
+		order by fno desc
 	</select>
 
 	<select id="selectByCat" parameterType="int" resultType="faq">
@@ -15,11 +15,11 @@
 			fno,
 			ftitle,
 			fanswer,
-			f.fcatid,
-			fname,
+			c.fcatid,
+			c.fname,
 			mid
 		from faqs f, faq_categorys c
-		where f.fcatid=c.fcatid and fcatid=#{fcatid}
+		where f.fcatid=c.fcatid and f.fcatid=#{fcatid}
 	</select>
 	
 	<select id="selectByPk" parameterType="int" resultType="faq">
