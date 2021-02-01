@@ -31,6 +31,21 @@ public class myinfo2 {
 //		
 //		return "account/myinfo";
 //	}
+	@RequestMapping("/myinfo2")
+	public String content(HttpServletRequest request, HttpServletResponse response) {
+		logger.info("나의정보페이지");
+		
+		HttpSession hs = request.getSession();
+		
+		if(hs.getAttribute("loginStatus") == null)
+		{
+			logger.info("로그인 되어있지 않음");
+			//response.sendRedirect("/account/login");
+			return "/account/login";
+		}
+		
+		return "account/myinfo2";
+	}
 	
 	
 	/*

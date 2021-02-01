@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+
 <!DOCTYPE html>
 
 <html>
@@ -8,9 +10,9 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>	
+		<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+		
 
 <meta charset="UTF-8">
 <title>밥향기 :: FAQ</title>
@@ -40,10 +42,13 @@
 				<div id="faq_category_wrap">
 					<div id="faq_category_title"><b>문의유형</b></div>
 					<div id="faq_category_box">
-						<div id="faq_category01" class="faq_cat">전체</div>
-						<div id="faq_category02" class="faq_cat">배송</div>
-						<div id="faq_category03" class="faq_cat">취소/반품</div>
-						<div id="faq_category04" class="faq_cat">주문</div>
+					<table>
+						<c:forEach var="faq" items="${list}">
+						  	<tr>
+						      <td class="not_list_num">${faq.ftitle}</td>
+						    </tr>
+					  	</c:forEach>
+					</table>
 					</div>
 				</div>
 				

@@ -25,7 +25,7 @@
 		<div id="wrapper_content">
 			<div id="cs_wrap">
 				<div id="title_box">
-					<div id="title"><b>고객센터</b></div>
+					<div id="title"><b>나의 정보</b></div>
 				</div>
 				
 					<div class="alert alert-primary" role="alert">
@@ -42,26 +42,25 @@
 					  </div>
 					  <div class="form-group">
 						    <label for="qanswer">답변</label>
-						    
-						    <c:if test='${ADMIN!="admin"}'>
 						     <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50" readonly>${directq.qanswer}</textarea>
-						    </c:if> 
-						    
-						    <c:if test='${ADMIN=="admin"}'>
-						     <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50">${directq.qanswer}</textarea>
-						    </c:if>
-						   
 					  </div>
-					 <a class="btn btn-primary" href="customer_service/dqdone">목록</a>
-					 <c:if test="${sessionMid == board.bwriter}">
+					 <c:if test='${ADMIN=="admin"}'>
+					 <a class="btn btn-primary" href="directqlist">목록</a>
+					 </c:if>
+					 
+					<c:if test='${ADMIN!="admin"}'>
+					 <a class="btn btn-primary" href="myinfo">목록</a>
+					 </c:if>
+					 
+					 <c:if test="${sessionMid == directq.mid}">
 						  <a class="btn btn-warning" href="directqupdate?qno=${directq.qno}">수정</a>
 						  <a class="btn btn-danger" href="directqdelete?qno=${directq.qno}">삭제</a>
 					 </c:if>
-					 
-		
-					 
-					 
-					 </form>
+					 <c:if test='${ADMIN=="admin"}'>
+					 	<a class="btn btn-warning" href="directqupdate?qno=${directq.qno}">답변</a>
+					 	<a class="btn btn-danger" href="directqdelete?qno=${directq.qno}">삭제</a>
+					 </c:if>
+					</form>
 			</div>
 		</div>
 		

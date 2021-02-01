@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="faq">
+
+
+	<select id="selectAll" resultType="faq">
+		select fno, ftitle, fanswer, mid, c.fname, f.fcatid
+		from faqs f, faq_categorys c
+		where f.fcatid=c.fcatid
+		order by fno desc	
+	</select>
+
+	<select id="selectByCat" parameterType="int" resultType="faq">
+		select
+			fno,
+			ftitle,
+			fanswer,
+			f.fcatid,
+			fname,
+			mid
+		from faqs f, faq_categorys c
+		where f.fcatid=c.fcatid and fcatid=#{fcatid}
+	</select>
+	
+	<select id="selectByPk" parameterType="int" resultType="faq">
+		select
+			fno,
+			ftitle,
+			fanswer,
+			mid
+		from 
+		where fno=#{fno}
+	</select>
+	
+
+</mapper>
+

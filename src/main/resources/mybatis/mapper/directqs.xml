@@ -4,9 +4,9 @@
 <mapper namespace="direct_qs">
 	<insert id="insert" parameterType="directq">
 			insert into direct_qs
-			(qno, qtitle, qcontent)
+			(qno, qtitle, qcontent, mid)
 			values
-			(qno_seq.nextval, #{qtitle}, #{qcontent})
+			(qno_seq.nextval, #{qtitle}, #{qcontent}, #{mid})
 	</insert>
 	
 	<select id="selectAll" resultType="directq">
@@ -45,7 +45,7 @@
 	
 	<update id="update" parameterType="directq">
 		update direct_qs
-		set qtitle=#{qtitle}, qcontent=#{qcontent}
+		set qtitle=#{qtitle}, qcontent=#{qcontent}, qanswer=#{qanswer}
 		where qno=#{qno}
 	</update>
 	
