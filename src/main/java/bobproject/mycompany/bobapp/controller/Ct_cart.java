@@ -19,8 +19,8 @@ import bobproject.mycompany.bobapp.dto.Product;
 
 @Controller
 @RequestMapping("/cart")
-public class ct_cart {
-	private static final Logger logger = LoggerFactory.getLogger(ct_cart.class);
+public class Ct_cart {
+	private static final Logger logger = LoggerFactory.getLogger(Ct_cart.class);
 	
 	@Resource
 	private CartService cartService;
@@ -36,23 +36,21 @@ public class ct_cart {
 	}
 	
 	@GetMapping("/addcart")
-	public String addcart(Cart cart, HttpSession session) throws Exception {
-	//	login 에서 세션에 mid 저장	
+	public String addcart(HttpSession session) throws Exception {
+	//	login 에서 세션에 mid 저장
+		
+		Cart cart = new Cart();
 		String mid = (String) session.getAttribute("sessionMid");
+		int pno = (int) session.getAttribute("pno");
 		cart.setMid(mid);
-		
-	//	cart.setMid("test");
-	
-	//	detail 에서 세션에 pno 저장
-	//	int pno = (Integer) session.getAttribute("sessionPno");
-	//	cart.setPno(pno);
-		
-		cart.setPno(35);
+		cart.setPno(pno);
 		
 		cartService.addCart(cart);
 		
 		return "redirect:/cart/cartlist";
 	}
+	
+	
 	
 	@PostMapping("/updatecart")
 	public void updatecart(int pno, int cpqn, HttpSession session) {

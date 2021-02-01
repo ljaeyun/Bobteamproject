@@ -23,8 +23,8 @@ import bobproject.mycompany.bobapp.dto.createid.Member;
 
 @Controller
 @RequestMapping("/order")
-public class ct_order {
-	private static final Logger logger = LoggerFactory.getLogger(ct_order.class);
+public class Ct_order {
+	private static final Logger logger = LoggerFactory.getLogger(Ct_order.class);
 	
 	@Resource
 	private CartService cartService;

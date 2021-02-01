@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import bobproject.mycompany.bobapp.Service.ProductService;
 import bobproject.mycompany.bobapp.dto.Product;
 @Controller
-public class ControllerSearch {
+public class Ct_Search {
 	private static final Logger logger 
-	= LoggerFactory.getLogger(ControllerSearch.class);
+	= LoggerFactory.getLogger(Ct_Search.class);
 	
 	@Resource
 	private ProductService productService;

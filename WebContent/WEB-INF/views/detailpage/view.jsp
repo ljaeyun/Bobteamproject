@@ -48,7 +48,7 @@
 				</tr>	
 				<tr >
 					<th> 조리 인분 </th>
-					<th> ${product.pweight} 인	분</th>
+					<th> ${product.pamount}</th>
 				</tr>
 				<tr>
 					<th> 조리시간 </th>
@@ -79,7 +79,7 @@
 
 			
 			<ul id= "menu01">
-			<oi id="oi1"><a href ="tologin">장바구니 담기</a></oi>
+			<oi id="oi1"><a href ="cart/addcart">장바구니 담기</a></oi>
 			</ul>
 			</div>
 		</section>
