@@ -16,7 +16,7 @@
 						data:{member_id : mid},
 						success: function(data) {
 							$('#mid').html(data.member_id);
-							$('#mpurchasecount').html(data.)
+							$('#mpurchasecount').html(data.purchasecount);
 						}
 					});
 				}

@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class myinfo2 {
 	private static final Logger logger = LoggerFactory.getLogger(myinfo2.class);
 	
-	@RequestMapping("/myinfo")
+	@RequestMapping("/myinfo2")
 	public String content(HttpServletRequest request, HttpServletResponse response) {
 		logger.info("나의정보페이지");
 		
@@ -29,7 +29,7 @@ public class myinfo2 {
 			return "/account/login";
 		}
 		
-		return "account/myinfo";
+		return "account/myinfo2";
 	}
 	
 	
