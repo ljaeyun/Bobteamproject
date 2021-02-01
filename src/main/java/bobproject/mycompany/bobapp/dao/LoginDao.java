@@ -34,9 +34,9 @@ public class LoginDao {
 		return rows;
 	}
 	
-	public String insertGrade(String grade)
+	public int insertGrade(String mid)
 	{
-		String g = sst.insert("members.insertGrade",grade);
-		return g;
+		int grade = sst.insert("members.insertGrade",mid);
+		return grade;
 	}
 }

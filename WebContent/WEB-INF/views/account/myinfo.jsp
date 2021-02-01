@@ -80,7 +80,7 @@
 						
 						<ul>
 							<h3><b>혜택</b></h3>
-							<li><a href="javascript:mcBox()">적립금 & 쿠폰</a></li>
+							<li><a href="javascript:mcBox()">등급 & 적립금</a></li>
 						</ul>
 						
 						<ul>

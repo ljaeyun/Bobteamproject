@@ -17,17 +17,27 @@
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_faq.css">
 </head>	
 <body>	
-	
-	
-		<div>적립금</div>
-	
-			<input class="user_id" type="text" value="${pur.mid}" readonly class="form-control">
-			<input class="user_pcount" type="text" value="${pur.mpurchasecount}" readonly class="form-control">
-			<input class="user_psum" type="text" value="${pur.mpurchasesum}" readonly class="form-control">
-			<input class="user_psmoney" type="text" value="${pur.msavemoney}" readonly class="form-control">
 		
 		
-		<div>쿠폰</div>
+		<div>
+			<div>등급</div>
+			
+				<input id="user_grade" type="text" value="${gra.mgrade}" readonly class="form-control">
+			
+		
+		</div>
+		
+		
+		<div>
+		
+			<div>적립금</div>
+	
+				<input id="user_id" type="text" value="${pur.mid}" readonly class="form-control">
+				<input id="user_pcount" type="text" value="${pur.mpurchasecount}" readonly class="form-control">
+				<input id="user_psum" type="text" value="${pur.mpurchasesum}" readonly class="form-control">
+				<input id="user_psmoney" type="text" value="${pur.msavemoney}" readonly class="form-control">
+			
+		</div>
 			
 </body>
 

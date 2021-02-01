@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import bobproject.mycompany.bobapp.dao.ProductDao;
+import bobproject.mycompany.bobapp.dto.Pager;
 import bobproject.mycompany.bobapp.dto.Product;
 
 @Service
@@ -22,12 +23,20 @@ public class ProductService {
 	public void saveProduct(Product product) {
 		productDao.insert(product);
 	}
-
-	public Product getProduct() {
-		// TODO Auto-generated method stub
-		return null;
+	
+	
+	public List<Product> getProductList(Pager pager) {
+		List<Product> list = productDao.selectByPage(pager);
+		return list;
 	}
 
+	public Product getProduct(int pno) {
+		Product product = productDao.selectByPk(pno);
+		return product;
 	
-	
+	}
+	public int getTotalRows() {
+		int totalRows = productDao.countAll();
+		return totalRows;
+	}
 }

@@ -25,7 +25,7 @@ public class MemberService {
 	
 	public String login(Member id) {
 		Member dbId = loginDao.selectByPk(id.getMid());
-		Purchase dbId2 = 
+		Purchase pur = purchaseDao.selectPsum(id.getMid());
 		
 		
 		if(dbId == null) {
@@ -68,10 +68,7 @@ public class MemberService {
 	 * @Resource private OrderDao orderDao;
 	 */
 
-	public void join(Member id)
-	{
-		loginDao.insert(id);
-	}
+
 	
 	
 }

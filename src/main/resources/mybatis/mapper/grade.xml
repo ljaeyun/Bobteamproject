@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="grades">
+	<insert id="insert" parameterType="cart">
+		insert into carts
+		(mid, pno)
+		values
+		(#{mid}, #{pno})
+	</insert>
+
+	<insert id="selectByPk" parameterType="string">
+		select  MGRADE, GDISCOUNTRATE, GSAVERATE, GCOUPON, GCRITERIA
+		from grades g, members m
+		where g.mgrade = m.mgrade and g.mgrade=#{mgrade}
+	</insert>
+</mapper>

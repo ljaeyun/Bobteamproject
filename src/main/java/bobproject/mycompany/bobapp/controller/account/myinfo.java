@@ -49,14 +49,19 @@ public class myinfo {
 	public String moneycoupon(HttpSession session, Model model) {
 		String mid = (String) session.getAttribute("sessionMid");
 		logger.info(mid);
+		String mgrade = (String)session.getAttribute("grade");
+		logger.info(mgrade);
 		
 		Purchase pur = moneycouponservice.getPurchase(mid);
+		
+		
 		//pur.setMid(mid);
 		model.addAttribute("pur", pur);
 		
 		return "account/moneycoupon";
 	}
-	 
+	
+
 	
 	@Resource
 	private CSDirectqService csdirectqService;

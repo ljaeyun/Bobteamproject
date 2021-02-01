@@ -23,4 +23,9 @@ public class PurchaseDao {
 		return id;
 	}
 	
+	public Purchase selectPsum(String mid)
+	{
+		Purchase sum = sst.selectOne("purchases.selectPsum", mid);
+		return sum;
+	}
 }
