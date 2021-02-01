@@ -6,29 +6,25 @@
 			<div class="faq_Q_Icon"><img src="<%=application.getContextPath()%>/resources/img/letterQ.png" width="35px" height="35px"/></div>
 			<div id="question_01" class="faq_q" >
 				<ul>
-				 	<li class="question_text" onclick="faqanswer()">${faq.ftitle}</li>
+				 	<li class="question_text" onclick="toggle()">${faq.ftitle}</li>
 				 	<li class="question_type">${faq.fname}</li>
 				</ul>
 			</div>
 		</div>
 		
-		<div id="faq_answerbox" class="answer_list">
+		<div id="answer_list_${faq.fno}" class="answer_list" style="display:none">
 			<ul>
 				<li class="answer_text">${faq.fanswer}</li>
 			</ul>
 		</div>
 		
 		<script>
-			function faqanswer(){
-				$.ajax({
-					url:"faqanswerbox",
-					method:"get",
-					data: {fcatid:fcatid},
-					success:function(data){
-						$("#faq_answerbox").html(data);
-					}
-				});
-			};
+		function toggle() {
+			  var x = document.getElementById("answer_list_${faq.fno}");
+			  if (x.style.display === "none") {
+			    x.style.display = "block";
+			  } else {
+			    x.style.display = "none";}}
 		</script>
 		
 	</c:forEach>

@@ -14,7 +14,6 @@
 <meta charset="UTF-8">
 <title>밥향기 :: 나의정보</title>
 
-<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/main.css">
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/account/myinfo.css">
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_faq.css">
 
@@ -98,8 +97,6 @@
 									
 									<h3><b>[관리자]고객센터</b></h3>
 									<li><a href="<%=application.getContextPath()%>/customer_service/directqlist" href="javascript:dqBox()" name="cs01">1대1문의 관리</a></li>
-									<li><a href="<%=application.getContextPath()%>/customer_service/cs_notice" name="cs02">공지사항 관리</a></li>
-									<li><a href="<%=application.getContextPath()%>/goodsRevise" name="sel02">FAQ 관리 </a></li>
 								</c:if>									
 						</ul>
 					</nav>

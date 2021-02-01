@@ -37,20 +37,7 @@
 					</table>
 					<a class="btn btn-dark btn-sm" id="btn_notice_back" href="cs_notice">목록</a>
 		 	</div>
-		 	
-		 	<%-- 
-				
-					<form name="noticereadform" action="noticeread" method="post">
-						  <div class="form-group">
-							    <label for="ntitle">제목</label>
-							    <input type="text" value="${noticeread.ntitle}" readonly class="form-control" id="ntitle" name="ntitle"/>
-						  </div>
-						  <div class="form-group">
-							    <label for="ncontent">내용</label>
-							    <textarea class="form-control" id="ncontent" name="ncontent" rows="4" cols="50" readonly>${noticeread.ncontent}</textarea>
-						  </div>
-						  <a class="btn btn-primary" href="cs_notice">목록</a>
-					 </form> --%>
+		 
 		 	
 		 	
 		 </div>

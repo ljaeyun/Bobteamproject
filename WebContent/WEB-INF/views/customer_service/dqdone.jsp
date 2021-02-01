@@ -8,7 +8,8 @@
 
 
 				<div>
-					<div><h5>1대1문의 내역</h5></div>
+					<div><h4>1대1문의 내역</h4></div>
+					<hr style="height:5px; background-color:black">
 					<table id="notice_table" class="table table-bordered">
 					  <thead>
 					    <tr id="notice_title">

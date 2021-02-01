@@ -42,7 +42,7 @@
 					  </div>
 					  <div class="form-group">
 						    <label for="qanswer">답변</label>
-						     <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50" readonly>${directq.qanswer}</textarea>
+						    <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50" readonly>${directq.qanswer}</textarea>
 					  </div>
 					 <c:if test='${ADMIN=="admin"}'>
 					 <a class="btn btn-primary" href="directqlist">목록</a>
