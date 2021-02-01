@@ -6,6 +6,8 @@
 			   1대1 문의 작성
 			</div>
 			<form enctype="multipart/form-data" name="directqwriteform" action="directqwrite" method="post">
+			  
+			  <input type="hidden" name="mid" value="${sessionMid}"/>
 			  <div class="form-group">
 				    <label for="qtitle">제목</label>
 				    <input type="text" class="form-control" id="qtitle" name="qtitle">
