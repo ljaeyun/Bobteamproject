@@ -9,13 +9,25 @@
 	</insert>
 	
 	<select id="selectById" parameterType="string" resultType="product">
-		select pname, pprice, pno
-		from products
-		where pno in (
-			select pno
+		select pname, pprice, p.pno, c.cpqn
+		from products p, carts c
+		where p.pno in (
+			select c.pno
 			from carts
 			where mid=#{mid}
 		)
 	</select>
+	
+	<delete id="deleteById" parameterType="string">
+		delete from carts
+		where mid=#{mid}
+	</delete>
+	
+	<update id="update" parameterType="cart">
+		update carts
+		set cpqn=#{cpqn}
+		where mid=#{mid} and pno=#{pno}
+	</update>
+	
 	
 </mapper>

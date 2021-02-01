@@ -10,6 +10,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,8 +27,8 @@ import bobproject.mycompany.bobapp.dto.Pager;
 import bobproject.mycompany.bobapp.dto.Product;
 
 @Controller
-public class Controller_Pboard {
-	private static final Logger logger = LoggerFactory.getLogger(Controller_Pboard.class);
+public class Ct_Product {
+	private static final Logger logger = LoggerFactory.getLogger(Ct_Product.class);
 	
 	@Resource
 	private ProductService productService;
@@ -105,7 +106,7 @@ public class Controller_Pboard {
 		os.close();
 		is.close();
 	}
-	@GetMapping("/menu/pphoto2")
+	@GetMapping("/pphoto2")
 	public void pphoto2(int pno, HttpServletResponse response) throws Exception {
 		String filePath = null;
 		Product product = productService.getProduct(pno);
@@ -122,7 +123,7 @@ public class Controller_Pboard {
 		os.close();
 		is.close();
 	}
-	@GetMapping("/menu/pphoto3")
+	@GetMapping("/pphoto3")
 	public void pphoto3(int pno, HttpServletResponse response) throws Exception {
 		String filePath = null;
 		Product product = productService.getProduct(pno);
@@ -141,25 +142,25 @@ public class Controller_Pboard {
 		is.close();
 	}
 
-	@GetMapping("/menu/menu")
-	public String menu(@RequestParam(defaultValue="7") int pageNo, Model model) {
+	@GetMapping("/menu")
+	public String menu(@RequestParam(defaultValue="1") int pageNo, Model model) {
 		int totalRows = productService.getTotalRows();
 		Pager pager = new Pager(9, 3 ,totalRows, pageNo);
 		List<Product> list = productService.getProductList(pager);
 		model.addAttribute("list", list);
 		model.addAttribute("pager", pager);	
-		return "/menu/menu";
+		return "menu/menu";
 	}
 	
-	@GetMapping("/menu/detailpage")
-	public String detailpage(@RequestParam(defaultValue ="7") int pno, Model model) {
+	@GetMapping("/detailpage")
+	public String detailpage(@RequestParam(defaultValue ="7") int pno, Model model, HttpSession session) {
 		Product product = new Product();
 		product = productService.getProduct(pno);	
 		model.addAttribute("product", product);
+		session.setAttribute("pno", pno);
 		return "detailpage/view";
 	
 	}
-	
 }
 
 

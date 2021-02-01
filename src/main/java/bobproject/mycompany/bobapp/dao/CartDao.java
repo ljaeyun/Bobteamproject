@@ -28,5 +28,15 @@ public class CartDao {
 		return cartlist;
 	}
 
+	public int delete(String mid) {
+		int rows = sst.delete("carts.deleteById" ,mid);
+		return rows;
+	}
+
+	public int update(Cart cart) {
+		int rows = sst.update("carts.update", cart);
+		return rows;
+	}
+	
 	
 }

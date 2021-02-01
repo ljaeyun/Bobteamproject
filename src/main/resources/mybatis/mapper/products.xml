@@ -95,7 +95,30 @@
 		)
 		where rno &gt;= #{startRowNo}	
 	</select>
-	
+	<select id="selectSearch" parameterType="keyword" resultType="product">
+		select
+			pno,
+		    pname,
+			pamount,
+			pcontent,
+			psubtitle,
+			pdifficulty,
+			pprice,
+			pweight,
+			ptime,
+			pimgorigin1,
+			pimgorigin2,
+			pimgorigin3,
+			pimgsave1,
+			pimgsave2,
+			pimgsave3,
+			pimgtype1,
+			pimgtype2,
+			pimgtype3
+		from
+			products
+		where pname like #{keyword}
+	</select>
 		<select id="selectAll" resultType="product">
 		select
 			pno,

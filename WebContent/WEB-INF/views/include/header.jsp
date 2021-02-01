@@ -32,26 +32,30 @@
 			 			<div id="menu">
 							 <ul id="ul2">
 								<li><a href="<%=application.getContextPath()%>/">밥향기 소개</a></li>
-								<li><a href="<%=application.getContextPath()%>/menu/menu?pageNo=1">메뉴</a></li>
+								<li><a href="<%=application.getContextPath()%>/menu?pageNo=1">메뉴</a></li>
 								<li><a href="<%=application.getContextPath()%>/review">리뷰</a></li>
 								<li><a href="<%=application.getContextPath()%>/event">이벤트</a></li>
 							</ul>
 					 	</div>
 			 			
 						<div id="search">
-						<i class="fa fa-search" aria-hidden="true"></i>
-						 	<input id="src1" type="text" placeholder="검색" />
-						 			<!-- <div id="src1" input=>
-						 				검색
-						 			</div> -->
+				
+							<form action="search" method="get" >
+								 <input id="src1" type="text"  name="keyword" placeholder="검색" />
+						 		 <button><i class="fa fa-search" aria-hidden="true"></i></button>
+						 	</form>
 						 </div>
 						 
 						<div id="icon">
 							<a href="<%=application.getContextPath()%>/myinfo"><i class="fa fa-user" aria-hidden="true"></i> 마이페이지</a>
-							<a href="<%=application.getContextPath()%>/cart/cartlist"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 장바구니</a>
-						</div>
-						
 							
+							<c:if test="${sessionMid != null}">
+								<a href="<%=application.getContextPath()%>/cart/cartlist"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 장바구니</a>
+							</c:if>
+							<c:if test="${sessionMid == null}">
+								<a href="<%=application.getContextPath()%>/login"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 장바구니</a>
+							</c:if>
+						</div>
 					</div>
 			 	</div>
 			</header>
