@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import bobproject.mycompany.bobapp.dao.ProductDao;
 import bobproject.mycompany.bobapp.dto.Pager;
 import bobproject.mycompany.bobapp.dto.Product;
+import bobproject.mycompany.bobapp.dto.Search;
 
 @Service
 public class ProductService {
@@ -39,4 +40,11 @@ public class ProductService {
 		int totalRows = productDao.countAll();
 		return totalRows;
 	}
+
+
+	public List<Product> getProductList(String keyword) {
+		List<Product> list = productDao.selectAll(keyword);
+		return list;
+	}
+
 }

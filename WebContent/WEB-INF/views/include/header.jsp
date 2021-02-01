@@ -39,11 +39,11 @@
 					 	</div>
 			 			
 						<div id="search">
-						<i class="fa fa-search" aria-hidden="true"></i>
-						 	<input id="src1" type="text" placeholder="검색" />
-						 			<!-- <div id="src1" input=>
-						 				검색
-						 			</div> -->
+				
+							<form action="search" method="get" >
+								 <input id="src1" type="text"  name="keyword" placeholder="검색" />
+						 		 <button><i class="fa fa-search" aria-hidden="true"></i></button>
+						 	</form>
 						 </div>
 						 
 						<div id="icon">

@@ -12,6 +12,7 @@
 		<typeAlias alias="product" type="bobproject.mycompany.bobapp.dto.Product"/>
 		<typeAlias alias="cart" type="bobproject.mycompany.bobapp.dto.Cart"/>
 		<typeAlias alias="pager" type="bobproject.mycompany.bobapp.dto.Pager"/>
+		<typeAlias alias="keyword" type="bobproject.mycompany.bobapp.dto.Search"/>
 		<typeAlias alias="purchase" type="bobproject.mycompany.bobapp.dto.Purchase"/>
 	</typeAliases>
 </configuration>

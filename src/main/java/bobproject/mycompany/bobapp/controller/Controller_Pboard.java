@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
@@ -142,7 +143,7 @@ public class Controller_Pboard {
 	}
 
 	@GetMapping("/menu/menu")
-	public String menu(@RequestParam(defaultValue="7") int pageNo, Model model) {
+	public String menu(@RequestParam(defaultValue="1") int pageNo, Model model) {
 		int totalRows = productService.getTotalRows();
 		Pager pager = new Pager(9, 3 ,totalRows, pageNo);
 		List<Product> list = productService.getProductList(pager);
@@ -159,7 +160,6 @@ public class Controller_Pboard {
 		return "detailpage/view";
 	
 	}
-	
 }
 
 

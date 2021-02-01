@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import bobproject.mycompany.bobapp.dto.Pager;
 import bobproject.mycompany.bobapp.dto.Product;
+import bobproject.mycompany.bobapp.dto.Search;
 
 @Repository
 public class ProductDao {
@@ -45,6 +46,10 @@ public class ProductDao {
 		return list;
 	}
 
+	public List<Product> selectAll(String keyword) {
+		List<Product> list = sst.selectList("products.selectSearch", "%"+keyword+"%");
+		return list;
+	}
 
 
 

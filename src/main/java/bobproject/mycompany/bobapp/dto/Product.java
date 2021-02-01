@@ -28,6 +28,8 @@ public class Product {
 	private MultipartFile pattach1;
 	private MultipartFile pattach2;
 	private MultipartFile pattach3;
+	
+	
 	public int getPno() {
 		return pno;
 	}
@@ -154,7 +156,5 @@ public class Product {
 	public void setPattach3(MultipartFile pattach3) {
 		this.pattach3 = pattach3;
 	}
-	
-	
-	
+
 }
