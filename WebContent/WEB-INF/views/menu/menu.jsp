@@ -41,7 +41,7 @@
 				<div id="productline" class="productline">
 					<c:forEach var="product" items="${list}">
 					<div id="infobox" >
-					
+					  
 						<div id="image" class="cat_img" > <a class="class" href="detailpage?pno=${product.pno}">
 							<img height=300px width=250px src="pphoto1?pno=${product.pno}"/></a>
 						</div>
