@@ -6,12 +6,13 @@ public class Order {
 	private int pno;
 	private String mid;
 	private String oaddress;
-	private int oprice;
+	private String oprice;
 	
-	public int getOprice() {
+	
+	public String getOprice() {
 		return oprice;
 	}
-	public void setOprice(int oprice) {
+	public void setOprice(String oprice) {
 		this.oprice = oprice;
 	}
 	public int getOno() {

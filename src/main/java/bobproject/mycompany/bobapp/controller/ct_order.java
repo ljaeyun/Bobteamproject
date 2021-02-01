@@ -45,6 +45,7 @@ public class ct_order {
 		Member memberinfo = orderService.getMemberinfo(mid);
 		model.addAttribute("memberinfo", memberinfo);
 		
+		
 		return "order/order";
 	}
 	

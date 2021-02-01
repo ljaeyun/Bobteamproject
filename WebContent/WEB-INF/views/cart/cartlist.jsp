@@ -1,6 +1,7 @@
-<%@ page isELIgnored="false" contentType="text/html; charset=UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+<script src="<%=application.getContextPath()%>/resources/js/cart/cart.js"></script>
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/cart/cart.css">
 <div id="cart">
 				<div id="cart_header">장바구니</div>
@@ -26,21 +27,19 @@
 								<div id="pprice">${cartlist.pprice}원</div>
 							</div>
 							
-							
-							
 								<div id="pd_quantity_box" class="pd_quantity_box">
-									<input type=hidden name="pprice_${cartlist.pno}" value="${cartlist.pprice}"/>
-									<div><input type="button" value=" - " onclick="minus(${cartlist.pno})"/></div>
-									<div id="quantity"><input type="text" name="amount_${cartlist.pno}" value="${cartlist.cpqn}" readonly></div>
-									<div><input type="button" value=" + " onclick="plus(${cartlist.pno})"/></div>
+									<input type="hidden" name="pprice_${cartlist.pno}" class="pprice" value="${cartlist.pprice}">
+									<input type="hidden" name="pno_${cartlist.pno}" class="pno" value="${cartlist.pno}"/>
+									<div><input type="button" value=" - " onclick="minus(${cartlist.pno})"></div>
+									<div id="quantity"><input type="text" class="cpqn" name="amount_${cartlist.pno}" value="${cartlist.cpqn}" readonly></div>
+									<div><input type="button" value=" + " onclick="plus(${cartlist.pno})"></div>
 								</div>
 								<div id="pd_price_sum" class="pd_price_sum"><input type="text" class="sum" name="sum_${cartlist.pno}" value="${cartlist.pprice*cartlist.cpqn}" readonly/>원</div>
 							
 								<div id="pd_delete"><a href="delete"></a></div>
-								
 						</div>
-						</form>	
-					</c:forEach>
+					</form>	
+				</c:forEach>
 					
 					<div id="cart_price">
 						<div id="price">
@@ -55,95 +54,18 @@
 						<div>+</div>
 						<div id="delivery">
 							<div id="price1">총 배송비</div>
-							<input id="deli" class="deli" name="deli"/><div>원</div>
+							<div id="deli" class="deli">원</div>
 						</div>
 						<div>=</div>
 						<div id="finalprice">
 							<div id="price1">총 예상 결제금액</div>
-							<input id="fianl_price" name="oprice"/><div>원</div>
+							<div id="final_price">원</div>
+							<input type="hidden" id="oprice" name="oprice" class="oprice">
 						</div>
 					</div>
 				</div>
 				
 				
-				<script>
-
-				
-						var pprice;
-						var amount;
-						var sum;
-						var sum_all;
-				
-				
-						function sum() {
-							var count = $(".sum").length;
-							var sum_all = 0;
-							for(var i= 0; i < count; i++) {
-								sum_all += parseInt($(".sum")[i].value);
-							}
-							$("#sum_all").html(sum_all+"원");
-							
-							if(sum_all.value >= 50000) {
-								deli = 0;
-							} else {
-								deli = 3000;
-							}
-							
-							$("#deli").val(deli);
-							
-						}
-						
-						
-						
-						function plus(pno) {
-							pprice = document["form_" + pno]["pprice_" + pno];
-							amount = document["form_" + pno]["amount_" + pno];
-							sum = document["form_" + pno]["sum_" + pno];
-							amount.value++;
-							sum.value = amount.value * pprice.value;
-							
-							var count = $(".sum").length;
-							var sum_all = 0;
-							for(var i= 0; i < count; i++) {
-								sum_all += parseInt($(".sum")[i].value);
-							}
-							$("#sum_all").html(sum_all+"원");
-							
-							if(sum_all.value >= 50000) {
-								deli = 0;
-							} else {
-								deli = 3000;
-							}
-							
-							$("#deli").val(deli);
-							
-						}
-						
-						
-						
-						function minus(pno) {
-							pprice = document["form_" + pno]["pprice_" + pno];
-							amount = document["form_" + pno]["amount_" + pno];
-							sum = document["form_" + pno]["sum_" + pno];
-							if (amount.value > 1) {
-								amount.value--;
-								sum.value = amount.value * parseInt(pprice.value);
-								document.getElementById("sum_all").innerHTML = sum.value + "원";
-								if(document.form.sum_all.value >= 50000) {
-									deli = 0;
-								} else if(document.form.sum_all.value < 50000) {
-									deli = 3000;
-								}
-								document.getElementById("deli").innerHTML = deli + "원";
-								document.getElementById("fianl_price").innerHTML = parseInt(sum_all.value) + deli + "원";
-							}
-						}
-						
-						
-						
-						
-						
-					</script>
 				<div id="cart_order">
 			<!--	 	<div id="nonmember">비회원 주문하기 > </div> -->
 					<div id="member"><a href="orderlist"> 회원 주문하기 ></a></div>

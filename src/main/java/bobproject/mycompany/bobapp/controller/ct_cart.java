@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.Service.CartService;
@@ -46,13 +47,26 @@ public class ct_cart {
 	//	int pno = (Integer) session.getAttribute("sessionPno");
 	//	cart.setPno(pno);
 		
-		cart.setPno(7);
+		cart.setPno(35);
 		
 		cartService.addCart(cart);
 		
 		return "redirect:/cart/cartlist";
 	}
 	
+	@PostMapping("/updatecart")
+	public void updatecart(int pno, int cpqn, HttpSession session) {
+		String mid = (String) session.getAttribute("sessionMid");
+		
+		logger.info("수량:" + cpqn);
+		
+		Cart cart = new Cart();
+		cart.setMid(mid);
+		cart.setPno(pno);
+		cart.setCpqn(cpqn);
+		
+		cartService.updateCart(cart);
+	}
 	
 	@GetMapping("/deletecart")
 	public String deletecart(HttpSession session) {
@@ -70,13 +84,9 @@ public class ct_cart {
 	}
 	
 	@GetMapping("/orderlist")
-	public String orderlist(Cart cart, HttpSession session) {
+	public String orderlist() {
 		logger.info("주문 진행 페이지로 갑니다.");
-		String mid = (String) session.getAttribute("sessionMid");
 		
-		cart.setMid(mid);
-		cartService.updateCart(cart);
-	
 		return "redirect:/order/orderlist";
 	}
 	
