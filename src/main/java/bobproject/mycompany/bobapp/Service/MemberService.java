@@ -7,11 +7,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import bobproject.mycompany.bobapp.dao.LoginDao;
-<<<<<<< HEAD
 import bobproject.mycompany.bobapp.dao.PurchaseDao;
 import bobproject.mycompany.bobapp.dto.Purchase;
-=======
->>>>>>> branch 'master' of https://github.com/ljaeyun/Bobteamproject
+
 import bobproject.mycompany.bobapp.dto.createid.Member;
 
 @Service
@@ -71,7 +69,9 @@ public class MemberService {
 	 * @Resource private OrderDao orderDao;
 	 */
 
-
-	
+	public void join(Member id)
+	{
+		loginDao.insert(id);
+	}
 	
 }
