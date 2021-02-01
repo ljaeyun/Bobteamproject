@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import bobproject.mycompany.bobapp.dto.Purchase;
+import bobproject.mycompany.bobapp.dto.createid.Member;
 
 @Repository
 public class PurchaseDao {
@@ -22,4 +23,9 @@ public class PurchaseDao {
 		return id;
 	}
 	
+	public Purchase selectPsum(String mid)
+	{
+		Purchase sum = sst.selectOne("purchases.selectPsum", mid);
+		return sum;
+	}
 }

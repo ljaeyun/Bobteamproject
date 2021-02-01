@@ -7,7 +7,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import bobproject.mycompany.bobapp.dao.LoginDao;
-import bobproject.mycompany.bobapp.dao.OrderDao;
+<<<<<<< HEAD
+import bobproject.mycompany.bobapp.dao.PurchaseDao;
+import bobproject.mycompany.bobapp.dto.Purchase;
+=======
+>>>>>>> branch 'master' of https://github.com/ljaeyun/Bobteamproject
 import bobproject.mycompany.bobapp.dto.createid.Member;
 
 @Service
@@ -17,16 +21,24 @@ public class MemberService {
 	@Resource
 	private LoginDao loginDao;
 	
+	@Resource
+	private PurchaseDao purchaseDao;
+	
+	
+	
 	public String login(Member id) {
 		Member dbId = loginDao.selectByPk(id.getMid());
+		Purchase pur = purchaseDao.selectPsum(id.getMid());
+		
 		
 		if(dbId == null) {
 			return "wrongMid";
 		} else if(dbId.getMpw().equals(id.getMpw())) {
-			return "success";
+				return "success";
 		} else {
 			return "wrongMpw";
 		}
+			
 	}
 	
 	public String checkMid(Member id) {
@@ -59,11 +71,7 @@ public class MemberService {
 	 * @Resource private OrderDao orderDao;
 	 */
 
-	public void join(Member id)
-	{
-		loginDao.insert(id);
-	}
-	
+
 	
 	
 }

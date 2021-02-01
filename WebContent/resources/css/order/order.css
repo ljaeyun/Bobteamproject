@@ -27,8 +27,27 @@
 					align-items: center;
 				}
 				
-					
+					#cart_select {
+						height: 40px;
+						width: 90%;
+						flex-direction: row;
+						border-bottom: 1px solid black;
+						border-top: 2px solid black;
+						padding: 6px 0px 0px 47px;
+					}
+						#checkall {
+							margin-top: 2px;
+						}
 						
+						
+						#cart_select >a {
+							color: black;
+							font-family: 'Noto Sans KR';
+							text-decoration: none;
+							margin: 0px 10px;
+							font-size: 13px;
+						}
+					
 					#cart_listeach {
 						height: 200px;
 						width: 90%;
@@ -40,7 +59,11 @@
 						padding-left: 30px;
 					}
 					
-						
+						#checkeach {
+							width: 5%;
+						/* 	border: 1px solid black; */
+							text-align: center;
+						}
 						
 						#pd_img {
 							width: 10%;
@@ -55,7 +78,7 @@
 						}
 						
 						
-							#pd_name {
+							#pname {
 								padding-left: 50px;
 								margin-bottom: 20px;
 								font-family: 'Noto Sans KR Medium';
@@ -63,23 +86,23 @@
 							}
 							
 							
-							#pd_name >a {
+							#pname >a {
 								text-decoration: none;
 								color: black;
 							}
 							
-							#pd_price {
+							#pprice {
 								padding-left: 50px;
 								font-family: 'Noto Sans KR';
 								font-size: 18px;
 							}
 						
-						#form {
-							width: 30%;
+						form {
+							width: 100%;
 							display: flex;
 							flex-direction: row;
+							align-items: center;
 							text-align: center;
-							margin-right: 50px;
 						}
 						
 							#pd_quantity_box {

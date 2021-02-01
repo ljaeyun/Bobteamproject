@@ -8,7 +8,9 @@ import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.Service.CartService;
@@ -17,40 +19,51 @@ import bobproject.mycompany.bobapp.dto.Product;
 
 @Controller
 @RequestMapping("/cart")
-public class ct_cart {
-	private static final Logger logger = LoggerFactory.getLogger(ct_cart.class);
+public class Ct_cart {
+	private static final Logger logger = LoggerFactory.getLogger(Ct_cart.class);
 	
 	@Resource
 	private CartService cartService;
 	
 	@GetMapping("/cartlist")
-	public String cartlist(HttpSession session) {
-	//	String mid = (String) session.getAttribute("sessionMid");
-		String mid = "test";
+	public String cartlist(HttpSession session, Model model) {
+		String mid = (String) session.getAttribute("sessionMid");
 		
 		List<Product> cartlist = cartService.getCartList(mid);
 		
-		session.setAttribute("cartlist", cartlist);
+		model.addAttribute("cartlist", cartlist);
 		return "cart/cart";
 	}
 	
 	@GetMapping("/addcart")
-	public String addcart(Cart cart, HttpSession session) throws Exception {
-	//	login 에서 세션에 mid 저장	
+	public String addcart(HttpSession session) throws Exception {
+	//	login 에서 세션에 mid 저장
+		
+		Cart cart = new Cart();
 		String mid = (String) session.getAttribute("sessionMid");
+		int pno = (int) session.getAttribute("pno");
 		cart.setMid(mid);
-		
-	//	cart.setMid("test");
-	
-	//	detail 에서 세션에 pno 저장
-	//	int pno = (Integer) session.getAttribute("sessionPno");
-	//	cart.setPno(pno);
-		
-		cart.setPno(8);
+		cart.setPno(pno);
 		
 		cartService.addCart(cart);
 		
 		return "redirect:/cart/cartlist";
+	}
+	
+	
+	
+	@PostMapping("/updatecart")
+	public void updatecart(int pno, int cpqn, HttpSession session) {
+		String mid = (String) session.getAttribute("sessionMid");
+		
+		logger.info("수량:" + cpqn);
+		
+		Cart cart = new Cart();
+		cart.setMid(mid);
+		cart.setPno(pno);
+		cart.setCpqn(cpqn);
+		
+		cartService.updateCart(cart);
 	}
 	
 	@GetMapping("/deletecart")
@@ -59,7 +72,7 @@ public class ct_cart {
 		session.removeAttribute("cartList");
 		
 		logger.info("cart를 삭제했습니다.");
-		return "redirect:/cart";
+		return "redirect:/cart/cartlist";
 	}
 	
 	@GetMapping("/menu")
@@ -71,7 +84,7 @@ public class ct_cart {
 	@GetMapping("/orderlist")
 	public String orderlist() {
 		logger.info("주문 진행 페이지로 갑니다.");
-	
+		
 		return "redirect:/order/orderlist";
 	}
 	

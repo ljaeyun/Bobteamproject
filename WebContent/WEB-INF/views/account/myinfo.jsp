@@ -28,7 +28,22 @@
 				success:function(data){
 					$("#directqBox").html(data);
 					$("#infomain").hide();
+					$("#moneyCoupon").hide();
 					$("#directqBox").show();
+				}
+			});
+		};
+	</script>
+	<script>
+		function mcBox(){
+			$.ajax({
+				url:"moneycoupon",
+				method:"get",
+				success:function(data){
+					$("#moneyCoupon").html(data);
+					$("#infomain").hide();
+					$("#moneyCoupon").show();
+					$("#directqBox").hide();
 				}
 			});
 		};
@@ -64,8 +79,7 @@
 						
 						<ul>
 							<h3><b>혜택</b></h3>
-							<li><a href=" ">쿠폰</a></li>
-							<li><a href=" ">적립금</a></li>
+							<li><a href="javascript:mcBox()">등급 & 적립금</a></li>
 						</ul>
 						
 						<ul>
@@ -106,7 +120,11 @@
 
 					<div id="directqBox">			
 					</div>
-		
+					
+					
+					<div id="moneyCoupon">
+					</div>
+					
 					<div id="infomain">
 					
 						<h4><b>주문/배송 현황</b></h4>

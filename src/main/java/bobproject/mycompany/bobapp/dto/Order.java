@@ -6,7 +6,15 @@ public class Order {
 	private int pno;
 	private String mid;
 	private String oaddress;
+	private String oprice;
 	
+	
+	public String getOprice() {
+		return oprice;
+	}
+	public void setOprice(String oprice) {
+		this.oprice = oprice;
+	}
 	public int getOno() {
 		return ono;
 	}

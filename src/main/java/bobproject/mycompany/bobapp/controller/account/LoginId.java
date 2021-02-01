@@ -44,6 +44,7 @@ public class LoginId {
 			{
 				session.setAttribute("sessionMid", id.getMid());
 				session.setAttribute("loginStatus", "ok");
+				session.setAttribute("grade", id.getMgrade());
 			}
 			
 		}

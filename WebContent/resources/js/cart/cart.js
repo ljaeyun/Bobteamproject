@@ -1,80 +1,89 @@
-checkAll = () => {
-   	if(document.getElementById("checkall").checked==true){ 
-         for(var i=0;i<2;i++) document.getElementsByName("checkBox")[i].checked=true; 
+
+
+				
+var pprice;
+var amount;
+var sum;
+var deli;
+
+ 
+$(document).ready(function(){
+	var sum_all = 0;
+	
+	var sums = document.getElementsByClassName("sum");
+	
+ 	for(var i=0; i < sums.length; i++) {
+		sum_all += parseInt(sums[i].value);
 	}
-    if(document.getElementById("checkall").checked==false){
-         for(var i=0;i<2;i++) document.getElementsByName("checkBox")[i].checked=false;  
-    }
+	
+	if(sum_all < 100000) {
+		deli = 3000;
+	} else {
+		deli = 0;
+	}
+	
+	var final_price = sum_all + deli;
+	
+	$("#sum_all").html(sum_all + "원");
+	$("#deli").html(deli + "원");
+	$("#final_price").html(final_price + "원");
+	$("#oprice").val(final_price);
+});
+
+
+function recalc(){
+	var sum_all = 0;
+	
+	var sums = document.getElementsByClassName("sum");
+	
+ 	for(var i=0; i < sums.length; i++) {
+		sum_all += parseInt(sums[i].value);
+	}
+	
+	if(sum_all < 100000) {
+		deli = 3000;
+	} else {
+		deli = 0;
+	}
+	
+	$("#sum_all").html(sum_all + "원");
+	$("#deli").html(deli + "원");
+	$("#final_price").html(sum_all + deli + "원");
+	$("#oprice").val(sum_all + deli);
+};
+
+
+function plus(pno) {
+	pprice = document["form_" + pno]["pprice_" + pno];
+	amount = document["form_" + pno]["amount_" + pno];
+	sum = document["form_" + pno]["sum_" + pno];
+	amount.value++;
+	sum.value = amount.value * pprice.value;
+	$.ajax({
+		url: "updatecart",
+		method: "post",
+		data:{pno:pno, cpqn:amount.value},
+		success: recalc()
+	});
+
 }
-			
-			
-			var pprice;
-			var amount;
 
-			init = () => {
-				pprice = document.form.pprice;
-				amount = document.form.amount;
-				document.form.sum.value = parseInt(pprice.value);
-				change();
-				if(document.form.sum.value >= 50000) {
-					deli = 0;
-				} else if(document.form.sum.value < 50000) {
-					deli = 3000;
-				}
-				document.getElementById("deli").innerHTML = deli + "원";
-				document.getElementById("fianl_price").innerHTML = parseInt(sum.value) + deli + "원";
-			}
-			
-			plus = () => {
-				pprice = document.form.pprice;
-				amount = document.form.amount;
-				sum = document.form.sum;
-				amount.value++;
-				sum.value = amount.value * parseInt(pprice.value);
-				document.getElementById("sum_all").innerHTML = sum.value + "원";
-				if(document.form.sum.value >= 50000) {
-					deli = 0;
-				} else if(document.form.sum.value < 50000) {
-					deli = 3000;
-				}
-				document.getElementById("deli").innerHTML = deli + "원";
-				document.getElementById("fianl_price").innerHTML = parseInt(sum.value) + deli + "원";
-			}
 
-			minus = () => {
-				pprice = document.form.pprice;
-				amount = document.form.amount;
-				sum = document.form.sum;
-					if (amount.value > 1) {
-						amount.value--;
-						sum.value = amount.value * parseInt(pprice.value);
-						document.getElementById("sum_all").innerHTML = sum.value + "원";
-						if(document.form.sum.value >= 50000) {
-							deli = 0;
-						} else if(document.form.sum.value < 50000) {
-							deli = 3000;
-						}
-						document.getElementById("deli").innerHTML = deli + "원";
-						document.getElementById("fianl_price").innerHTML = parseInt(sum.value) + deli + "원";
-					}
-			}
 
-			change = () => {
-				pprice = document.form.pprice;
-				amount = document.form.amount;
-				sum = document.form.sum;
-					if (amount.value < 0) {
-						amount.value = 0;
-					}
-				sum.value = amount.value * parseInt(pprice.value);
-				document.getElementById("sum_all").innerHTML = sum.value + "원";
-				if(document.form.sum.value >= 50000) {
-					deli = 0;
-				} else if(document.form.sum.value < 50000) {
-					deli = 3000;
-				}
-				document.getElementById("deli").innerHTML = deli + "원";
-				document.getElementById("fianl_price").innerHTML = parseInt(sum.value) + deli + "원";
-			}
-			
-			
+function minus(pno) {
+	pprice = document["form_" + pno]["pprice_" + pno];
+	amount = document["form_" + pno]["amount_" + pno];
+	sum = document["form_" + pno]["sum_" + pno];
+	if (amount.value > 1) {
+		amount.value--;
+	}
+	sum.value = amount.value * pprice.value;
+	$.ajax({
+		url: "updatecart",
+		method: "post",
+		data:{pno:pno, cpqn:amount.value},
+		success: recalc()
+	});
+}
+						
+					
