@@ -59,22 +59,17 @@ public class Ct_CSCenter {
 		return "customer_service/customer_service_faq";
 	}
 	
-	@GetMapping("/faqlistbox")
-	public String faqbox(Model model) {
-		logger.info("작동여부확인");
-		List<CSFaq> list = csfaqService.getFaqcatList();
-		model.addAttribute("list", list);
-		return "customer_service/faqbox";
-	}
-	
 	@GetMapping("/faqlistcatbox")
 	public String faqcatbox(int fcatid, Model model) {
-		logger.info("작동여부확인");
-		List<CSFaq> list = csfaqService.getFaqcatList2(fcatid);
-		model.addAttribute("list", list);
-		return "customer_service/faqbox";
+		if (fcatid == 0)  {
+			List<CSFaq> list = csfaqService.getFaqcatList();
+			model.addAttribute("list", list);
+			return "customer_service/faqbox"; }
+		else {
+			List<CSFaq> list = csfaqService.getFaqcatList2(fcatid);
+			model.addAttribute("list", list);
+			return "customer_service/faqbox"; }
 	}
-	
 	
 	@Resource
 	private CSDirectqService csdirectqService;

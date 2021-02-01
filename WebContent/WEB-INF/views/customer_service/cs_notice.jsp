@@ -32,14 +32,14 @@
 			</div>
 			
 			<div id="category_box">
-				<div id="category_01" class="cs_cat"><a href="customer_service_faq"><b>FAQ</b></a></div>
+				<div  class="cs_cat"><a id="category_01" href="customer_service_faq"><b>FAQ</b></a></div>
 				<div id="category_02" class="cs_cat"><a href="customer_service_notice"><b>공지사항</b></a></div>
 			</div>
 			
 			
 				
 				<div>
-					<table id="notice_table" class="table table-bordered">
+					<table id="notice_table" class="table table-hover">
 					  <thead>
 					    <tr id="notice_title">
 					      <th class="not_list_num">번호</th>

@@ -14,7 +14,7 @@
 	<meta charset="UTF-8">
 	<title>밥향기 :: 공지사항세부</title>
 
-	<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_notice.css">
+	<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_cs_notice.css">
 	
 	</head>
 	
@@ -24,14 +24,23 @@
 
 		<div id="wrapper_content">
 			<div id="cs_wrap">
-				<div id="title_box">
-					<div id="title"><b>고객센터</b></div>
-				</div>
+					<div id="title_box">
+						<div id="title"><b>고객센터</b></div>
+					</div>
+					<table id="notice_detail_table">
+						<tr id="notice_detail_title">
+							<th class="not_detail_title">${noticeread.ntitle}</th>
+						</tr>
+						<tr class="notice_detail_content">
+							<td class="not_detail_content"><p>${noticeread.ncontent}</p></td>
+						</tr>
+					</table>
+					<a class="btn btn-dark btn-sm" id="btn_notice_back" href="cs_notice">목록</a>
+		 	</div>
+		 	
+		 	<%-- 
 				
-				<div class="alert alert-primary" role="alert">
-					   공지사항
-				</div>
-					 <form name="noticereadform" action="noticeread" method="post">
+					<form name="noticereadform" action="noticeread" method="post">
 						  <div class="form-group">
 							    <label for="ntitle">제목</label>
 							    <input type="text" value="${noticeread.ntitle}" readonly class="form-control" id="ntitle" name="ntitle"/>
@@ -41,12 +50,9 @@
 							    <textarea class="form-control" id="ncontent" name="ncontent" rows="4" cols="50" readonly>${noticeread.ncontent}</textarea>
 						  </div>
 						  <a class="btn btn-primary" href="cs_notice">목록</a>
-					    	 <!--  <c:if test="${sessionMid == board.bwriter}">
-							  <a class="btn btn-warning" href="boardupdate?bno=${board.bno}">수정</a>
-							  <a class="btn btn-danger" href="boarddelete?bno=${board.bno}">삭제</a>
-						 	  </c:if>  -->
-					 </form>
-		 	</div>
+					 </form> --%>
+		 	
+		 	
 		 </div>
 		
 		
