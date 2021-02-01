@@ -139,7 +139,10 @@
 							width:25px;
 							height:25px;
 						}
-						
+						.class:hover{
+							text-decoration: none;
+							color:black;
+						}
 						#sp_cart, #cat_img, #infoline_1,
 						#infoline_2, #infoline_3:hover {
 							cursor: pointer;
