@@ -75,5 +75,10 @@ public class MemberService {
 	public void updateMember(Member mem) {
 		loginDao.update(mem);
 	}
+
+	public Member getGrade(String mid) {
+		Member id = loginDao.selectByPk(mid);
+		return id;
+	}
 	
 }
