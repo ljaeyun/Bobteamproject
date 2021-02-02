@@ -72,7 +72,7 @@
 							<tr>
 								<th>휴대폰</th>
 								<td class="inputtd"><input id = "mphone" placeholder="000-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required type = "tel" name="mphone"/></td>
-								<td class="checktd"><input type="button" id ="checkbtn" value="인증번호" onclick='console.log("확인3")'/></td>
+								<!-- <td class="checktd"><input type="button" id ="checkbtn" value="인증번호" onclick='console.log("확인3")'/></td> -->
 							</tr>
 							<tr>
 								<th>주소</th>
@@ -101,17 +101,17 @@
 									<form class = "checkbox" name="form1">
 								
 										<p><input type="checkbox" name="selectall" value="selectall" style="margin-right : 25px" id="chk" onclick="selectAll(this)"/><label for="chk"><span><b>전체동의</b></span></label></p>
-										<p><input type="checkbox" name="agreebox" value="twodragon" style="margin-right : 25px" onclick="checkSelectAll(); mustSelect();" class="mustclick"/><label for="nom1"><span>이용약관동의(필수)</span></label></p>
-										<p><input type="checkbox" name="agreebox" value="myinfo" style="margin-right : 25px" onclick="checkSelectAll(); mustSelect();" class="mustclick"/><label for="nom2"><span>개인정보처리방침의(필수)</span></label></p>
+										<p><input type="checkbox" name="agreebox" value="twodragon" style="margin-right : 25px" onclick="checkSelectAll();" class="mustclick"/><label for="nom1"><span>이용약관동의(필수)</span></label></p>
+										<p><input type="checkbox" name="agreebox" value="myinfo" style="margin-right : 25px" onclick="checkSelectAll();" class="mustclick"/><label for="nom2"><span>개인정보처리방침의(필수)</span></label></p>
 										<p><input type="checkbox" name="agreebox" value="myinfo2" style="margin-right : 25px" onclick="checkSelectAll()"/><label for="nom3"><span>개인정보처리방침의(선택)</span></label></p>
-										<p><input type="checkbox" name="agreebox" value="coupon" style="margin-right : 25px" onclick="checkSelectAll()" /><label for="nom4"><span>무료배송,할인쿠폰 등 혜택/정보 수신 동의(선택)</span></label></p>
+										<p><input type="checkbox" name="agreebox" value="coupon" style="margin-right : 25px" onclick="checkSelectAll()" id="checkradio"/><label for="nom4"><span>무료배송,할인쿠폰 등 혜택/정보 수신 동의(선택)</span></label></p>
 										<p>
 											<div id = "radiob">
 											<label><input style="margin-left:67px"type="radio" name="INFO" value="sms" >SMS </label>
 											<label><input style="margin-left:67px"type="radio" name="INFO" value="email" >이메일 </label>
 											</div> 
 										</p>
-										<p><label><input type="checkbox" name="agreebox" value="oldage" style="margin-right : 25px" onclick="checkSelectAll(); mustSelect();" class="mustclick"/>본인은 만 14세 이상입니다(필수)</label></p>
+										<p><label><input type="checkbox" name="agreebox" value="oldage" style="margin-right : 25px" onclick="checkSelectAll();" class="mustclick"/>본인은 만 14세 이상입니다(필수)</label></p>
 						
 									</form>
 								</td>
@@ -127,6 +127,8 @@
 								var loginbtn = document.getElementById('joinbtn');	
 								var flag1 = false;
 								var flag2 = false;
+								var flag3 = false;
+								var flag4 = false;
 								//var flag2 = false;
 								
 								$('#midcheckbtn').click(function(){
@@ -138,8 +140,7 @@
 										success : function(data) {
 											if(data.chkResult === "noMid") {
 												flag1 = false;
-												
-												if((flag1 && flag2) == false)
+												if((flag1 && flag2 && flag3) == false)
 													{
 														loginbtn.disabled=true;	
 													}else {
@@ -148,7 +149,7 @@
 												alert("아이디 중복 입니다. 다른아이디 쓰세요");
 											} else if(data.chkResult ==="yesMid") {
 												flag1 = true;
-												if((flag1 && flag2) == false)
+												if((flag1 && flag2 && flag3) == false)
 												{
 													loginbtn.disabled=true;	
 												}else {
@@ -170,7 +171,7 @@
 										success : function(data) {
 											if(data.chkResult === "noMemail") {
 												flag2 = false;
-												if((flag1 && flag2) == false)
+												if((flag1 && flag2 && flag3) == false)
 													{
 														loginbtn.disabled=true;	
 													}else {
@@ -179,7 +180,7 @@
 												alert("이메일 중복 입니다. 다른이메일 쓰세요");
 											} else if(data.chkResult ==="yesMemail") {
 												flag2 = true;
-												if((flag1 && flag2) == false)
+												if((flag1 && flag2 && flag3) == false)
 												{
 													loginbtn.disabled=true;	
 												}else {
@@ -203,6 +204,62 @@
 									}
 								}
 						
+								$("input[type='checkbox'].mustclick").change(function(){
+									var a = $("input[type='checkbox'].mustclick");
+									if(a.length == a.filter(":checked").length){
+										alert('모두 동의 하셨습니다');
+										flag3 = true;
+										if((flag1 && flag2 && flag3) == false)
+										{
+											loginbtn.disabled=true;	
+										}else {
+											loginbtn.disabled=false;
+										}
+									
+									}
+								});
+								
+								
+								
+								function selectAll(selectAll) {
+											const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+											
+											checkboxes.forEach((checkbox) => {
+												checkbox.checked = selectAll.checked;
+												
+												flag4 =true;
+												if((flag1 && flag2 && flag4) == false)
+												{
+													loginbtn.disabled=true;	
+												}else {
+													loginbtn.disabled=false;
+												}	
+											})
+										};
+										
+								function checkSelectAll() {
+									const checkboxes = document.querySelectorAll('input[name="agreebox"]');
+									
+									const checked = document.querySelectorAll('input[name="agreebox"]:checked');
+									
+									const selectAll = document.querySelector('input[name="selectall"]');
+									
+									if(checkboxes.length === checked.length) {
+									
+										selectAll.checked = true;
+									
+										if((flag1 && flag2 && flag3) == false)
+										{
+											loginbtn.disabled=true;	
+										}else {
+											loginbtn.disabled=false;
+										}
+									} else {
+										selectAll.checked = false;
+									}
+								}
+										
+								
 						</script>
 						
 					</div>

@@ -54,5 +54,11 @@ public class ProductService {
 	}
 
 
+	public void updateProduct(Product product) {
+		productDao.update(product);
+	}
+
+
+
 
 }

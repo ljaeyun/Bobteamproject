@@ -28,4 +28,12 @@ public class PurchaseDao {
 		Purchase sum = sst.selectOne("purchases.selectPsum", mid);
 		return sum;
 	}
+	
+	public int insert(Purchase id)
+	{
+		int rows = sst.insert("purchases.insert", id);
+		return rows;
+	}
+	
+	
 }

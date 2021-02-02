@@ -23,7 +23,7 @@
 	<div class="wrapper">
 		<div class="content">
 		<div class="alert alert-secondary" role="alert">상품 등록 페이지</div>
-		<form enctype="multipart/form-data" name="RegistForm" action="goodsRegist" method="post">
+		<form enctype="multipart/form-data" name="RegistForm" action="goodsregist" method="post">
 			<div class="form-group">
 				<label for="pname">상품의 이름을 입력하세요</label>
 					<input type="text" class="form-control" id="pname" name="pname">
