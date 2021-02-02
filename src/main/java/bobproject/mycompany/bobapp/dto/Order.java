@@ -6,10 +6,24 @@ public class Order {
 	private String sname;
 	private int pno;
 	private String mid;
+	private String mname;
+	private String mphone;
 	private String oaddress;
 	private int oprice;
 	
 	
+	public String getMname() {
+		return mname;
+	}
+	public void setMname(String mname) {
+		this.mname = mname;
+	}
+	public String getMphone() {
+		return mphone;
+	}
+	public void setMphone(String mphone) {
+		this.mphone = mphone;
+	}
 	public String getSname() {
 		return sname;
 	}

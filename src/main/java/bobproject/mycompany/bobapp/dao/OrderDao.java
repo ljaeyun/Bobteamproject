@@ -46,6 +46,11 @@ public class OrderDao {
 		List<Order> orderlist = sst.selectList("orders.selectAll");
 		return orderlist;
 	}
+
+	public List<Orderitem> selectItemsByOno(int ono) {
+		List<Orderitem> orderitems = sst.selectList("orders.selectItemsByOno", ono);
+		return orderitems;
+	}
 	
 	
 }

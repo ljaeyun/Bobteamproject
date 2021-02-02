@@ -3,7 +3,8 @@
 		
 		.wrapper{
 					margin: 0 auto;
-					width:1200px;
+					width:900px;
+					display:block;
 					font-family: 'Noto Sans KR Medium';
 		}
 			
