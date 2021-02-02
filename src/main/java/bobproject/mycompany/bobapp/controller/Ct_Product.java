@@ -33,12 +33,7 @@ public class Ct_Product {
 	@Resource
 	private ProductService productService;
 	//상품 등록
-	@GetMapping("/goodsregist")
-	public String RegistForm() {
-		logger.info("상품등록페이지 열기");
-		return "seller/goodsregist";
-	}
-	
+
 	
 	@GetMapping("/menu/pphoto1")
 	public void pphoto1(int pno, HttpServletResponse response) throws Exception {
