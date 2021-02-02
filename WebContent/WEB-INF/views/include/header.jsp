@@ -7,7 +7,6 @@
 	$(document).ready(
 		function idcheck(){
 			var mid='<%=(String)session.getAttribute("sessionMid")%>';
-			
 			if(mid == null)
 				{
 					$('#idid').text("");
