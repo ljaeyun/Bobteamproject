@@ -66,5 +66,10 @@ public class MemberService {
 		loginDao.insert(id);
 	
 	}
+
+	public void deletemember(String mid) {
+		loginDao.delete(mid);
+		
+	}
 	
 }

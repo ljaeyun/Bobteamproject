@@ -85,7 +85,7 @@
 						<ul>
 							<h3><b>나의 정보</b></h3>
 							<li><a href=" ">개인정보 변경</a></li>
-							<li><a href=" ">회원탈퇴</a></li>
+							<li><a href="<%=application.getContextPath()%>/deleteId">회원탈퇴</a></li>
 						</ul>
 						
 						<c:if test='${ADMIN!="admin"}'>
