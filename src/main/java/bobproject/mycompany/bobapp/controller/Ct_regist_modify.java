@@ -24,8 +24,8 @@ import bobproject.mycompany.bobapp.dto.seller.sellergoods;
 
 @Controller
 /* @RequestMapping("/seller") */
-public class Ct_goodsRegist {
-	private static final Logger logger = LoggerFactory.getLogger(Ct_goodsRegist.class);
+public class Ct_regist_modify {
+	private static final Logger logger = LoggerFactory.getLogger(Ct_regist_modify.class);
 	@Resource
 	private ProductService productService;
 	
@@ -89,7 +89,7 @@ public class Ct_goodsRegist {
 	@GetMapping("/goodsrewrite")
 	public String goodsRevise(@RequestParam(defaultValue="1")int pageNo, Model model) {
 		int totalRows = productService.getTotalRows();
-		Pager pager = new Pager(10, 3, totalRows, pageNo);
+		Pager pager = new Pager(15, 3, totalRows, pageNo);
 		List<Product> list = productService.getProductList(pager);
 		model.addAttribute("list", list);
 		return "seller/goodsrewrite";
@@ -102,44 +102,7 @@ public class Ct_goodsRegist {
 		return "seller/goodsmodify";
 	}
 	@PostMapping("/goodsmodify")
-		public String goodsModify(Product product)throws Exception {
-//
-//		MultipartFile mf1 = product.getPattach1();
-//		MultipartFile mf2 = product.getPattach2();
-//		MultipartFile mf3 = product.getPattach3();
-//		
-//		product.setPimgorigin1(mf1.getOriginalFilename());
-//		product.setPimgtype1(mf1.getContentType());
-//		String saveName1 = new Date().getTime() + "-" + mf1.getOriginalFilename();
-//		
-//		
-//		
-//		product.setPimgsave1(saveName1);
-//		product.setPimgtype1(mf1.getContentType());
-//		File saveFile1 = new File("D:/MyWorkspace/uploadfiles/members/" + saveName1);
-//		mf1.transferTo(saveFile1);
-//		
-//		product.setPimgorigin2(mf2.getOriginalFilename());
-//		product.setPimgtype2(mf2.getContentType());
-//		String saveName2 = new Date().getTime() + "-" + mf2.getOriginalFilename();
-//		
-//		
-//		product.setPimgsave2(saveName2);
-//		product.setPimgtype2(mf2.getContentType());
-//		File saveFile2 = new File("D:/MyWorkspace/uploadfiles/members/" + saveName2);
-//		mf2.transferTo(saveFile2);
-//			
-//		
-//		product.setPimgorigin3(mf3.getOriginalFilename());
-//		product.setPimgtype3(mf3.getContentType());
-//		String saveName3 = new Date().getTime() + "-" + mf3.getOriginalFilename();
-//		
-//		
-//		product.setPimgsave3(saveName3);
-//		product.setPimgtype3(mf3.getContentType());
-//		File saveFile3 = new File("D:/MyWorkspace/uploadfiles/members/" + saveName3);
-//		mf3.transferTo(saveFile3);
-		
+		public String goodsModify(Product product){
 		productService.updateProduct(product);
 		return "redirect:/";
 		}

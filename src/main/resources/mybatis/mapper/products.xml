@@ -23,6 +23,7 @@
 			pimgtype3
 		from products
 		where pno =#{pno}
+		order by pno
 	</select>
 	<select id="countAll" resultType="int">
 		select count(*) from products
@@ -118,6 +119,7 @@
 		from
 			products
 		where pname like #{keyword}
+		order by pno
 	</select>
 		<select id="selectAll" resultType="product">
 		select
@@ -140,6 +142,7 @@
 			pimgtype2,
 			pimgtype3
 		from products
+		order by pno
 	</select>
 	<insert id="insert" parameterType="product">
 		insert into products
