@@ -31,9 +31,8 @@
 						height: 40px;
 						width: 90%;
 						flex-direction: row;
-						border-bottom: 1px solid black;
-						border-top: 2px solid black;
 						padding: 6px 0px 0px 47px;
+						border-bottom: 1px solid black;
 					}
 						#checkall {
 							margin-top: 2px;
@@ -48,6 +47,13 @@
 							font-size: 13px;
 						}
 					
+					.cartlist_each {
+						margin-left:120px;
+					}
+					
+					
+					
+					
 					#cart_listeach {
 						height: 200px;
 						width: 90%;
@@ -56,7 +62,6 @@
 						border-bottom: 1px solid #dee2e6;
 						vertical-align: middle;
 						align-items: center;
-						padding-left: 30px;
 					}
 					
 						#checkeach {
@@ -201,28 +206,28 @@
 						width: 20%;
 						height: 100%;
 						text-align: center;
-						margin: 10px 20px 0px 20px;
+						margin: 30px 20px 0px 20px;
 					}
 				
 					#discount {
 						width: 20%;
 						height: 100%;
 						text-align: center;
-						margin: 10px 20px 0px 20px;
+						margin: 30px 20px 0px 20px;
 					}
 					
 					#delivery {
 						width: 20%;
 						height: 100%;
 						text-align: center;
-						margin: 10px 20px 0px 20px;
+						margin: 30px 20px 0px 20px;
 					}
 					
 					#finalprice {
 						width: 20%;
 						height: 100%;
 						text-align: center;
-						margin: 10px 20px 0px 20px;
+						margin: 30px 20px 0px 20px;
 					}
 					
 					#fianl_price {
