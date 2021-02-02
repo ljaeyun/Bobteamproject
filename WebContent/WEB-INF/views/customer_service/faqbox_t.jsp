@@ -12,20 +12,19 @@
 			</div>
 		</div>
 		
-		<div id="answer_list_${faq.fno}" class="answer_list" style="display:none">
+		<div id="answer_list_${faq.fno}" class="answer_list" style="display:none;">
 			<ul>
 				<li class="answer_text">${faq.fanswer}</li>
 			</ul>
 		</div>
+	</c:forEach>
 		
 		<script>
-		function toggle() {
+			function toggle() {
 			  var x = document.getElementById("answer_list_${faq.fno}");
 			  if (x.style.display === "none") {
 			    x.style.display = "block";
 			  } else {
-			    x.style.display = "none";}}
+			    x.style.display = "none";}
+			  }
 		</script>
-		
-	</c:forEach>
-		

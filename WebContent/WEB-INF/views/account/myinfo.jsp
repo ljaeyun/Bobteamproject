@@ -11,12 +11,13 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+	
 <meta charset="UTF-8">
 <title>밥향기 :: 나의정보</title>
 
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/account/myinfo.css">
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_faq.css">
-
+<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_dqlist.css">
 
 <script type="text/javascript" src="<%=application.getContextPath()%>/resources/js/account/myinfo.js"></script>
 
