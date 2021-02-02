@@ -16,4 +16,10 @@
 		where m.mid = p.mid and m.mid=#{mid}
 	</select>
 	
+	<insert id="insert" parameterType="purchase">
+		insert into purchases
+		(mid, mpurchasecount, mpurchasesum, msavemoney)
+		values
+		(#{mid}, #{mpurchasecount}, #{mpurchasesum}, #{msavemoney})
+	</insert>
 </mapper>

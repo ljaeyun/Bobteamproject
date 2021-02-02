@@ -19,15 +19,8 @@ public class MemberService {
 	@Resource
 	private LoginDao loginDao;
 	
-	@Resource
-	private PurchaseDao purchaseDao;
-	
-	
-	
 	public String login(Member id) {
 		Member dbId = loginDao.selectByPk(id.getMid());
-		Purchase pur = purchaseDao.selectPsum(id.getMid());
-		
 		
 		if(dbId == null) {
 			return "wrongMid";
@@ -67,11 +60,16 @@ public class MemberService {
 
 	/*
 	 * @Resource private OrderDao orderDao;
-	 */
-
+	 */	
 	public void join(Member id)
 	{
 		loginDao.insert(id);
+	
+	}
+
+	public void deletemember(String mid) {
+		loginDao.delete(mid);
+		
 	}
 	
 }

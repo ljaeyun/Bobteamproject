@@ -1,29 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>밥향기 :: 상품등록</title>
-  <%@ page import="java.util.*" %>
-  <%@ page import="java.text.SimpleDateFormat" %>
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/seller/goodsRegist.css">
-</head>
-<body>
-	
-	<jsp:include page="/WEB-INF/views/include/header.jsp"/>
+
+<br/>
+		<h4><b>상품 등록</b></h4>
+			<hr style="height:5px; background-color:black">
 	<div class="wrapper">
 		<div class="content">
-		<div class="alert alert-secondary" role="alert">상품 등록 페이지</div>
-		<form enctype="multipart/form-data" name="RegistForm" action="goodsRegist" method="post">
+		<form enctype="multipart/form-data" name="RegistForm" action="goodsregist" method="post">
 			<div class="form-group">
 				<label for="pname">상품의 이름을 입력하세요</label>
 					<input type="text" class="form-control" id="pname" name="pname">
@@ -57,7 +42,7 @@
 			<div class="form-group">
 			<label for="ptime">조리시간을 입력하세요</label>
 					<input type="text" class="form-control" id="ptime" name="ptime">
-					<small class="form-text text-muted">예시: 30분</small>
+					<small class="form-text text-muted">분단위로 숫자만 입력하세요</small>
 			</div>
 			<div class="form-group">
 			<label for="pdifficulty">조리 난이도를 입력하세요</label>
@@ -79,26 +64,9 @@
 					<textarea class="form-control" id="pcontent" name="pcontent"
 					rows="6" cols="50"></textarea>
 					<small class="form-text text-muted">2000자 이내 권고</small>
-			<button class="btn btn-primary">저장</button>
-			<a class="btn btn-primary" href="boardlist2">취소</a>
+			<button class="btn btn-secondary">저장</button>
+			<a class="btn btn-secondary" href="myinfo">취소</a>
 			</form>
 			</div>
-			<hr/>
-			<div id="ClientC">
-				<p><u> 밥향기 고객센터 </u><br>
-				<br>
-				카카오톡 : <b> 친구찾기 > 쿡킷 </b><br>
-				이메일 : <b>cookcook@CookKit.com </b><br>
-				전화 : 070-1234-5678 <br>
-				시간 : <b>월~금 : 09 : 00 ~ 18 : 00 </b><br>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>공휴일 휴무</b>
-				</p>
-			</div>
-		
-		
-					
+			<hr/>					
 	</div>	
-	
-			<jsp:include page="/WEB-INF/views/include/footer.jsp"/>
-</body>
-</html>

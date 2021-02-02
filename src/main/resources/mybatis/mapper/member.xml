@@ -26,4 +26,9 @@
 		values
 		(#{mgrade})	
 	</select>
+	
+	<delete id="delete" parameterType="string">
+		delete from members where mid=#{mid}
+	</delete>
+	
 </mapper>

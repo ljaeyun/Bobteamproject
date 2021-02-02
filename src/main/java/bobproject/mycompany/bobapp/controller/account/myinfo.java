@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.Service.CSDirectqService;
-import bobproject.mycompany.bobapp.Service.MoneyCouponService;
+import bobproject.mycompany.bobapp.Service.PurchaseService;
 import bobproject.mycompany.bobapp.dto.CSDirectq;
 import bobproject.mycompany.bobapp.dto.Purchase;
 import bobproject.mycompany.bobapp.dto.createid.Member;
@@ -43,7 +43,7 @@ public class myinfo {
 	}
 	
 	@Resource
-	private MoneyCouponService moneycouponservice;
+	private PurchaseService moneycouponservice;
 	
 	@GetMapping("/moneycoupon")
 	public String moneycoupon(HttpSession session, Model model) {

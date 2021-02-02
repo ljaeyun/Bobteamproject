@@ -82,6 +82,38 @@
 				}
 			});
 		}
+
+		function regist() {
+			$.ajax({
+				url:"goodsregist",
+				method:"get",
+				success:function(data) {
+					$("#regist").html(data);
+					$("#regist").show();
+					$("#adminorderlist").hide();
+					$("#infomain").hide();
+					$("#moneyCoupon").hide();
+					$("#directqBox").hide();
+					$("#rewrite").hide();
+				}
+			});
+		}
+
+		function rewrite() {
+			$.ajax({
+				url:"goodsrewrite",
+				method:"get",
+				success:function(data) {
+					$("#rewrite").html(data);
+					$("#rewrite").show();
+					$("#regist").hide();
+					$("#adminorderlist").hide();
+					$("#infomain").hide();
+					$("#moneyCoupon").hide();
+					$("#directqBox").hide();
+				}
+			});
+		}
 	</script>
 
 </head>
@@ -124,7 +156,7 @@
 						<ul>
 							<h3><b>나의 정보</b></h3>
 							<li><a href=" ">개인정보 변경</a></li>
-							<li><a href=" ">회원탈퇴</a></li>
+							<li><a href="<%=application.getContextPath()%>/deleteId">회원탈퇴</a></li>
 						</ul>
 						
 						<c:if test='${ADMIN!="admin"}'>
@@ -145,8 +177,8 @@
 								
 								<c:if test='${ADMIN=="admin"}'>
 									<h3><b>판매자등록</b></h3>
-									<li><a href="<%=application.getContextPath()%>/goodsRegist" name="sel01">상품등록</a></li>
-									<li><a href="<%=application.getContextPath()%>/goodsRevise" name="sel02">상품수정</a></li>
+									<li><a href="javascript:regist()" name="sel01">상품등록</a></li>
+									<li><a href="javascript:rewrite()" name="sel02">상품수정</a></li>
 									
 									<h3><b>[관리자]고객센터</b></h3>
 									<li><a href="<%=application.getContextPath()%>/customer_service/directqlist" href="javascript:dqBox()" name="cs01">1대1문의 관리</a></li>
@@ -155,7 +187,12 @@
 					</nav>
 					
 		<!--=========================================================================== -->
-
+					
+					<div id="regist">
+					</div>
+					
+					<div id="rewrite">
+					</div>
 
 					<div id="directqBox">			
 					</div>

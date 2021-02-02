@@ -51,12 +51,17 @@ public class ProductDao {
 		return list;
 	}
 
+
+	public int update(Product product) {
+		int rows = sst.update("boards.update", product);
+		return rows;
+	}
+
 	public int delete(int pno) {
 		int rows =sst.delete("products.delete", pno);
 		return rows;
 		
 	}
-
 
 
 

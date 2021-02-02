@@ -11,8 +11,8 @@ import bobproject.mycompany.bobapp.dto.Purchase;
 import bobproject.mycompany.bobapp.dto.createid.Member;
 
 @Service
-public class MoneyCouponService {
-	private static Logger logger = LoggerFactory.getLogger(MoneyCouponService.class);
+public class PurchaseService {
+	private static Logger logger = LoggerFactory.getLogger(PurchaseService.class);
 	
 	
 	@Resource
@@ -23,6 +23,11 @@ public class MoneyCouponService {
 		Purchase mem = purchaseDao.selectByPk(id);
 		
 		return mem;
+	}
+
+	public void join(Purchase id) {
+		
+		purchaseDao.insert(id);
 	}
 	
 }

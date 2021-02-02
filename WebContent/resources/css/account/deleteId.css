@@ -1,0 +1,259 @@
+@charset "UTF-8";
+	#wrapper_contents{
+				display: flex;
+				width : 1200px;
+				height: 590px;
+				justify-content : center;
+				font-family: 'Noto Sans KR';
+			}
+			
+			#content {
+				width:1900px;
+				height; 590px;
+			}
+			#article {
+				width : 800px;
+				margin :0 auto;
+			}
+			
+			.title2 {
+				text-align : center;
+				font-size : 40px;
+				
+			}
+			
+			#search_line {
+				margin_bottom:25px;
+				height:50px;
+				border-bottom:solid 3px gray;
+			}
+			
+			.sub {
+				text-align : right;
+				font-size : 5px;
+			}
+			
+			.txtinfo {
+				padding:20px;
+				width:800px;
+				height : 400px;
+			}
+			
+			
+			
+			#table1 {
+				width : 400px;
+				
+				margin-left:auto;
+				margin-right:auto;
+				table-layout:fixed;
+				margin-top:20px;
+				
+			}
+			
+			#table2 {
+				width : 400px;
+				
+				margin-left:auto;
+				margin-right:auto;
+				table-layout:fixed;
+			}
+			
+			#table1 ,th,td{
+				
+				 border-collapse: separate;
+				 border-spacing: 0 10px;
+			}
+			
+			
+			th {
+				text-align:left;
+				width : 120px;
+				height:30px;
+				
+			}
+			
+			td {
+				vertical-align:middle;
+				padding : 5px;
+
+			}
+
+			td.inputtd {
+				width:300px;
+			}
+			
+			td.checktd {
+				width:100px;
+			}
+			
+			#minibtn {
+				
+				margin-left:auto;
+				margin-right:auto;
+				
+			}
+			
+	
+			#linetr {
+				border-top : 1px solid black;
+			}
+			
+			input[type="text"] {
+			  font-size:1.5em;
+			  padding:0.25em;
+			  box-sizing: border-box;
+			  width:100%;
+			  border : none;
+			  border : solid 1px #ccc;
+			  border-radius : 60px;
+			  
+			}
+			
+			input[type="text"]:focus {
+			  outline:none;
+			  border : none;
+			  border : solid 1px #000000;
+			  border-radius : 60px;
+			}
+			
+			input[type="password"]:focus {
+			  outline:none;
+			  border : none;
+			  border : solid 1px #000000;
+			  border-radius : 60px;
+			}
+			
+			input[type="password"] {
+			  font-size:1.5em;
+			  padding:0.25em;
+			  box-sizing: border-box;
+			  width:100%;
+			   border : none;
+			  border : solid 1px #ccc;
+			  border-radius : 60px;
+			}
+			
+			input[type="date"] {
+			  font-size:1.0em;
+			  padding:0.25em;
+			  box-sizing: border-box;
+			  width:100%;
+			}
+			
+			button[type="submit"] {
+			  font-size:1.2em;
+			  padding:0.25em;
+			  box-sizing: border-box;
+			  width:100%;
+			}
+	
+			#radiob {
+				width:100%;
+			}
+			
+	#deletebtn {
+		
+		margin-top : 50px;
+		text-align : center;
+	}
+
+	
+	#deleteyes {
+		
+		width : 500px;
+	}
+	
+	
+	
+	#deleteno {
+		margin-top : 50px;
+		width : 500px;
+		
+		
+	}
+	
+	.btn-danger {
+				width:100%;
+				height:52px;
+				background-color: #FFFFFF ;
+				border-color: #7bc143;
+				color: #FF2D00; 
+				cursor:pointer;
+				font-family: 'Noto Sans KR medium';
+				
+				  border : none;
+			  border : solid 1px #ccc;
+			  border-radius : 60px;
+				}
+				
+	.btn-primary {
+				width:100%;
+				height:52px;
+				background-color: #53B1FF;
+				border-color: #240531;
+				color: #FFF;
+				cursor:pointer;
+				font-family: 'Noto Sans KR medium';
+				
+				  border : none;
+			  border : solid 1px #ccc;
+			  border-radius : 60px;
+				}
+	/* .btn-primary {
+				width:100%;
+				height:52px;
+				background-color: #240531;
+				border-color: #240531;
+				color: #FFF;
+				cursor:pointer;
+				font-family: 'Noto Sans KR medium';
+				
+				  border : none;
+			  border : solid 1px #ccc;
+			  border-radius : 60px;
+				}
+			.btn-primary:hover,
+			.btn-primary:focus {
+				outline:none;
+				border-color: #1B0325;
+				background-color: #1B0325;
+				color: #FFF; }
+			
+			.btn-primary:active,
+			.btn-primary:visited,
+			.btn-primary:active:focus,
+			.btn-primary:active:hover {
+				border-color: #800080;
+				background-color: #639d34;
+				color: #FFF; }
+				
+				
+				
+			.btn-danger {
+				width:100%;
+				height:52px;
+				background-color: #FFFFFF ;
+				border-color: #7bc143;
+				color: #000000; 
+				cursor:pointer;
+				font-family: 'Noto Sans KR medium';
+				
+				  border : none;
+			  border : solid 1px #ccc;
+			  border-radius : 60px;
+				}
+			.btn-danger:hover,
+			.btn-danger:focus {
+				outline:none;
+				border-color: #6fb03a;
+				background-color: #ACF196;
+				color: #000000; }
+			
+			.btn-danger:active,
+			.btn-danger:visited,
+			.btn-danger:active:focus,
+			.btn-danger:active:hover {
+				border-color: #639d34;
+				background-color: #639d34;
+				color: #FFF; } */
