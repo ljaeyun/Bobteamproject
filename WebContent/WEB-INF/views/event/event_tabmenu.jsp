@@ -16,7 +16,7 @@ function fun1(){
 		method:"get",
 		success:function(data){
 			$("#people1").html(data);
-			$("#people1").show(data);
+			$("#people1").show();
 			$("#people2").hide();
 			$("#people3").hide();
 			$("#people4").hide();
@@ -37,7 +37,7 @@ function fun2(){
 		success:function(data){
 			$("#people2").html(data);
 			$("#people1").hide();
-			$("#people2").show(data);
+			$("#people2").show();
 			$("#people3").hide();
 			$("#people4").hide();
 			$("#people5").hide();
@@ -58,7 +58,7 @@ function fun3(){
 			$("#people3").html(data);
 			$("#people1").hide();
 			$("#people2").hide();
-			$("#people3").show(data);
+			$("#people3").show();
 			$("#people4").hide();
 			$("#people5").hide();
 			$("#btn3").css({"background-color": "#1c7ed6", "color": "white"});
@@ -79,7 +79,7 @@ function fun4(){
 			$("#people1").hide();
 			$("#people2").hide();
 			$("#people3").hide();
-			$("#people4").show(data);
+			$("#people4").show();
 			$("#people5").hide();
 			$("#btn4").css({"background-color": "#4dabf7", "color": "white"});
 			$("#btn1").css({"background-color": "", "color": ""});
@@ -100,7 +100,7 @@ function fun5(){
 			$("#people2").hide();
 			$("#people3").hide();
 			$("#people4").hide();
-			$("#people5").show(data);
+			$("#people5").show();
 			$("#btn5").css({"background-color": "#868e96", "color": "white"});
 			$("#btn1").css({"background-color": "", "color": ""});
 			$("#btn2").css({"background-color": "", "color": ""});

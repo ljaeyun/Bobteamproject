@@ -88,6 +88,11 @@ public class Ct_Product {
 		productService.saveProduct(product);
 		return "redirect:/";
 		}
+	@GetMapping("/goodsDelete")
+	public String goodsDelete(int pno) {
+		productService.deleteDelete(pno);
+		return "redirect:/";
+	}
 	
 	@GetMapping("/menu/pphoto1")
 	public void pphoto1(int pno, HttpServletResponse response) throws Exception {

@@ -147,4 +147,7 @@
 		values
 		(pno_seq.nextval, #{pname}, #{pamount}, #{pcontent}, #{psubtitle}, #{pdifficulty}, #{pprice}, #{pweight}, #{ptime}, #{pimgorigin1}, #{pimgorigin2}, #{pimgorigin3}, #{pimgsave1}, #{pimgsave2}, #{pimgsave3}, #{pimgtype1}, #{pimgtype2}, #{pimgtype3})
 	</insert>
+	<delete id="delete" parameterType="int">
+		delete from products where pno=#{pno}
+	</delete>
 </mapper>

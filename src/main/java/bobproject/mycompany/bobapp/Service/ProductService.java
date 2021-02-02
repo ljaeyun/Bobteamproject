@@ -47,4 +47,12 @@ public class ProductService {
 		return list;
 	}
 
+
+	public void deleteDelete(int pno) {
+		productDao.delete(pno);
+		
+	}
+
+
+
 }
