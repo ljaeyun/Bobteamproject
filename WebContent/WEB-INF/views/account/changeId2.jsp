@@ -3,46 +3,33 @@
     
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
 
-	<br/>
-		<h4><b>회원정보 수정</b></h4>
-			<hr style="height:5px; background-color:black">
-	<div class="wrapper">
-		<div class="content">
-
-		<form enctype="multipart/form-data" action="changeIdupdate" method="post">
-			<div class="form-group">
-				<label for="pname">아이디</label>
-					<input type="text" class="form-control" id="pname" name="pname" value="${mem.mid}">
-			</div>
-	
-			<div class="form-group">
-			<label for="pprice">이름</label>
-					<input type="text" class="form-control" id="pprice" name="pprice" value="${mem.mname}">
-			</div>
-			<div class="form-group">
-			<label for="pamount">이메일</label>
-					<input type="text" class="form-control" id="pamount" name="pamount" value="${mem.memail}" >
-
-			</div>
-			<div class="form-group">
-			<label for="ptime">휴대전화</label>
-					<input type="text" class="form-control" id="ptime" name="ptime" value="${mem.mphone}" >
-
-			</div>
-			<div class="form-group">
-			<label for="pdifficulty">주소</label>
-					<input type="text" class="form-control" id="pdifficulty" name="pdifficulty" value="${mem.maddress}" >
+	<form method="post" action="changeIdupdate">
+		<label for="mid">아이디</label>
+		<input type="text" value="${mem.mid}" readonly name="mid">
 				
-			</div>
-				
-				<input type="hidden" value="${mem.mpw}" name="mpw">
-				<input type="hidden" value="${mem.mgender}" name="mgender">
-				<input type="hidden" value="${mem.mbirth}" name="mbirth">
-				<input type="hidden" value="${mem.mgrade}" name="mgrade">
-				
-			<button class="btn btn-primary">저장</button>
-			</form>
-			</div>
-			<hr/>		
-	</div>	
+		<label for="mname">이름</label>
+		<input type="text" value="${mem.mname}" name="mname">
+		
+		<label for="memail">이메일</label>
+		<input type="text" value="${mem.memail}" name="memail">
+		
+		<label for="mphone">휴대전화</label>
+		<input type="text" value="${mem.mphone}" name="mphone">
+			
+		<label for="maddress">주소</label>
+		<input type="text" value="${mem.maddress}" name="maddress">
+		
+		<input type="hidden" value="${mem.mpw}" name="mpw">
+		<input type="hidden" value="${mem.mgender}" name="mgender">
+		<input type="hidden" value="${mem.mbirth}" name="mbirth">
+		<input type="hidden" value="${mem.mgrade}" name="mgrade">
+		
+		
+		<button class="btn btn-info" id="changebtn">수정</button>
+		</form>
