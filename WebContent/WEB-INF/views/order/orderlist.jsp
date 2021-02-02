@@ -75,9 +75,9 @@
 			
 			
 			<div id="orderlist_fn">
-				<form id="orderinfo" class="form-inline" action="order" method="post">
+				<form id="orderinfo" action="order" method="post">
 					<div id="order-personalinfo" class="olist_infobox">
-						<div id="opsinfo_title" class="titlebox">주문자</div>
+						<div id="opsinfo_title" class="titlebox">주문정보</div>
 						<div id="opsinfo_content" class="contentbox">
 							<div id="opsinfo_name" class="ops_box">
 								<div class="boxes_title">받으실 분</div>
@@ -95,23 +95,26 @@
 							</div>
 						</div>
 					</div>
-					<div id="order-deliinfo" class="olist_infobox">
-						<div id="ordinfo_title" class="titlebox">배송정보</div>
-						<div id="ordinfo_content"  class="ops_box">
-							<div class="boxes_title">배송지</div>
-							<input type="text" class="form-control" id="olist_address" name="oaddress" value="${memberinfo.maddress}"/>
-						</div>					
-					</div>
-					<div id="order-paymentinfo" class="olist_infobox">
-						<div id="opayinfo_title"  class="titlebox">결제수단</div>
-						<div id="opayinfo_content" class="ops_box">
-							<div class="boxes_title">신용카드번호</div>
-							<input type="text" class="form-control" id="olist_address" name="oaddress" value="${memberinfo.maddress}"/>
-						</div>	
-					</div>
+					<div id="order_other">
+						<div id="order-deliinfo" class="olist_infobox">
+							<div id="ordinfo_title" class="titlebox">배송정보</div>
+							<div id="ordinfo_content"  class="ops_box">
+								<div class="boxes_title">배송지</div>
+								<input type="text" class="form-control" id="olist_address" name="oaddress" value="${memberinfo.maddress}"/>
+							</div>					
+						</div>
+						<div id="order-paymentinfo" class="olist_infobox">
+							<div id="opayinfo_title"  class="titlebox">결제수단</div>
+							<div id="opayinfo_content" class="ops_box">
+								<div class="boxes_title">결제수단 선택</div>
+								<input type="text" class="form-control" id="olist_address" name="oaddress" value="계좌이체"/>
+							</div>	
+						</div>
+					</div>	
 					<input type="hidden" id="oprice" name="oprice" class="oprice">
-						<br/>
-					<button type="submit" class="btn btn-dark">결제하기</button>
+					<div id="buttonbox"> 
+						<button id="sub_btn" type="submit">결제하기</button>
+					</div>
 				</form>
 			</div>
 			
