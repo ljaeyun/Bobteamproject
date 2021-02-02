@@ -39,4 +39,12 @@ public class LoginDao {
 		int grade = sst.insert("members.insertGrade",mid);
 		return grade;
 	}
+
+	public int delete(String mid) {
+		int rows = sst.delete("members.delete", mid);
+		return rows;
+		
+	}
+	
+	
 }

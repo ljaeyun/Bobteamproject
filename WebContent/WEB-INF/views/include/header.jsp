@@ -3,7 +3,20 @@
  <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/header.css">
 <link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
-
+<script>
+	$(document).ready(
+		function idcheck(){
+			var mid='<%=(String)session.getAttribute("sessionMid")%>';
+			
+			if(mid == null)
+				{
+					$('#idid').text("");
+				} else {
+					$('#idid').text(mid + " 님 ㅎㅇㅎㅇ");
+				}
+		}		
+	)
+</script>
 <div id="wrapper_header">
 			 <header>
 				 <div id="div1">
@@ -21,6 +34,7 @@
 									<li><a href="<%=application.getContextPath()%>/login">로그인</a></li>
 								</c:if>
 								<c:if test="${loginStatus!=null }">
+									<li><a href="<%=application.getContextPath()%>/myinfo" id="idid"></a></li>
 									<li><a href="<%=application.getContextPath()%>/logout">로그아웃</a></li>
 								</c:if>
 								<li><a href="<%=application.getContextPath()%>/customer_service/customer_service_faq">고객센터</a></li>

@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.Service.MemberService;
+import bobproject.mycompany.bobapp.Service.PurchaseService;
+import bobproject.mycompany.bobapp.dto.Purchase;
 import bobproject.mycompany.bobapp.dto.createid.Member;
 
 @Controller
@@ -31,10 +33,15 @@ public class CreateId {
 	@Resource
 	private MemberService memberService;
 	
+	
+	@Resource
+	private PurchaseService purchaseService;
+	
 	@PostMapping("/join")
-	public String create(Member id) {
+	public String create(Member id, Purchase id2) {
 		
 		memberService.join(id);
+		purchaseService.join(id2);
 		
 		return "redirect:/";
 	}
