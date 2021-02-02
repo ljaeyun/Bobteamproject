@@ -51,7 +51,7 @@
 	<update id="updatepurchase" parameterType="order">
 		update purchases
 		set mpurchasesum=+#{oprice},
-			mpurchasecount=+1,
+			mpurchasecount=mpurchasecount+1,
 			msavemoney=+#{oprice}*(select gsaverate
 									from grades
 									where mgrade=(select mgrade
@@ -60,4 +60,11 @@
 									)
 		where mid=#{mid}
 	</update>
+	
+	<update id="updatePlusOstatus" parameterType="int">
+		update orders
+		set sid=sid+1
+		where ono=#{ono}
+	</update>	
+	
 </mapper>

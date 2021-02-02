@@ -10,7 +10,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import bobproject.mycompany.bobapp.Service.OrderService;
 import bobproject.mycompany.bobapp.dto.Order;
@@ -47,5 +49,12 @@ public class Ct_myinfo_order {
 		List<Orderitem> orderitems = orderService.getOrderitems(ono);
 		model.addAttribute("orderitems",orderitems);
 		return "order/orderitems";
+	}
+	
+
+	@PostMapping("/plus")
+	public void plus(int ono) {
+		orderService.plusOstatus(ono);
+		logger.info("배송 상태 변경");
 	}
 }

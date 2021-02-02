@@ -43,11 +43,11 @@
 								<td>${orderlist.oaddress}</td>
 								<td>${orderlist.oprice}원</td>
 								<td>
-									<c:if test="${orderlist.sname}!='결제완료'">
-										<a href="javascript:minus(${orderlist.ono})">< </a>
+									<c:if test="${orderlist.sname!='결제완료'}">
+										<a href="minus(${orderlist.ono})">< </a>
 									</c:if>
 											${orderlist.sname}
-									<c:if test="${orderlist.sname}!='배송완료'">
+									<c:if test="${orderlist.sname!='배송완료'}">
 										<a href="javascript:plus(${orderlist.ono})"> ></a>
 									</c:if>
 								</td>
@@ -56,6 +56,15 @@
 					</tbody>
 				</table>
 				<script>
+					
+					function plus(ono) {
+						$.ajax({
+							url: "plus",
+							method: "post",
+							data: {ono:ono}
+						});
+					}
+					
 					function showOrderItem(ono) {
 						var html = "<tr id='tr-oi-" + ono + "'><td colspan=7></td></tr>"
 						if($("#tr-oi-" + ono).length == 0) {
