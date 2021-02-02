@@ -256,29 +256,44 @@
 							</table>
 				
 						</div>
-						<h4 style="margin-top : 160px;"><b>적립금/쿠폰</b></h4>
+						<h4 style="margin-top : 100px;"><b>적립금/쿠폰</b></h4>
 						<hr style="height:5px; background-color:black">
+							
 						<div id = "moneycoupon">
 							<table id = "money">
 								<tr style="height:60px">
-									<td class ="pitext">적립금</td>
-									<td class ="pitext">구매횟수</td>
-									<td class ="pitext">소비액</td>
+									<td class ="pitext2">적립금</td>
+									<td class ="pitext2">구매횟수</td>
+									<td class ="pitext2">소비액</td>
 								</tr>
 								<tr style="height:60px">
-									<td><div id = "num434" class = "smmoney">${pur.msavemoney}</div></td>
-									<td><div id = "num434" class = "ssum">${pur.mpurchasecount}</div></td>
-									<td><div id = "num434" class = "slost">${pur.mpurchasesum}</div></td>
+									<td><div id = "num4343" class = "smmoney">${pur.msavemoney}</div></td>
+									<td><div id = "num4343" class = "ssum">${pur.mpurchasecount}</div></td>
+									<td><div id = "num4343" class = "slost">${pur.mpurchasesum}</div></td>
 								</tr>
-								<tr>
-									<td colspan="3">${mem.mgrade}</td>
-								</tr>
-								
-						
 							</table>
-					
+								
+								<c:if test="${mem.mgrade=='Gray'}">
+									<h4 style="margin-top : 100px; color: #868e96; ">회원님의 등급은 <b>Gray</b> 입니다.</h4>
+								</c:if>
+								<c:if test="${mem.mgrade=='Sky'}">
+									<h4 style="margin-top : 100px; color: #4dabf7;">회원님의 등급은 <b>Sky</b> 입니다.</h4>
+								</c:if>
+								<c:if test="${mem.mgrade=='Blue'}">
+									<h4 style="margin-top : 100px; color: #1c7ed6">회원님의 등급은 <b>Blue</b> 입니다.</h4>
+								</c:if>
+								<c:if test="${mem.mgrade=='The Blue'}">
+									<h4 style="margin-top : 100px; color: #1864ab">회원님의 등급은 <b>The Blue</b> 입니다.</h4>
+								</c:if>
+								<c:if test="${mem.mgrade=='Blue Blanco'}">
+									<h4 style="margin-top : 100px; color: #364fc7">회원님의 등급은 <b>Blue Blanca</b> 입니다.</h4>
+								</c:if>
+								<hr style="height:5px; background-color:black">
+								<script>
+									
+								</script>
 						</div>
-					
+								
 					</div>
 				</div>
 			</div>
