@@ -52,4 +52,9 @@ public class OrderService {
 		List<Orderitem> orderitems = orderDao.selectItemsByOno(ono);
 		return orderitems;
 	}
+
+
+	public void plusOstatus(int ono) {
+		orderDao.plusOstatus(ono);
+	}
 }
