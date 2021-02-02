@@ -9,13 +9,13 @@
 		
 		
 		#wrapper_contents {
+			display: block;
 			width: 1200px;
 			margin: auto;
 		}
 	
 		
 		#menu_wrapper {
-		
 			margin: 0px auto;
 			width: 1000px;
 			font-family: 'Noto Sans KR';
@@ -28,11 +28,12 @@
 		}
 
 		a:hover{
-			text-decoration: none
-			;
+			text-decoration: none;
+			color:gray;
 		}
 			
 		#search_inform{
+			display: block;
 			margin: 0px auto;
 			width: 400px;
 			height: 130px;
@@ -81,19 +82,21 @@
 				border-bottom: 1px solid gray;
 				text-decoration: none;
 		}
-	
+		#productall{
+			display: block;
+			display:flex;
+		}
 		#productlist_total{
+			flex:1;
+			display:block;
 			margin-bottom: 100px;
 		}
-		
-			#productline{
-				display: inline-block;
-				justify-content: space-around;
-				height: 520px;
-				}
-				
 			
+			#productline{
+				display:block;
+				}
 				#infobox{
+			
 				display:inline-block;
 				margin: 40px;
 				width:25%;
@@ -114,6 +117,8 @@
 					
 							
 						.infoline_1 {
+							flex:1;
+							margin-bottom: 5px;
 							width: 100%;
 							height: 20px;
 							color : gray;
@@ -122,6 +127,8 @@
 							font-weight: normal;
 							}
 						.infoline_2 {
+							flex:1;
+							margin-bottom: 5px;
 							width: 100%;
 							height: 20px;
 							color : black;
@@ -132,6 +139,7 @@
 							}
 							
 						.infoline_3 {
+							flex:1;
 							margin-top: 5px;
 							width: 100%;
 							height: 20px;
@@ -142,8 +150,8 @@
 							margin-bottom: 10px;
 							}
 						.sp_cart {
+							flex:1;
 							margin-top: 10px;
-							display: inline-block;
 							width:25px;
 							height:25px;
 						}
@@ -151,22 +159,28 @@
 							text-decoration: none;
 							color:black;
 						}
-						#sp_cart, #cat_img, #infoline_1,
-						#infoline_2, #infoline_3:hover {
-							cursor: pointer;
-							text-decoration: none;
-							color:black;
-						}
-						.sp_cart, .cat_img, .infoline_1,
-						.infoline_2, .infoline_3:visited {
-							text-decoration: none;
-							color:black;
-						}
 			
 		#page_num {
-			display : flex;
+			flex:1;
+			display: flex;			
 			justify-content: center; 
 			height : 30px;
 		}
+		.btn_page{
+					padding: 20px;
+
+					font-size:18px;
+					height :30px;
+					border: none;
+    				outline:none;
+    				background-color: white;
+    				color:black;
+					}
+					.btn_page:hover{
+					cursor:pointer;
+					text-decoration: underline;
+					color: gray;
+					}
+		
 		
 	
