@@ -47,4 +47,9 @@ public class OrderService {
 		List<Order> orderlist = orderDao.selectAll();
 		return orderlist;
 	}
+
+	public List<Orderitem> getOrderitems(int ono) {
+		List<Orderitem> orderitems = orderDao.selectItemsByOno(ono);
+		return orderitems;
+	}
 }

@@ -5,15 +5,20 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.Service.OrderService;
 import bobproject.mycompany.bobapp.dto.Order;
+import bobproject.mycompany.bobapp.dto.Orderitem;
 
 @Controller
 public class Ct_myinfo_order {
+	private static final Logger logger = LoggerFactory.getLogger(Ct_myinfo_order.class);
 	
 	@Resource
 	private OrderService orderService;
@@ -25,6 +30,7 @@ public class Ct_myinfo_order {
 		List<Order> orderlist = orderService.getOrderList(mid);
 		
 		model.addAttribute("orderlist", orderlist);
+		
 		return "order/myorderlist";
 	}
 	
@@ -36,4 +42,10 @@ public class Ct_myinfo_order {
 		return "order/adminorderlist";
 	}
 	
+	@GetMapping("/orderitems")
+	public String orderitems(int ono, Model model) {
+		List<Orderitem> orderitems = orderService.getOrderitems(ono);
+		model.addAttribute("orderitems",orderitems);
+		return "order/orderitems";
+	}
 }
