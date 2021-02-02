@@ -33,4 +33,18 @@ public class OrderService {
 		}
 		
 	}
+
+	public void purchase(Order order) {
+		orderDao.updatePurchase(order);
+	}
+	
+	public List<Order> getOrderList(String mid) {
+		List<Order> orderlist = orderDao.selectListById(mid);
+		return orderlist;
+	}
+	
+	public List<Order> getOrderList() {
+		List<Order> orderlist = orderDao.selectAll();
+		return orderlist;
+	}
 }

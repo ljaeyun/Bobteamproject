@@ -32,11 +32,18 @@ public class CartDao {
 		int rows = sst.delete("carts.deleteById" ,mid);
 		return rows;
 	}
+	
+	public int delete(Cart cart) {
+		int rows = sst.delete("carts.deleteByPno", cart);
+		return rows;
+	}
 
 	public int update(Cart cart) {
 		int rows = sst.update("carts.update", cart);
 		return rows;
 	}
+
+	
 	
 	
 }

@@ -69,6 +69,8 @@ public class Ct_order {
 		
 		orderService.order(order, orderitems);
 		
+		orderService.purchase(order);
+		
 		cartService.deleteCart(mid);
 		logger.info("주문완료");
 		return "redirect:/order/orderdone";

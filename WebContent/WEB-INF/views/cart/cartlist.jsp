@@ -36,7 +36,7 @@
 								</div>
 								<div id="pd_price_sum" class="pd_price_sum"><input type="text" class="sum" name="sum_${cartlist.pno}" value="${cartlist.pprice*cartlist.cpqn}" readonly/>원</div>
 							
-								<div id="pd_delete"><a href="delete"></a></div>
+								<div id="pd_delete"><a href="deletecart?pno=${cartlist.pno}"><i class="far fa-times-circle"></i></a></div>
 						</div>
 					</form>	
 				</c:forEach>

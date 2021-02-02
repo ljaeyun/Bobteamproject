@@ -66,11 +66,14 @@ public class Ct_cart {
 		cartService.updateCart(cart);
 	}
 	
+
 	@GetMapping("/deletecart")
-	public String deletecart(HttpSession session) {
-		
-		session.removeAttribute("cartList");
-		
+	public String deletecart(int pno, HttpSession session) {
+		String mid = (String) session.getAttribute("sessionMid");
+		Cart cart = new Cart();
+		cart.setMid(mid);
+		cart.setPno(pno);
+		cartService.deleteCart(cart);
 		logger.info("cart를 삭제했습니다.");
 		return "redirect:/cart/cartlist";
 	}

@@ -30,6 +30,7 @@
 					$("#infomain").hide();
 					$("#moneyCoupon").hide();
 					$("#directqBox").show();
+					$("#orderlist").hide();
 				}
 			});
 		};
@@ -44,9 +45,40 @@
 					$("#infomain").hide();
 					$("#moneyCoupon").show();
 					$("#directqBox").hide();
+					$("#orderlist").hide();
 				}
 			});
 		};
+	</script>
+	<script>
+		function myorderlist() {
+			$.ajax({
+				url:"myinfo_orderlist",
+				method:"get",
+				success:function(data) {
+					$("#orderlist").html(data);
+					$("#orderlist").show();
+					$("#infomain").hide();
+					$("#moneyCoupon").hide();
+					$("#directqBox").hide();
+					$("#adminorderlist").hide();
+				}
+			});
+		}
+		
+		function adminorderlist() {
+			$.ajax({
+				url:"admin_orderlist",
+				method:"get",
+				success:function(data) {
+					$("#adminorderlist").html(data);
+					$("#adminorderlist").show();
+					$("#infomain").hide();
+					$("#moneyCoupon").hide();
+					$("#directqBox").hide();
+				}
+			});
+		}
 	</script>
 
 </head>
@@ -73,8 +105,12 @@
 					<nav id ="infomenu">
 						<ul>
 							<h3><b>주문 정보</b></h3>
-							<li><a href=" ">주문/배송 조회</a></li>
-							<li><a href=" ">취소/반품 조회</a></li>
+							<c:if test='${ADMIN!="admin"}'>
+							<li><a href="javascript:myorderlist()">주문/배송 조회</a></li>
+							</c:if>
+							<c:if test='${ADMIN=="admin"}'>
+							<li><a href="javascript:adminorderlist()">주문/배송 관리</a></li>
+							</c:if>
 						</ul>
 						
 						<ul>
@@ -123,6 +159,12 @@
 					
 					
 					<div id="moneyCoupon">
+					</div>
+					
+					<div id="orderlist">
+					</div>
+					
+					<div id="adminorderlist">
 					</div>
 					
 					<div id="infomain">
