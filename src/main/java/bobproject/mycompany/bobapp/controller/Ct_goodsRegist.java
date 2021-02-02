@@ -89,7 +89,7 @@ public class Ct_goodsRegist {
 	@GetMapping("/goodsrewrite")
 	public String goodsRevise(@RequestParam(defaultValue="1")int pageNo, Model model) {
 		int totalRows = productService.getTotalRows();
-		Pager pager = new Pager(10, 3, totalRows, pageNo);
+		Pager pager = new Pager(15, 3, totalRows, pageNo);
 		List<Product> list = productService.getProductList(pager);
 		model.addAttribute("list", list);
 		return "seller/goodsrewrite";
