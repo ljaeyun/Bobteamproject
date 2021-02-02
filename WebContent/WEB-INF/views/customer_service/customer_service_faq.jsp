@@ -41,17 +41,17 @@
 				<div id="faq_category_wrap">
 					<div id="faq_category_title"><b>FAQ</b></div>
 					<div id="faq_category_box">
-						<div id="temp" class="faq_cat" onclick="faqlistBoxCat(fcatid=0)">전체</div>
-						<div class="faq_cat" onclick="faqlistBoxCat(fcatid=1)">배송</div>
-						<div class="faq_cat" onclick="faqlistBoxCat(fcatid=2)">취소</div>
-						<div class="faq_cat" onclick="faqlistBoxCat(fcatid=3)">주문</div>
+						<div id="temp" class="faq_cat" onclick="faqlistBoxCat(0)">전체</div>
+						<div class="faq_cat" onclick="faqlistBoxCat(1)">배송</div>
+						<div class="faq_cat" onclick="faqlistBoxCat(2)">취소</div>
+						<div class="faq_cat" onclick="faqlistBoxCat(3)">주문</div>
 					</div>
 				</div>
 				
 
 				<script>
 					temp.click();
-					function faqlistBoxCat(){
+					function faqlistBoxCat(fcatid){
 						$.ajax({
 							url:"faqlistcatbox",
 							method:"get",

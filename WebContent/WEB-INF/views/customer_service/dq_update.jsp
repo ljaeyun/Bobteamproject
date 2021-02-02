@@ -12,10 +12,10 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 	<meta charset="UTF-8">
-	<title>밥향기 :: 1대1문의 수정테스트</title>
+	<title>밥향기 :: 1대1문의 수정</title>
 
-	<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_notice.css">
-
+	<%-- <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_notice.css"> --%>
+	<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_dqlist.css">
 	</head>
 	
 	<body>
@@ -25,10 +25,15 @@
 		<div id="wrapper_content">
 			<div id="cs_wrap">
 				<div id="title_box">
-					<div id="title"><b>나의 정보</b></div>
+					<c:if test='${ADMIN!="admin"}'>
+						<div id="title"><b>나의 정보</b></div>
+					</c:if>
+					<c:if test='${ADMIN=="admin"}'>
+						<div id="title"><b>[관리] 1:1 문의 답변</b></div>
+					</c:if>
 				</div>
 			
-						<div class="alert alert-primary" role="alert">
+						<div class="alert alert-secondary" role="alert">
 						   1대1 문의 수정
 						</div>
 						<form enctype="multipart/form-data" name="directqupdateform" action="directqupdate" method="post">
@@ -50,19 +55,20 @@
 						  
 						 <c:if test='${ADMIN=="admin"}'>
 							    <div class="form-group">
-								    <label for="qanswer">답변 작성하기</label>
+								    <label for="qanswer">답변 작성</label>
 								    <textarea class="form-control" id="qanswer" name="qanswer" rows="4" cols="50">${directq.qanswer}</textarea>
 							 	</div>
 						  </c:if>
 						  
 						  <c:if test='${ADMIN!="admin"}'>
-						  <button class="btn btn-primary">수정</button>
+						  	<button class="btn btn-outline-secondary">수정</button>
+						  	<a class="btn btn-outline-secondary" href="myinfo">취소</a>
 						  </c:if>
 						  
 						  <c:if test='${ADMIN=="admin"}'>
-						   <button class="btn btn-primary">답변</button>
+						   	<button class="btn btn-outline-secondary">답변</button>
+						   	<a class="btn btn-outline-secondary" href="directqlist">취소</a>
 						  </c:if>
-						  <a class="btn btn-primary" href="myinfo">취소</a>
 						</form>
 			
 				

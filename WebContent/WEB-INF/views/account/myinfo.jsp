@@ -11,12 +11,13 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+	
 <meta charset="UTF-8">
 <title>밥향기 :: 나의정보</title>
 
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/account/myinfo.css">
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_customer_service_faq.css">
-
+<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/customer_service/cs_dqlist.css">
 
 <script type="text/javascript" src="<%=application.getContextPath()%>/resources/js/account/myinfo.js"></script>
 
@@ -30,6 +31,7 @@
 					$("#infomain").hide();
 					$("#moneyCoupon").hide();
 					$("#directqBox").show();
+					$("#orderlist").hide();
 				}
 			});
 		};
@@ -44,9 +46,40 @@
 					$("#infomain").hide();
 					$("#moneyCoupon").show();
 					$("#directqBox").hide();
+					$("#orderlist").hide();
 				}
 			});
 		};
+	</script>
+	<script>
+		function myorderlist() {
+			$.ajax({
+				url:"myinfo_orderlist",
+				method:"get",
+				success:function(data) {
+					$("#orderlist").html(data);
+					$("#orderlist").show();
+					$("#infomain").hide();
+					$("#moneyCoupon").hide();
+					$("#directqBox").hide();
+					$("#adminorderlist").hide();
+				}
+			});
+		}
+		
+		function adminorderlist() {
+			$.ajax({
+				url:"admin_orderlist",
+				method:"get",
+				success:function(data) {
+					$("#adminorderlist").html(data);
+					$("#adminorderlist").show();
+					$("#infomain").hide();
+					$("#moneyCoupon").hide();
+					$("#directqBox").hide();
+				}
+			});
+		}
 	</script>
 
 </head>
@@ -73,8 +106,12 @@
 					<nav id ="infomenu">
 						<ul>
 							<h3><b>주문 정보</b></h3>
-							<li><a href=" ">주문/배송 조회</a></li>
-							<li><a href=" ">취소/반품 조회</a></li>
+							<c:if test='${ADMIN!="admin"}'>
+							<li><a href="javascript:myorderlist()">주문/배송 조회</a></li>
+							</c:if>
+							<c:if test='${ADMIN=="admin"}'>
+							<li><a href="javascript:adminorderlist()">주문/배송 관리</a></li>
+							</c:if>
 						</ul>
 						
 						<ul>
@@ -123,6 +160,12 @@
 					
 					
 					<div id="moneyCoupon">
+					</div>
+					
+					<div id="orderlist">
+					</div>
+					
+					<div id="adminorderlist">
 					</div>
 					
 					<div id="infomain">

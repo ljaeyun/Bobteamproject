@@ -11,16 +11,17 @@
 	<select id="selectById" parameterType="string" resultType="product">
 		select pname, pprice, p.pno, c.cpqn
 		from products p, carts c
-		where p.pno in (
-			select c.pno
-			from carts
-			where mid=#{mid}
-		)
+		where p.pno in c.pno and mid=#{mid}
 	</select>
 	
 	<delete id="deleteById" parameterType="string">
 		delete from carts
 		where mid=#{mid}
+	</delete>
+	
+	<delete id="deleteByPno" parameterType="cart">
+		delete from carts
+		where mid=#{mid} and pno=#{pno}
 	</delete>
 	
 	<update id="update" parameterType="cart">

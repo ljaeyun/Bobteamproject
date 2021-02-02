@@ -1,3 +1,4 @@
+
 package bobproject.mycompany.bobapp.controller;
 
 import java.util.ArrayList;
@@ -68,6 +69,8 @@ public class Ct_order {
 		}
 		
 		orderService.order(order, orderitems);
+		
+		orderService.purchase(order);
 		
 		cartService.deleteCart(mid);
 		logger.info("주문완료");
