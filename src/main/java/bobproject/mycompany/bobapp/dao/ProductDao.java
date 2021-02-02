@@ -51,6 +51,12 @@ public class ProductDao {
 		return list;
 	}
 
+	public int delete(int pno) {
+		int rows =sst.delete("products.delete", pno);
+		return rows;
+		
+	}
+
 
 
 

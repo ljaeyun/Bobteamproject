@@ -22,7 +22,7 @@
 		<section id="sec01">
 			<div id ="div01">
 			
-				<img width="450px" height="530px" src="<%=application.getContextPath()%>/resources/img/detailpage/랍스터/랍스터_01.PNG"/>
+				<img width="450px" height="530px" src="pphoto1?pno=${product.pno}"/>
 				</div>
 			<div id ="div02">
 				<h1>[모노키친] 랍스터 갈릭버터 치즈 오븐구이</h1>
@@ -33,15 +33,18 @@
 			<table id ="table01">
 				<tr>
 					<th > 판매단위 </th>
-					<th> 1팩 </th>
+					<th>1팩</th>
 				</tr>
 				<tr >
 					<th> 중량/용량 </th>
-					<th> 530g</th>
+					<th>${product.pamount}</th>
 				</tr>
 				<tr>
-					<th> 배송구분 </th>
-					<th> 샛별배송/택배배송</th>
+					<th> ${product.pamount}인분</th>
+				</tr>
+				<tr >
+					<th> 조리시간</th>
+					<th>  ${product.ptime} 분</th>
 				</tr>
 				<tr >
 					<th> 포장타입</th>
@@ -50,10 +53,6 @@
 				<tr>
 					<th> 알레르기정보</th>
 					<th> 대두,밀,우유,아황산유,새우 함유</th>
-				</tr>
-				<tr id = "tr01">
-					<th> 구매수량</th>
-					<th id = "on"> - &ensp; 1 &ensp; +</th>
 				</tr>
 			</table>
 			</div>
@@ -64,134 +63,33 @@
 					<tr>
 						<th><h5>여백</h5></th>
 						<th><h6>총 상품금액: &ensp;</h6></th>
-						<th><h7>19,900</h7></th> 
+						<th><h7>${product.pprice}</h7></th> 
 						<th><h71>원</h71></th> 
 					</tr>
 				</table>
 
 			
 			<ul id= "menu01">
-			
-				<oi id="oi1"><a href ="tologin">장바구니 담기</a></oi>
-				<oi id="oi2">늘 사는 것</oi>
-				<oi id="oi3">재입고 알림</oi>
+				<oi id="oi1"><a href ="cart/addcart">장바구니 담기</a></oi>
 			</ul>
 			</div>
 		</section>
 		<section id="sec02">
 			<hr>
-			<ul id= "menu02">
-
-				<oi >상품 설명</oi>
-				<oi >상품 이미지</oi>
-				<oi >상세 정보</oi>
-				<oi >고객 후기</oi>
-				<oi >상품 문의</oi>
-			</ul>	
+	
 				<div id="div04">
-					<img width="1100px" height="800px" src="<%=application.getContextPath()%>/resources/img/detailpage/랍스터/랍스터_02.PNG"/>
+					<img width="1100px" height="800px" src="pphoto2?pno=${product.pno}"/>
 				</div>
 			<div id="div05">
 				<h8>손쉽게 완성하는 근사한 일품요리</h8>
 				<br/>
-				<h9>[모노키친]랍스터 <br/>갈릭버터 치즈 오븐구이	</h9>
+				<h9>${product.pname}</h9>
 				
 				<hr>
-				<p>특별한 모임을 염두해 두고 있는 분이라면,모노키친 랍스터 갈릭버터 치즈 오븐구이를 주목해주세요.
-				특출난 요리 실력이 없어도 근사한
-				<br/>랍스터 요리를 완성할 수 있어요. 어획 후 자숙하여 급속 냉동한 제품으로 조리가 매우 간단하답니다
-				. 가위로 쓱쓱 손질한 뒤 동봉된 갈릭버터
-				<br/>소스와 모짜렐라 치즈를 뿌려 조리하면 고소한 풍미의 랍스터가 금세 완성되죠.캐나다산 제철 랍스터만을 선별하여 
-				신선하고 쫄깃한 식감<br/>이 살아있답니다. 몸통은 물론 집게까지 살이 통통하게 오른 랍스터를 보내드리니,
-				 식탁위 특별함을 더해보세요.</p>
+				<p>${product.pcontent}</p>
 			</div>
-			<div id="div06">
-				<h10>영상으로 미리 만나는 랍스터<br/> 갈릭버터 치즈 오븐구이</h10>
-				<img width="1100px" height="600px" src="<%=application.getContextPath()%>/resources/img/detailpage/랍스터/랍스터_03.PNG"/>
-			</div>
-			<div id="div07">
-				<hr >
-				<h11>밥향기's Point</h11>
-			</div>
-				<div id="div07_1">
-					<div id= "Ingredients">
-						<img width="100px" height="80px" src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic01.PNG"/>
-						<h11>재료와 성분 Ingredient</h11>
-						<ul>
-						<li>캐나다산 랍스터</li>
-						</ul>
-					</div>
-					<div id= "Process">
-						<img width="100px" height="80px" src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic02.PNG"/>
-						<h12>생산 유통 과정 Process</h12>
-						<ul>
-							<li>HACCP인증 시설에서 위생적으로 생산</li>
-							<li>어획 후 한 번 익혀 급속 냉동한 랍스터</li>
-						</ul>
-						</div>
-				</div>
-					<div id= "Recommendation">
-						<img width="100px" height="80px" src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic03.PNG"/>
-						<h13>활용법 Recommendation</h13>
-						<ul>
-						<li>간편하고 근사한 홈파티용 랍스터</li>
-						<li>특별함을 더하는 캠핑요리</li>
-						<li>가나쉬를 곁들여 더욱 풍성하게</li>
-						</ul>
-					</div>
-		</section>
-			<div id="div08">
-				<hr>
-				<h14>밥향기's Pick</h14>
-				<img width="1100px" height="700px" src="<%=application.getContextPath()%>/resources/img/detailpage/랍스터/랍스터_04.PNG"/>
-			</div>
-			<div id="div09">
-				<h15>랍스터 갈릭버터 치즈 오븐구이</h15>
-				<ul>
-					<li><b>구성:</b>①랍스터(450g), ②모짜렐라 치즈(35g), ③갈릭버터치즈(35g)</li>
-					<li><b>특징:</b>속이 꽉찬 캐나다산 랍스터를 자숙한 뒤 냉동해 손질과 조리가 편리한 제품이에요. 모짜렐라 치즈와 갈릭버터 소스가<br/>
-					동봉되어 있어 간편하게 버터 치즈구이를 즐길 수 있어요</li>
-					<li><b>보관법:</b>-18˚C이하에서 냉동보관하세요.개봉후 가급적 빨리 섭취하세요</li>
-				</ul>
-			</div>
-			<div id="div10">
-				<h16>밥향기's Tip!</h16>
-					<div id="div10_1">
-					<img width="900px" height="600px" src="<%=application.getContextPath()%>/resources/img/detailpage/랍스터/랍스터_05.PNG"/>
-			
-					<h17>손질법을 확인하세요</h17>
-					<ul>
-						<li>포장을 제외한 랍스터를 흐르는 물에 10분간 씻어주세요</li>
-						<li>랍스터를 뒤집어 꼬리부터 머리까지 반으로 잘라주세요</li>
-						<li>랍스터의 살부분에 갈릭버터 소스를 바르고 모짜렐라 치즈를 뿌려주세요.</li>
-					</ul>
-					<h17>에어프라이어로 간편하게 조리하세요</h17>
-					<ul>
-						<li>토핑된 랍스터를 에어프라이어에 넣고 180˚C에서 약 12분간 조리하세요 </li>
-						<li>랍스터 한마리를 조리하기 위해서는 6L이상의 대용량 에어프라이어가 필요해요.</li>
-					</ul>
-					<h17>팬프라이어로 깊은 풍미를 살려 조리하세요</h17>
-					<ul>
-						<li>중불로 달군 펜에 버터나 오일을 둘러주세요 </li>
-						<li>토핑된 랍스터를 프라이펜에 올려 뚜겅을 덮은 뒤 중불에서 7~8분정도 조리해주세요.</li>
-					</ul>
-					</div>
-					
-					<div id="div10_2">
-					<img width="900px" height="600px" src="<%=application.getContextPath()%>/resources/img/detailpage/랍스터/랍스터_06.PNG"/>
-					<h17>완성된 랍스터는 이렇게 드세요.</h17>
-					<ul>
-						<li>몸통부분은 포크와 나이프를 이용해 잘라드세요. 한 번 자숙한 제품이라 껍질과 살이 쉽게 분리됩니다.</li>
-						<li>집게다리는 작은 다리를 역방향으로 눌러 껍질을  벗긴 뒤 살전체를 손으로 살살 꺼내 드세요.</li>
-						<li>랍스터의 내장은 볶음밥 재료로 활용하세요. 감칠맛나는 별미를 즐길 수 있어요</li>
-					</ul>
-					</div>
-			</div>
-			<div id="div11">
-				<div id="div11_1">	
-				<hr>
+			<div>			
 				<h18>About Bland</h18>
-				</div>
 				<div id="div11_2">	
 					<img width="170px" height="70px" src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic04.PNG"/>
 					<ul>
@@ -206,14 +104,13 @@
 						전문적이고 깊이있는 간편식을 제안하지요.전국 2만 곳 이상의 파트너에게서 수집한 메뉴 선호도, 평가 피드백을 자체 R&D센터에서 분석하고<br/>
 						고도화하죠. 모노키친의 맛과 품질을 신뢰할 수 있는 이유랍니다. 생활 미식부터 세계 여러 나라의 미식을 모두 아우르는 만큼 메뉴선택지가<br/>
 						다양한 것도 매력적이죠. 손쉽게 근사한 요리를 만들고 싶을 때, 모노키친이 함께할게요. </article>
-				</div></div>
+				</div></div>>
 			<div id="div12">
 				<hr>
 				<h21>밥향기's Image</h21>
 				
-				<img width="1100px" height="600px" src="<%=application.getContextPath()%>/resources/img/detailpage/c_pic05.PNG"/>
-				<h22>모노키친 랍스터 갈릭버터 치즈 오븐구이</h22>
-				<hr>
+				<img width="1100px" height="600px" src="pphoto3?pno=${product.pno}"/>
+				
 			</div>
 			<div id="div13">
 				
