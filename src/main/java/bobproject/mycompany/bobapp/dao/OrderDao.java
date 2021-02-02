@@ -51,6 +51,11 @@ public class OrderDao {
 		List<Orderitem> orderitems = sst.selectList("orders.selectItemsByOno", ono);
 		return orderitems;
 	}
+
+	public int plusOstatus(int ono) {
+		int rows = sst.update("orders.updatePlusOstatus", ono);
+		return rows;
+	}
 	
 	
 }
