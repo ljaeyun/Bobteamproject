@@ -1,5 +1,7 @@
 package bobproject.mycompany.bobapp.dao;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -30,5 +32,20 @@ public class OrderDao {
 		return rows;
 	}
 
+	public int updatePurchase(Order order) {
+		int rows = sst.update("orders.updatepurchase", order);
+		return rows;
+	}
+
+	public List<Order> selectListById(String mid) {
+		List<Order> orderlist = sst.selectList("orders.selectListById", mid);
+		return orderlist;
+	}
+
+	public List<Order> selectAll() {
+		List<Order> orderlist = sst.selectList("orders.selectAll");
+		return orderlist;
+	}
+	
 	
 }

@@ -8,6 +8,26 @@
 		where mid=#{mid}
 	</select>
 	
+	<select id="selectListById" parameterType="string" resultType="order">
+		select ono, oaddress, oprice, sname
+		from orders o, order_status s
+		where mid=#{mid} and s.sid in (select o.sid
+            from orders
+            where ono in (select ono from orders where mid=#{mid})
+            )
+        order by ono asc
+	</select>
+	
+	<select id="selectAll" resultType="order">
+		select ono, oaddress, oprice, sname
+		from orders o, order_status s
+		where s.sid in (select o.sid
+            from orders
+            where ono in (select ono from orders)
+            )
+        order by ono asc
+	</select>
+	
 	<insert id="insertorder" parameterType="order">
 		<selectKey keyProperty="ono" resultType="int" order="BEFORE">
 			select ono_seq.nextval from dual
@@ -21,4 +41,16 @@
 	 	values (#{ono}, #{pno}, #{opqn})
 	</insert>
 	
+	<update id="updatepurchase" parameterType="order">
+		update purchases
+		set mpurchasesum=+#{oprice},
+			mpurchasecount=+1,
+			msavemoney=+#{oprice}*(select gsaverate
+									from grades
+									where mgrade=(select mgrade
+													from members
+													where mid=#{mid})
+									)
+		where mid=#{mid}
+	</update>
 </mapper>

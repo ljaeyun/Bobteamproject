@@ -3,16 +3,23 @@ package bobproject.mycompany.bobapp.dto;
 public class Order {
 	private int ono;
 	private int sid;
+	private String sname;
 	private int pno;
 	private String mid;
 	private String oaddress;
-	private String oprice;
+	private int oprice;
 	
 	
-	public String getOprice() {
+	public String getSname() {
+		return sname;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+	public int getOprice() {
 		return oprice;
 	}
-	public void setOprice(String oprice) {
+	public void setOprice(int oprice) {
 		this.oprice = oprice;
 	}
 	public int getOno() {
