@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import bobproject.mycompany.bobapp.Service.CSDirectqService;
+import bobproject.mycompany.bobapp.Service.MemberService;
 import bobproject.mycompany.bobapp.Service.PurchaseService;
 import bobproject.mycompany.bobapp.dto.CSDirectq;
 import bobproject.mycompany.bobapp.dto.Purchase;
@@ -61,6 +62,26 @@ public class myinfo {
 		return "account/moneycoupon";
 	}
 	
+	
+	@Resource
+	private MemberService memberService;
+	
+	@GetMapping("/changeId")
+	public String changeId(HttpSession session, Model model) {
+		String mid = (String) session.getAttribute("sessionMid");
+		logger.info(mid);
+		
+		Member mem = memberService.getMember(mid);
+		
+		model.addAttribute("mem", mem);
+		return "account/changeId";
+	}
+	
+	@PostMapping("/changeIdupdate")
+	public String changeIdupdate(Member mem) {
+		memberService.updateMember(mem);
+		return "redirect:/account/changeId";
+	}
 
 	
 	@Resource

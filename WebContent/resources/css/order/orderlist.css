@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+
+#orderlist_fn{
+	display: flex;
+	flex-direction: column;
+	margin : 25px auto;
+	width : 1050px;
+}
+
+.olist_infobox {
+	margin-top : 15px;
+}
+
+.titlebox {
+	font-size : 25px;
+	height : 50px;
+	font-weight:bold;
+	padding-bottom : 10px;
+	border-bottom: 2px solid black;
+}
+
+.contentbox {
+	display : flex;
+	justify-content: space-between;
+}
+
+.ops_box {
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top : 10px;
+}
+.boxes_title {
+	font-size : 15px;
+	font-weight : bold;
+	color : gray;
+}
+
+.form-control {
+	width : 260px;
+	height : 40px;
+	margin-top : 3px;
+}
+
+
+#olist_address {
+	
+	width: 300px;
+}
+
+
+
+#order_other {
+	display:flex;
+	flex-direction:row;
+	margin-top : 10px;
+}
+	#order-deliinfo {
+		flex: 1;
+		margin-top : 15px;
+	}
+	
+	#order-paymentinfo {
+		flex: 1;
+		margin-top : 15px;
+	}
+	
+
+#buttonbox {
+	text-align: center;
+	margin-top : 20px;
+	height : 50px;
+}
+#sub_btn {
+	text-align: center;
+	font-size: 12px;
+	color : white;
+	width: 130px;
+	height: 30px;
+	background-color: purple;
+	border-radius: 20px;
+	margin : 15px auto;
+}
+
+#sub_btn:hover {
+	
+	
+}
+		

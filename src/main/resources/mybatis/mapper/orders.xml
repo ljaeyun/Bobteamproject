@@ -19,13 +19,20 @@
 	</select>
 	
 	<select id="selectAll" resultType="order">
-		select ono, oaddress, oprice, sname
-		from orders o, order_status s
+		select ono, oaddress, oprice, sname, m.mid, mname, mphone
+		from orders o, order_status s, members m
 		where s.sid in (select o.sid
-            from orders
-            where ono in (select ono from orders)
-            )
+           				 from orders
+          				  where ono in (select ono from orders)
+           				 )
+           	and m.mid in (select o.mid from orders)
         order by ono asc
+	</select>
+	
+	<select id="selectItemsByOno" parameterType="int" resultType="orderitem">
+		select ono, opqn, pname, pprice, p.pno
+		from orderitems o, products p
+		where o.ono=#{ono} and p.pno in (select o.pno from orderitems where ono=#{ono})
 	</select>
 	
 	<insert id="insertorder" parameterType="order">

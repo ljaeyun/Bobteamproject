@@ -46,5 +46,10 @@ public class LoginDao {
 		
 	}
 	
+	public int update(Member mem) {
+		int rows = sst.update("members.update", mem);
+		return rows;
+	}
+	
 	
 }

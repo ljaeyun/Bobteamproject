@@ -32,6 +32,7 @@
 					$("#moneyCoupon").hide();
 					$("#directqBox").show();
 					$("#orderlist").hide();
+					$("#adminorderlist").hide();
 				}
 			});
 		};
@@ -47,6 +48,7 @@
 					$("#moneyCoupon").show();
 					$("#directqBox").hide();
 					$("#orderlist").hide();
+					$("#adminorderlist").hide();
 				}
 			});
 		};

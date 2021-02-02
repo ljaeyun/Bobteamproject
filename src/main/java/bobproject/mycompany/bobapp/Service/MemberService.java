@@ -72,4 +72,8 @@ public class MemberService {
 		
 	}
 	
+	public void updateMember(Member mem) {
+		loginDao.update(mem);
+	}
+	
 }
