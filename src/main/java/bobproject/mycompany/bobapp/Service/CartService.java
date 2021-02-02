@@ -23,8 +23,13 @@ public class CartService {
 	public void deleteCart(String mid) {
 		cartDao.delete(mid);
 	}
+	
 	public void updateCart(Cart cart) {
 		cartDao.update(cart);
+	}
+	public void deleteCart(Cart cart) {
+		cartDao.delete(cart);
+		
 	}
 	
 }

@@ -4,6 +4,7 @@
 <style type="text/css">
 			* {
 				box-sizing: border-box;
+				font-family: 'Noto Sans KR';
 			}
 			
 			
@@ -129,7 +130,7 @@
 				
 				#oi1{
 					width: 230px;
-					height: 35px;
+					height: 40px;
 					text-decoration: none;
 					}
 				
@@ -159,22 +160,7 @@
 		display:flex;
 		flex: 8;
 		flex-direction: column;
-			}
-				#menu02 oi{
-				flex:1;
-				float:left;
-				margin:40px 0px 40px 0px;
-				border:1px solid gray;
-				display:inline-block;
-				color:gray;
-				font-size:1rem;
-				font-weight:bold;
-				padding:0px;
-				text-align: center;
-				line-height:2;
-				width: 130px;
-				
-				}
+		}
 				#menu02 :hover{
 				background-color:gray;
 				cursor:pointer;
@@ -190,7 +176,8 @@
 				flex:4;
 				margin:40px ;
 				text-align: center;
-				color: #495057
+				color: #495057;
+				font-family: 'Noto Sans KR';
 				}	
 				#div05 > h8{
 				font-size: 20px;
@@ -326,7 +313,7 @@
 				color:#495057;
 				text-align:auto;
 			}	
-				#div11 h18{
+				h18{
 				text-align:center;
 				font-size: 50px;
 				font-weight: bold;
@@ -355,9 +342,10 @@
 					}
 					
 				}#div11_3{
+				text-align: center;
+				font-family: 'Noto Sans KR';
 				margin: 50px 0 20px 0;
 				font-size: 17px;
-				text-align: left;
 				}
 			#div12{
 				margin: 0 0 20px 0;
@@ -381,7 +369,7 @@
 					margin: 200px 0 0 0;
 				}				
 			#div13{
-				margin: 0;
+				margin-top: 60px;
 				display:flex;
 				flex-direction:column;
 				text-align:center;

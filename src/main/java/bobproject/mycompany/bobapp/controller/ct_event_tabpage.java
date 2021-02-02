@@ -1,8 +1,14 @@
 package bobproject.mycompany.bobapp.controller;
 
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.json.JSONArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ct_event_tabpage {
@@ -14,6 +20,16 @@ public class ct_event_tabpage {
 	 public String tabpage() {
 	 return "event/event_tabmenu";
 	 }
+//	 @GetMapping("/function1")
+//	 public void jsonresponse1(HttpServletResponse response) throws Exception{
+//		 response.setContentType("application/json;charset=UTF-8");
+//		 PrintWriter pw = response.getWriter();
+//		 JSONArray root = new JSONArray();
+//		 for(int i=1; i<=3; i++) {
+//			 JSONObject board = new JSONObject();
+//			 board.put("no", i)
+//		 }
+//	 }
 	 
 	 @RequestMapping("/tabmenu1") public String tabmenu1() { logger.info("블루비양카");
 	 return "event/tabmenu1"; }

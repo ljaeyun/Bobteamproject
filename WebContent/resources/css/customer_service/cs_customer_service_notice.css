@@ -14,26 +14,12 @@
 					width: 1200px;
 					margin: 0px auto;
 				}
-			
-			
-				footer {
-					background-color: #f8f9fa;
-				}
-				
-				#footer {
-					width: 1800px;
-					margin: auto;
-					padding: 50px 20px;
-					color: #495057;
-					font-family: 'Noto Sans KR light';
-					font-size: 10px;
-					text-align: right;
-				}
-				
+									
 		#cs_wrap {
 			margin: 0px auto;
 			width: 1100px;
 			display: flex;
+			box-sizing: border-box;
 			flex-direction: column;
 			font-family: 'Noto Sans KR', sans-serif;
 		}
