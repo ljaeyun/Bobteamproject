@@ -18,7 +18,7 @@
 </head>	
 <script>
 
-	function modify(){
+	function modify(pno){
 		var pno = $("#productpno").val();
  		$.ajax({
  			url:"goodsmodify",
@@ -33,11 +33,11 @@
  	}
 </script>
 <body>	
-	<br/>
+		<div id="contents">
+				<br/>
 		<h4><b>상품 등록 내역</b></h4>
 			<hr style="height:5px; background-color:black">
 			
-			<div id="contents">
 				<br/>
 				<table class="table table-hover" style="width:900px; text-align:center;">
 					<thead>
@@ -53,14 +53,14 @@
 					</thead>
 					<tbody>
 						<c:forEach var="product" items="${list}" >
-							<input type="hidden" name="pno" value="${product.pno}"/>
+							<input type="hidden" id="productpno" value="${product.pno}"/>
 						<tr>
 							<td>${product.pno}</td>
 							<td>${product.pname}</td>
 							<td>${product.pprice}원</td>
 							<td>${product.pamount}</td>
 							<td>${product.ptime}분</td>
-							<td><a href="javascript:modify()"><img width="30px" height="30px" src="<%=application.getContextPath()%>/resources/img/modify.png"/></a></td>
+							<td><a href="javascript:modify(${product.pno})"><img width="30px" height="30px" src="<%=application.getContextPath()%>/resources/img/modify.png"/></a></td>
 							<td><a href="goodsdelete?pno=${product.pno}" ><img width="30px" height="30px" src="<%=application.getContextPath()%>/resources/img/trashbin.png"/></a></td>
 						</tr>
 						</c:forEach>

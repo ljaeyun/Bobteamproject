@@ -84,8 +84,9 @@
 			<div id="div05">
 				<h8>손쉽게 완성하는 근사한 일품요리</h8>
 				<br/>
-				<h9>${product.pname}</h9>
-				
+				<h9>${product.psubtitle}</h9>
+				<br/>
+				<h8>${product.pname}</h8>
 				<hr>
 				<p>${product.pcontent}</p>
 			</div>
@@ -177,12 +178,12 @@
 						</tr>
 					</table>
 					<hr>
-				</div>
+				<!-- </div>
 					<div id="div15">
 					<a class="btn_page" id="pre"  href="to_previouspage1">이전 페이지</a>
 					<a class="btn_page" id="tocategory" href="to_category1">카테고리</a>
 					<a class="btn_page" id="next" href="to_nextpage1">다음 페이지</a>
-				</div>
+				</div> -->
 				</div>
 	
 	

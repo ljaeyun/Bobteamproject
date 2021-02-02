@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/seller/goodsRegist.css">
 
 <br/>
+	
 		<h4><b>상품 등록</b></h4>
 			<hr style="height:5px; background-color:black">
 	<div class="wrapper">
