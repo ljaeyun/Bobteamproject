@@ -29,16 +29,17 @@
 				success:function(data){
 					$("#directqBox").html(data);
 					$("#infomain").hide();
-					$("#moneyCoupon").hide();
+					/* $("#moneyCoupon").hide(); */
 					$("#directqBox").show();
 					$("#orderlist").hide();
 					$("#adminorderlist").hide();
+					$("#changeId").hide();
 				}
 			});
 		};
 	</script>
 	<script>
-		function mcBox(){
+/* 		function mcBox(){
 			$.ajax({
 				url:"moneycoupon",
 				method:"get",
@@ -49,9 +50,10 @@
 					$("#directqBox").hide();
 					$("#orderlist").hide();
 					$("#adminorderlist").hide();
+					$("#changeId").hide();
 				}
 			});
-		};
+		}; */
 	</script>
 	<script>
 		function myorderlist() {
@@ -62,9 +64,10 @@
 					$("#orderlist").html(data);
 					$("#orderlist").show();
 					$("#infomain").hide();
-					$("#moneyCoupon").hide();
+					/* $("#moneyCoupon").hide(); */
 					$("#directqBox").hide();
 					$("#adminorderlist").hide();
+					$("#changeId").hide();
 				}
 			});
 		}
@@ -77,8 +80,9 @@
 					$("#adminorderlist").html(data);
 					$("#adminorderlist").show();
 					$("#infomain").hide();
-					$("#moneyCoupon").hide();
+					/* $("#moneyCoupon").hide(); */
 					$("#directqBox").hide();
+					$("#changeId").hide();
 				}
 			});
 		}
@@ -92,9 +96,10 @@
 					$("#regist").show();
 					$("#adminorderlist").hide();
 					$("#infomain").hide();
-					$("#moneyCoupon").hide();
+					/* $("#moneyCoupon").hide(); */
 					$("#directqBox").hide();
 					$("#rewrite").hide();
+					$("#changeId").hide();
 				}
 			});
 		}
@@ -109,7 +114,24 @@
 					$("#regist").hide();
 					$("#adminorderlist").hide();
 					$("#infomain").hide();
-					$("#moneyCoupon").hide();
+					/* $("#moneyCoupon").hide(); */
+					$("#directqBox").hide();
+					$("#changeId").hide();
+				}
+			});
+		}
+		
+		function changeId() {
+			$.ajax({
+				url:"changeId",
+				method:"get",
+				success:function(data) {
+					$("#changeId").html(data);
+					$("#changeId").show();
+					$("#regist").hide();
+					$("#adminorderlist").hide();
+					$("#infomain").hide();
+					/* $("#moneyCoupon").hide(); */
 					$("#directqBox").hide();
 				}
 			});
@@ -147,15 +169,13 @@
 							<li><a href="javascript:adminorderlist()">주문/배송 관리</a></li>
 							</c:if>
 						</ul>
-						
-						<ul>
+						<!-- <ul>
 							<h3><b>혜택</b></h3>
 							<li><a href="javascript:mcBox()">등급 & 적립금</a></li>
-						</ul>
-						
+						</ul> -->
 						<ul>
 							<h3><b>나의 정보</b></h3>
-							<li><a href=" ">개인정보 변경</a></li>
+							<li><a href="javascript:changeId()">개인정보 변경</a></li>
 							<li><a href="<%=application.getContextPath()%>/deleteId">회원탈퇴</a></li>
 						</ul>
 						
@@ -207,6 +227,9 @@
 					<div id="adminorderlist">
 					</div>
 					
+					<div id="changeId">
+					</div>
+					
 					<div id="infomain">
 					
 						<h4><b>주문/배송 현황</b></h4>
@@ -239,14 +262,21 @@
 							<table id = "money">
 								<tr style="height:60px">
 									<td class ="pitext">적립금</td>
-									<td class ="pitext">쿠폰</td>
+									<td class ="pitext">구매횟수</td>
+									<td class ="pitext">소비액</td>
 								</tr>
 								<tr style="height:60px">
-									<td><div id = "num434" class = "smmoney">1000</div></td>
-									<td><div id = "num434" class = "coupon">2</div></td>
+									<td><div id = "num434" class = "smmoney">${pur.msavemoney}</div></td>
+									<td><div id = "num434" class = "ssum">${pur.mpurchasecount}</div></td>
+									<td><div id = "num434" class = "slost">${pur.mpurchasesum}</div></td>
 								</tr>
-							</table>
+								<tr>
+									<td colspan="3">${mem.mgrade}</td>
+								</tr>
+								
 						
+							</table>
+					
 						</div>
 					
 					</div>

@@ -46,7 +46,10 @@ public class myinfo {
 	@Resource
 	private PurchaseService moneycouponservice;
 	
-	@GetMapping("/moneycoupon")
+	@Resource
+	private MemberService memberService;
+	
+	@GetMapping("/myinfo")
 	public String moneycoupon(HttpSession session, Model model) {
 		String mid = (String) session.getAttribute("sessionMid");
 		logger.info(mid);
@@ -54,17 +57,16 @@ public class myinfo {
 		logger.info(mgrade);
 		
 		Purchase pur = moneycouponservice.getPurchase(mid);
-		
+		Member mem = memberService.getGrade(mid);
 		
 		//pur.setMid(mid);
 		model.addAttribute("pur", pur);
-		
-		return "account/moneycoupon";
+		model.addAttribute("mem", mem);
+		return "account/myinfo";
 	}
 	
 	
-	@Resource
-	private MemberService memberService;
+	
 	
 	@GetMapping("/changeId")
 	public String changeId(HttpSession session, Model model) {
@@ -76,11 +78,19 @@ public class myinfo {
 		model.addAttribute("mem", mem);
 		return "account/changeId";
 	}
+	@GetMapping("/changeIdupdate")
+	public String changeIdupdateForm(HttpSession session, Model model) {
+		String mid = (String) session.getAttribute("sessionMid");
+		Member mem = memberService.getMember(mid);
+		
+		model.addAttribute("mem", mem);
+		return "account/changeId";
+	}
 	
 	@PostMapping("/changeIdupdate")
 	public String changeIdupdate(Member mem) {
 		memberService.updateMember(mem);
-		return "redirect:/account/changeId";
+		return "redirect:/myinfo";
 	}
 
 	
