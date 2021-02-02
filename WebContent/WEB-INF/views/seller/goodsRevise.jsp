@@ -36,59 +36,7 @@
 					</p>
 				</div>
 			</nav>
-			
-			<article>
-					<h1>상품수정</h1>
-						<form method="post" enctype="multipart/form-data" name="myForm" action="goodsupload">
-							<table>
-								<tr align = "center" >
-									<td width = "120px" height = "30px"> <b>상품명 </b></td>
-									<td colspan = "5"><input type="text" name="gname" size="20" style="width:98%; border:0;"/></td>
-								</tr>
-								<tr align = "center">
-									<td height = "30px"> <b>판매가</b> </td>
-									<td colspan = "3" width="50px"><input type="text" name="gcost" size="20" style="width:98%; border:0;"/></td>
-									<td>원</td>
-								</tr>
-								
-								<tr align = "center">
-									<td height = "220px"> <b>상품이미지 등록</b> </td>
-									<td colspan = "4" width="50px">
-										
-										<input type="file" name="gimg"/>
-										
-										<div align = "center">
-											<p font-size = "1px">
-												-쇼핑몰에 기본으로 보여지는 상품이미지를 등록합니다. <br>
-												-대표이미지 등록 시 , 상세, 목록, 작은목록, 축소 이미지에 자동 리사이징 됩니다. <br>
-												-권장이미지 : 500px * 500px / 5M 이하 / gif, png, jpg(jpeg)
-											</p>
-										 <div>
-									</td>
-								</tr>
-								
-								<tr align = "center" >
-									<td width = "100px" height = "40px"> <b>상품요약설명</b></td>
-									<td colspan = "5"><input type="text" name="gsummary" size="20" style="width:98%; border:0;"/></td>					
-								</tr>
-								<tr align = "center"> 
-									<td height = "400px"><b> 상품상세설명 </b></td>
-									<td colspan="5" rowspan="4"><textarea name="gdetail" rows="20" style= "width:98%; border : 0; resize:none;"></textarea></td>
-								</tr>
-								<tr>
-									
-								
-									
-								</tr>
-							</table>
-						<a class="btn" onclick="javascript:document.myForm.submit();" type="submit">등록</a>
-							<!-- <a class = "btn" href="">등록</a>					 주 소 수 정 -->
-						
-					
-						</form>
-			</article>
-			
-			
+		
 		</section>
 					
 					<div style="margin-bottom:15px;font-family: 'Noto Sans KR Medium';" class = "buttonBox" align ="right">

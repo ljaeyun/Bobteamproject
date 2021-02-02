@@ -43,11 +43,7 @@ public class Ct_Product {
 	@PostMapping("/goodsRegist")
 	public String RegistForm(Product product) throws Exception {
 		logger.info("실행");
-//		for(int i =1 ; i <= 3; i++) {
-//			
-//			MultipartFile mfi = product.getPatta
-//		}
-//		
+		
 		MultipartFile mf1 = product.getPattach1();
 		MultipartFile mf2 = product.getPattach2();
 		MultipartFile mf3 = product.getPattach3();
