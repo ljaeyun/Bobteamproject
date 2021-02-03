@@ -34,6 +34,8 @@
 					$("#orderlist").hide();
 					$("#adminorderlist").hide();
 					$("#changeId").hide();
+					$("#rewrite").hide();
+					$("#regist").hide();
 				}
 			});
 		};
@@ -68,6 +70,8 @@
 					$("#directqBox").hide();
 					$("#adminorderlist").hide();
 					$("#changeId").hide();
+					$("#rewrite").hide();
+					$("#regist").hide();
 				}
 			});
 		}
@@ -83,6 +87,8 @@
 					/* $("#moneyCoupon").hide(); */
 					$("#directqBox").hide();
 					$("#changeId").hide();
+					$("#rewrite").hide();
+					$("#regist").hide();
 				}
 			});
 		}
@@ -100,6 +106,7 @@
 					$("#directqBox").hide();
 					$("#rewrite").hide();
 					$("#changeId").hide();
+					
 				}
 			});
 		}
@@ -133,6 +140,7 @@
 					$("#infomain").hide();
 					/* $("#moneyCoupon").hide(); */
 					$("#directqBox").hide();
+					$("#rewrite").hide();
 				}
 			});
 		}
