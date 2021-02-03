@@ -1,11 +1,11 @@
 package bobproject.mycompany.bobapp.controller;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,14 +13,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import bobproject.mycompany.bobapp.Service.ProductService;
 import bobproject.mycompany.bobapp.dto.Pager;
 import bobproject.mycompany.bobapp.dto.Product;
-import bobproject.mycompany.bobapp.dto.seller.sellergoods;
 
 @Controller
 /* @RequestMapping("/seller") */
@@ -96,13 +94,14 @@ public class Ct_regist_modify {
 	}
 	
 	@GetMapping("/goodsmodify")
-		public String goodsModify(@RequestParam(defaultValue="1") int pno, Model model) {
+		public String goodsModify(@RequestParam(defaultValue="1") int pno, HttpSession session) {
 		Product product = productService.getProduct(pno);
-		model.addAttribute("product", product);
+		session.setAttribute("product", product);
 		return "seller/goodsmodify";
 	}
 	@PostMapping("/goodsmodify")
 		public String goodsModify(Product product){
+		logger.info(""+product.getPno());
 		productService.updateProduct(product);
 		return "redirect:/";
 		}
