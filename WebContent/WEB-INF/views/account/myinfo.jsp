@@ -225,7 +225,6 @@
 					<div id="directqBox">			
 					</div>
 					
-					
 					<div id="moneyCoupon">
 					</div>
 					
@@ -259,18 +258,23 @@
 								<c:if test="${mem.mgrade=='Blue Blanco'}">
 									<h4 style="margin-top : 100px; color: #364fc7">회원님의 등급은 <b>Blue Blanca</b> 입니다.</h4>
 								</c:if>
+								<a id=to_membership href=forword_tabmenu>등급별 혜택 보기</a>
 								<hr style="height:5px; background-color:black">
-								<table id = "money">
-								<tr style="height:60px">
-									<td class ="pitext2"><b>적립금</b></td>
-									<td class ="pitext2"><b>구매횟수</b></td>
-									<td class ="pitext2"><b>소비액</b></td>
-								</tr>
-								<tr style="height:60px">
-									<td><div id = "num4343" class = "smmoney">${pur.msavemoney}</div></td>
-									<td><div id = "num4343" class = "ssum">${pur.mpurchasecount}</div></td>
-									<td><div id = "num4343" class = "slost">${pur.mpurchasesum}</div></td>
-								</tr>
+								<table class="table table-hover" style="text-align: center">
+								<thead>
+									<tr style="height:50px">
+										<th class ="pitext2"><b>적립금</b></th>
+										<th class ="pitext2"><b>구매횟수</b></th>
+										<th class ="pitext2"><b>소비액</b></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr style="height:60px; font-size: 24px;">
+										<td><div id = "num4343" class = "smmoney">${pur.msavemoney}</div></td>
+										<td><div id = "num4343" class = "ssum">${pur.mpurchasecount}</div></td>
+										<td><div id = "num4343" class = "slost">${pur.mpurchasesum}</div></td>
+									</tr>
+								</tbody>
 							</table>
 				
 						</div>
