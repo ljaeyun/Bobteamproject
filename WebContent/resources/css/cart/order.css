@@ -16,17 +16,25 @@
 					text-align: center;
 					padding: 10px 0px 0px 0px;
 				}
-				
+				#cart_select {
+						height: 40px;
+						width: 90%;
+						flex-direction: row;
+						padding: 6px 0px 0px 47px;
+						border-bottom: 1px solid black;
+					}
 				
 				#order_listall {
 					width: 1200px;
 					display: flex;
 					flex-direction: column;
 					align-items: center;
+					text-align: center;
 				}
 				
 						#checkall {
 							margin-top: 2px;
+							margin-left:50px;
 						}
 						
 						
@@ -46,7 +54,7 @@
 						border-bottom: 1px solid #dee2e6;
 						vertical-align: middle;
 						align-items: center;
-						padding-left: 30px;
+						
 					}
 					
 						#checkeach {
@@ -92,7 +100,6 @@
 							display: flex;
 							flex-direction: row;
 							text-align: center;
-							margin-right: 50px;
 						}
 						
 							#pd_quantity_box {
@@ -178,8 +185,8 @@
 					font-family: 'Noto Sans KR Medium';
 					font-size: 24px;
 					align-items: center;
-					padding-left: 20px;
 					padding-top: 15px;
+					margin-left:50px;
 				}
 				
 				#price1 {

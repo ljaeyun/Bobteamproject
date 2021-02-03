@@ -2,14 +2,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
 <script src="<%=application.getContextPath()%>/resources/js/cart/cart.js"></script>
-<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/cart/cart.css">
+<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/cart/order.css">
 <div id="cart">
 				<div id="cart_header">장바구니</div>
 				<div id="cart_listall">
 					<div id="cart_select">
-						<input type="checkbox" id="checkall" name="checkall" onclick="checkAll()"/>
-						<a href="">전체 선택</a>
-						<a href="">선택 삭제</a>
 						
 					</div>	
 				
@@ -20,7 +17,7 @@
 					<form class="cartlist_each" id="form_${cartlist.pno}" name="form_${cartlist.pno}" method="post">
 						<div id="cart_listeach">
 							<div id="checkeach">
-								<input type="checkbox" name="checkBox"/>
+								
 							</div>
 								<a href=""><img src="" style="width:100px;"/></a>
 								<img src="../pphoto3?pno=${cartlist.pno}" style="width:150px;"/>

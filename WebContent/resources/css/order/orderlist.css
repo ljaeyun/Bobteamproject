@@ -136,16 +136,33 @@ text-align: center;
 #sub_btn {
 	text-align: center;
 	font-size: 12px;
-	color : white;
 	width: 130px;
 	height: 30px;
 	background-color: purple;
 	border-radius: 20px;
-	margin : 15px auto;
+	margin-right: 50px;
+	padding-top: 10px;
 }
 
 #sub_btn:hover {
 	
 	
+}
+
+#member {
+	text-align: center;
+	font-size: 12px;
+	width: 130px;
+	height: 30px;
+	background-color: purple;
+	border-radius: 20px;
+	margin-right: 50px;
+	padding-top: 10px;
+}
+
+#member >a {
+	font-family: 'Noto Sans KR Medium';
+	color: white;
+	text-decoration: none;
 }
 		
