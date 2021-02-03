@@ -232,7 +232,10 @@
 					
 					<div id="infomain">
 					
-						<div class = "sdfklgj">
+							
+						<div id = "moneycoupon">
+							
+								
 								<c:if test="${mem.mgrade=='Gray'}">
 									<h4 style="margin-top : 100px; color: #868e96; ">회원님의 등급은 <b>Gray</b> 입니다.</h4>
 								</c:if>
@@ -245,20 +248,15 @@
 								<c:if test="${mem.mgrade=='The Blue'}">
 									<h4 style="margin-top : 100px; color: #1864ab">회원님의 등급은 <b>The Blue</b> 입니다.</h4>
 								</c:if>
-								<c:if test="${mem.mgrade=='Blue Bianco'}">
-									<h4 style="margin-top : 100px; color: #364fc7">회원님의 등급은 <b>Blue Bianco</b> 입니다.</h4>
+								<c:if test="${mem.mgrade=='Blue Blanco'}">
+									<h4 style="margin-top : 100px; color: #364fc7">회원님의 등급은 <b>Blue Blanca</b> 입니다.</h4>
 								</c:if>
 								<hr style="height:5px; background-color:black">
-				
-						</div>
-				
-							
-						<div id = "moneycoupon">
-							<table id = "money">
+								<table id = "money">
 								<tr style="height:60px">
-									<td class ="pitext2">적립금</td>
-									<td class ="pitext2">구매횟수</td>
-									<td class ="pitext2">소비액</td>
+									<td class ="pitext2"><b>적립금</b></td>
+									<td class ="pitext2"><b>구매횟수</b></td>
+									<td class ="pitext2"><b>소비액</b></td>
 								</tr>
 								<tr style="height:60px">
 									<td><div id = "num4343" class = "smmoney">${pur.msavemoney}</div></td>
@@ -266,10 +264,7 @@
 									<td><div id = "num4343" class = "slost">${pur.mpurchasesum}</div></td>
 								</tr>
 							</table>
-								
-								<script>
-									
-								</script>
+				
 						</div>
 								
 					</div>
