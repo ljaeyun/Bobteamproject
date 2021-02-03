@@ -247,8 +247,12 @@
 					
 							
 						<div id = "moneycoupon">
-							
-								
+							<c:if test='${ADMIN=="admin"}'>
+								<h4 style="margin-top : 100px; text-align: center; ">관리자 페이지입니다.</h4>
+								<hr style="height:5px; background-color:black"><div style="width:350px; display:inline-block"></div>
+								<img width="200px" style="text-align: center;" src="<%=application.getContextPath()%>/resources/img/logo.png">
+							</c:if>
+							<c:if test='${ADMIN!="admin"}'>
 								<c:if test="${mem.mgrade=='Gray'}">
 									<h4 style="margin-top : 100px; color: #868e96; ">회원님의 등급은 <b>Gray</b> 입니다.</h4>
 								</c:if>
@@ -282,7 +286,8 @@
 									</tr>
 								</tbody>
 							</table>
-				
+						</c:if>
+						
 						</div>
 								
 					</div>
