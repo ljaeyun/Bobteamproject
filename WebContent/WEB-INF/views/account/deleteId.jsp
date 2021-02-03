@@ -34,7 +34,7 @@
 					<div id="search_line"></div>
 				</div>
 				
-				<div id="checktext" style="text-align:center; margin-top:20px;"><h4>정말 탈퇴???</h4></div>
+				<div id="checktext" style="text-align:center; margin-top:20px;"><h4>정말 탈퇴 하시겠습니까?</h4></div>
 				<div id="deletebtn">
 					<a class="btn btn-danger" id="deleteyes" href="deletemember">예</a>
 					<a class="btn btn-primary" id="deleteno" href="/bobapp/">아니요</a>
