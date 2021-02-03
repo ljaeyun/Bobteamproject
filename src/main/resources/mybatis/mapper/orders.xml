@@ -67,4 +67,10 @@
 		where ono=#{ono}
 	</update>	
 	
+	<update id="updateMinusOstatus" parameterType="int">
+		update orders
+		set sid=sid-1
+		where ono=#{ono}
+	</update>	
+	
 </mapper>

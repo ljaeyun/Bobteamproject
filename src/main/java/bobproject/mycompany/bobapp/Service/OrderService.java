@@ -57,4 +57,10 @@ public class OrderService {
 	public void plusOstatus(int ono) {
 		orderDao.plusOstatus(ono);
 	}
+
+
+	public void minusOstatus(int ono) {
+		orderDao.minusOstatus(ono);
+		
+	}
 }

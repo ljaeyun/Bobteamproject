@@ -56,6 +56,11 @@ public class OrderDao {
 		int rows = sst.update("orders.updatePlusOstatus", ono);
 		return rows;
 	}
+
+	public int minusOstatus(int ono) {
+		int rows = sst.update("orders.updateMinusOstatus", ono);
+		return rows;
+	}
 	
 	
 }

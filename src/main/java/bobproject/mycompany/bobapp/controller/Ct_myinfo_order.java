@@ -53,8 +53,16 @@ public class Ct_myinfo_order {
 	
 
 	@PostMapping("/plus")
-	public void plus(int ono) {
+	public String plus(int ono) {
 		orderService.plusOstatus(ono);
 		logger.info("배송 상태 변경");
+		return "redirect:/order/myorderlist";
+	}
+	
+	@PostMapping("/minus")
+	public String minus(int ono) {
+		orderService.minusOstatus(ono);
+		logger.info("배송 상태 변경");
+		return "redirect:/order/myorderlist";
 	}
 }

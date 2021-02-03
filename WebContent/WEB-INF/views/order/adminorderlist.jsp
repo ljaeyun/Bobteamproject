@@ -44,7 +44,7 @@
 								<td>${orderlist.oprice}원</td>
 								<td>
 									<c:if test="${orderlist.sname!='결제완료'}">
-										<a href="minus(${orderlist.ono})">< </a>
+										<a href="javascript:minus(${orderlist.ono})">< </a>
 									</c:if>
 											${orderlist.sname}
 									<c:if test="${orderlist.sname!='배송완료'}">
@@ -60,6 +60,14 @@
 					function plus(ono) {
 						$.ajax({
 							url: "plus",
+							method: "post",
+							data: {ono:ono}
+						});
+					}
+					
+					function minus(ono) {
+						$.ajax({
+							url: "minus",
 							method: "post",
 							data: {ono:ono}
 						});
