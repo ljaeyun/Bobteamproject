@@ -27,8 +27,16 @@ import bobproject.mycompany.bobapp.dto.createid.Member;
 public class myinfo {
 	private static final Logger logger = LoggerFactory.getLogger(myinfo.class);
 	
+	
+	@Resource
+	private PurchaseService moneycouponservice;
+	
+	@Resource
+	private MemberService memberService;
+	
+	
 	@RequestMapping("/myinfo")
-	public String content(HttpServletRequest request, HttpServletResponse response) {
+	public String content(HttpServletRequest request, HttpServletResponse response, Model model, HttpSession session) {
 		logger.info("나의정보페이지");
 		
 		HttpSession hs = request.getSession();
@@ -40,17 +48,6 @@ public class myinfo {
 			return "/account/login";
 		}
 		
-		return "account/myinfo";
-	}
-	
-	@Resource
-	private PurchaseService moneycouponservice;
-	
-	@Resource
-	private MemberService memberService;
-	
-	@GetMapping("/myinfo")
-	public String moneycoupon(HttpSession session, Model model) {
 		String mid = (String) session.getAttribute("sessionMid");
 		logger.info(mid);
 		String mgrade = (String)session.getAttribute("grade");
@@ -62,8 +59,24 @@ public class myinfo {
 		//pur.setMid(mid);
 		model.addAttribute("pur", pur);
 		model.addAttribute("mem", mem);
+		
+		
 		return "account/myinfo";
 	}
+	
+	
+	/*
+	 * @GetMapping("/myinfo") public String moneycoupon(HttpSession session, Model
+	 * model) { String mid = (String) session.getAttribute("sessionMid");
+	 * logger.info(mid); String mgrade = (String)session.getAttribute("grade");
+	 * logger.info(mgrade);
+	 * 
+	 * Purchase pur = moneycouponservice.getPurchase(mid); Member mem =
+	 * memberService.getGrade(mid);
+	 * 
+	 * //pur.setMid(mid); model.addAttribute("pur", pur); model.addAttribute("mem",
+	 * mem); return "account/myinfo"; }
+	 */
 	
 	
 	

@@ -36,6 +36,7 @@
 					$("#changeId").hide();
 					$("#rewrite").hide();
 					$("#regist").hide();
+					$("#orderlist").hide();
 				}
 			});
 		};
@@ -89,6 +90,8 @@
 					$("#changeId").hide();
 					$("#rewrite").hide();
 					$("#regist").hide();
+					$("#orderlist").show();
+					
 				}
 			});
 		}
@@ -106,6 +109,7 @@
 					$("#directqBox").hide();
 					$("#rewrite").hide();
 					$("#changeId").hide();
+					$("#orderlist").hide();
 					
 				}
 			});
@@ -124,6 +128,7 @@
 					/* $("#moneyCoupon").hide(); */
 					$("#directqBox").hide();
 					$("#changeId").hide();
+					$("#orderlist").hide();
 				}
 			});
 		}
@@ -141,6 +146,7 @@
 					/* $("#moneyCoupon").hide(); */
 					$("#directqBox").hide();
 					$("#rewrite").hide();
+					$("#orderlist").hide();
 				}
 			});
 		}
