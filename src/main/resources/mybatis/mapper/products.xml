@@ -154,9 +154,8 @@
 	</insert>
 	<update id="update" parameterType="product">
 		update products
-		set pamount=#{pamount}, pcontent=#{pcontent}, psubtitle=#{psubtitle}, pdifficulty=#{pdifficulty},
-			pprice=#{pprice}, pweight=#{pweight}, ptime=#{ptime}, pimgorigin1=#{pimgorigin1}, pimgorigin2=#{pimgorigin2}, pimgorigin3=#{pimgorigin3},
-			pimgsave1=#{pimgsave1}, pimgsave2=#{pimgsave2}, pimgsave3=#{pimgsave3}, pimgtype1=#{pimgtype1}, pimgtype2=#{pimgtype2}, pimgtype3=#{pimgtype3}
+		set pname=#{pname}, pamount=#{pamount}, pcontent=#{pcontent}, psubtitle=#{psubtitle}, pdifficulty=#{pdifficulty},
+			pprice=#{pprice}, pweight=#{pweight}, ptime=#{ptime}
 		where pno=#{pno}
 	</update>
 	<delete id="delete" parameterType="int">

@@ -5,7 +5,7 @@
 
 
 	<br/>
-		<h4><b>회원정보 수정</b></h4>
+		<h4><b>상품정보 수정</b></h4>
 			<hr style="height:5px; background-color:black">
 	<div class="wrapper">
 		<div class="content">

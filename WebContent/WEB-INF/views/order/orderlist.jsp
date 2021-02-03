@@ -122,7 +122,7 @@
 						</div>
 						
 					</div>	
-					<input type="hidden" id="oprice" name="oprice" class="oprice">
+					<input type="hidden" id="oprice" name="oprice" class="oprice"/>
 					
 				<br/>
 				<br/>
