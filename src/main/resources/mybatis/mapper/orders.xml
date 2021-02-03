@@ -50,9 +50,9 @@
 	
 	<update id="updatepurchase" parameterType="order">
 		update purchases
-		set mpurchasesum=+#{oprice},
+		set mpurchasesum=mpurchasesum+#{oprice},
 			mpurchasecount=mpurchasecount+1,
-			msavemoney=+#{oprice}*(select gsaverate
+			msavemoney=msavemoney+#{oprice}*(select gsaverate
 									from grades
 									where mgrade=(select mgrade
 													from members

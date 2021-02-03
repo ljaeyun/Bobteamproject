@@ -91,10 +91,12 @@
 				pimgtype2,
 				pimgtype3
 			from products
+			order by pno
 	    )
 	    where rownum &lt;= #{endRowNo} 
 		)
 		where rno &gt;= #{startRowNo}	
+		order by pno
 	</select>
 	<select id="selectSearch" parameterType="keyword" resultType="product">
 		select

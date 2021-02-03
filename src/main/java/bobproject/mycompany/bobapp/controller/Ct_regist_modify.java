@@ -79,7 +79,7 @@ public class Ct_regist_modify {
 		productService.saveProduct(product);
 		return "redirect:/";
 		}
-	@GetMapping("/goodsDelete")
+	@GetMapping("/goodsdelete")
 	public String goodsDelete(int pno) {
 		productService.deleteDelete(pno);
 		return "redirect:/";

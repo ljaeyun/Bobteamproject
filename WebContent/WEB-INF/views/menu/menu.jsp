@@ -50,11 +50,7 @@
 							<div class ="infoline_2" ><a href="detailpage?pno=${product.pno}">${product.pname}</a></div>
 							<div class ="infoline_3" ><a  href="detailpage?pno=${product.pno}">${product.pprice}원</a></div> 
 						
-							<c:if test='${ADMIN=="admin"}'>
-								<span class = "sp_cart">
-								<a  href="goodsDelete?pno=${product.pno}">
-								<img width="25px" height="25px" src="<%=application.getContextPath()%>/resources/img/trashbin.png"/></a></span>
-							</c:if>
+						
 						</div>
 					</div>
 				</c:forEach>

@@ -232,32 +232,26 @@
 					
 					<div id="infomain">
 					
-						<h4><b>주문/배송 현황</b></h4>
-						<hr style="height:5px; background-color:black">
-						<div class = "progress">
-							
-							<table id = "totalp">
-								<tr>
-									<td  id="ew" rowspan="2"><i class="fas fa-wallet"></i></td>
-									<td><div class = "pitext">주문/결제</div></td>
-									<td  id="ew" rowspan="2"><i class="far fa-lemon"></i></td>
-									<td><div class = "pitext">상품준비</div></td>
-									<td  id="ew" rowspan="2"><i class="fas fa-shipping-fast"></i></td>
-									<td><div class = "pitext">배송</div></td>
-									<td  id="ew" rowspan="2"><i class="fas fa-box-open"></i></td>
-									<td><div class = "pitext">배송완료</div></td>
-								</tr>
-								<tr>
-									<td><div id = "num434" class = "order">1</div></td>									
-									<td><div id = "num434" class = "ready">5</div></td>
-									<td><div id = "num434" class = "deli">6</div></td>
-									<td><div id = "num434" class = "finish">7</div></td>
-								</tr>
-							</table>
+						<div class = "sdfklgj">
+								<c:if test="${mem.mgrade=='Gray'}">
+									<h4 style="margin-top : 100px; color: #868e96; ">회원님의 등급은 <b>Gray</b> 입니다.</h4>
+								</c:if>
+								<c:if test="${mem.mgrade=='Sky'}">
+									<h4 style="margin-top : 100px; color: #4dabf7;">회원님의 등급은 <b>Sky</b> 입니다.</h4>
+								</c:if>
+								<c:if test="${mem.mgrade=='Blue'}">
+									<h4 style="margin-top : 100px; color: #1c7ed6">회원님의 등급은 <b>Blue</b> 입니다.</h4>
+								</c:if>
+								<c:if test="${mem.mgrade=='The Blue'}">
+									<h4 style="margin-top : 100px; color: #1864ab">회원님의 등급은 <b>The Blue</b> 입니다.</h4>
+								</c:if>
+								<c:if test="${mem.mgrade=='Blue Bianco'}">
+									<h4 style="margin-top : 100px; color: #364fc7">회원님의 등급은 <b>Blue Bianco</b> 입니다.</h4>
+								</c:if>
+								<hr style="height:5px; background-color:black">
 				
 						</div>
-						<h4 style="margin-top : 100px;"><b>적립금/쿠폰</b></h4>
-						<hr style="height:5px; background-color:black">
+				
 							
 						<div id = "moneycoupon">
 							<table id = "money">
@@ -273,22 +267,6 @@
 								</tr>
 							</table>
 								
-								<c:if test="${mem.mgrade=='Gray'}">
-									<h4 style="margin-top : 100px; color: #868e96; ">회원님의 등급은 <b>Gray</b> 입니다.</h4>
-								</c:if>
-								<c:if test="${mem.mgrade=='Sky'}">
-									<h4 style="margin-top : 100px; color: #4dabf7;">회원님의 등급은 <b>Sky</b> 입니다.</h4>
-								</c:if>
-								<c:if test="${mem.mgrade=='Blue'}">
-									<h4 style="margin-top : 100px; color: #1c7ed6">회원님의 등급은 <b>Blue</b> 입니다.</h4>
-								</c:if>
-								<c:if test="${mem.mgrade=='The Blue'}">
-									<h4 style="margin-top : 100px; color: #1864ab">회원님의 등급은 <b>The Blue</b> 입니다.</h4>
-								</c:if>
-								<c:if test="${mem.mgrade=='Blue Blanco'}">
-									<h4 style="margin-top : 100px; color: #364fc7">회원님의 등급은 <b>Blue Blanca</b> 입니다.</h4>
-								</c:if>
-								<hr style="height:5px; background-color:black">
 								<script>
 									
 								</script>
