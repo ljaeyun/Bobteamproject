@@ -11,7 +11,7 @@
 				{
 					$('#idid').text("");
 				} else {
-					$('#idid').text(mid + " 님 ㅎㅇㅎㅇ");
+					$('#idid').text(mid + " 님 안녕하세요?");
 				}
 		}		
 	)
