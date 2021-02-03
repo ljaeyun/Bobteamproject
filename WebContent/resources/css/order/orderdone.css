@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+
+				#wrapper_contents {
+					width: 1200px;
+					margin: 20px auto;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					box-sizing:border-box;
+				/* 	border: 1px solid black; */
+				}
+			
+				#cart_header {
+					width:1000px;
+					height: 140px;
+				 	font-family: 'Noto Sans KR Medium';
+					font-size: 40px;
+					text-align: center;
+					padding-top : 40px;
+					padding: 40px 0px 0px 0px;
+					margin-top : 100px;
+				
+				}
+					
+				.orderdone_box {
+					display: flex;
+					flex-direction : row;
+					height : 100px;
+					width : 600px;
+					text-align : center;
+				}
+				
+				.orderdone_cat {
+					width : 80%;
+					height : 100px;
+					text-align : center;
+					padding-top: 30px;
+					font-size : 20px;
+					font-weight: bold;
+				}
+				
+				.orderdone_btn {
+					width : 20%;
+					height : 100px;
+					text-align : center;
+					padding-top: 30px;
+				}
+				

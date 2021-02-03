@@ -4,13 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Insert title here</title>
-		<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/cart/cart.css">
-		<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/cart/order.css">
-		<script src="<%=application.getContextPath()%>/resources/js/cart/cart.js"></script>
+		<link rel="stylesheet" href="<%=application.getContextPath()%>/resources/css/order/orderdone.css">
 		<script src="https://kit.fontawesome.com/7f16510dcc.js" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>	
+		<link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>밥향기 :: 주문완료</title>
 
 </head>
 <body>
@@ -18,8 +21,21 @@
 		<jsp:include page="/WEB-INF/views/include/header.jsp"/>
 		
 		<div id="wrapper_contents">
+			<div id="cart_header">고객님의 주문이 완료되었습니다.</div>
 		
-		주문이 완료되었습니다.
+		
+			<div class="orderdone_box">
+				<div class="orderdone_cat">주문이 잘 되었는지 확인하려면?</div>
+				<div class="orderdone_btn">
+					<a class="btn btn-outline-dark btn-sm" href="<%=application.getContextPath()%>/myinfo">마이페이지 이동</a>
+				</div>
+			</div>
+			<div class="orderdone_box">
+				<div class="orderdone_cat"> 다른 제품들도 궁금하다면?</div>
+				<div class="orderdone_btn">
+					<a class="btn btn-outline-dark btn-sm" href="<%=application.getContextPath()%>/menu">쇼핑 계속하기</a>
+				</div>
+			</div>
 		
 		</div>	
 	
