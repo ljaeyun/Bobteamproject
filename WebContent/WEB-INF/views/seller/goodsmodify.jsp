@@ -14,7 +14,7 @@
 				<input type="hidden" name="pno" value="${product.pno}"/>
 			<div class="form-group">
 				<label for="pname">상품명</label>
-					<input type="text" class="form-control" id="pname" name="pname" value="${product.pname}">
+					<input type="text" class="form-control" id="pname"  readonly name="pname" value="${product.pname}">
 					<small class="form-text text-muted">10자 이내</small>
 			</div>
 	
