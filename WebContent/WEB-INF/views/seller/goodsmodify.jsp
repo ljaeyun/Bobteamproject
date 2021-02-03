@@ -5,7 +5,7 @@
 
 
 	<br/>
-		<h4><b>상품 수정</b></h4>
+		<h4><b>회원정보 수정</b></h4>
 			<hr style="height:5px; background-color:black">
 	<div class="wrapper">
 		<div class="content">
@@ -13,25 +13,11 @@
 		<form enctype="multipart/form-data" name="goodsmodify" action="goodsmodify" method="post">
 				<input type="hidden" name="pno" value="${product.pno}"/>
 			<div class="form-group">
-				<label for="pname">${product.pname}</label>
+				<label for="pname">상품명</label>
 					<input type="text" class="form-control" id="pname" name="pname" value="${product.pname}">
 					<small class="form-text text-muted">10자 이내</small>
 			</div>
-		<!-- 	<div class="form-group">
-				<label for="pmainimg">첫번째 이미지를 첨부하세요</label>
-					<input type="file" class="form-control-file border" id="pmainimg" name="pattach1">
-					<small class="form-text text-muted">쇼핑몰의 기본 상품 이미지입니다</small>
-			</div>
-			<div class="form-group">
-				<label for="psubimg1">두번째 이미지를 첨부하세요</label>
-					<input type="file" class="form-control-file border" id="psubimg1" name="pattach2">
-					<small class="form-text text-muted">쇼핑몰의 상세 상품 이미지입니다</small>
-			</div>
-			<div class="form-group">
-				<label for="psubimg2">세번째 이미지를 첨부하세요</label>
-					<input type="file" class="form-control-file border" id="psubimg2" name="pattach3">
-					<small class="form-text text-muted">쇼핑몰의 상세 상품 이미지입니다</small>
-			</div> -->
+	
 			<div class="form-group">
 			<label for="pprice">상품의 가격을 입력하세요</label>
 					<input type="text" class="form-control" id="pprice" name="pprice" value="${product.pprice}">

@@ -34,6 +34,8 @@
 					$("#orderlist").hide();
 					$("#adminorderlist").hide();
 					$("#changeId").hide();
+					$("#rewrite").hide();
+					$("#regist").hide();
 				}
 			});
 		};
@@ -68,6 +70,8 @@
 					$("#directqBox").hide();
 					$("#adminorderlist").hide();
 					$("#changeId").hide();
+					$("#rewrite").hide();
+					$("#regist").hide();
 				}
 			});
 		}
@@ -83,6 +87,8 @@
 					/* $("#moneyCoupon").hide(); */
 					$("#directqBox").hide();
 					$("#changeId").hide();
+					$("#rewrite").hide();
+					$("#regist").hide();
 				}
 			});
 		}
@@ -100,6 +106,7 @@
 					$("#directqBox").hide();
 					$("#rewrite").hide();
 					$("#changeId").hide();
+					
 				}
 			});
 		}
@@ -133,6 +140,7 @@
 					$("#infomain").hide();
 					/* $("#moneyCoupon").hide(); */
 					$("#directqBox").hide();
+					$("#rewrite").hide();
 				}
 			});
 		}
@@ -232,46 +240,9 @@
 					
 					<div id="infomain">
 					
-						<h4><b>주문/배송 현황</b></h4>
-						<hr style="height:5px; background-color:black">
-						<div class = "progress">
-							
-							<table id = "totalp">
-								<tr>
-									<td  id="ew" rowspan="2"><i class="fas fa-wallet"></i></td>
-									<td><div class = "pitext">주문/결제</div></td>
-									<td  id="ew" rowspan="2"><i class="far fa-lemon"></i></td>
-									<td><div class = "pitext">상품준비</div></td>
-									<td  id="ew" rowspan="2"><i class="fas fa-shipping-fast"></i></td>
-									<td><div class = "pitext">배송</div></td>
-									<td  id="ew" rowspan="2"><i class="fas fa-box-open"></i></td>
-									<td><div class = "pitext">배송완료</div></td>
-								</tr>
-								<tr>
-									<td><div id = "num434" class = "order">1</div></td>									
-									<td><div id = "num434" class = "ready">5</div></td>
-									<td><div id = "num434" class = "deli">6</div></td>
-									<td><div id = "num434" class = "finish">7</div></td>
-								</tr>
-							</table>
-				
-						</div>
-						<h4 style="margin-top : 100px;"><b>적립금/쿠폰</b></h4>
-						<hr style="height:5px; background-color:black">
 							
 						<div id = "moneycoupon">
-							<table id = "money">
-								<tr style="height:60px">
-									<td class ="pitext2">적립금</td>
-									<td class ="pitext2">구매횟수</td>
-									<td class ="pitext2">소비액</td>
-								</tr>
-								<tr style="height:60px">
-									<td><div id = "num4343" class = "smmoney">${pur.msavemoney}</div></td>
-									<td><div id = "num4343" class = "ssum">${pur.mpurchasecount}</div></td>
-									<td><div id = "num4343" class = "slost">${pur.mpurchasesum}</div></td>
-								</tr>
-							</table>
+							
 								
 								<c:if test="${mem.mgrade=='Gray'}">
 									<h4 style="margin-top : 100px; color: #868e96; ">회원님의 등급은 <b>Gray</b> 입니다.</h4>
@@ -289,9 +260,19 @@
 									<h4 style="margin-top : 100px; color: #364fc7">회원님의 등급은 <b>Blue Blanca</b> 입니다.</h4>
 								</c:if>
 								<hr style="height:5px; background-color:black">
-								<script>
-									
-								</script>
+								<table id = "money">
+								<tr style="height:60px">
+									<td class ="pitext2"><b>적립금</b></td>
+									<td class ="pitext2"><b>구매횟수</b></td>
+									<td class ="pitext2"><b>소비액</b></td>
+								</tr>
+								<tr style="height:60px">
+									<td><div id = "num4343" class = "smmoney">${pur.msavemoney}</div></td>
+									<td><div id = "num4343" class = "ssum">${pur.mpurchasecount}</div></td>
+									<td><div id = "num4343" class = "slost">${pur.mpurchasesum}</div></td>
+								</tr>
+							</table>
+				
 						</div>
 								
 					</div>

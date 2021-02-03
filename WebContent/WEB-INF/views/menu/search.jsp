@@ -49,7 +49,7 @@
 							<div class ="infoline_2" ><a href="detailpage?pno=${product.pno}">${product.pname}</a></div>
 							<div class ="infoline_3" ><a  href="detailpage?pno=${product.pno}">${product.pprice}원</a></div> 
 							<span class = "sp_cart"><a  href="<%=application.getContextPath()%>/login">
-							<img width="25px" height="25px" src="<%=application.getContextPath()%>/resources/img/trashbin.png"/></a></span>
+
 						</div>
 					</div>
 				</c:forEach>

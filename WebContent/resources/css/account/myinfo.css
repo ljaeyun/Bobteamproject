@@ -59,6 +59,7 @@
 			
 		
 			h3 {
+				font-size:25px;
 				margin-top : 70px;
 			}
 			
@@ -98,7 +99,7 @@
 			#ew {
 				font-size: 90px;
 			}
-			
+	
 			
 			#totalp {
 				border : 1px solid #e9ecef;
@@ -120,6 +121,7 @@
 			#money td {
 			width : 33%;
 				border : 1px solid black;
+				margin : 
 			}
 			/*-------------테이블 2--------------*/
 			

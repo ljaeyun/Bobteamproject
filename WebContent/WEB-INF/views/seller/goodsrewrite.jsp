@@ -66,26 +66,7 @@
 						</c:forEach>
 					</tbody>
 				</table>
-					<div id="page_num">
-				<a class="btn_page"
-					href="menu?pageNo=1">처음</a>
-				<c:if test="${pager.groupNo > 1}">
-					<a class="btn_page"
-						href="menu?pageNo=${pager.startPageNo - 1}">이전</a>
-				</c:if>
-				<c:forEach var="i" begin="${pager.startPageNo}" end="${pager.endPageNo}">
-					<c:if test="${i == pager.pageNo}">
-						<a class="btn_page" href="menu?pageNo=${i}">${i}</a>
-					</c:if>
-					<c:if test="${i != pager.pageNo}">
-						<a class="btn_page" href="menu?pageNo=${i}">${i}</a>
-					</c:if>
-				</c:forEach>
-				<c:if test="${pager.groupNo < pager.totalGroupNo}">
-					<a class="btn_page" href="menu?pageNo=${pager.endPageNo + 1}">다음</a>
-				</c:if>
-					<a class="btn_page" href="menu?pageNo=${pager.totalPageNo}">맨끝</a>
-			</div>	
+				
 			</div>
 		<div id="modify">
 		</div>
