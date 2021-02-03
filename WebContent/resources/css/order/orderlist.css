@@ -1,6 +1,68 @@
 @charset "UTF-8";
 
 
+.cartlist_each {
+	margin-left:120px;
+}
+
+
+#cart_select {
+	height: 40px;
+	width: 90%;
+	flex-direction: row;
+	padding: 6px 0px 0px 47px;
+	border-bottom: 1px solid black;
+}
+
+#cart_listeach {
+	height: 200px;
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid #dee2e6;
+	vertical-align: middle;
+	align-items: center;
+}
+
+	#checkeach {
+		width: 5%;
+	/* 	border: 1px solid black; */
+text-align: center;
+}
+
+#pd_img {
+	width: 10%;
+/* 	border: 1px solid black; */
+	align-items: center;
+}
+
+#pd_info {
+	width: 45%;
+/* 	border: 1px solid black; */
+	align-items: center;
+}
+
+
+#pname {
+	padding-left: 50px;
+	margin-bottom: 20px;
+	font-family: 'Noto Sans KR Medium';
+	font-size: 16px;
+}
+
+
+#pname >a {
+	text-decoration: none;
+	color: black;
+}
+
+#pprice {
+	padding-left: 50px;
+	font-family: 'Noto Sans KR';
+	font-size: 18px;
+	}
+
+
 #orderlist_fn{
 	display: flex;
 	flex-direction: column;

@@ -25,14 +25,6 @@
 					align-items: center;
 				}
 				
-					#cart_select {
-						height: 40px;
-						width: 90%;
-						flex-direction: row;
-						border-bottom: 1px solid black;
-						border-top: 2px solid black;
-						padding: 6px 0px 0px 47px;
-					}
 						#checkall {
 							margin-top: 2px;
 						}

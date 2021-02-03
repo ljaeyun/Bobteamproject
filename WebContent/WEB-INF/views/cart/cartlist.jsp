@@ -10,18 +10,20 @@
 						<input type="checkbox" id="checkall" name="checkall" onclick="checkAll()"/>
 						<a href="">전체 선택</a>
 						<a href="">선택 삭제</a>
+						
 					</div>	
 				
 				
 				
 				
 				<c:forEach var="cartlist" items="${cartlist}">
-					<form id="form_${cartlist.pno}" name="form_${cartlist.pno}" method="post">
+					<form class="cartlist_each" id="form_${cartlist.pno}" name="form_${cartlist.pno}" method="post">
 						<div id="cart_listeach">
 							<div id="checkeach">
 								<input type="checkbox" name="checkBox"/>
 							</div>
 								<a href=""><img src="" style="width:100px;"/></a>
+								<img src="../pphoto3?pno=${cartlist.pno}" style="width:150px;"/>
 							<div id="pd_info">
 								<div id="pname"><a href="">${cartlist.pname}</a></div>
 								<div id="pprice">${cartlist.pprice}원</div>

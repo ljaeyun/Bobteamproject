@@ -22,7 +22,7 @@
 		<div>
 			<div>등급</div>
 			
-				<input id="user_grade" type="text" value="${gra.mgrade}" readonly class="form-control">
+				<input id="user_grade" type="text" value="${mem.mgrade}" readonly class="form-control">
 			
 		
 		</div>
