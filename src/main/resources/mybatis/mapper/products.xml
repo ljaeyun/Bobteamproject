@@ -96,7 +96,7 @@
 	    where rownum &lt;= #{endRowNo} 
 		)
 		where rno &gt;= #{startRowNo}	
-		order by pno
+		order by pno	
 	</select>
 	<select id="selectSearch" parameterType="keyword" resultType="product">
 		select
