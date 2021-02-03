@@ -154,7 +154,7 @@
 	</insert>
 	<update id="update" parameterType="product">
 		update products
-		set pname=#{pname}, pamount=#{pamount}, pcontent=#{pcontent}, psubtitle=#{psubtitle}, pdifficulty=#{pdifficulty},
+		set pamount=#{pamount}, pcontent=#{pcontent}, psubtitle=#{psubtitle}, pdifficulty=#{pdifficulty},
 			pprice=#{pprice}, pweight=#{pweight}, ptime=#{ptime}
 		where pno=#{pno}
 	</update>

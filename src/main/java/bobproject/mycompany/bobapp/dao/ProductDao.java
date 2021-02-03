@@ -53,7 +53,8 @@ public class ProductDao {
 
 
 	public int update(Product product) {
-		int rows = sst.update("boards.update", product);
+		int rows = sst.update("products.update", product);
+		logger.info(""+rows);
 		return rows;
 	}
 
