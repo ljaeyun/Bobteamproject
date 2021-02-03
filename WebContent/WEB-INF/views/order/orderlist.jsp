@@ -15,9 +15,9 @@
 					<div id="cart_listeach">
 						<div id="checkeach">
 						</div>
-							<a href=""><img src="" style="width:100px;"/></a>
+							<img src="../pphoto3?pno=${cartlist.pno}" style="width:150px;"/>
 						<div id="pd_info">
-							<div id="pname"><a href="">${cartlist.pname}</a></div>
+							<div id="pname">${cartlist.pname}</div>
 							<div id="pprice">${cartlist.pprice}원</div>
 						</div>
 						
